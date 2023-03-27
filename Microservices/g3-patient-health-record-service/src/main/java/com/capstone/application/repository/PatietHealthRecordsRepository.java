@@ -1,5 +1,6 @@
 package com.capstone.application.repository;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -20,5 +21,14 @@ public interface PatietHealthRecordsRepository extends JpaRepository<VisitDetail
 	@Query(value="Select * from visit_details where appointment_id=:id", nativeQuery =true)
 	 public VisitDetails findVisitDetailsById(@Param(value = "id") Integer id);
 	
-	
+	//Eshwari
+	@Query(value="select * from visit_details where patient_id =?1 and blood_group is not null limit 1;", nativeQuery=true)
+
+	public Optional< VisitDetails> getBloodGroup(int patientId);
+
+
+
+	@Query(value ="Select * from visit_details where appointment_id =?1 limit 1" , nativeQuery = true)
+
+	Optional<VisitDetails> getVisitDetailsBtAppId(int appointmentId);
 }

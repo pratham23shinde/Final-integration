@@ -14,7 +14,7 @@
     <a href="/" class="upsale-button" *ngIf="(auth.isAuthenticated$ | async) === false" routerLink="patient/login">
       <span>Book An Appointment</span>
     </a>
-    <button routerLink="patient/login">btn</button>
+    <!-- <button routerLink="patient/login">btn</button> -->
     <!-- <div *ngIf="(auth.isAuthenticated$ | async) === false">
     </div> -->
 
@@ -28,6 +28,12 @@
       <a routerLink="physician/dashboard" *ngIf="user['role'] == 'Doctor'">
         <button mat-stroked-button color="primary" class="btnclass">
           Physician Dashboard
+        </button>
+      </a>
+
+      <a routerLink="nurse/dashboard" *ngIf="user['role'] == 'Nurse'">
+        <button mat-stroked-button color="primary" class="btnclass">
+          Nurse Dashboard
         </button>
       </a>
     </div>

@@ -40,6 +40,25 @@ public class PatientHealthRecordController {
 		super();
 		this.patientHealthRecordService = patientHealthRecordService;
 	}
+	
+	
+	
+	//Eshwari changes
+	@GetMapping("/patient/{patientId}/bloodgroup")
+
+	public Optional<VisitDetails> FindPatientBloodGroup(@PathVariable int patientId){
+
+	return patientHealthRecordService.findBloodGroupForPatient(patientId);
+
+	}
+
+	@GetMapping("/patient/visitDetails/{appointmentId}")
+
+	public Optional<VisitDetails> getPatientDetailsByappointmentid(@PathVariable int appointmentId){
+
+	return patientHealthRecordService.getDetailsByAppId(appointmentId);
+
+	}
 
 	@GetMapping("/patient/{patientId}/health-records")
 	public Optional<VisitDetails> healthRecordsById(@PathVariable int patientId) 

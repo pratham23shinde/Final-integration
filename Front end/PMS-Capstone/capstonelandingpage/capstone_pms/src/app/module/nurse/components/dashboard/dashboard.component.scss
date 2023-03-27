@@ -1,0 +1,45 @@
+$borderbottomcolor: grey;
+.example-card {
+  max-width: 100%;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+.mat-elevation-z8 {
+  width: 100%;
+  margin-top: 15px;
+  .table-row:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+}
+table {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.classParent {
+  display: flex;
+}
+.childClass1 {
+  .mat-card-title {
+    // background-attachment: $borderbottomcolor;
+    font-weight: 500;
+  }
+}
+.childClass2 {
+  float: right;
+  width: 30%;
+  margin-top: -45px;
+}
+.submit {
+  background: none;
+  border: none;
+  background-color: #2d3663;
+  padding: 15px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}

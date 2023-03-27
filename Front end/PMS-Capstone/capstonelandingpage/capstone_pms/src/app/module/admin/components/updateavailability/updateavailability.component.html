@@ -7,17 +7,21 @@
             <h4 style="color: black">{{ drName }}</h4>
             <h4 style="color: black">{{ startDate }}</h4>
         </div>
+        
 
         <mat-form-field appearance="fill">
+
             <mat-label>Available From</mat-label>
-            <input [min]="todayDate" name="startDate" matInput [matDatepicker]="picker" ngModel />
+            <input  [min]="todayDate" [max]="nextTwoWeeks" name="startDate" matInput [matDatepicker]="picker" [(ngModel)]="from"   
+            
+            />
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <mat-datepicker   #picker></mat-datepicker>
         </mat-form-field>
 
         <mat-form-field style="margin: 5px" appearance="fill">
             <mat-label>Available Till</mat-label>
-            <input [min]="todayDate" name="endDate" matInput [matDatepicker]="picker1" ngModel />
+            <input [min]="from" [max]="nextTwoWeeks" name="endDate" matInput [matDatepicker]="picker1" ngModel />
             <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
             <mat-datepicker #picker1></mat-datepicker>
         </mat-form-field>

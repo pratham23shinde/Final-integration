@@ -18,7 +18,7 @@ import com.capstone.application.service.PatientAuthenticationService;
 import lombok.extern.log4j.Log4j2;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="*")
 @RequestMapping("/api/v1")
 @Log4j2
 public class AuthenticationServiceController {

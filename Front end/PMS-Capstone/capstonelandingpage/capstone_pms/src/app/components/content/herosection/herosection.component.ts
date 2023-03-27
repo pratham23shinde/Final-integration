@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 import { AdminService } from 'src/app/module/admin/admin.service';
-import { InitializeUsersService } from './initialize-users.service';
 
 @Component({
   selector: 'app-herosection',
@@ -12,6 +11,7 @@ export class HerosectionComponent {
   profileJson: string = 'none';
   ShowRole = false;
   roleOfUSer: any;
+  emaildOfUser:any;
 
   constructor(public auth: AuthService,private addUsers:AdminService) {}
   index=0
@@ -19,7 +19,7 @@ export class HerosectionComponent {
     this.auth.user$.subscribe(
       (profile) => {
         (this.profileJson = JSON.stringify(profile, null, 2));
-        
+        this.emaildOfUser="fdfdf@gmail.com";
 
         let i=0;
         for( i=0;i<this.profileJson.length;i++){
@@ -33,19 +33,17 @@ export class HerosectionComponent {
         
         if(this.index>8){
           if(this.profileJson[this.index]=="A"){
-            this.roleOfUSer="Admin";
+          
             this.adminAddMethod();
             this.doctorAddMethod();
             this.nurseAddMethod();
-            console.log("Admin");
+            
           }else if(this.profileJson[this.index]=="D"){
-              console.log("Doctor");
-              this.roleOfUSer="Doctor";
               this.doctorAddMethod();
           }else if(this.profileJson[this.index]=="N"){
-            this.roleOfUSer="Nurse";
+            this.doctorAddMethod();
             this.nurseAddMethod();
-            console.log("Nurse")
+            
           }
         }
 
@@ -65,19 +63,19 @@ export class HerosectionComponent {
 
  
 
-  doctorAddMethod() {
+  public doctorAddMethod() : void {
     
-    this.addUsers.addDoctorUser() ;
-    
-  }
-
-  adminAddMethod() {
-    this.addUsers.addAdminUser ;
+    this.addUsers.addDoctorUser().subscribe();
     
   }
 
-  nurseAddMethod() {
-    this.addUsers.addNurseUser ;
+  adminAddMethod(): void {
+    this.addUsers.addAdminUser().subscribe();
+    
+  }
+
+  nurseAddMethod(): void {
+    this.addUsers.addNurseUser().subscribe();
     
   }
 }

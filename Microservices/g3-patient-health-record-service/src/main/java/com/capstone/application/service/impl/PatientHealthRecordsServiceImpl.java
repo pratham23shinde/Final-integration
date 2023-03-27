@@ -573,8 +573,28 @@ public class PatientHealthRecordsServiceImpl implements PatientHealthRecordServi
 	// aakash solanke
 		
 		
-		
-		
+
+		//Eshwari
+	
+	@Override
+
+	public Optional<VisitDetails> findBloodGroupForPatient(int patientId) {
+
+	// TODO Auto-generated method stub
+
+	return patientHealthRecordsRepository.getBloodGroup(patientId);
+
+	}
+
+	@Override
+
+	public Optional<VisitDetails> getDetailsByAppId(int appointmentId) {
+
+	// TODO Auto-generated method stub
+
+	return patientHealthRecordsRepository.getVisitDetailsBtAppId(appointmentId);
+
+	}
 		
 		
 		

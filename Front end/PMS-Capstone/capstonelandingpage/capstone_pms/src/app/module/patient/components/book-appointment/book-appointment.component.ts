@@ -238,7 +238,7 @@ export class BookAppointmentComponent implements OnInit {
   // periodic: PeriodicElement = {} as PeriodicElement;
   getAvaiDoctors() {
     this.http
-      .get('http://localhost:9007/api/v1/physician-avail?availability=true')
+      .get('http://localhost:9007/api/v1/physician-avail?availability=false')
       .subscribe((result: any) => {
         // console.log(result);
         // sessionStorage.setItem('doctorData',JSON.stringify(result));

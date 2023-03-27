@@ -7,6 +7,7 @@ import { AdminService } from '../../admin.service';
 import { MatDialogRef } from '@angular/material/dialog';
 import { DatePipe } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
+import {FormControl,FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-updateavailability',
@@ -20,6 +21,7 @@ export class UpdateavailabilityComponent {
   public startDate: any;
   public endDate: any;
   public parent!: DoctoravailabilityComponent;
+  public from:any;
 
   // minDate: Date;
   // maxDate: Date;
@@ -36,6 +38,16 @@ export class UpdateavailabilityComponent {
   }
   todayDate: Date = new Date();
 
+  
+  
+  
+  nextTwoWeeks=new Date(Date.now() + 12096e5);
+  
+  dateFormCtrl = new FormControl(new Date());
+  
+
+
+
   ngOnInit() {
     this.drName = this.doctorService.getThatVar();
   }
@@ -44,9 +56,7 @@ export class UpdateavailabilityComponent {
     console.log(this.doctorService.getThatVar());
   }
 
-  // reloadCurrentPage() {
-  //   this.ngOnInit();
-  // }
+  
 
   selectedMatDate!: Date;
 
@@ -92,4 +102,6 @@ export class UpdateavailabilityComponent {
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+  
 }

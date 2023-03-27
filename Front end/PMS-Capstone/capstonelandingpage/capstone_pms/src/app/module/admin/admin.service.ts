@@ -13,8 +13,8 @@ import { tap } from 'rxjs/operators';
 export class AdminService {
   public myVar: any;
 
-  private apiServerPatient = 'http://localhost:8089';
-  private apiServerDoctor = 'http://localhost:8082';
+ 
+  private apiServerDoctor = 'http://localhost:9007/api/v1';
 
   constructor(private http: HttpClient) {}
 
@@ -25,15 +25,15 @@ export class AdminService {
   }
 
   public getPatients(): Observable<PatientData[]> {
-    return this.http.get<PatientData[]>('http://localhost:8089/patient');
+    return this.http.get<PatientData[]>('http://localhost:9006/api/v1/patient');
   }
 
   public getNurses(): Observable<NurseData[]> {
-    return this.http.get<NurseData[]>('http://localhost:8083/nurses');
+    return this.http.get<NurseData[]>('http://localhost:9005/api/v1/nurses');
   }
 
   public getAdmins(): Observable<AdminData[]> {
-    return this.http.get<AdminData[]>('http://localhost:8083/admins');
+    return this.http.get<AdminData[]>('http://localhost:9005/api/v1/admins');
   }
 
   //Physician Availability List
@@ -97,18 +97,17 @@ export class AdminService {
   }
 
 
-  addDoctorUser() {
-    console.log('In service');
-    console.log('Work');
-    this.http.get('http://localhost:9007/api/v1/addDoctors');
+  public addDoctorUser(): Observable<DoctorData[]> {
+    
+    return this.http.get<DoctorData[]>('http://localhost:9007/api/v1/addDoctors');
   }
 
-  addAdminUser() {
-    this.http.get('http://localhost:9007/api/v1/addAdmins');
+  addAdminUser(): Observable<DoctorData[]> {
+    return this.http.get<DoctorData[]>('http://localhost:9005/api/v1/addAdmins');
   }
 
-  addNurseUser() {
-    this.http.get('http://localhost:9007/api/v1/addNurses');
+  addNurseUser(): Observable<DoctorData[]> {
+    return this.http.get<DoctorData[]>('http://localhost:9005/api/v1/addNurses');
   }
 
 

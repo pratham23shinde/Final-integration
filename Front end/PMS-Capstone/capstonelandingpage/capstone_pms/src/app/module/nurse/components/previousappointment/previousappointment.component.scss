@@ -1,0 +1,31 @@
+$borderbottomcolor: grey;
+$tablehoverbgcolor: #f1f1f1;
+$white: #ffffff;
+$textcolor: #2d3663;
+
+* {
+  color: $textcolor;
+}
+
+.mainclass {
+  display: flex;
+  justify-content: space-between;
+  //margin-top: 50px;
+  .childclass {
+    background-color: #fff;
+    border: 1px solid #e4e9f0;
+    padding: 35px 31px;
+    margin-right: 50px;
+    span {
+      font-weight: 500;
+    }
+  }
+  .childclass1 {
+    width: 50%;
+  }
+  .childclass2 {
+    width: 50%;
+    border-top: 5px solid #2d3663;
+    height: 156px;
+  }
+}

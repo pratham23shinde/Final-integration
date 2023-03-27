@@ -61,4 +61,10 @@ public interface PatientHealthRecordService {
 	public void deleteTest(Integer testId);
 	
 	
+	//Eshwari
+	
+	public Optional<VisitDetails> findBloodGroupForPatient(int patientId );
+
+	public Optional<VisitDetails> getDetailsByAppId(int appointmentId);
+	
 }

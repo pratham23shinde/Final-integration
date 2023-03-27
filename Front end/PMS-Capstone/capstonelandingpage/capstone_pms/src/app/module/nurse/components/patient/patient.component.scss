@@ -1,0 +1,48 @@
+$textcolor: #2d3663;
+
+* {
+  color: $textcolor;
+}
+h4 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+  span {
+    padding: 15px;
+  }
+}
+.parent {
+  display: flex;
+  // max-width: 90%;
+  //border: solid;
+  margin-bottom: 20px;
+  .child1 {
+    // max-height: 100%;
+    width: 45%;
+  }
+  .child2 {
+    // max-height: 100%;
+    width: 45%;
+  }
+}
+
+h3 {
+  margin: 20px;
+}
+
+.parent1 {
+  // max-width: 90%;
+}
+
+.submit {
+  background: none;
+  border: none;
+  background-color: #2d3663;
+  padding: 15px;
+  border-radius: 8px;
+  span {
+    color: white !important;
+  }
+  cursor: pointer;
+  width: 13%;
+  margin-top: 15px;
+}

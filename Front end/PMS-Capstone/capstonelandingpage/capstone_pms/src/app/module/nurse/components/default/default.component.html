@@ -1,0 +1,27 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidebar mode="side" opened="true">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <div class="toolbar">
+        <mat-toolbar>
+          <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
+          <div class="box">
+            <mat-icon class="box-item" matTooltip="Search">search</mat-icon>
+            <mat-icon class="box-item" matTooltip="Calendar"
+              >event_note</mat-icon
+            >
+            <mat-icon class="box-item" matTooltip="Email"
+              >mail_outline</mat-icon
+            >
+            <mat-icon class="box-item" matTooltip="Logout">logout</mat-icon>
+          </div>
+        </mat-toolbar>
+        <div class="main">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
