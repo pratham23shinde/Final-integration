@@ -1,0 +1,55 @@
+.associatesimg {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+    padding: 40px;
+    .hoverimg:hover {
+      transition: -webkit-transform 0.6s, -moz-transform 0.6s, -o-transform 0.6s,
+        transform 0.6s;
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    mat-toolbar {
+      background: red !important;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 600px) {
+    .associatesimg{
+      margin: 0 !important;
+      padding: 10px !important;
+      img{
+        height: 80px !important;
+      }
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 768px) {
+    .associatesimg {
+      margin: 19px 5px !important;
+      padding: 0 !important;
+      img{
+        height: 80px !important;
+      }
+    }
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    mat-toolbar {
+      background: orange !important;
+    }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    mat-toolbar {
+      background: pink !important;
+    }
+  }
+  

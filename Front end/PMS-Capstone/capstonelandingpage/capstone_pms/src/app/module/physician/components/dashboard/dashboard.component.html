@@ -1,0 +1,96 @@
+<h4><mat-icon>calendar_today</mat-icon><span>Todays Appointment</span></h4>
+<div class="inputfield">
+  <div class="date">
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="Choose a date"
+        [min]="todayDate"
+        (dateChange)="onDateSelected($event.target.value)"
+      />
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <i (click)="picker.open()" class="fa-solid fa-calendar-days"></i>
+  </div>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Search</mat-label>
+      <input
+        matInput
+        #message
+        maxlength="25"
+        (keyup)="applyFilter($event)"
+        placeholder="Ex. Patient Name"
+      />
+      <mat-hint align="end">{{ message.value.length }} / 25</mat-hint>
+    </mat-form-field>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </form>
+</div>
+<table mat-table [dataSource]="todaysAppointment" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="appointmentId" class="table-row">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let element">{{ element.appointmentId }}</td>
+  </ng-container>
+
+  <!-- Patient Name -->
+  <ng-container matColumnDef="reason" class="table-row">
+    <th mat-header-cell *matHeaderCellDef>reason</th>
+    <td mat-cell *matCellDef="let element">{{ element.reason }}</td>
+  </ng-container>
+
+  <!-- Booked On -->
+  <ng-container matColumnDef="date" class="table-row">
+    <th mat-header-cell *matHeaderCellDef>Booked On</th>
+    <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+  </ng-container>
+
+  <!-- Reason -->
+  <ng-container matColumnDef="acceptance" class="table-row">
+    <th mat-header-cell *matHeaderCellDef>Acceptance</th>
+    <td mat-cell *matCellDef="let element">{{ element.acceptance }}</td>
+  </ng-container>
+
+  <!-- Reason -->
+  <ng-container matColumnDef="patientId" class="table-row">
+    <th mat-header-cell *matHeaderCellDef>Status</th>
+    <td mat-cell *matCellDef="let element">{{ element.patientId }}</td>
+  </ng-container>
+
+  <!-- Action -->
+  <ng-container matColumnDef="action" class="table-row">
+    <th mat-header-cell *matHeaderCellDef>Action</th>
+    <td mat-cell *matCellDef="let element">
+      <button
+      (click)="getpatientidbyclick(element.patientId, element.appointmentId)"
+        mat-stroked-button
+        color="primary"
+        [routerLink]="['/physician/update-patient']"
+        class="table-btn"
+      >
+        Update
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    class="table-row"
+  ></tr>
+</table>
+<mat-paginator
+  [pageSizeOptions]="[5, 10, 15]"
+  showFirstLastButtons
+></mat-paginator>
+<button
+  mat-stroked-button
+  color="primary"
+  class="button-pending"
+  [routerLink]="['/physician/pending-appointment']"
+>
+  Pending Appointments
+</button>

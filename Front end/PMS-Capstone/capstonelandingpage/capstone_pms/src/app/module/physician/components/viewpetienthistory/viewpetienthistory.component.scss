@@ -1,0 +1,82 @@
+$borderbottomcolor: grey;
+$tablehoverbgcolor: #f1f1f1;
+$white:#ffffff;
+$textcolor: #2d3663;
+*{
+  color: $textcolor;
+}
+
+//heading style
+h4 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $borderbottomcolor;
+  mat-icon{
+    margin-right: 15px;
+  }
+}
+.table-row:hover {
+  cursor: pointer;
+  background-color: whitesmoke !important;
+}
+
+.mainclass {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  .childclass {
+    background-color: #fff;
+    border: 1px solid #e4e9f0;
+    border-top: 5px solid #2d3663;
+    padding: 30px 28px;
+    margin-right: 50px;
+    span {
+      font-weight: 500;
+    }
+  }
+  .childclass1 {
+    width: 25%;
+  }
+  .childclass2 {
+    width: 40%;
+  }
+  .childclass3 {
+    width: 35%;
+  }
+}
+.historybtn {
+  margin-top: 15px;
+}
+.tableclass {
+  h4 {
+    border: none;
+  }
+}
+.btn-class {
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.editdelete {
+  display: flex;
+  padding: 15px 10px 15px 10px;
+  .btn1 {
+    margin-right: 10px;
+  }
+}
+form {
+  font-weight: 500;
+  textarea {
+    border: none;
+    background: $white;
+    border-bottom: 1px solid gray;
+    border-radius: 5px 5px 0 0;
+    outline: none;
+    font-size: 18px;
+  }
+}
+.bottom-btn {
+  float: right;
+  padding-bottom: 40px;
+  .btn-class1{
+    background-color: white
+  }
+}

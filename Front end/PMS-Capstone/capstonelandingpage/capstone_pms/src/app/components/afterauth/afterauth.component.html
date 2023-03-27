@@ -1,0 +1,36 @@
+<div class="writtenContent">
+    <div *ngIf="auth.user$ | async as user">
+        <div class="row align-items-center profile-header mb-5 text-center text-md-left">
+            <div class="col-md-2 mb-3">
+                <img [src]="user.picture" alt="users profile picture" class="rounded-circle img-fluid pr" />
+            </div>
+            <div>
+                <div class="col-md text-center text-md-left">
+                    <h2 style="color: black;">{{ user.name }}</h2>
+                    <p style="color: black;" class="lead text-muted">{{ user.email }}</p>
+                    <div>
+                        <pre>{{ profileJson }}</pre>
+                    </div>
+                    <span>
+                        <a mat-raised-button color="primary" *ngIf="!this.ShowRole" id="role"
+                            (click)="this.ShowRole = !ShowRole">Get Role</a>
+                    </span>
+
+                    <p *ngIf="this.ShowRole">{{ user["role"] }}</p>
+                </div>
+
+                <div *ngIf="auth.user$ | async as user">
+                    <h1>roleOfUSer</h1>
+                    <a id="a" mat-raised-button routerLink="dashboard" *ngIf="user['role'] == 'Admin'">
+                        <button>
+                            Login As
+                            Admin</button></a>
+
+                    <a mat-raised-button color="accent" routerLink="/Doctordashboard"
+                        *ngIf="user['role'] == 'Doctor'">LoginAsDoctor</a>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </div>
+</div>

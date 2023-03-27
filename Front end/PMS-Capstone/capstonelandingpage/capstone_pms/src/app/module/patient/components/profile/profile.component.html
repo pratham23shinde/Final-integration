@@ -1,0 +1,47 @@
+<!-- <mat-card class="example-card">
+  <mat-card-content>
+    <div class="profileinfo">
+      <div class="nameandqualificatio">
+        <h2>
+          <i class="fa-solid fa-user-nurse"></i>{{ patientbyIdData.title }}.
+          {{ patientbyIdData.firstName }}
+          {{ patientbyIdData.lastName }}
+        </h2>
+      </div>
+      <div class="basicinfo">
+        <p><span>Email: </span>{{ patientbyIdData.email }}</p>
+        <p><span>Date of Birth: </span> {{ patientbyIdData.dob }}</p>
+        <p><span>Contact Number: </span>{{ patientbyIdData.contactNumber }}</p>
+        <p><span>Gender: </span>{{ patientbyIdData.gender }}</p>
+        <p><span>Address: </span>{{ patientbyIdData.address }}</p>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card> -->
+<div class="mainprofile">
+  <!-- <img
+    src="http://holamed.like-themes.com/wp-content/uploads/2018/11/01.jpg"
+    alt="Physicia image"
+  /> -->
+  <div class="profileinfo">
+    <div class="nameandqualificatio">
+      <h2>
+        <i class="fa-solid fa-hospital-user"></i> {{ patientbyIdData.title }}.
+        {{ patientbyIdData.firstName }}
+        {{ patientbyIdData.lastName }}
+      </h2>
+    </div>
+    <div class="basicinfo">
+      <p><span>Date of Birth: </span> {{ patientbyIdData.dob }}</p>
+      <p><span>Gender: </span>{{ patientbyIdData.gender }}</p>
+      <p><span>Address: </span>{{ patientbyIdData.address }}</p>
+    </div>
+    <div class="contact">
+      <h4><i class="fa-solid fa-phone-flip"></i> {{ patientbyIdData.contactNumber }}</h4>
+
+      <h4>
+        <i class="fa-solid fa-envelope"></i> {{ patientbyIdData.email }}
+      </h4>
+    </div>
+  </div>
+</div>

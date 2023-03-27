@@ -1,0 +1,17 @@
+<div class="matclass">
+    <h4>Comfirm delete?</h4>
+    <div class="btnclass">
+      <mat-dialog-actions matDialogClose>
+        <button
+          mat-stroked-button
+          color="primary"
+          class="btn btn1"
+          (click)="delete()"
+          (click)="openAcceptSnackbar('Patient appointment', 'Rejected')"
+        >
+          Yes
+        </button>
+        <button mat-stroked-button color="accent" class="btn btn2">No</button>
+      </mat-dialog-actions>
+    </div>
+  </div>

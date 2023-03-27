@@ -1,0 +1,32 @@
+<button mat-icon-button style="float: right; margin: 5px" matDialogClose>
+  <mat-icon>close</mat-icon>
+</button>
+<p>All medicines are available at our pharmacy</p>
+<mat-dialog-content>
+  <form (ngSubmit)="onSubmit()" class="form-field">
+    <input
+      type="text"
+      name="medicine"
+      placeholder="medicine/Drug Name*"
+      class="input-style"
+      [(ngModel)]="prescription.prescriptionName"
+    />
+    <input
+      type="text"
+      name="dosage"
+      placeholder="Dosage*"
+      class="input-style"
+      [(ngModel)]="prescription.dosage"
+    />
+    <input
+      type="text"
+      name="notes"
+      placeholder="Notes"
+      class="input-style"
+      [(ngModel)]="prescription.prescriptionNotes"
+    />
+    <button type="submit" id="addPrescriptionForm" class="submit">
+      submit
+    </button>
+  </form>
+</mat-dialog-content>

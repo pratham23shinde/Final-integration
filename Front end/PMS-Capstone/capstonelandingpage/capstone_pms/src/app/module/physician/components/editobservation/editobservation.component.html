@@ -1,0 +1,21 @@
+<button mat-icon-button style="float: right; margin: 5px" matDialogClose>
+  <mat-icon>close</mat-icon>
+</button>
+<mat-dialog-content>
+  <form action="" class="form-field">
+    <input type="text" placeholder="Test Conducted*" class="input-style" />
+    <div class="internal-style">
+      <input
+        type="text"
+        placeholder="Actual Result*"
+        class="internal-input-style mr"
+      />
+      <input type="text" placeholder="Status*" class="internal-input-style" />
+    </div>
+    <input type="text" placeholder="Remarks" class="input-style" />
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions matDialogClose>
+  <button mat-stroked-button color="primary">Save</button>
+  <button mat-stroked-button color="warn">cancal</button>
+</mat-dialog-actions>

@@ -1,0 +1,109 @@
+.maincardclass {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 0;
+    background-color: aliceblue;
+    .card {
+      width: 20%;
+      // background-color: #edf3f6;
+      background-color: #fff;
+      padding: 55px 40px;
+      border-radius: 8px;
+      img {
+        display: block;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        border: 10px solid #edf3f6;
+      }
+      h3 {
+        font-size: 26px;
+        text-align: center;
+      }
+      h6 {
+        font-size: 20px;
+        background-color: #47ccc8;
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+      }
+      p {
+        text-align: center;
+        font-size: 17px;
+      }
+      h3,
+      h6,
+      p {
+        color: #2d3663;
+      }
+    }
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    mat-toolbar {
+      background: red !important;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 600px) {
+    .maincardclass{
+      padding: 40px 0 !important;
+      .card{
+        padding: 30px 30px 0 17px !important;
+      }
+      h3{
+        font-size: 19px !important;
+      }
+      h6{
+        font-size: 15px !important;
+        width: 70% !important;
+      }
+      p{
+        font-size: 15px !important;
+      }
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 768px) {
+    .maincardclass {
+      padding: 50px 0;
+      .card {
+        width: 25% !important;
+        padding: 20px 18px !important;
+        img {
+          width: 80% !important;
+        }
+        h3 {
+          font-size: 22px !important;
+        }
+        h6 {
+          font-size: 18px !important;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    mat-toolbar {
+      background: orange !important;
+    }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    mat-toolbar {
+      background: pink !important;
+    }
+  }
+  

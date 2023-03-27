@@ -1,0 +1,77 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  :host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  }
+  ///////////
+  .width-50 {
+    width: 26%;
+  }
+  // .formclass {
+  //   position: relative;
+  //   padding: 55px;
+  //   width: 40%;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   border: 1px solid grey;
+  //   border-radius: 8px;
+  //   margin-top: 30px;
+  //   background-color: white;
+  // }
+  
+  .example-card,.formclass {
+  // margin-top: 25%;
+  // margin-bottom: 25%;
+  // margin-left: 25%;
+  // margin-right: 25%;
+    
+    
+    // margin-left: auto;
+    // margin-right: auto;
+    h1,
+    p {
+      text-align: center;
+    }
+  }
+  
+  .space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .address {
+    margin-left: 5.5%;
+    width: 52%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  // .main{
+  //   background-image: linear-gradient(rgb(62, 198, 222),rgb(151, 193, 188),blue
+  //   );
+    .formclass{
+      margin-top: 20px ;
+      border:1px solid black;
+      border-radius: 10px;
+  margin-left: 35%;
+  margin-top: 10%;
+  margin-bottom: 25%;
+  margin-right: 25%;
+  width: 120%;
+  background-color: white;
+  
+    }
+    
+  
+  

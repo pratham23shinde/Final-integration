@@ -1,0 +1,54 @@
+$borderbottomcolor: grey;
+$tablehoverbgcolor: f1f1f1;
+$textcolor: #2d3663;
+
+* {
+  color: $textcolor;
+}
+h4 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $borderbottomcolor;
+  span {
+    padding: 15px;
+  }
+}
+.date {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.mat-elevation-z8 {
+  width: 100%;
+  margin-top: 35px;
+  box-shadow: none;
+  .table-row:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+  }
+  .btn-table-row {
+    display: flex;
+    padding: 15px 10px 15px 10px;
+    .btn1 {
+      margin-right: 10px;
+      // background-color: #fff;
+      // border: none;
+    }
+    .btn2 {
+      // border: none;
+    }
+    .one {
+      color: green;
+    }
+    .two {
+      color: red;
+    }
+  }
+}
+.button-pending {
+  float: right;
+  margin-top: 15px;
+}

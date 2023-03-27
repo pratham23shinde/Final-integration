@@ -1,0 +1,102 @@
+.mainfooter {
+    bottom: 0;
+    height: 500px;
+  //   border: 2px solid red;
+    display: flex;
+    position: relative;
+    //   background-image: url("http://holamed.like-themes.com/wp-content/uploads/2018/11/wave_bg.png");
+    background-color: #2d3663;
+    &::before {
+      background-image: url("http://holamed.like-themes.com/wp-content/uploads/2018/11/wave_bg.png");
+      content: "";
+      z-index: 0;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      // zoom: 1;
+      opacity: 0.25;
+    }
+    .aboutus,
+    .adress,
+    .links {
+      margin: 15px;
+      padding: 15px;
+      // border: 2px solid red;
+      height: 87%;
+      // width: 33.33%;
+    }
+    .aboutus {
+      z-index: 9;
+      padding: 50px 50px 1px 50px;
+      h1 {
+        color: #47ccc8;
+        margin: 45px 0;
+      }
+      p {
+        color: whitesmoke;
+        margin: 45px 0;
+      }
+      .icon {
+        display: flex;
+        flex-direction: column;
+        .childicon {
+          display: flex;
+          margin-bottom: 25px;
+          mat-icon {
+            margin-right: 10px;
+            color: #47ccc8;
+          }
+          .span:hover {
+            transition: all 0.5s ease-in-out;
+            color: #47ccc8;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    mat-toolbar {
+      background: red !important;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 600px) {
+    .aboutus{
+      width: 100% !important;
+      padding: 0px 0px 0px 15px !important;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 768px) {
+    .aboutus {
+      padding: 0px 15px !important;
+      .childicon{
+        mat-icon{
+          width: 40px !important;
+        }
+      }
+    }
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    mat-toolbar {
+      background: orange !important;
+    }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    mat-toolbar {
+      background: pink !important;
+    }
+  }
+  
