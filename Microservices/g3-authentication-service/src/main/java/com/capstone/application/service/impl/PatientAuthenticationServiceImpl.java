@@ -6,7 +6,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.capstone.application.controller.AuthenticationServiceController;
 import com.capstone.application.dto.PatientDto;
 import com.capstone.application.model.Patient;
 import com.capstone.application.repository.PatientAuthenticationRepository;
@@ -29,20 +28,6 @@ public class PatientAuthenticationServiceImpl implements PatientAuthenticationSe
 		this.patientAuthenticationRepository = patientAuthenticationRepository;
 	}
 
-	@Override
-	public Patient save(Patient patient) {
-		try {
-			log.info("Patient registered successfully");
-		return patientAuthenticationRepository.save(patient);
-	}
-	catch(Exception e)
-	{
-		 e.printStackTrace();
-		log.error(e.getMessage());
-	}
-	return null;
-
-	}
 
 	@Override
 	public Optional<Patient> patientLogin(String email, String password) {

@@ -19,7 +19,8 @@ public interface AppointmentService
 		void  updateByID(Integer appoitmentId, String status);
 		public Appointment findPreviousAppointmentByPatientId(int patientId);
 
-
+		//Sangeeta
+				public long countAppointments();
 
 
 }

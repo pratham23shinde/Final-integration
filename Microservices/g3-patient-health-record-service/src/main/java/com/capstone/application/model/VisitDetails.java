@@ -26,10 +26,10 @@ public class VisitDetails
 	private float weight;
 	
 	@Column(name="blood_pressure_systolic")
-	private int BPsystolic;
+	private int bpSystolic;
 	
 	@Column(name="blood_pressure_diastolic")
-	private int BPdiastolic;
+	private int bpDiastolic;
 	
 	@Column(name="body_temperature")
 	private float bodyTemperature;
@@ -55,31 +55,20 @@ public class VisitDetails
 	@Column(name="diagnosis_by_doctor")
 	private String diagnosis;
 
+	@Column(name="allergy_name")
+	private String allergyName;
 	
 	
-	public String getDiagnosis() {
-		return diagnosis;
-	}
-
-	public void setDiagnosis(String diagnosis) {
-		this.diagnosis = diagnosis;
-	}
-
-	public VisitDetails() {
-		super();
-	}
-
-
-	public VisitDetails(int visitId, int patientId, float height, float weight, int bPsystolic, int bPdiastolic,
+	public VisitDetails(int visitId, int patientId, float height, float weight, int bpSystolic, int bpDiastolic,
 			float bodyTemperature, int repirationRate, String bloodGroup, String nurseEmail, String physicianEmail,
-			int appointmentId, String keyNotes, String diagnosis) {
+			int appointmentId, String keyNotes, String diagnosis, String allergyName) {
 		super();
 		this.visitId = visitId;
 		this.patientId = patientId;
 		this.height = height;
 		this.weight = weight;
-		BPsystolic = bPsystolic;
-		BPdiastolic = bPdiastolic;
+		this.bpSystolic = bpSystolic;
+		this.bpDiastolic = bpDiastolic;
 		this.bodyTemperature = bodyTemperature;
 		this.repirationRate = repirationRate;
 		this.bloodGroup = bloodGroup;
@@ -88,6 +77,18 @@ public class VisitDetails
 		this.appointmentId = appointmentId;
 		this.keyNotes = keyNotes;
 		this.diagnosis = diagnosis;
+		this.allergyName = allergyName;
+	}
+
+
+	@Override
+	public String toString() {
+		return "VisitDetails [visitId=" + visitId + ", patientId=" + patientId + ", height=" + height + ", weight="
+				+ weight + ", bpSystolic=" + bpSystolic + ", bpDiastolic=" + bpDiastolic + ", bodyTemperature="
+				+ bodyTemperature + ", repirationRate=" + repirationRate + ", bloodGroup=" + bloodGroup
+				+ ", nurseEmail=" + nurseEmail + ", physicianEmail=" + physicianEmail + ", appointmentId="
+				+ appointmentId + ", keyNotes=" + keyNotes + ", diagnosis=" + diagnosis + ", allergyName=" + allergyName
+				+ "]";
 	}
 
 
@@ -95,105 +96,157 @@ public class VisitDetails
 		return visitId;
 	}
 
+
 	public void setVisitId(int visitId) {
 		this.visitId = visitId;
 	}
+
 
 	public int getPatientId() {
 		return patientId;
 	}
 
+
 	public void setPatientId(int patientId) {
 		this.patientId = patientId;
 	}
+
 
 	public float getHeight() {
 		return height;
 	}
 
+
 	public void setHeight(float height) {
 		this.height = height;
 	}
+
 
 	public float getWeight() {
 		return weight;
 	}
 
+
 	public void setWeight(float weight) {
 		this.weight = weight;
 	}
 
-	public int getBPsystolic() {
-		return BPsystolic;
+
+	public int getBpSystolic() {
+		return bpSystolic;
 	}
 
-	public void setBPsystolic(int bPsystolic) {
-		BPsystolic = bPsystolic;
+
+	public void setBpSystolic(int bpSystolic) {
+		this.bpSystolic = bpSystolic;
 	}
 
-	public int getBPdiastolic() {
-		return BPdiastolic;
+
+	public int getBpDiastolic() {
+		return bpDiastolic;
 	}
 
-	public void setBPdiastolic(int bPdiastolic) {
-		BPdiastolic = bPdiastolic;
+
+	public void setBpDiastolic(int bpDiastolic) {
+		this.bpDiastolic = bpDiastolic;
 	}
+
 
 	public float getBodyTemperature() {
 		return bodyTemperature;
 	}
 
+
 	public void setBodyTemperature(float bodyTemperature) {
 		this.bodyTemperature = bodyTemperature;
 	}
+
 
 	public int getRepirationRate() {
 		return repirationRate;
 	}
 
+
 	public void setRepirationRate(int repirationRate) {
 		this.repirationRate = repirationRate;
 	}
+
 
 	public String getBloodGroup() {
 		return bloodGroup;
 	}
 
+
 	public void setBloodGroup(String bloodGroup) {
 		this.bloodGroup = bloodGroup;
 	}
+
 
 	public String getNurseEmail() {
 		return nurseEmail;
 	}
 
+
 	public void setNurseEmail(String nurseEmail) {
 		this.nurseEmail = nurseEmail;
 	}
+
 
 	public String getPhysicianEmail() {
 		return physicianEmail;
 	}
 
+
 	public void setPhysicianEmail(String physicianEmail) {
 		this.physicianEmail = physicianEmail;
 	}
+
 
 	public int getAppointmentId() {
 		return appointmentId;
 	}
 
+
 	public void setAppointmentId(int appointmentId) {
 		this.appointmentId = appointmentId;
 	}
+
 
 	public String getKeyNotes() {
 		return keyNotes;
 	}
 
+
 	public void setKeyNotes(String keyNotes) {
 		this.keyNotes = keyNotes;
 	}
+
+
+	public String getDiagnosis() {
+		return diagnosis;
+	}
+
+
+	public void setDiagnosis(String diagnosis) {
+		this.diagnosis = diagnosis;
+	}
+
+
+	public String getAllergyName() {
+		return allergyName;
+	}
+
+
+	public void setAllergyName(String allergyName) {
+		this.allergyName = allergyName;
+	}
+
+
+	public VisitDetails() {
+		super();
+	}
+
+
 	
 	
 }

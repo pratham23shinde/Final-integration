@@ -2,7 +2,6 @@ package com.capstone.application.dto;
 
 public class PatientDto {
 	private String title;
-
 	private String email;
 	private String firstName;
 	private String lastName;

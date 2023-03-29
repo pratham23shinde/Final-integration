@@ -5,8 +5,8 @@ public class VisitDetailsDto {
 	private int patientId;
 	private float height;
 	private float weight;
-	private int BPsystolic;
-	private int BPdiastolic;
+	private int bpSystolic;
+	private int bpDiastolic;
 	private float bodyTemperature;
 	private int repirationRate;
 	private String bloodGroup;
@@ -14,8 +14,13 @@ public class VisitDetailsDto {
 	private String physicianEmail;
 	private String keyNotes;
 	private int appointmentId;
-	
-	
+	private String AllergyName;
+	public String getAllergyName() {
+		return AllergyName;
+	}
+	public void setAllergyName(String allergyName) {
+		AllergyName = allergyName;
+	}
 	public int getPatientId() {
 		return patientId;
 	}
@@ -34,17 +39,17 @@ public class VisitDetailsDto {
 	public void setWeight(float weight) {
 		this.weight = weight;
 	}
-	public int getBPsystolic() {
-		return BPsystolic;
+	public int getBpSystolic() {
+		return bpSystolic;
 	}
-	public void setBPsystolic(int bPsystolic) {
-		BPsystolic = bPsystolic;
+	public void setBpSystolic(int bpSystolic) {
+		this.bpSystolic = bpSystolic;
 	}
-	public int getBPdiastolic() {
-		return BPdiastolic;
+	public int getBpDiastolic() {
+		return bpDiastolic;
 	}
-	public void setBPdiastolic(int bPdiastolic) {
-		BPdiastolic = bPdiastolic;
+	public void setBpDiastolic(int bpDiastolic) {
+		this.bpDiastolic = bpDiastolic;
 	}
 	public float getBodyTemperature() {
 		return bodyTemperature;
@@ -82,11 +87,12 @@ public class VisitDetailsDto {
 	public void setKeyNotes(String keyNotes) {
 		this.keyNotes = keyNotes;
 	}
-	
 	public int getAppointmentId() {
 		return appointmentId;
 	}
 	public void setAppointmentId(int appointmentId) {
 		this.appointmentId = appointmentId;
 	}
+	
+	
 }

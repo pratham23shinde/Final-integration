@@ -10,10 +10,7 @@ public interface PatientInfoService
 	public List<Patient> findAll();
 	public Optional<Patient> findById(Integer patientId);
     public Patient update(Patient patient);
+  //Sangeeta
+    public long countPatient();
     
-    //aaksh
-    public Optional<Patient> findByIdData(Integer patientId);
-
-
-
 }

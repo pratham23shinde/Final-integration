@@ -52,21 +52,6 @@ public class AppointmentServiceImpl implements AppointmentService{
 		return null;
 	}
 	
-//	@Override
-//	public Appointment findPreviousAppointmentByPatientId(int patientId) {
-//	// TODO Auto-generated method stub
-//		try {
-//			log.info("Previous appointment fetched successfully");
-//	return appointmentRepository.findPreviousAppointmentById(patientId);
-//		}
-//		catch(Exception e)
-//		{
-//			 e.printStackTrace();
-//			log.error(e.getMessage());
-//		}
-//		return null;
-//	}
-	
 	
 	@Override
 	public List<Appointment> findByAppointmentById(Integer patientId) {
@@ -172,6 +157,7 @@ public class AppointmentServiceImpl implements AppointmentService{
 	@Override
 	public void updateByID(Integer appoitmentId, String status) {
 		try {
+			log.info("Appointment updated successfully");
 			appointmentRepository.update(appoitmentId, status);
 		}
 		catch(Exception e)
@@ -188,5 +174,10 @@ public class AppointmentServiceImpl implements AppointmentService{
 	return appointmentRepository.findPreviousAppointmentById(patientId);
 	}
 
+	//Sangeeta
+		@Override
+		public long countAppointments() {
+			return appointmentRepository.count();
+		}
 	
 }

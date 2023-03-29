@@ -34,37 +34,48 @@ public interface PatientHealthRecordService {
 
 	public List<AdminInfo> AdminfindAll();
 
-	//Patient new methods (Pranit)
+	// Patient new methods (Pranit)
 	public List<Tests> findTestByVisitId(Integer visitId);
 
 	public List<Integer> findVisitIdByPatientId(Integer patientId);
 
 	public List<Prescription> findPrescriptionByVisitId(Integer visitId);
-	
-	
+
 	// aakash solanke
-	
-    public List<VisitDetails> findAll();
-	
-	public VisitDetails findVisistDetailsByAppointmentId(Integer appointmentId );
-	
+
+	public List<VisitDetails> findAll();
+
+	public VisitDetails findVisistDetailsByAppointmentId(Integer appointmentId);
+
 	public VisitDetails getPreviousVisitDetailsByPatientId(Integer patientId);
-	
+
 	public List<Prescription> findPrescriptionById(Integer visitId);
-	
+
 	public Prescription savePrescription(Prescription prescription);
 
 //	public List<Tests> findAllTesta();
-	
+
 	public Tests saveTest(Tests test);
-	
+
 	public void deleteTest(Integer testId);
-	
-	
-	//Eshwari
-	
-	public Optional<VisitDetails> findBloodGroupForPatient(int patientId );
+
+	public VisitDetails getPreviousVisitDetailsByPatientIdforhistory(Integer patientId);
+
+	public Tests updateForTestByTestId(int testId, Tests test);
+
+	public boolean deletePrescription(int prescriptionId);
+
+	public boolean updateForPrescriptionByPrescriptionId(int prescriptionId, Prescription prescription);
+
+	// Eshwari
+
+	public Optional<VisitDetails> findBloodGroupForPatient(int patientId);
 
 	public Optional<VisitDetails> getDetailsByAppId(int appointmentId);
 	
+	//Sangeeta
+		public long countNurses();
+
+		public long countAdmins();
+
 }

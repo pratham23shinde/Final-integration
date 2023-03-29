@@ -1,4 +1,5 @@
 package com.capstone.application.controller;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -27,69 +28,63 @@ import com.capstone.application.service.PatientHealthRecordService;
 import lombok.extern.log4j.Log4j2;
 
 @RestController
-@CrossOrigin(origins="*")
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/v1")
 @Log4j2
 public class PatientHealthRecordController {
-	private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager.getLogger(PatientHealthRecordController.class);
+	private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager
+			.getLogger(PatientHealthRecordController.class);
 
 	private PatientHealthRecordService patientHealthRecordService;
-	
-	
+
 	public PatientHealthRecordController(PatientHealthRecordService patientHealthRecordService) {
 		super();
 		this.patientHealthRecordService = patientHealthRecordService;
 	}
-	
-	
-	
-	//Eshwari changes
+
+	// Eshwari changes
 	@GetMapping("/patient/{patientId}/bloodgroup")
 
-	public Optional<VisitDetails> FindPatientBloodGroup(@PathVariable int patientId){
+	public Optional<VisitDetails> FindPatientBloodGroup(@PathVariable int patientId) {
 
-	return patientHealthRecordService.findBloodGroupForPatient(patientId);
+		return patientHealthRecordService.findBloodGroupForPatient(patientId);
 
 	}
 
 	@GetMapping("/patient/visitDetails/{appointmentId}")
 
-	public Optional<VisitDetails> getPatientDetailsByappointmentid(@PathVariable int appointmentId){
+	public Optional<VisitDetails> getPatientDetailsByappointmentid(@PathVariable int appointmentId) {
 
-	return patientHealthRecordService.getDetailsByAppId(appointmentId);
+		return patientHealthRecordService.getDetailsByAppId(appointmentId);
 
 	}
 
 	@GetMapping("/patient/{patientId}/health-records")
-	public Optional<VisitDetails> healthRecordsById(@PathVariable int patientId) 
-	{
+	public Optional<VisitDetails> healthRecordsById(@PathVariable int patientId) {
 		try {
 			log.info("Patient health records fetched successfully");
-        Optional < VisitDetails > optional = patientHealthRecordService.findById(patientId);
-		return optional;
-	}
-	catch(Exception e)
-	{
-		log.error(e.getMessage());
-		throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-	}
-	}
-	
-	//Implemented method by pranit
-	@GetMapping("/patient/{patientId}/visitId")
-	public List<Integer> findVisitIdByPatientId(@PathVariable int patientId){
-		try {
-			
-			log.info("Visit details fetched by patientId successfully");
-		List <Integer> list = patientHealthRecordService.findVisitIdByPatientId(patientId);
-		return list;
-		}
-		catch(Exception e)
-		{
+			Optional<VisitDetails> optional = patientHealthRecordService.findById(patientId);
+			return optional;
+		} catch (Exception e) {
 			log.error(e.getMessage());
 			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
 	}
+
+	// Implemented method by pranit
+	@GetMapping("/patient/{patientId}/visitId")
+	public List<Integer> findVisitIdByPatientId(@PathVariable int patientId) {
+		try {
+
+			log.info("Visit details fetched by patientId successfully");
+			List<Integer> list = patientHealthRecordService.findVisitIdByPatientId(patientId);
+			return list;
+		} catch (Exception e) {
+			log.error(e.getMessage());
+			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
+		}
+	}
+
 //	
 //	@GetMapping("/patient/{patientId}/visitId")
 //	public List<Integer> findVisitIdByPatientId(@PathVariable int patientId){
@@ -98,159 +93,160 @@ public class PatientHealthRecordController {
 //	}
 	@GetMapping("/patient/{visitId}/test-records")
 	public List<Tests> findTestsByVisitId(@PathVariable int visitId) {
-		 List < Tests > list= patientHealthRecordService.findTestByVisitId(visitId);
-		 return list;
+		List<Tests> list = patientHealthRecordService.findTestByVisitId(visitId);
+		return list;
 	}
-	
+
 	@PostMapping("/patient/health-records")
-	 public VisitDetailsDto insertVisitDetials(@RequestBody VisitDetailsDto visitDetailsDto) {
+	public VisitDetailsDto insertVisitDetials(@RequestBody VisitDetailsDto visitDetailsDto) {
 		try {
 			log.info("Patient health record submitted successfully");
-		return patientHealthRecordService.createVisitDetails(visitDetailsDto);
-		}
-		catch(Exception e)
-		{
+			log.info(visitDetailsDto.getAllergyName());
+			return patientHealthRecordService.createVisitDetails(visitDetailsDto);
+		} catch (Exception e) {
 			log.error(e.getMessage());
 			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
 	}
-	
+
 	@PutMapping("/patient/{patientId}/health-records")
-	public VisitDetailsDto updatePatientInforDoctors(@PathVariable int patientId, @RequestBody VisitDetailsDto visitDetailsDto) {
+	public VisitDetailsDto updatePatientInforDoctors(@PathVariable int patientId,
+			@RequestBody VisitDetailsDto visitDetailsDto) {
 		try {
 			log.info("Patient health record updated successfully");
-		return patientHealthRecordService.updateVisitDetials(patientId,visitDetailsDto );
-		}
-		catch(Exception e)
-		{
+			return patientHealthRecordService.updateVisitDetials(patientId, visitDetailsDto);
+		} catch (Exception e) {
 			log.error(e.getMessage());
 			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
 	}
-	
+
 	@PostMapping("/patient/{visitId}/tests")
-	public Tests updateTest(@RequestBody Tests tests)
-	{
+	public Tests updateTest(@RequestBody Tests tests) {
 		try {
 			log.info("Pateint's test added successfully");
-		Tests updateResponse=patientHealthRecordService.updateforTest(tests);
-		return updateResponse;
-		}
-		catch(Exception e)
-		{
+			Tests updateResponse = patientHealthRecordService.updateforTest(tests);
+			return updateResponse;
+		} catch (Exception e) {
 			log.error(e.getMessage());
 			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
-		
-	}
-	
 
-	
+	}
+
 	@GetMapping("/patient/prescription")
-	public List<Prescription> findAllPrescription(){
+	public List<Prescription> findAllPrescription() {
 		try {
 			log.info("Fetching patient prescription by patinetId successfully");
-		return patientHealthRecordService.findAllPriscription();
-		}
-		catch(Exception e)
-		{
+			return patientHealthRecordService.findAllPriscription();
+		} catch (Exception e) {
 			log.error(e.getMessage());
 			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
 	}
-	
-	
-	
+
 	@GetMapping("/addAdmins")
 	public void postAdmins() throws Exception, Throwable {
 		try {
 			log.info("Added admins in the admin table from auth0 successfully");
-		patientHealthRecordService.postAdmins();
-		}
-		catch(Exception e)
-		{
+			patientHealthRecordService.postAdmins();
+		} catch (Exception e) {
 			log.error(e.getMessage());
 			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
-		
+
 	}
-	
+
 	@GetMapping("/addNurses")
 	public void postNurses() throws Exception, Throwable {
 		try {
 			log.info("Added nurses from Auth0 successfully");
-		patientHealthRecordService.postNurses();
-		}
-		catch(Exception e)
-		{
+			patientHealthRecordService.postNurses();
+		} catch (Exception e) {
 			log.error(e.getMessage());
 			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
-		
+
 	}
-	
+
 	@GetMapping("/nurses")
 	public ResponseEntity<List<NurseInfo>> NurseList() {
 		try {
 			log.info("Fetched all the nurse list");
-		List <NurseInfo> nurse = patientHealthRecordService.NursefindAll();
-		return new ResponseEntity<>(nurse, HttpStatus.OK );
-		}
-		catch(Exception e)
-		{
+			List<NurseInfo> nurse = patientHealthRecordService.NursefindAll();
+			return new ResponseEntity<>(nurse, HttpStatus.OK);
+		} catch (Exception e) {
 			log.error(e.getMessage());
 			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
 	}
+
 	@GetMapping("/patient/{visitId}/prescription")
 	public List<Prescription> findPrescriptionsByVisitId(@PathVariable int visitId) {
-		 //List < Prescription > list= 
-		 return patientHealthRecordService.findPrescriptionByVisitId(visitId);
+		// List < Prescription > list=
+		return patientHealthRecordService.findPrescriptionByVisitId(visitId);
 	}
-	
+
 	@GetMapping("/admins")
 	public ResponseEntity<List<AdminInfo>> AdminList() {
 		try {
 			log.info("Fectching admin list from the table successfully");
-		List <AdminInfo> nurse = patientHealthRecordService.AdminfindAll();
-		return new ResponseEntity<>(nurse, HttpStatus.OK );
-		}
-		catch(Exception e)
-		{
+			List<AdminInfo> nurse = patientHealthRecordService.AdminfindAll();
+			return new ResponseEntity<>(nurse, HttpStatus.OK);
+		} catch (Exception e) {
 			log.error(e.getMessage());
 			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
 	}
-	
-	
-    // aakash solanke
-	
+
+	// aakash solanke
+
 	@GetMapping("/patient/health-records/{appointmentId}")
-	public VisitDetails healthRecordsByIdAppointmentId(@PathVariable int appointmentId) 
-	{
-		
-      
+	public VisitDetails healthRecordsByIdAppointmentId(@PathVariable int appointmentId) {
+
 		return patientHealthRecordService.findVisistDetailsByAppointmentId(appointmentId);
 	}
-	
-	//ME
+
+	// ME
 	@GetMapping("/patient/Previous-visitDetails-records/{patientId}")
 	public VisitDetails previousVisistDetailsRecords(@PathVariable Integer patientId) {
 		return patientHealthRecordService.getPreviousVisitDetailsByPatientId(patientId);
-		
+
 	}
-	
+
 	@GetMapping("/prescription/{visitId}")
-	public List<Prescription> getPrescriptionById(@PathVariable Integer visitId ) {
+	public List<Prescription> getPrescriptionById(@PathVariable Integer visitId) {
 		return patientHealthRecordService.findPrescriptionById(visitId);
 	}
-	
+
 	@PostMapping("/patient/prescription")
 	public Prescription updatePrescription(@RequestBody Prescription prescription) {
-		Prescription updateResponse=patientHealthRecordService.savePrescription(prescription);
+		Prescription updateResponse = patientHealthRecordService.savePrescription(prescription);
 		return updateResponse;
 	}
-	
+
+	@GetMapping("/patient/Previous-visitDetails-records-for-history/{patientId}")
+	public VisitDetails getVisitDetailsByPatientIdForHistory(@PathVariable Integer patientId) {
+
+		return patientHealthRecordService.getPreviousVisitDetailsByPatientIdforhistory(patientId);
+
+	}
+
+	@PutMapping("/updateTest/{testId}")
+	public Tests updateTestByTestId(@PathVariable int testId, @RequestBody Tests test) {
+		return patientHealthRecordService.updateForTestByTestId(testId, test);
+	}
+
+	@DeleteMapping("/deletePrescription/{prescriptionId}")
+	public void deletePrescriptionById(@PathVariable Integer prescriptionId) {
+		patientHealthRecordService.deletePrescription(prescriptionId);
+	}
+
+	@PutMapping("/updatePrescription/{prescriptionId}")
+	public void updatePrescription(@PathVariable int prescriptionId, @RequestBody Prescription prescription) {
+
+	}
+
 //	@PostMapping("/patient/{visitId}/prescription")
 //	public Prescription updatePrescription(@RequestBody Prescription prescription) {
 //		try {
@@ -264,19 +260,29 @@ public class PatientHealthRecordController {
 //			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 //		}
 //	}
-	
-	
+
 	@PostMapping("/savetest")
 	public Tests saveTest(@RequestBody Tests test) {
 		return patientHealthRecordService.saveTest(test);
-		
+
 	}
-	
+
 	@DeleteMapping("/tests/{testId}")
-	public void delete(@PathVariable("testId") Integer testId){
-	     patientHealthRecordService.deleteTest(testId);
-	  
+	public void delete(@PathVariable("testId") Integer testId) {
+		patientHealthRecordService.deleteTest(testId);
+
 	}
-      	
 	
+	//Sangeeta
+	
+		@GetMapping("/nurseCount")
+		public long nurseCount() {
+		return patientHealthRecordService.countNurses();
+		}
+		
+		@GetMapping("/adminCount")
+		public long adminCount() {
+		return patientHealthRecordService.countAdmins();
+		}
+
 }

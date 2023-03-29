@@ -81,14 +81,11 @@ public class PatientInfoController {
 		}
 	}
 	
-	//aakash
+	//Sangeeta	
+		@GetMapping("/patientCount")
+		public long patientCount() {
+		return patientInfoService.countPatient();
+		}
 	
-	@GetMapping("/patientinfobyid/{patientId}")
-	public Optional<Patient> getPatientById(@PathVariable int patientId){
-	
-	Optional<Patient> patient = patientInfoService.findById(patientId);
-	
-	return patient;
-	}
 
 }

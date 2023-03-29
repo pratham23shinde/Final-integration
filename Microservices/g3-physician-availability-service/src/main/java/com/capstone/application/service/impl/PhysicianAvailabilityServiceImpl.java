@@ -4,10 +4,14 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -38,21 +42,29 @@ public class PhysicianAvailabilityServiceImpl implements PhysicianAvailabilitySe
 	}
 	
 	
-	private boolean setTodaysAvailbility(PhysicianAvailabiityModel physicianAvailabiity,String startDate,String endDate) {
+private boolean setTodaysAvailbility(PhysicianAvailabiityModel physicianAvailabiity,String cstartDate,String cendDate) throws ParseException {
 		
 		
 		PhysicianAvailabiityModel model = null;
 		
 		LocalDate timeNow=LocalDate.now();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY");
         String today=formatter.format(timeNow).toString();
-		int sD=today.compareTo(startDate);
-		int eD=today.compareTo(endDate);
-		System.out.println(startDate);
-		System.out.println(endDate);
-		System.out.println(sD);
-		System.out.println(eD);
-		if(sD>=1 && eD<=-1) {
+	
+		
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+		Date currentDate=sdf.parse(today); 
+		Date startdate = sdf.parse(cstartDate);  
+		Date enddate = sdf.parse(cendDate); 
+		int sD=currentDate.compareTo(startdate);
+		int eD=currentDate.compareTo(enddate);
+		
+		
+		
+		
+		
+		if(sD>=0 && eD<=0) {
 			return true;
 		}
 		else {
@@ -62,69 +74,86 @@ public class PhysicianAvailabilityServiceImpl implements PhysicianAvailabilitySe
 		
 	}
 	
-	private void setTodaysAvailbilityForAll() {
+private void setTodaysAvailbilityForAll() throws ParseException {
+	
+	
+	PhysicianAvailabiityModel model = null;
+	boolean nullCheck=false;
+	List<PhysicianAvailabiityModel>l=physicianAvailabilityRepository.findAll();
+	for(PhysicianAvailabiityModel p:l) {
+		LocalDate timeNow=LocalDate.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY");
+        String today=formatter.format(timeNow).toString();
+        
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+		Date currentDate=sdf.parse(today); 
+		Date startdate = sdf.parse(p.getStartDate());  
+		Date enddate = sdf.parse(p.getEndDate()); 
+		int sD=currentDate.compareTo(startdate);
+		int eD=currentDate.compareTo(enddate);
+        
+        
+        
+        
 		
-		
-		PhysicianAvailabiityModel model = null;
-		boolean nullCheck=false;
-		List<PhysicianAvailabiityModel>l=physicianAvailabilityRepository.findAll();
-		for(PhysicianAvailabiityModel p:l) {
-			LocalDate timeNow=LocalDate.now();
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/YYYY");
-	        String today=formatter.format(timeNow).toString();
-	        if(p.getStartDate()==null || p.getEndDate()==null) {
-	        	nullCheck=true;
-	        	continue;
-	        }
-			int sD=today.compareTo(p.getStartDate());
-			int eD=today.compareTo(p.getEndDate());
-			if(sD>=1 && eD<=-1) {
-				p.setAvailability(true);
-				model=p;
-			}
-			else {
-				p.setAvailability(false);
-				model=p;
-			}
-			
+		if(sD>=0 && eD<=0) {
+			p.setAvailability(true);
+			model=p;
 		}
-		if(nullCheck==false) {
-		physicianAvailabilityRepository.save(model);
+		else {
+			p.setAvailability(false);
+			model=p;
 		}
 		
 	}
+	if(nullCheck==false) {
+	physicianAvailabilityRepository.save(model);
+	}
+	
+}
 	
 
-	@Override
-	public List<PhysicianAvailabiityModel> findAll() {
-		//List<PhysicianAvailabiityModel>l=physicianAvailabilityRepository.findAll();
+@Override
+public List<PhysicianAvailabiityModel> findAll() {
+	//List<PhysicianAvailabiityModel>l=physicianAvailabilityRepository.findAll();
+	try {
 		setTodaysAvailbilityForAll();
-		return physicianAvailabilityRepository.findAll();
-		
+	} catch (ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return physicianAvailabilityRepository.findAll();
+	
+}
+	
+public PhysicianAvailabiityModel update(PhysicianAvailabiityModel physicianAvailabiity) {
+	PhysicianAvailabiityModel p=physicianAvailabiity;
+	List<PhysicianAvailabiityModel>l=physicianAvailabilityRepository.findAll();
+	for(PhysicianAvailabiityModel i:l) {
+		if(i.getPhysicianEmail().equals(physicianAvailabiity.getPhysicianEmail())) {
+			p=i;
+			break;
+			
+		}
 	}
 	
-	public PhysicianAvailabiityModel update(PhysicianAvailabiityModel physicianAvailabiity) {
-		PhysicianAvailabiityModel p=physicianAvailabiity;
-		List<PhysicianAvailabiityModel>l=physicianAvailabilityRepository.findAll();
-		for(PhysicianAvailabiityModel i:l) {
-			if(i.getPhysicianEmail().equals(physicianAvailabiity.getPhysicianEmail())) {
-				p=i;
-				break;
-				
-			}
-		}
-		
-		p.setStartDate(physicianAvailabiity.getStartDate());
-		p.setEndDate(physicianAvailabiity.getEndDate());
-		
-		
-		boolean val=setTodaysAvailbility(p,p.getStartDate(),p.getEndDate());
-		p.setAvailability(val);
-		
-		
-		PhysicianAvailabiityModel updateResponse = physicianAvailabilityRepository.save(p);
-        return updateResponse;
+	p.setStartDate(physicianAvailabiity.getStartDate());
+	p.setEndDate(physicianAvailabiity.getEndDate());
+	
+	
+	boolean val=true;
+	try {
+		val = setTodaysAvailbility(p,p.getStartDate(),p.getEndDate());
+	} catch (ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
 	}
+	p.setAvailability(val);
+	
+	
+	PhysicianAvailabiityModel updateResponse = physicianAvailabilityRepository.save(p);
+    return updateResponse;
+}
 
 	@Override
 	public boolean deletePhysician(String physicianEmail) {
@@ -262,22 +291,10 @@ public class PhysicianAvailabilityServiceImpl implements PhysicianAvailabilitySe
        }
        
        
-     
-       
-       
-       
-   
-       
-       
-       
-       
        for(int i=0;i<emails.size();i++) {
     	   
 LocalDate timeNow=LocalDate.now();
-    	   
-   		   
-    	   
-    	   
+   
     	   if(role.get(i).equals("Doctor") ) {
     		   int x=physicianAvailabilityRepository.isValuePresent(emails.get(i));
     		   if(x==0) {
@@ -288,7 +305,7 @@ LocalDate timeNow=LocalDate.now();
     	   doc.setLast_name(lastName.get(i));
     	   doc.setSpeciality(speciality.get(i));
     	   //System.out.println(role.get(i));
-    	   DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+    	   DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY");
            String yesterday=formatter.format(timeNow.minusDays(1)).toString();
            
     	   doc.setStartDate(yesterday);
@@ -314,19 +331,20 @@ LocalDate timeNow=LocalDate.now();
 
 
 	@Override
-	public List<PhysicianAvailabiityModel> findAllPhysicianOnDate(String date) {
+	public List<PhysicianAvailabiityModel> findAllPhysicianOnDate(String date) throws ParseException {
 		// TODO Auto-generated method stub
 		List<PhysicianAvailabiityModel>allPhy=physicianAvailabilityRepository.findAll();
 		List<PhysicianAvailabiityModel>physicianOnThatDate=new ArrayList<>();
 		for(PhysicianAvailabiityModel physician:allPhy) {
 			
-			if(physician.getStartDate()==null || physician.getEndDate()==null) {
-	        	
-	        	continue;
-	        }
-			int sD=date.compareTo(physician.getStartDate());
-			int eD=date.compareTo(physician.getEndDate());
-			if(sD>=0 && eD<=0) {
+			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+			Date currentDate=sdf.parse(date); 
+			Date startdate = sdf.parse(physician.getStartDate());  
+			Date enddate = sdf.parse(physician.getEndDate()); 
+			int sD=currentDate.compareTo(startdate);
+			int eD=currentDate.compareTo(enddate);
+		
+			if(sD==1 && eD==-1) {
 				physicianOnThatDate.add(physician);
 			}
 				
@@ -336,7 +354,19 @@ LocalDate timeNow=LocalDate.now();
 		return physicianOnThatDate;
 	}
 
+	@Override
+	public Optional<PhysicianAvailabiityModel> findDoctorInfoByEmailId(String email) {
+		
+		return physicianAvailabilityRepository.findById(email);
+	}
 
+	
+	//Sangeeta
+		@Override
+		public long countDoctors() {
+			return physicianAvailabilityRepository.count();
+			
+		}
 
 	
 }

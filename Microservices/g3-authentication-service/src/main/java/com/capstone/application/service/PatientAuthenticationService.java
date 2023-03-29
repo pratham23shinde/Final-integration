@@ -7,7 +7,6 @@ import com.capstone.application.model.Patient;
 
 public interface PatientAuthenticationService {
 
-    Patient save(Patient patient);
 	Optional<Patient> patientLogin(String email, String password);
 	PatientDto createPatient(PatientDto patienDto);
 

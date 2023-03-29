@@ -1,6 +1,5 @@
 package com.capstone.application.repository;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -24,7 +23,7 @@ public interface AppointmentRepository extends JpaRepository<Appointment,Integer
 //	 @Query(value = "select * from appointment where patient_id =?1 and date < now() limit 1" ,nativeQuery=true)
 //	 Appointment findPreviousAppointmentById(int patientId);
 
-	 @Query(value = "select * from appointment where patient_id=:patientId" ,nativeQuery=true)
+	 @Query(value = "select * from appointment where patient_id=:patientId order by date desc" ,nativeQuery=true)
 	 List<Appointment> findByPatientId(Integer patientId);
 	 
 	 @Query(value = "select appointment_id from appointment where patient_id =?1",nativeQuery=true)
@@ -38,6 +37,7 @@ public interface AppointmentRepository extends JpaRepository<Appointment,Integer
 		@Query(value="update Appointment set acceptance=:status where appointment_id=:id",nativeQuery = true)
 		void update(@Param(value = "id") Integer id,@Param(value = "status") String status);
 		
-		@Query(value = "select * from Appointment where patient_id=:id order by appointment_id desc limit 1,1" ,nativeQuery=true)
+		@Query(value = "select * from Appointment where patient_id=:id and acceptance='Accepted' order by appointment_id desc limit 1,1" ,nativeQuery=true)
 		public Appointment findPreviousAppointmentById(@Param(value="id") Integer id);
+
 }

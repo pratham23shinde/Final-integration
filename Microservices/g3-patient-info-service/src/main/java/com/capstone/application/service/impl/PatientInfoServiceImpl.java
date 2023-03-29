@@ -73,11 +73,11 @@ public class PatientInfoServiceImpl implements PatientInfoService
 		return null;
 	}
 	
+	//Sangeeta
+		@Override
+		public long countPatient() {
+			return patientInfoRepository.count();
+		}
 	
-	// aakash
-	@Override
-	public Optional<Patient> findByIdData(Integer patientId){
-		// TODO Auto-generated method stub
-		return patientInfoRepository.findById(patientId);
-	}
+
 }

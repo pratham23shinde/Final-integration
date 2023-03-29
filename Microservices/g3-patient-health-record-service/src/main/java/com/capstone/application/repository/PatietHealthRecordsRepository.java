@@ -15,14 +15,14 @@ public interface PatietHealthRecordsRepository extends JpaRepository<VisitDetail
 
 	
 	//aakash
-	@Query(value = "Select * from visit_details  where patient_id=:id order by visit_id desc limit 1,1", nativeQuery =true)
+	@Query(value = "Select * from visit_details  where patient_id=:id order by visit_id desc limit 1", nativeQuery =true)
 	public VisitDetails  getPreviousVisitIdDetailsById(@Param(value="id") Integer id)	;
 
 	@Query(value="Select * from visit_details where appointment_id=:id", nativeQuery =true)
 	 public VisitDetails findVisitDetailsById(@Param(value = "id") Integer id);
 	
 	//Eshwari
-	@Query(value="select * from visit_details where patient_id =?1 and blood_group is not null limit 1;", nativeQuery=true)
+	@Query(value="select * from visit_details where patient_id =?1 and blood_group is not null limit 1", nativeQuery=true)
 
 	public Optional< VisitDetails> getBloodGroup(int patientId);
 
