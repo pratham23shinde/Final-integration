@@ -29,7 +29,8 @@ export class PreviousAppointmentComponent implements OnInit {
     this.getAppointmenthHistoryDetailsById();
     // this.perviousAppointmentVisitHistory();
   }
-
+  show!:boolean;
+  hide!:boolean;
   patientId=sessionStorage.getItem("patientid")
   perviousAppointmentIdData:any
   getPeviousAppointment() {
@@ -37,24 +38,33 @@ export class PreviousAppointmentComponent implements OnInit {
     this.patientService.getPeviousAppointment(Number(this.patientId)).subscribe(response => {
       this.perviousAppointmentIdData = response;
       console.log("get previous app",response);
+        
+      if(response===null)
+      {
+        this.show=true;
+        this.hide=false
+      }else{
+        this.show=false;
+        this.hide=true;
+      }
     })
   }
 
-  perviousAppointmentVisitHistory:any
- 
+  perviousAppointmentVisitHistory:any;
+
   getAppointmenthHistoryDetailsById() {
     console.log(
       'this is patient id in getvisit history detailsby id for history',
       this.patientId
     );
-
+    console.log(
+      'Appointment History Details By Id IN Update component',
+      this.perviousAppointmentIdData
+    );
     this.patientService.getAppointmentHistoryDetailsById(this.patientId)
       .subscribe((response: any) => {
         this.perviousAppointmentVisitHistory = response;
-        console.log(
-          'Appointment History Details By Id IN Update component',
-          this.perviousAppointmentVisitHistory
-        );
+      
 
         sessionStorage.setItem("previousAppoitmentId",this.perviousAppointmentVisitHistory.appointmentId);
       });

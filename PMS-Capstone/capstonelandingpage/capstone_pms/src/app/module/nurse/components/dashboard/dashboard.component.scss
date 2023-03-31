@@ -20,17 +20,20 @@ table {
 .classParent {
   display: flex;
 }
-.childClass1 {
-  .mat-card-title {
-    // background-attachment: $borderbottomcolor;
-    font-weight: 500;
+.parent1{
+  display: flex;
+  .child1{
+   width: 40%;
+  }
+  .child2{
+   width: 60%;
+   .child21{
+    float: right;
+    margin-right: 15px;
+   }
   }
 }
-.childClass2 {
-  float: right;
-  width: 30%;
-  margin-top: -45px;
-}
+
 .submit {
   background: none;
   border: none;

@@ -19,6 +19,7 @@
           "options": {
             "outputPath": "dist/capstone_pms",
             "index": "src/index.html",
+
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"

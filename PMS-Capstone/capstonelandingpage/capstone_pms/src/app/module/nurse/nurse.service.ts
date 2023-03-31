@@ -5,6 +5,7 @@ import { Allergy } from './components/addvisitdetails/addvisitdetails.component'
 import { VisitDetails } from './components/addvisitdetails/visistDetails.model';
 
 import { AppointmentList } from './components/dashboard/dashboard.component';
+import { PhysicianDetailsList } from './components/doctors/doctors.component';
 import { PrescriptionList } from './components/prescription/prescription.component';
 import { AppointmentDetails, VisitId } from './components/previoushealthrecords/previoushealthrecords.component';
 // import { VisitId } from './components/previoushealthrecords/previoushealthrecords.component';
@@ -99,6 +100,24 @@ getAppointmentDetails(
   return this.http.get<AppointmentDetails[]>(
     `http://localhost:9003/api/v1/appointments/${appointmentId}`
   );
+}
+//get appoitment by date
+getTodaysAppointment(date:string,acceptance:string){
+  return this.http.get(`http://localhost:9003/api/v1/appointment/nurse/${date}?acceptance=Accepted`);
+}
+/// get visit details by visit id
+getVisitDetails(VisitId:number):Observable<VisitDetails[]>{
+  return this.http.get<VisitDetails[]>(
+    `http://localhost:9005/api/v1/patient/${VisitId}/visit-details`
+  )
+}
+//nurseifo by email id
+getNurseDetailsByEmail(email:String){
+  return this.http.get(`http://localhost:9005/api/v1/nursedetails/${email}`);
+}
+//physician info list
+getAllDoctors():Observable<PhysicianDetailsList[]>{
+  return this.http.get<PhysicianDetailsList[]>(`http://localhost:9007/api/v1/physician-availability`);
 }
   
 }

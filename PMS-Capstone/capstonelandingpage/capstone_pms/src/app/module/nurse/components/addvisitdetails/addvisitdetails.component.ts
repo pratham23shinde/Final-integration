@@ -163,7 +163,7 @@ form =this.formBuilder.group({
 get keyNotes(){
 return this.form.controls['keyNotes'];
 }
-numValidate(event:any ){
+numValidator(event:any ){
   if(event.target.value.length===0 && event.key =="0"){
     event.preventDefault();
     alert("Enter null value");

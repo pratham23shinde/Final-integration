@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.capstone.application.dto.VisitDetailsDto;
+import com.capstone.application.exception.PatientHealthException;
 import com.capstone.application.model.AdminInfo;
 import com.capstone.application.model.NurseInfo;
 import com.capstone.application.model.Prescription;
@@ -69,7 +70,7 @@ public interface PatientHealthRecordService {
 
 	// Eshwari
 
-	public Optional<VisitDetails> findBloodGroupForPatient(int patientId);
+	public Optional<VisitDetails> findBloodGroupForPatient(int patientId) throws PatientHealthException;
 
 	public Optional<VisitDetails> getDetailsByAppId(int appointmentId);
 	
@@ -77,5 +78,11 @@ public interface PatientHealthRecordService {
 		public long countNurses();
 
 		public long countAdmins();
+		
+		//mrunal
+		public List<VisitDetails> findVisitDetailsByVisitId(int visitId);
+		
+		//gayatri
+		public NurseInfo getNurseDetails(String nurse_email);
 
 }

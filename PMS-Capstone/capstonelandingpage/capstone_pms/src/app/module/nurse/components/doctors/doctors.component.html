@@ -1,1 +1,28 @@
-<p>doctors works!</p>
+<span class="mainprofile"   *ngFor="let a of details">
+    <!-- <img
+      src="http://holamed.like-themes.com/wp-content/uploads/2018/11/01.jpg"
+      alt="Physicia image"
+    /> -->
+    <div class="profileinfo">
+      <div class="nameandqualificatio">
+        <h2>
+          <i class="fa-solid fa-user-nurse"></i> {{a.first_name}} {{a.last_name}} <br /><span
+            ></span
+          >
+        </h2>
+        <div class="basicinfo">
+        
+          <p><span>Specialization: </span>{{a.speciality}}</p>
+        </div>
+      </div>
+    
+      <div class="contact">
+        
+  
+        <h4>
+          <i class="fa-solid fa-envelope"></i> {{a.physicianEmail}}
+        </h4>
+      </div>
+      
+    </div>
+  </span>

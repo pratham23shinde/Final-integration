@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpClientErrorException;
 
+import com.capstone.application.exception.AppointmentServiceException;
 import com.capstone.application.model.Appointment;
 import com.capstone.application.service.AppointmentService;
 
@@ -37,31 +38,17 @@ public class AppointmentController
 		super();
 		this.appointmentService = appointmentService;
 	}
+	
 	@GetMapping("/appointments/{appointmentId}")
-	public List<Appointment> appointmentsByAppointmentId(@PathVariable int appointmentId) {
-		try {
-			log.info("Appointment details fetched by ID successfully");
+	public List<Appointment> appointmentsByAppointmentId(@PathVariable int appointmentId) throws AppointmentServiceException {
+		
 		return appointmentService.findAppointmentsByAppointmentId(appointmentId);
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
 	}
 	
 	@GetMapping("/patient/{patientId}/allappointments")
-	public List<Integer> allAppointmentsForPatientId(@PathVariable int patientId)
+	public List<Integer> allAppointmentsForPatientId(@PathVariable int patientId) throws AppointmentServiceException
 	{
-		try {
-			log.info("Patient all appointment information fetced by patientId successfully");
 		return appointmentService.findAllAppointmentsByPatientId(patientId);
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
 	}
 
 //	@GetMapping("/appointment/{patientId}/previous")
@@ -80,136 +67,70 @@ public class AppointmentController
 	
 	
 	@GetMapping("/patient/{patientId}/appointments")
-	public List<Appointment> appointmetForPatientId(@PathVariable int patientId)
+	public List<Appointment> appointmetForPatientId(@PathVariable int patientId) throws AppointmentServiceException
 	{
-		try {
-			log.info("Patient all appointments information fetched successfully");
 		return appointmentService.findByAppointmentById(patientId);
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
+		
 	}
 	
+	
 	@GetMapping("/appointment/{physicianEmail}")
-	public List<Appointment> pendingAppointmentByEmail(@PathVariable String physicianEmail,@RequestParam String acceptance) {
-		try {
-			log.info("All appointments for physician fetched successfully");
+	public List<Appointment> pendingAppointmentByEmail(@PathVariable String physicianEmail,@RequestParam String acceptance) throws AppointmentServiceException{
 		return appointmentService.findByAppointmentByPEmail(physicianEmail,acceptance);
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
+		
 	} 
 	
 	@GetMapping("/appointment/{physicianEmail}/{date}")
-	public List<Appointment> AcceptedAppointmentByEmailandDate(@PathVariable String physicianEmail, @PathVariable String date,@RequestParam String acceptance) {
-		try {
-			log.info("All appointments for a particular date fetched successfully");
-	return appointmentService.findByAppointmentByPEmailandDate(physicianEmail,date,acceptance);
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
+	public List<Appointment> AcceptedAppointmentByEmailandDate(@PathVariable String physicianEmail, @PathVariable String date,@RequestParam String acceptance) throws AppointmentServiceException{
+		return appointmentService.findByAppointmentByPEmailandDate(physicianEmail,date,acceptance);
+		
 	}
 	
 	@GetMapping("/appointments")
-	public  List<Appointment> acceptedAppointmentForNurse(@RequestParam String acceptance)
+	public  List<Appointment> acceptedAppointmentForNurse(@RequestParam String acceptance) throws AppointmentServiceException
 	{
-		try {
-			log.info("All accepted appointments list fetched successfully");
 		return appointmentService.findByAcceptedAppointment(acceptance);
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
 	}
 	
 	@PostMapping("/appointment")
-	public Appointment Createappointment(@RequestBody Appointment appointment)
+	public Appointment Createappointment(@RequestBody Appointment appointment) throws AppointmentServiceException
 	{
-		try {
-			log.info("Appointment booked successfully");
 		return appointmentService.saveAppointment(appointment);
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
 	}
 	
 	@PutMapping("/appointments/{appointmentId}")
-	public Appointment updatedPhysicianAvailabilitys(@RequestBody Appointment appointment) 
+	public Appointment updatedPhysicianAvailabilitys(@RequestBody Appointment appointment) throws AppointmentServiceException
 	{
-		try {
-	        log.info("Appointment updated successfully");
 		Appointment updateResponse = appointmentService.update(appointment);
         return updateResponse;
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
 	}
 	
 	@DeleteMapping("/appointment/{appointmentId}")
-	public boolean deleteAppointmentById(@PathVariable("appointmentId")Integer appointmentId) {
-		try {
-			log.info("Appointment deleted successfully");
+	public boolean deleteAppointmentById(@PathVariable("appointmentId")Integer appointmentId) throws AppointmentServiceException
+	{
 		return appointmentService.deleteAppointment(appointmentId);
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
 		
 	}
 	
 	//aakash solanke
 	@PutMapping("/appointments/{appointmentId}/{status}")
 	@Transactional
-	public void updatedPhysicianAvailabilitys(@PathVariable int appointmentId, @PathVariable String status) 
+	public void updatedPhysicianAvailabilitys(@PathVariable int appointmentId, @PathVariable String status) throws AppointmentServiceException
 	{
-		try {
 		appointmentService.updateByID(appointmentId,status);
-        
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
 	}
 	
 	
 	@PutMapping("/rejectedappointments/{appointmentId}/{status}")
 	@Transactional
-	public void rejectAppointment(@PathVariable int appointmentId, @PathVariable String status) 
+	public void rejectAppointment(@PathVariable int appointmentId, @PathVariable String status) throws AppointmentServiceException 
 	{
-		try {
 		appointmentService.updateByID(appointmentId,status);
         
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
 	}
-
+	
 	@GetMapping("/appointment/{patientId}/previous")
-	public Appointment previousAppointment(@PathVariable int patientId) {
+	public Appointment previousAppointment(@PathVariable int patientId) throws AppointmentServiceException{
 	return appointmentService.findPreviousAppointmentByPatientId(patientId);
 	}
 	
@@ -218,4 +139,13 @@ public class AppointmentController
 		public long appointmentCount() {
 		return appointmentService.countAppointments();
 		}
+	
+		//gayatri
+		@GetMapping("/appointment/nurse/{date}")
+		public List<Appointment> AcceptedAppointmentByDate( @PathVariable String date,@RequestParam String acceptance) throws AppointmentServiceException {
+			System.out.println(date +" "+" "+ acceptance);
+			return appointmentService.findAppointmentByDate(date,acceptance);
+			
+		}
+		
 }

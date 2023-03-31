@@ -1,3 +1,4 @@
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -34,7 +35,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatListModule } from '@angular/material/list';
-import { MatOptionModule } from '@angular/material/core';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
@@ -79,6 +80,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     MatOptionModule,
     MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
 })
 export class NurseModule {}

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpClientErrorException;
 
 import com.capstone.application.dto.VisitDetailsDto;
+import com.capstone.application.exception.PatientHealthException;
 import com.capstone.application.model.AdminInfo;
 import com.capstone.application.model.NurseInfo;
 import com.capstone.application.model.Prescription;
@@ -45,7 +46,7 @@ public class PatientHealthRecordController {
 	// Eshwari changes
 	@GetMapping("/patient/{patientId}/bloodgroup")
 
-	public Optional<VisitDetails> FindPatientBloodGroup(@PathVariable int patientId) {
+	public Optional<VisitDetails> FindPatientBloodGroup(@PathVariable int patientId) throws PatientHealthException{
 
 		return patientHealthRecordService.findBloodGroupForPatient(patientId);
 
@@ -283,6 +284,17 @@ public class PatientHealthRecordController {
 		@GetMapping("/adminCount")
 		public long adminCount() {
 		return patientHealthRecordService.countAdmins();
+		}
+		
+		//mrunal
+		@GetMapping("/patient/{visitId}/visit-details")
+		public List<VisitDetails> findVisitDetailsByVisitId(@PathVariable int visitId){
+			return patientHealthRecordService.findVisitDetailsByVisitId(visitId);
+		}
+		//gayatri
+		@GetMapping("/nursedetails/{nurse_email}")
+		public NurseInfo getNurseDetails(@PathVariable String nurse_email) {
+			return patientHealthRecordService.getNurseDetails(nurse_email);
 		}
 
 }

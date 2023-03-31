@@ -1,48 +1,48 @@
 <div class="navbar">
-    <div class="top">
-      <div class="demo-section">
-        <mat-icon matBadge="15" matBadgeColor="warn">notifications_none</mat-icon>
-      </div>
-      <!-- <mat-icon matBadge="15" matBadgeColor="warn" [inline]="true">notifications_none</mat-icon> -->
+  <div class="top">
+    <div class="demo-section">
+      <mat-icon matBadge="15" matBadgeColor="warn">notifications_none</mat-icon>
     </div>
-    <div class="user">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67CK2JdmRsOEuDYJooISW3e1iKqh2pSEOMg&usqp=CAU"
-        alt="doctor avatar"
-      />
-      <h4 class="name">Nurse</h4>
-      <p class="mail">admin@gmainl.com</p>
+    <!-- <mat-icon matBadge="15" matBadgeColor="warn" [inline]="true">notifications_none</mat-icon> -->
+  </div>
+  <div class="user">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67CK2JdmRsOEuDYJooISW3e1iKqh2pSEOMg&usqp=CAU"
+      alt="doctor avatar"
+    />
+    <h4 class="name">{{nurseInfo.first_Name}}  {{nurseInfo.last_Name}}</h4>
+    <p class="mail">{{nurseInfo.nurse_email}}</p>
+  </div>
+  <div class="menu">
+    <div class="menu-head">
+      <span>Dashboard</span>
     </div>
-    <div class="menu">
-      <div class="menu-head">
-        <span>Dashboard</span>
-      </div>
-      <div class="menu-item">
-        <button
-          mat-button
-          class="menu-button"
-          [routerLink]="['/nurse/dashboard']"
-        >
-          <mat-icon>dashboard</mat-icon>
-          <span>Home</span>
-        </button>
-  
-        <button mat-button class="menu-button" [routerLink]="['/nurse/doctors']">
-          <mat-icon>Person</mat-icon>
-          <span>Doctor</span>
-        </button>
-        <button
-          mat-button
-          class="menu-button"
-          [routerLink]="['/nurse/notification']"
-        >
-          <mat-icon>notifications_none</mat-icon>
-          <span>Notification</span>
-        </button>
-        <button mat-button class="menu-button" [routerLink]="['/nurse/profile']">
-          <mat-icon>person_outline</mat-icon>
-          <span>Profile</span>
-        </button>
-      </div>
+    <div class="menu-item">
+      <button
+        mat-button
+        class="menu-button"
+        [routerLink]="['/nurse/dashboard']"
+      >
+        <mat-icon>dashboard</mat-icon>
+        <span>Home</span>
+      </button>
+
+      <button mat-button class="menu-button" [routerLink]="['/nurse/doctors']">
+        <mat-icon>Person</mat-icon>
+        <span>Doctor</span>
+      </button>
+      <button
+        mat-button
+        class="menu-button"
+        [routerLink]="['/nurse/notification']"
+      >
+        <mat-icon>notifications_none</mat-icon>
+        <span>Notification</span>
+      </button>
+      <button mat-button class="menu-button" [routerLink]="['/nurse/profile']">
+        <mat-icon>person_outline</mat-icon>
+        <span>Profile</span>
+      </button>
     </div>
   </div>
+</div>

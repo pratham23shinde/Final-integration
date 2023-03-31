@@ -114,6 +114,7 @@ import { PatientService } from '../../patient.service';
 import { HttpClient } from '@angular/common/http';
 import { CalenderUser } from './book_appointment.model';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { MatDialogRef } from '@angular/material/dialog';
 
 class AppointmentUser {
   drFirstName: any;
@@ -174,7 +175,8 @@ export class BookAppointmentComponent implements OnInit {
     private patientService: PatientService,
     private router: Router,
     private http: HttpClient,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private matDialogRefrence : MatDialogRef<BookAppointmentComponent>
   ) {}
 
   ngOnInit() {
@@ -312,6 +314,7 @@ export class BookAppointmentComponent implements OnInit {
       },
       (error: any) => console.log(error)
     );
+    this.matDialogRefrence.close();
   }
   //  goToUserList(){
   //   this.router.navigate(['/patient/register']);

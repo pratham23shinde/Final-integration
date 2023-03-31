@@ -1,113 +1,128 @@
-<mat-card class="example-card">
-  <div class="parentclass">
-    <div class="childClass1">
-      <mat-card-header>
-        <mat-card-title-group>
-          <mat-card-title>Appointment list</mat-card-title>
-          <mat-card-subtitle>Date:16-09-2023</mat-card-subtitle>
-        </mat-card-title-group>
-      </mat-card-header>
-    </div>
+<h4><mat-icon>calendar_today</mat-icon><span>Accepted Appointment</span></h4>
 
-    <div class="childClass2">
-      <mat-form-field>
-        <mat-label>Search</mat-label>
-        <input
-          matInput
-          (keyup)="applyFilter($event)"
-          placeholder="search here"
-          #input
-        />
-      </mat-form-field>
-    </div>
+<!-- <div class="inputfield"> -->
+  <div class="parent1">
+  <div class="child1">
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="Choose a date"
+        [min]="todayDate"
+        (dateChange)="onDateSelected($event.target.value)"
+        
+      />
+      <i (click)="picker.open()" class="fa-solid fa-calendar-days" matSuffix></i>
+      <mat-datepicker #picker></mat-datepicker>
+      
+    </mat-form-field>
+    
   </div>
-</mat-card>
-
+  <div class="child2">
+    <mat-form-field class="child21">
+      <mat-label>Search</mat-label>
+     
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="search here"
+        #input
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+</div>
+<!-- </div> -->
 <mat-card class="example-card">
-  <mat-card-content>
-    <div class="mat-elevation-z8">
-      <table
-        mat-table
-        [dataSource]="dataSource"
-        matSort
-        (matSortChange)="announceSortChange($event)"
-      >
-        <!-- id Column -->
-        <ng-container matColumnDef="appointmentId">
-          <th
-            mat-header-cell
-            *matHeaderCellDef
-            mat-sort-header
-            sortActionDescription="Sort by appointmentId"
-          >
-            Id
-          </th>
-          <td mat-cell *matCellDef="let element">
-            {{ element.appointmentId }}
-          </td>
-        </ng-container>
-
-        <!--namet Column -->
-        <ng-container matColumnDef="patientId">
-          <th
-            mat-header-cell
-            *matHeaderCellDef
-            mat-sort-header
-            sortActionDescription="Sort by patientId"
-          >
-            Patient Name
-          </th>
-          <td mat-cell *matCellDef="let element">{{ element.patientId }}</td>
-        </ng-container>
-
-        <!-- date Column -->
-        <ng-container matColumnDef="date">
-          <th
-            mat-header-cell
-            *matHeaderCellDef
-            mat-sort-header
-            sortActionDescription="Sort by date"
-          >
-            Appointment Time
-          </th>
-          <td mat-cell *matCellDef="let element">{{ element.date }}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="reason">
-          <th mat-header-cell *matHeaderCellDef>Symtoms from Patient</th>
-          <td mat-cell *matCellDef="let element">{{ element.reason }}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="info">
-          <th mat-header-cell *matHeaderCellDef>Dignosis Info</th>
-          <td mat-cell *matCellDef="let row">
-            <button
-              class="submit"
-              mat-raised-button
-              color="primary"
-              [routerLink]="['/nurse/patient-info']"
-              (click)="
-                sendAppointmentData(
-                  row.physicianEmail,
-                  row.appointmentId,
-                  row.patientId
-                )
-              "
+   
+  </mat-card>
+  
+  <mat-card class="example-card">
+    <mat-card-content>
+      <div class="mat-elevation-z8">
+        <table
+          mat-table
+          [dataSource]="dataSource"
+          matSort
+          (matSortChange)="announceSortChange($event)"
+        >
+          <!-- id Column -->
+          <ng-container matColumnDef="appointmentId">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              sortActionDescription="Sort by appointmentId"
             >
-              Add Info
-            </button>
-          </td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-      </table>
-      <mat-paginator
-        [pageSizeOptions]="pageSizes"
-        showFirstLastButtons
-        aria-label="Select page of periodic elements"
-      >
-      </mat-paginator>
-    </div>
-  </mat-card-content>
-</mat-card>
+              Appoitment Id 
+            </th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.appointmentId }}
+            </td>
+          </ng-container>
+  
+          <!--namet Column -->
+          <ng-container matColumnDef="patientId">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              sortActionDescription="Sort by patientId"
+            >
+              Patient Id
+            </th>
+            <td mat-cell *matCellDef="let element">{{element.patientId}}</td>
+            <!-- <td mat-cell *matCellDef="let element">{{patientbyIdData.firstName }} {{patientbyIdData.lastName }}</td> -->
+          </ng-container>
+  
+          <!-- date Column -->
+          <ng-container matColumnDef="date">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              sortActionDescription="Sort by date"
+            >
+              Appointment Time
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+          </ng-container>
+  
+          <ng-container matColumnDef="reason">
+            <th mat-header-cell *matHeaderCellDef>Symtoms from Patient</th>
+            <td mat-cell *matCellDef="let element">{{ element.reason }}</td>
+          </ng-container>
+  
+          <ng-container matColumnDef="info">
+            <th mat-header-cell *matHeaderCellDef>Dignosis Info</th>
+            <td mat-cell *matCellDef="let row">
+              <button
+                class="submit"
+                mat-raised-button
+                color="primary"
+                [routerLink]="['/nurse/patient-info']"
+                (click)="
+                  sendAppointmentData(
+                    row.physicianEmail,
+                    row.appointmentId,
+                    row.patientId
+                  )
+                "
+              >
+                Add Info
+              </button>
+            </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+        <mat-paginator
+          [pageSizeOptions]="pageSizes"
+          showFirstLastButtons
+          aria-label="Select page of periodic elements"
+        >
+        </mat-paginator>
+      </div>
+    </mat-card-content>
+  </mat-card>

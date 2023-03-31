@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="hide">
   <div class="mainclass">
     <div class="childclass childclass2">
       <p>
@@ -15,8 +15,8 @@
     </div>
   </div>
 </div>
-<div *ngIf="perviousAppointmentIdData === null">
-  <div class="mainclass">
+<div >
+  <div class="mainclass" *ngIf="show">
     <p>Patients no previous history</p>
   </div>
 </div>

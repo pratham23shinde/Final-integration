@@ -33,7 +33,7 @@ public class PatientAuthenticationServiceImpl implements PatientAuthenticationSe
 	public Optional<Patient> patientLogin(String email, String password) {
 		// TODO Auto-generated method stub
 		try {
-			log.info("Patient login successfull");
+			
 		return patientAuthenticationRepository.authenticateByEmailandPassword(email,password);
 		}
 		catch(Exception e)

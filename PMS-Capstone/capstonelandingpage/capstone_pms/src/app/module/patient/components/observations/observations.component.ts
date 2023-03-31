@@ -72,6 +72,7 @@ export class ObservationsComponent {
     console.log("VisitId",this.arr);
     
     this.getTests();
+    this.getVisitDetailsByVisitId();
     // this.getVisitDetailsByVisitId();
     // this.getAppointment();
     // console.log("Rushi",this.visitIdForDoctor);
@@ -141,6 +142,13 @@ export class ObservationsComponent {
         this.visits = reponse;
         sessionStorage.setItem('data', JSON.stringify(reponse));
         console.log("visitId",this.visits);
+        if(this.visits===null){
+          this.show=false;
+        }
+        else{
+          this.show=true;
+        }
+
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
@@ -148,11 +156,11 @@ export class ObservationsComponent {
     );
   }
 
-  info(id:any){
-    sessionStorage.setItem("pass",id);
-    // console.log("IDDDD",id);
+  // info(id:any){
+  //   sessionStorage.setItem("pass",id);
+  //   // console.log("IDDDD",id);
 
-  }
+  // }
   visitIdForDoctor = sessionStorage.getItem("pass");
   // getVisitDetailsByVisitId():void{
   //   this.patientService.getVisitDetails(Number(this.visitIdForDoctor)).subscribe(
@@ -166,37 +174,40 @@ export class ObservationsComponent {
   //   )
 
   // }
+  eshu: any[] = [];
+  getVisitDetailsByVisitId(): void {
+    for (let a of this.arr) {
+      this.patientService
+        .getVisitDetails(Number(a))
+        .subscribe((response: VisitDetails[]) => {
+          this.visitDetails = response;
+          console.log('EEEEEEEE', response);
+          // sessionStorage.setItem('appId', JSON.stringify(response));
+          var len2 = this.eshu.push(response[0].appointmentId);
+          this.getAppointmentDetails(response[0].appointmentId);
+        });
+    }
+  }
 
-  doctor = sessionStorage.getItem("appId");
+  doctor: any[] = [];
 
-  public getAppointment(): void {
-      this.patientService.getAppointmentDetails(Number(this.doctor)).subscribe(
+  public getAppointmentDetails(x : number): void {
+      this.patientService.getAppointmentDetails(x).subscribe(
         (response: AppointmentDetails[]) => {
           this.appointmentDetails = response;
-          console.log("APPoint",this.appointmentDetails);
+          console.log('MMMMMMMMMMMMM', response);
+          var len4 = this.doctor.push(response);
           
         },
         (error: HttpErrorResponse) => {
           alert(error.message);
         }
       );
-    
   }
 
-  // public getAppointmentId(): void {
-  //   this.historyService.getAllAppointments(this.num).subscribe(
-  //     (response: AllAppointments[]) => {
-  //       this.appointments = response;
-  //       sessionStorage.setItem('app', JSON.stringify(response));
-  //       console.log('Mrunal', this.appointments);
-  //     },
-  //     (error: HttpErrorResponse) => {
-  //       alert(error.message);
-  //     }
-  //   );
-  // }
 
   try: any[] = [];
+show!:boolean
 
   public getTests(): void {
     for (let mrunal of this.arr) {
@@ -204,6 +215,7 @@ export class ObservationsComponent {
       this.patientService.getAllTests(Number(mrunal)).subscribe(
         (response: TestList[]) => {
           this.tests = response;
+          
           sessionStorage.setItem('visitid', mrunal);
           var len = this.try.push(response);
           // console.log(this.tests);
@@ -216,30 +228,7 @@ export class ObservationsComponent {
   }
 
   // perviousAppointmentIdData: any;
-  // getPeviousAppointment() {
-  //   this.historyService
-  //     .getPeviousAppointment(this.num)
-  //     .subscribe((response) => {
-  //       this.perviousAppointmentIdData = response;
-  //       console.log(response);
-  //       console.log(this.perviousAppointmentIdData.appointmentId);
-  //     });
-  // }
-  // perviousAppointmentVisitHistory: any;
-  // getPeviousAppointmentVisitHistory() {
-  //   console.log(this.perviousAppointmentIdData.appointmentId);
-  //   this.historyService
-  //     .getPeviousAppointmentVisitHistory(
-  //       this.perviousAppointmentIdData.appointmentId
-  //     )
-  //     .subscribe((response) => {
-  //       this.perviousAppointmentVisitHistory = response;
-  //       console.log(response);
-  //     });
-  // }
-
-   
-
+  
   openDialog(ashwin : any) {
     
     sessionStorage.setItem('view',ashwin);

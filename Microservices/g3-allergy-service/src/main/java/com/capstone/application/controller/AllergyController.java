@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpClientErrorException;
 
+import com.capstone.application.exception.AllergyServiceException;
 import com.capstone.application.model.Allergy;
 import com.capstone.application.service.AllergyService;
 
@@ -38,34 +39,22 @@ public class AllergyController
 	}
 
 	@GetMapping("/allergyList")
-	@ResponseStatus(HttpStatus.ACCEPTED)
-	public List<Allergy> allergy() 
+	public List<Allergy> allergy() throws AllergyServiceException 
 	{
-		try {
+		
 		List < Allergy > allergy = allergyService.findAll();
+		
 		return allergy;
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
+		
 	}
 	
 	
 	@GetMapping("/allergy/{allergyId}")
 	@ResponseStatus(HttpStatus.ACCEPTED)
-	public Optional<Allergy> allergyById(@PathVariable int allergyId) 
+	public Optional<Allergy> allergyById(@PathVariable int allergyId) throws AllergyServiceException 
 	{
-		try {
         Optional < Allergy > optional = allergyService.findById(allergyId);
 		return optional;
-		}
-		catch(Exception e)
-		{
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
 		
 	}
 	

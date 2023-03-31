@@ -32,8 +32,8 @@ submissionDate : string;
 export interface VisitDetails{
   height:number;
    weight:any;
-   BPdiastolic:any;
-   BPsystolic:any;
+   bpDiastolic:any;
+   bpSystolic:any;
    bloodGroup:any;
    bodyTemperature:any;
    patientId :any;
@@ -54,7 +54,7 @@ export class PrevioushealthrecordsComponent {
   paginator: any;
   sort: MatSort | null | undefined;
   constructor(
-    private patientService: NurseService,
+    private service: NurseService,
     private _liveAnnouncer: LiveAnnouncer,
     public dialog: MatDialog
   ) {}
@@ -68,6 +68,7 @@ export class PrevioushealthrecordsComponent {
     
     this.getVisitId();
     console.log("VisitId",this.arr);
+    this.getVisitDetailsByVisitId();
     
     this.getTests();
    
@@ -125,7 +126,7 @@ export class PrevioushealthrecordsComponent {
 
   public getVisitId(): void {
     console.log("inside getVisitId",this.num);
-    this.patientService.getAllVisitId(this.num).subscribe(
+    this.service.getAllVisitId(this.num).subscribe(
       (reponse: VisitId[]) => {
         this.visits = reponse;
         sessionStorage.setItem('data', JSON.stringify(reponse));
@@ -148,7 +149,7 @@ export class PrevioushealthrecordsComponent {
   doctor = sessionStorage.getItem("appId");
 
   public getAppointment(): void {
-      this.patientService.getAppointmentDetails(Number(this.doctor)).subscribe(
+      this.service.getAppointmentDetails(Number(this.doctor)).subscribe(
         (response: AppointmentDetails[]) => {
           this.appointmentDetails = response;
           console.log("APPoint",this.appointmentDetails);
@@ -168,7 +169,7 @@ export class PrevioushealthrecordsComponent {
   public getTests(): void {
     for (let mrunal of this.arr) {
       console.log('getTEst', Number(mrunal));
-      this.patientService.getAllTests(Number(mrunal)).subscribe(
+      this.service.getAllTests(Number(mrunal)).subscribe(
         (response: TestList[]) => {
           this.tests = response;
           sessionStorage.setItem('visitid', mrunal);
@@ -190,19 +191,35 @@ export class PrevioushealthrecordsComponent {
     this.dialog.open(ViewprescriptionComponent);
   }
 
-  announceSortChange(sortState: Sort) {
-    if (sortState.direction) {
-      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
-    } else {
-      this._liveAnnouncer.announce('Sorting cleared');
+  
+
+  eshu: any[] = [];
+  getVisitDetailsByVisitId(): void {
+    for (let a of this.arr) {
+      this.service
+        .getVisitDetails(Number(a))
+        .subscribe((response: VisitDetails[]) => {
+          this.visitDetails = response;
+          console.log('EEEEEEEE', response);
+          // sessionStorage.setItem('appId', JSON.stringify(response));
+          var len2 = this.eshu.push(response[0].appointmentId);
+          this.getAppointmentDetails(response[0].appointmentId);
+        });
     }
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource1.filter = filterValue.trim().toLowerCase();
+  appointmentDetail: any[] = [];
 
-    if (this.dataSource1.paginator) {
-      this.dataSource1.paginator.firstPage();
-    }
-  }}
+  public getAppointmentDetails(x : number): void {
+      this.service.getAppointmentDetails(x).subscribe(
+        (response: AppointmentDetails[]) => {
+          this.appointmentDetails = response;
+          console.log('MMMMMMMMMMMMM', response);
+          var fuck = this.appointmentDetail.push(response);
+        },
+        (error: HttpErrorResponse) => {
+          alert(error.message);
+        }
+      );
+  }
+}

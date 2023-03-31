@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capstone.application.dto.VisitDetailsDto;
+import com.capstone.application.exception.PatientHealthException;
 import com.capstone.application.model.AdminInfo;
 import com.capstone.application.model.NurseInfo;
 import com.capstone.application.model.Prescription;
@@ -516,9 +517,14 @@ public class PatientHealthRecordsServiceImpl implements PatientHealthRecordServi
 
 	@Override
 
-	public Optional<VisitDetails> findBloodGroupForPatient(int patientId) {
+	public Optional<VisitDetails> findBloodGroupForPatient(int patientId) throws PatientHealthException {
 
 		// TODO Auto-generated method stub
+		
+		Optional<VisitDetails> result = patientHealthRecordsRepository.getBloodGroup(patientId);
+		if(result.isEmpty()) {
+			throw new PatientHealthException("No patient found with patient Id "+ patientId);
+		}
 
 		return patientHealthRecordsRepository.getBloodGroup(patientId);
 
@@ -545,6 +551,16 @@ public class PatientHealthRecordsServiceImpl implements PatientHealthRecordServi
 		@Override
 		public long countAdmins() {
 			return adminInfoRepo.count();
+		}
+		
+		//mrunal
+		public List<VisitDetails> findVisitDetailsByVisitId(int visitId){
+			return patientHealthRecordsRepository.findVisitDetailsByVisitId(visitId);
+		}
+		//gayatri
+		public NurseInfo getNurseDetails(String nurse_email) {
+			// TODO Auto-generated method stub
+			return nurseInfoRepo.getNurseInfoByEmail(nurse_email);
 		}
 
 }

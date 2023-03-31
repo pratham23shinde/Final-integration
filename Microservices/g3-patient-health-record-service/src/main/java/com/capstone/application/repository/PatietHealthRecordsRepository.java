@@ -31,4 +31,8 @@ public interface PatietHealthRecordsRepository extends JpaRepository<VisitDetail
 	@Query(value ="Select * from visit_details where appointment_id =?1 limit 1" , nativeQuery = true)
 
 	Optional<VisitDetails> getVisitDetailsBtAppId(int appointmentId);
+	
+	//mrunal
+	@Query(value="select * from visit_details where visit_id=?1",nativeQuery=true)
+	public List<VisitDetails> findVisitDetailsByVisitId(int visitId);
 }

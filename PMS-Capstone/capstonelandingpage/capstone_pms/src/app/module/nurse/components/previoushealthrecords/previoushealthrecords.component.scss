@@ -1,0 +1,56 @@
+.bold {
+    font-weight: bold;
+    padding: 10px;
+    //color: #040d67;
+  }
+  .example-div {
+    // float: left;
+    // padding: 0   50px;
+    margin-left: 5%;
+    align-self: center;
+  }
+  .example-div2 {
+    // float: right;
+    // padding: 0   100px;
+  }
+  .div3 {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    background-color: white;
+  }
+  .div4 {
+    margin-top: 2%;
+    float: right;
+    margin-right: 7%;
+  }
+  
+  table {
+    max-height: 80%;
+    max-width: 60%;
+    margin-top: 40px;
+  }
+  .example-card {
+    max-width: 90%;
+    margin: 0 70px;
+  }
+  .example-card2 {
+    max-width: 90%;
+    max-height: 70%;
+    margin: 10px 70px;
+    background-color: aliceblue;
+  }
+  .submit {
+    background: none;
+    border: none;
+    background-color: #2d3663;
+    padding: 15px;
+    width: 10%;
+    // margin-bottom: 15px;
+    // margin-left: auto;
+    // margin-right: auto;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+  }
+  

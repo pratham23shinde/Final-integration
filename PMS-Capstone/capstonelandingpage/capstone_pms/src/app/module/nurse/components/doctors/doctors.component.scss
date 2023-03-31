@@ -1,0 +1,44 @@
+.mainprofile {
+    display: inline-block;
+    
+    width: 30%;
+    height: 40%;
+    margin-right: 3%;
+    margin-top: 3%;
+
+    .profileinfo {
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 8px 10px 10px -7px darkgray;
+      background: aliceblue;
+      .nameandqualificatio {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+        h2 {
+          color: #2d3663;
+          i{
+              margin-right: 7px;
+          }
+          i,
+          span {
+            color: #47ccc8;
+          }
+        }
+      }
+      .basicinfo {
+        color: #2d3663;
+        span {
+          font-weight: 500;
+        }
+      }
+      .contact{
+          h4{
+              color: #2d3663;
+              i{
+                  color: #47ccc8;
+              }
+          }
+      }
+    }
+  }

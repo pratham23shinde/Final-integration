@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
+
+import com.capstone.application.exception.AllergyServiceException;
 import com.capstone.application.model.Allergy;
 import com.capstone.application.repository.AllergyRepository;
 import com.capstone.application.service.AllergyService;
@@ -27,33 +29,31 @@ public class AllergyServiceImpl implements AllergyService {
 	}	
 
 	@Override
-	public List<Allergy> findAll() {
+	public List<Allergy> findAll() throws AllergyServiceException{
 		// TODO Auto-generated method stub
-		try {
-		return allergyRepository.findAll();
+		
+		List<Allergy> result= allergyRepository.findAll();
+		if(result.size()==0) {
+			throw new AllergyServiceException("No Allergy found in the Database");
 		}
-		catch(Exception e)
-		{
-			 e.printStackTrace();
-			log.error(e.getMessage());
-		}
-		return null;
+		
+		
+		return result;
 		
 		
 	}
 
 	@Override
-	public Optional<Allergy> findById(Integer allergyId) {
-		// TODO Auto-generated method stub
-		try {
-		return allergyRepository.findById(allergyId);
+	public Optional<Allergy> findById(Integer allergyId) throws AllergyServiceException{
+
+		Optional<Allergy> result = allergyRepository.findById(allergyId);
+		System.out.println(result);
+		if(result.isEmpty()) {
+			throw new AllergyServiceException("No Allergy found with ID "+allergyId);
 		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-			log.error(e.getMessage());
+		else {
+		return result;
 		}
-		return null;
 	}
 
 }

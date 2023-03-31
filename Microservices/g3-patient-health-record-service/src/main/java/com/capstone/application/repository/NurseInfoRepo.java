@@ -12,7 +12,8 @@ public interface NurseInfoRepo extends JpaRepository<NurseInfo,String>{
 
 	@Query(value="SELECT count(*) FROM nurseinfo WHERE nurse_email=:email",nativeQuery=true)
 	int isValuePresent(String email);
-	
-	
+	//gayu
+	@Query(value="select * from nurseinfo where nurse_email=?1",nativeQuery=true)
+	public NurseInfo getNurseInfoByEmail(String nurse_email) ;
 
 }

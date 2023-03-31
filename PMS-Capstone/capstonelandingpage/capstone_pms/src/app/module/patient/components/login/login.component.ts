@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { PatientService } from '../../patient.service';
 
 export class Login {
-  patientId: number = 0;
+  // patientId: number = 0;
   email: any;
   password: any;
 }

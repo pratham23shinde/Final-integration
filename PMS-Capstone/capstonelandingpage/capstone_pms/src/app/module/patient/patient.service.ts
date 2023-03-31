@@ -8,6 +8,7 @@ import {
   AllAppointments,
   AppointmentDetails,
   TestList,
+  VisitDetails,
   VisitId,
 } from './components/observations/observations.component';
 import { User } from './components/register/register.component';
@@ -130,5 +131,11 @@ export class PatientService {
   // }
   getAppointmentHistoryDetailsById(patientId :any){
     return this.httpClient.get(`http://localhost:9003/api/vi/appointment/${patientId}/previous`);
+  }
+
+  getVisitDetails(VisitId:number):Observable<VisitDetails[]>{
+    return this.httpClient.get<VisitDetails[]>(
+      `http://localhost:9005/api/v1/patient/${VisitId}/visit-details`
+    )
   }
 }

@@ -1,26 +1,32 @@
 <!-- <div class="main"> -->
   <div class="formdivclass">
-    <form action="" class="formclass" (ngSubmit)="onSubmit()" >
+    <form action="" class="formclass" [formGroup]="myGroup"(ngSubmit)="onSubmit()">
     <!-- [formGroup]="myForm">  -->
       <h1>Registration</h1>
       <p>For New Patient</p>
       <div class="space-evenly">
         <mat-form-field appearance="outline" class="width-50">
           <mat-label>Title</mat-label>
-          <mat-select id="title" name="title" [(ngModel)]="user.title">
+          <mat-error *ngIf="myInputTitle.hasError('required')">Title is required</mat-error>
+          <mat-select id="title" name="title" [(ngModel)]="user.title"  [formControl]="myInputTitle">
             <mat-option value="Mr">Mr</mat-option>
             <mat-option value="Ms">Ms</mat-option>
             <mat-option value="Miss">Miss</mat-option>
           </mat-select>
         </mat-form-field>
+
+
         <mat-form-field appearance="outline" class="width-50">
-          <mat-label>First Name*</mat-label>
-          <input matInput name="firstName" [(ngModel)]="user.firstName" />
+          <mat-label>First Name</mat-label>
+          <input matInput name="firstName" [(ngModel)]="user.firstName" [formControl]="myInputFirst">
+          <mat-error *ngIf="myInputFirst.hasError('required')">First Name is required</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="width-50">
-          <mat-label>Last Name*</mat-label>
-          <input matInput name="lastName" [(ngModel)]="user.lastName" />
+          <mat-label>Last Name</mat-label>
+          <input matInput name="lastName" [(ngModel)]="user.lastName"  [formControl]="myInputLast">
+          <mat-error *ngIf="myInputLast.hasError('required')">Last Name is required</mat-error>
+
         </mat-form-field>
       </div>
 
@@ -37,10 +43,9 @@
             matInput
             placeholder="Email"
             [(ngModel)]="user.email"
-            name="email"
-            required
-            email
-          />
+            name="email" [formControl]="myInputEmail">
+            <mat-error *ngIf="myInputEmail.hasError('required')">Email is required</mat-error>
+  <mat-error *ngIf="myInputEmail.hasError('email')">Invalid email address</mat-error>
           <!-- <mat-error
             *ngIf="
               emailFormControl.hasError('email') &&
@@ -55,23 +60,28 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="width-50">
-          <mat-label>Contact Number*</mat-label>
+          <mat-label>Contact Number</mat-label>
           <input
           maxlength="10"
             matInput
             name="contactNumber"
-            [(ngModel)]="user.contactNumber"
-          />
+            [(ngModel)]="user.contactNumber" [formControl]="myInputContact">
+          <mat-error *ngIf="myInputContact.hasError('required')">Phone number is required</mat-error>
+  <mat-error *ngIf="myInputContact.hasError('phoneNumber')">Invalid phone number</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="width-50">
           <mat-label>DOB </mat-label>
+          <mat-error *ngIf="myInputDob.hasError('required')">DOB is required</mat-error>
+
           <input
             matInput
             name="dob"
             [matDatepicker]="picker"
             [(ngModel)]="user.dob"
+            [formControl]="myInputDob"
           />
+          
           <mat-datepicker-toggle
             matIconSuffix
             [for]="picker"
@@ -83,16 +93,33 @@
       <div class="space-evenly">
         <mat-form-field appearance="outline" class="width-50">
           <mat-label>Gender</mat-label>
-          <mat-select id="gender" name="gender" [(ngModel)]="user.gender">
+          <mat-error *ngIf="myInputGender.hasError('required')">Gender is required</mat-error>
+          <mat-select id="gender" name="gender" [(ngModel)]="user.gender" [formControl]="myInputGender">
             <mat-option value="Male">Male</mat-option>
             <mat-option value="Female">Female</mat-option>
             <mat-option value="Other">Other</mat-option>
           </mat-select>
         </mat-form-field>
 
-        <!-- <mat-form-field appearance="outline">
+
+        <mat-form-field appearance="outline">
           <mat-label>Password</mat-label>
-          <input matInput type="password" name="password" placeholder="Enter your password" [(ngModel)]="user.password" formControlName="password" required>
+          <input matInput type="password" name="password" placeholder="Enter your password" formControlName="password1" required [(ngModel)]="user.password">
+          <mat-error *ngIf="passwordFormControl.hasError('required')">Password is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput type="password" placeholder="Confirm your password" formControlName="confirmPassword" required>
+          <mat-error *ngIf="confirmPasswordFormControl.hasError('required')">Confirm password is required</mat-error>
+          <div *ngIf="confirmPasswordFormControl.errors && confirmPasswordFormControl.errors.mismatch">{{ confirmPasswordFormControl.errors.message }}</div>
+        </mat-form-field>
+
+
+
+<!-- 
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" name="password" placeholder="Enter your password" [(ngModel)]="user.password" formControlName="password1" required>
           <mat-error *ngIf="passwordFormControl.hasError('required')">Password is required</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
@@ -100,16 +127,19 @@
           <input matInput type="password" placeholder="Confirm your password" formControlName="confirmPassword" required>
           <mat-error *ngIf="confirmPasswordFormControl.hasError('required')">Confirm password is required</mat-error> 
           <div *ngIf="confirmPasswordFormControl.errors && confirmPasswordFormControl.errors.mismatch">{{ confirmPasswordFormControl.errors.message }}</div>
-        </mat-form-field> -->
+        
+        
+        
+        </mat-form-field> 
 
-         <!-- <mat-form-field appearance="fill">
+          <mat-form-field appearance="fill">
           <mat-label>Password</mat-label>
           <input
             matInput
             type="password"
             name="password"
             placeholder="Enter your password"
-            formControlName="password"
+            formControlName="password1"
             required
             [(ngModel)]="user.password"
           />
@@ -138,36 +168,43 @@
             {{ confirmPasswordFormControl.errors.message }}
           </div>
         </mat-form-field>  -->
-        <mat-form-field appearance="outline" class="width-50">
+        <!-- <mat-form-field appearance="outline" class="width-50">
           <mat-label>Password*</mat-label>
           <input
             matInput
             name="password"
             [type]="hide ? 'password' : 'text'"
             [(ngModel)]="user.password"
-          />
-          <button mat-icon-button
+          [formControl]="passwordInput">
+          <mat-error *ngIf="passwordInput.get('password')?.hasError('required')">Password is required.</mat-error> -->
+
+          <!-- <button mat-icon-button
             matSuffix
             (click)="hide = !hide"
             [attr.aria-label]="'Hide password'"
             [attr.aria-pressed]="hide"
-          >
-            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
-          </button>
-        </mat-form-field> 
+          > -->
+            <!-- <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button> -->
+        <!-- </mat-form-field> 
         <mat-form-field appearance="outline" class="width-50">
           <mat-label>Confirm Password*</mat-label>
           <input
             matInput
             name="confirmPassword"
             [type]="hide ? 'password' : 'text'"
-          />
-        </mat-form-field>
+          formControlName="confirmPassword">
+          <mat-error *ngIf="passwordForm.get('confirmPassword')?.hasError('required')">Confirm Password is required.</mat-error>
+          <mat-error *ngIf="passwordForm.hasError('passwordMismatch')">Passwords do not match.</mat-error> -->
+      
+        <!-- </mat-form-field> -->
       </div>
       <div class="address">
         <mat-form-field class="example-full-width" appearance="outline">
           <mat-label>Address</mat-label>
-          <input matInput name="address" [(ngModel)]="user.address" />
+          <input matInput name="address" [(ngModel)]="user.address" [formControl]="myInputAddress" >
+          <mat-error *ngIf="myInputAddress.hasError('required')">First Name is required</mat-error>
+
           <textarea matInput placeholder=""></textarea>
         </mat-form-field>
       </div>

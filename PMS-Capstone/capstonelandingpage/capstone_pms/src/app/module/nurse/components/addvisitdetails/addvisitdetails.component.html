@@ -4,7 +4,7 @@
     ><span>Fill Visit Details</span>
   </h4>
   <form #visit="ngForm" (ngSubmit)="onSubmit(visit.value)" class="add-details">
-    <div 
+    <div
       class="formfield"
       style="display: flex; justify-content: space-between"
     >
@@ -15,21 +15,28 @@
           type="number"
           placeholder="height in ft"
           name="height"
-          [(ngModel)]="visitDetails.height" 
+          [(ngModel)]="visitDetails.height"
+          (keypress)="floatValidator($event)"
+          min="1"
+          max="10"
+          step="1.10"
         />
         <span matTextSuffix> ft</span>
       </mat-form-field>
 
       <mat-form-field appearance="outline" style="width: 40%">
         <mat-label>Weight</mat-label>
-        
-        <input
 
+        <input
           matInput
           type="number"
           placeholder="Weight in kg"
           name="weight"
           [(ngModel)]="visitDetails.weight"
+          (keypress)="floatValidator($event)"
+          min="1"
+          max="200"
+          step="1.10"
         />
         <span matTextSuffix> kgs</span>
       </mat-form-field>
@@ -45,8 +52,11 @@
           type="number"
           placeholder="Repiration Rate"
           name="repirationRate"
-         
+          (keypress)="numValidator($event)"
           [(ngModel)]="visitDetails.repirationRate"
+          min="1"
+          max="50"
+          step="1"
         />
         <span matTextSuffix> breaths/minute</span>
       </mat-form-field>
@@ -59,7 +69,11 @@
           placeholder="Body Temperature"
           name="bodyTemperature"
           [(ngModel)]="visitDetails.bodyTemperature"
-          step=1.01
+          step="1.01"
+          (keypress)="floatValidator($event)"
+          min="1"
+          max="100"
+          step="1.10"
         />
         <span matTextSuffix> C</span>
       </mat-form-field>
@@ -73,11 +87,14 @@
         <mat-label>Blood Pressure Systolic</mat-label>
         <input
           matInput
-         
+          (keypress)="numValidator($event)"
           type="number"
           placeholder="Blood Pressure Systolic"
           name="bpSystolic"
           [(ngModel)]="visitDetails.bpSystolic"
+          min="1"
+          max="200"
+          step="1"
         />
         <span matTextSuffix> mm Hg</span>
       </mat-form-field>
@@ -87,10 +104,13 @@
         <input
           matInput
           type="number"
-         
+          (keypress)="numValidator($event)"
           placeholder="Blood Pressure Diastolic"
           name="bpDiastolic"
-          [(ngModel)]="visitDetails.bpDiastolic "
+          [(ngModel)]="visitDetails.bpDiastolic"
+          min="1"
+          max="200"
+          step="1"
         />
         <span matTextSuffix>mm Hg</span>
       </mat-form-field>
@@ -109,16 +129,13 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field
-        appearance="outline"
-        
-        style="width: 40%"
-      >
+      <mat-form-field appearance="outline" style="width: 40%">
         <mat-label>Select BloodGroup</mat-label>
         <mat-select name="bloodGroup" [(ngModel)]="visitDetails.bloodGroup">
           <mat-option
             *ngFor="let bloodGroup of bloodGroups"
-            [value]="bloodGroup.value" [disabled]="isDisabled"
+            [value]="bloodGroup.value"
+            [disabled]="isDisabled"
           >
             {{ bloodGroup.viewValue }}
           </mat-option>
@@ -137,12 +154,9 @@
           placeholder="Notes"
           name="keyNotes"
           [(ngModel)]="visitDetails.keyNotes"
-         
         />
         <!-- <mat-hint align="end" >{{keyNotes.value.length}}/60</mat-hint> -->
-       
-       
-       
+
         <!-- <mat-error *ngIf="keyNotes.errors?.['minlength']" >
           Enter atleast 5-60 words
         </mat-error> -->
@@ -152,7 +166,6 @@
         name="submit"
         mat-raised-button
         (click)="openSnackBar()"
-       
         (click)="actionMethod(); clicked = true"
         color="primary"
         class="submit"

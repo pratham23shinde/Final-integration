@@ -16,7 +16,7 @@ public class Patient
 	@Column(name="patient_id")
 	private int patientId;
 	
-	@Column(name="email")
+	@Column(name="email",unique = true)
 	private String email;
 	
 	@Column(name="title")
