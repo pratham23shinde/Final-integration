@@ -14,7 +14,7 @@ export class AdminService {
   public myVar: any;
 
  
-  private apiServerDoctor = 'http://localhost:9007/api/v1';
+  private apiServerDoctor = 'http://localhost:9001/physician-availability-service';
 
   constructor(private http: HttpClient) {}
 
@@ -25,15 +25,15 @@ export class AdminService {
   }
 
   public getPatients(): Observable<PatientData[]> {
-    return this.http.get<PatientData[]>('http://localhost:9006/api/v1/patient');
+    return this.http.get<PatientData[]>('http://localhost:9001/patient-info-service/patient');
   }
 
   public getNurses(): Observable<NurseData[]> {
-    return this.http.get<NurseData[]>('http://localhost:9005/api/v1/nurses');
+    return this.http.get<NurseData[]>('http://localhost:9001/patient-health-records-service/nurses');
   }
 
   public getAdmins(): Observable<AdminData[]> {
-    return this.http.get<AdminData[]>('http://localhost:9005/api/v1/admins');
+    return this.http.get<AdminData[]>('http://localhost:9001/patient-health-records-service/admins');
   }
 
   //Physician Availability List
@@ -99,33 +99,33 @@ export class AdminService {
 
   public addDoctorUser(): Observable<DoctorData[]> {
     
-    return this.http.get<DoctorData[]>('http://localhost:9007/api/v1/addDoctors');
+    return this.http.get<DoctorData[]>('http://localhost:9001/physician-availability-service/addDoctors');
   }
 
   addAdminUser(): Observable<DoctorData[]> {
-    return this.http.get<DoctorData[]>('http://localhost:9005/api/v1/addAdmins');
+    return this.http.get<DoctorData[]>('http://localhost:9001/patient-health-records-service/addAdmins');
   }
 
   addNurseUser(): Observable<DoctorData[]> {
-    return this.http.get<DoctorData[]>('http://localhost:9005/api/v1/addNurses');
+    return this.http.get<DoctorData[]>('http://localhost:9001/patient-health-records-service/addNurses');
   }
 
 
   //Sangeeta
   public getAppointmentCount(): Observable<any> {
-    return this.http.get<any>('http://localhost:9003/api/v1/appointmentCount');
+    return this.http.get<any>('http://localhost:9001/appointment-service/appointmentCount');
   }
 
   public getDoctorCount(): Observable<any> {
-    return this.http.get<any>('http://localhost:9007/api/v1/doctorCount');
+    return this.http.get<any>('http://localhost:9001/physician-availability-service/doctorCount');
   }
 
   public getPatientCount(): Observable<any> {
-    return this.http.get<any>('http://localhost:9006/api/v1/patientCount');
+    return this.http.get<any>('http://localhost:9001/patient-info-service/patientCount');
   }
 
   public getNurseCount(): Observable<any> {
-    return this.http.get<any>('http://localhost:9005/api/v1/nurseCount');
+    return this.http.get<any>('http://localhost:9001/patient-health-records-service/nurseCount');
   }
 
 

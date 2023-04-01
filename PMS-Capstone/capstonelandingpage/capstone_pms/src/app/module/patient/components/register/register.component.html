@@ -1,14 +1,16 @@
 <!-- <div class="main"> -->
   <div class="formdivclass">
-    <form action="" class="formclass" [formGroup]="myGroup"(ngSubmit)="onSubmit()">
+    <form class="formclass" [formGroup]="myGroup" (ngSubmit)=onSubmit()  method="post" action="/submit-myForm">
     <!-- [formGroup]="myForm">  -->
       <h1>Registration</h1>
       <p>For New Patient</p>
       <div class="space-evenly">
         <mat-form-field appearance="outline" class="width-50">
           <mat-label>Title</mat-label>
-          <mat-error *ngIf="myInputTitle.hasError('required')">Title is required</mat-error>
-          <mat-select id="title" name="title" [(ngModel)]="user.title"  [formControl]="myInputTitle">
+          <!-- <mat-error *ngIf="myGroup.hasError('required')">Title is required</mat-error> -->
+          <mat-error *ngIf="myGroup.get('myInputTitle')">Title is required</mat-error>
+
+          <mat-select id="title" name="title" [(ngModel)]="user.title"  formControlName="myInputTitle">
             <mat-option value="Mr">Mr</mat-option>
             <mat-option value="Ms">Ms</mat-option>
             <mat-option value="Miss">Miss</mat-option>
@@ -18,14 +20,14 @@
 
         <mat-form-field appearance="outline" class="width-50">
           <mat-label>First Name</mat-label>
-          <input matInput name="firstName" [(ngModel)]="user.firstName" [formControl]="myInputFirst">
-          <mat-error *ngIf="myInputFirst.hasError('required')">First Name is required</mat-error>
+          <input matInput name="firstName" [(ngModel)]="user.firstName" formControlName="myInputFirst">
+          <mat-error *ngIf="myGroup.get('myInputFirst')">First Name is required</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="width-50">
           <mat-label>Last Name</mat-label>
-          <input matInput name="lastName" [(ngModel)]="user.lastName"  [formControl]="myInputLast">
-          <mat-error *ngIf="myInputLast.hasError('required')">Last Name is required</mat-error>
+          <input matInput name="lastName" [(ngModel)]="user.lastName"  formControlName="myInputLast">
+          <mat-error *ngIf="myGroup.get('myInputLast')">Last Name is required</mat-error>
 
         </mat-form-field>
       </div>
@@ -43,9 +45,9 @@
             matInput
             placeholder="Email"
             [(ngModel)]="user.email"
-            name="email" [formControl]="myInputEmail">
-            <mat-error *ngIf="myInputEmail.hasError('required')">Email is required</mat-error>
-  <mat-error *ngIf="myInputEmail.hasError('email')">Invalid email address</mat-error>
+            name="email" formControlName="myInputEmail">
+            <mat-error *ngIf="myGroup.get('myInputEmail')">Email is required</mat-error>
+  <mat-error *ngIf="myGroup.get('email')">Invalid email address</mat-error>
           <!-- <mat-error
             *ngIf="
               emailFormControl.hasError('email') &&
@@ -65,21 +67,21 @@
           maxlength="10"
             matInput
             name="contactNumber"
-            [(ngModel)]="user.contactNumber" [formControl]="myInputContact">
-          <mat-error *ngIf="myInputContact.hasError('required')">Phone number is required</mat-error>
-  <mat-error *ngIf="myInputContact.hasError('phoneNumber')">Invalid phone number</mat-error>
+            [(ngModel)]="user.contactNumber" formControlName="myInputContact">
+          <mat-error *ngIf="myGroup.get('myInputContact')">Phone number is required</mat-error>
+  <!-- <mat-error *ngIf="myGroup.get('phoneNumber')">Invalid phone number</mat-error> -->
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="width-50">
           <mat-label>DOB </mat-label>
-          <mat-error *ngIf="myInputDob.hasError('required')">DOB is required</mat-error>
+          <mat-error *ngIf="myGroup.get('myInputDob')">DOB is required</mat-error>
 
           <input
             matInput
             name="dob"
             [matDatepicker]="picker"
             [(ngModel)]="user.dob"
-            [formControl]="myInputDob"
+            formControlName="myInputDob"
           />
           
           <mat-datepicker-toggle
@@ -93,8 +95,8 @@
       <div class="space-evenly">
         <mat-form-field appearance="outline" class="width-50">
           <mat-label>Gender</mat-label>
-          <mat-error *ngIf="myInputGender.hasError('required')">Gender is required</mat-error>
-          <mat-select id="gender" name="gender" [(ngModel)]="user.gender" [formControl]="myInputGender">
+          <mat-error *ngIf="myGroup.get('myInputGender')">Gender is required</mat-error>
+          <mat-select id="gender" name="gender" [(ngModel)]="user.gender" formControlName="myInputGender">
             <mat-option value="Male">Male</mat-option>
             <mat-option value="Female">Female</mat-option>
             <mat-option value="Other">Other</mat-option>
@@ -105,13 +107,14 @@
         <mat-form-field appearance="outline">
           <mat-label>Password</mat-label>
           <input matInput type="password" name="password" placeholder="Enter your password" formControlName="password1" required [(ngModel)]="user.password">
-          <mat-error *ngIf="passwordFormControl.hasError('required')">Password is required</mat-error>
+          <!-- <mat-error *ngIf="passwordFormControl.hasError('required')">Password is required</mat-error> -->
+        <mat-error *ngIf="myGroup.get('password1')">Paaword Is Required</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Confirm Password</mat-label>
           <input matInput type="password" placeholder="Confirm your password" formControlName="confirmPassword" required>
-          <mat-error *ngIf="confirmPasswordFormControl.hasError('required')">Confirm password is required</mat-error>
-          <div *ngIf="confirmPasswordFormControl.errors && confirmPasswordFormControl.errors.mismatch">{{ confirmPasswordFormControl.errors.message }}</div>
+          <mat-error *ngIf="myGroup.get('confirmPassword')">Confirm password is required</mat-error>
+          <div *ngIf="confirmPasswordFormControl.errors && confirmPasswordFormControl.errors.mismatch">{{ confirmPasswordFormControl() }}</div>
         </mat-form-field>
 
 
@@ -202,14 +205,14 @@
       <div class="address">
         <mat-form-field class="example-full-width" appearance="outline">
           <mat-label>Address</mat-label>
-          <input matInput name="address" [(ngModel)]="user.address" [formControl]="myInputAddress" >
-          <mat-error *ngIf="myInputAddress.hasError('required')">First Name is required</mat-error>
+          <input matInput name="address" [(ngModel)]="user.address" formControlName="myInputAddress" >
+          <mat-error *ngIf="myGroup.get('myInputAddress')">Address is required</mat-error>
 
           <textarea matInput placeholder=""></textarea>
         </mat-form-field>
       </div>
 
-      <button mat-raised-button color="primary" style="float: right;">Submit</button>
+      <button mat-raised-button color="primary" type="submit" style="float: right;">Submit</button>
       <span> Register User? </span>
       <button
         mat-stroked-button

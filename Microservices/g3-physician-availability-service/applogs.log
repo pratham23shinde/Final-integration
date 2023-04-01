@@ -1,127 +1,183 @@
-2023-03-31T07:39:02.542+05:30  WARN 13208 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h37m58s473ms536µs801ns).
-2023-03-31T08:20:57.673+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T08:20:57.710+05:30  INFO 13208 --- [RMI TCP Connection(1002)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T08:20:57.832+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T08:20:57.856+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-03-31T08:20:57.880+05:30  WARN 13208 --- [RMI TCP Connection(1000)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Connection evictor] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@17.0.6/java.lang.Thread.sleep(Native Method)
- app//unirest.shaded.org.apache.http.impl.client.IdleConnectionEvictor$1.run(IdleConnectionEvictor.java:66)
- java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
-2023-03-31T08:20:57.881+05:30  INFO 13208 --- [RMI TCP Connection(1003)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T08:20:57.902+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
-2023-03-31T08:20:57.927+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T08:20:57.981+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T08:20:57.996+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-31T08:23:23.733+05:30  INFO 22180 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 22180 (C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service)
-2023-03-31T08:23:23.736+05:30  INFO 22180 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T08:23:23.777+05:30  INFO 22180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-31T08:23:23.777+05:30  INFO 22180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-31T08:23:24.529+05:30  INFO 22180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T08:23:24.639+05:30  INFO 22180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 2 JPA repository interfaces.
-2023-03-31T08:23:25.104+05:30  INFO 22180 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
-2023-03-31T08:23:25.195+05:30  INFO 22180 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T08:23:25.229+05:30  INFO 22180 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T08:23:25.627+05:30  INFO 22180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
-2023-03-31T08:23:25.637+05:30  INFO 22180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T08:23:25.637+05:30  INFO 22180 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T08:23:25.707+05:30  INFO 22180 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T08:23:25.708+05:30  INFO 22180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1931 ms
-2023-03-31T08:23:25.914+05:30  INFO 22180 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T08:23:25.991+05:30  INFO 22180 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T08:23:26.305+05:30  INFO 22180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T08:23:26.431+05:30  INFO 22180 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44250445
-2023-03-31T08:23:26.433+05:30  INFO 22180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T08:23:26.495+05:30  INFO 22180 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T08:23:27.219+05:30  INFO 22180 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T08:23:27.230+05:30  INFO 22180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T08:23:27.528+05:30  WARN 22180 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T08:23:28.149+05:30  WARN 22180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T08:23:28.284+05:30  WARN 22180 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T08:23:28.289+05:30  INFO 22180 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T08:23:28.388+05:30  INFO 22180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
-2023-03-31T08:23:28.391+05:30  INFO 22180 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-03-31T08:23:28.504+05:30  INFO 22180 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 5.408 seconds (process running for 6.064)
-2023-03-31T08:23:29.369+05:30  INFO 22180 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-03-31T08:23:29.370+05:30  INFO 22180 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-03-31T08:23:29.372+05:30  INFO 22180 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-03-31T13:25:19.946+05:30  WARN 22180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m18s111ms563µs300ns).
-2023-03-31T15:38:27.823+05:30  INFO 16772 --- [main] .a.PhysicianAvailabilityApplicationTests : Starting PhysicianAvailabilityApplicationTests using Java 17.0.6 with PID 16772 (started by prath in C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service)
-2023-03-31T15:38:27.827+05:30  INFO 16772 --- [main] .a.PhysicianAvailabilityApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T15:38:28.950+05:30  INFO 16772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T15:38:29.117+05:30  INFO 16772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158 ms. Found 2 JPA repository interfaces.
-2023-03-31T15:38:29.914+05:30  INFO 16772 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc938cf4-8a29-33ab-8889-ecfc8addbce2
-2023-03-31T15:38:30.104+05:30  INFO 16772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T15:38:30.152+05:30  INFO 16772 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T15:38:30.423+05:30  INFO 16772 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T15:38:30.507+05:30  INFO 16772 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T15:38:30.863+05:30  INFO 16772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T15:38:31.049+05:30  INFO 16772 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71eafb64
-2023-03-31T15:38:31.053+05:30  INFO 16772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T15:38:31.124+05:30  INFO 16772 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T15:38:31.925+05:30  INFO 16772 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T15:38:31.947+05:30  INFO 16772 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T15:38:32.692+05:30  WARN 16772 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T15:38:33.942+05:30  WARN 16772 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T15:38:33.974+05:30  INFO 16772 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T15:38:34.111+05:30  INFO 16772 --- [main] .a.PhysicianAvailabilityApplicationTests : Started PhysicianAvailabilityApplicationTests in 7.258 seconds (process running for 8.896)
-2023-03-31T15:38:34.730+05:30  INFO 16772 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T15:38:34.734+05:30  INFO 16772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T15:38:34.746+05:30  INFO 16772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-31T15:38:48.269+05:30  INFO 24000 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 24000 (C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service)
-2023-03-31T15:38:48.272+05:30  INFO 24000 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T15:38:48.328+05:30  INFO 24000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-31T15:38:48.329+05:30  INFO 24000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-31T15:38:49.139+05:30  INFO 24000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T15:38:49.264+05:30  INFO 24000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 2 JPA repository interfaces.
-2023-03-31T15:38:49.903+05:30  INFO 24000 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
-2023-03-31T15:38:50.009+05:30  INFO 24000 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T15:38:50.046+05:30  INFO 24000 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T15:38:50.478+05:30  INFO 24000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
-2023-03-31T15:38:50.492+05:30  INFO 24000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T15:38:50.493+05:30  INFO 24000 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T15:38:50.636+05:30  INFO 24000 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T15:38:50.637+05:30  INFO 24000 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2306 ms
-2023-03-31T15:38:50.924+05:30  INFO 24000 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T15:38:50.964+05:30  INFO 24000 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T15:38:51.217+05:30  INFO 24000 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T15:38:51.354+05:30  INFO 24000 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d274185
-2023-03-31T15:38:51.355+05:30  INFO 24000 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T15:38:51.406+05:30  INFO 24000 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T15:38:52.177+05:30  INFO 24000 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T15:38:52.189+05:30  INFO 24000 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T15:38:52.502+05:30  WARN 24000 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T15:38:53.249+05:30  WARN 24000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T15:38:53.405+05:30  WARN 24000 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T15:38:53.410+05:30  INFO 24000 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T15:38:53.510+05:30  WARN 24000 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2023-03-31T15:38:53.515+05:30  INFO 24000 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T15:38:53.519+05:30  INFO 24000 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T15:38:53.515+05:30 ERROR 24000 --- [catalogWatchTaskScheduler-1] o.s.c.c.discovery.ConsulDiscoveryClient  : Error watching Consul CatalogServices
-
-org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'refreshEventListener': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:264) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:221) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:413) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:139) ~[spring-cloud-consul-discovery-4.0.1.jar:4.0.1]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.6.jar:6.0.6]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2023-03-31T15:38:53.528+05:30  INFO 24000 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-31T15:38:53.531+05:30  INFO 24000 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T15:38:53.553+05:30  INFO 24000 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-03-31T15:38:53.570+05:30 ERROR 24000 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2023-04-01T10:01:16.098+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:01:16.104+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:01:16.153+05:30  INFO 13292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-01T10:01:16.154+05:30  INFO 13292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-01T10:01:16.805+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:01:16.928+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
+2023-04-01T10:01:17.435+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-04-01T10:01:17.533+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:01:17.568+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:01:17.961+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:01:17.973+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:01:17.973+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:01:18.037+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:01:18.038+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1882 ms
+2023-04-01T10:01:18.313+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:01:18.382+05:30  INFO 13292 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-01T10:01:18.737+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-01T10:01:18.865+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52412cd0
+2023-04-01T10:01:18.867+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-01T10:01:18.947+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:01:19.614+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:01:19.624+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:01:19.905+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:01:20.484+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:01:20.618+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:01:20.622+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:01:20.719+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:01:20.723+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:01:20.861+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 5.401 seconds (process running for 6.139)
+2023-04-01T10:01:21.701+05:30  INFO 13292 --- [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01T10:01:21.702+05:30  INFO 13292 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01T10:01:21.705+05:30  INFO 13292 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-04-01T10:02:46.196+05:30  INFO 13292 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-04-01T10:02:46.323+05:30  INFO 13292 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T10:02:46.331+05:30  INFO 13292 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-01T10:02:46.343+05:30  INFO 13292 --- [Thread-1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T10:02:46.595+05:30  INFO 13292 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:02:46.604+05:30  INFO 13292 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-01T10:02:46.616+05:30  INFO 13292 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-01T10:02:46.788+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:02:46.788+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:02:46.942+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:02:46.953+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+2023-04-01T10:02:47.099+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-04-01T10:02:47.116+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:02:47.117+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:02:47.163+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:02:47.164+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:02:47.164+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:02:47.184+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:02:47.184+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 394 ms
+2023-04-01T10:02:47.242+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:02:47.247+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-04-01T10:02:47.255+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74a695c4
+2023-04-01T10:02:47.255+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-04-01T10:02:47.256+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:02:47.311+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:02:47.311+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:02:47.374+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:02:47.730+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:02:47.821+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:02:47.823+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:02:47.854+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:02:47.855+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:02:47.941+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 1.245 seconds (process running for 93.218)
+2023-04-01T10:02:47.944+05:30  INFO 13292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-01T10:02:49.150+05:30  INFO 13292 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 16 class path changes (0 additions, 0 deletions, 16 modifications)
+2023-04-01T10:02:49.164+05:30  INFO 13292 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T10:02:49.168+05:30  INFO 13292 --- [Thread-7] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T10:02:49.178+05:30  INFO 13292 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:02:49.180+05:30  INFO 13292 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-04-01T10:02:49.188+05:30  INFO 13292 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-04-01T10:02:49.333+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:02:49.333+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:02:49.480+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:02:49.489+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2023-04-01T10:02:49.597+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-04-01T10:02:49.609+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:02:49.610+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:02:49.651+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:02:49.652+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:02:49.653+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:02:49.669+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:02:49.669+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 333 ms
+2023-04-01T10:02:49.715+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:02:49.722+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-04-01T10:02:49.728+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bcb749c
+2023-04-01T10:02:49.729+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-04-01T10:02:49.730+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:02:49.783+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:02:49.783+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:02:49.873+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:02:50.195+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:02:50.442+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:02:50.447+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:02:50.513+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:02:50.518+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:02:50.682+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 1.427 seconds (process running for 95.96)
+2023-04-01T10:02:50.687+05:30  INFO 13292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-01T10:02:52.621+05:30  INFO 13292 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-04-01T10:02:52.633+05:30  INFO 13292 --- [Thread-13] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T10:02:52.637+05:30  INFO 13292 --- [Thread-13] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T10:02:52.646+05:30  INFO 13292 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:02:52.648+05:30  INFO 13292 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-04-01T10:02:52.655+05:30  INFO 13292 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-04-01T10:02:52.812+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:02:52.813+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:02:52.992+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:02:53.007+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2023-04-01T10:02:53.143+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-04-01T10:02:53.156+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:02:53.157+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:02:53.250+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:02:53.251+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:02:53.251+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:02:53.271+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:02:53.271+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 456 ms
+2023-04-01T10:02:53.329+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:02:53.335+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-04-01T10:02:53.341+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24d4864d
+2023-04-01T10:02:53.341+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-04-01T10:02:53.343+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:02:53.391+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:02:53.391+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:02:53.451+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:02:53.670+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:02:53.748+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:02:53.750+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:02:53.777+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:02:53.779+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:02:53.861+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 1.134 seconds (process running for 99.138)
+2023-04-01T10:02:53.863+05:30  INFO 13292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-01T10:02:55.596+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01T10:02:55.597+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01T10:02:55.600+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-04-01T10:04:27.227+05:30  INFO 13292 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 16 class path changes (0 additions, 0 deletions, 16 modifications)
+2023-04-01T10:04:27.239+05:30  INFO 13292 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T10:04:27.240+05:30  INFO 13292 --- [Thread-19] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-01T10:04:27.242+05:30  INFO 13292 --- [Thread-19] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T10:04:27.254+05:30  INFO 13292 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:04:27.255+05:30  INFO 13292 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-04-01T10:04:27.260+05:30  INFO 13292 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-04-01T10:04:27.404+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:04:27.405+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:04:27.550+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:04:27.562+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+2023-04-01T10:04:27.682+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-04-01T10:04:27.694+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:04:27.695+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:04:27.735+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:04:27.736+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:04:27.736+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:04:27.753+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:04:27.753+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 346 ms
+2023-04-01T10:04:27.811+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:04:27.815+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-04-01T10:04:27.820+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c057219
+2023-04-01T10:04:27.820+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-04-01T10:04:27.821+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:04:27.856+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:04:27.857+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:04:27.910+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:04:28.101+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:04:28.166+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:04:28.169+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:04:28.194+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:04:28.195+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:04:28.301+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 0.98 seconds (process running for 193.579)
+2023-04-01T10:04:28.304+05:30  INFO 13292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-01T10:04:32.461+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01T10:04:32.461+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01T10:04:32.462+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-01T10:07:11.283+05:30  INFO 13292 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 16 class path changes (0 additions, 2 deletions, 14 modifications)
+2023-04-01T10:07:11.294+05:30  INFO 13292 --- [Thread-25] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T10:07:11.294+05:30  INFO 13292 --- [Thread-25] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-01T10:07:11.298+05:30  INFO 13292 --- [Thread-25] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T10:07:11.320+05:30  INFO 13292 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:07:11.320+05:30  INFO 13292 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-04-01T10:07:11.323+05:30  INFO 13292 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2023-04-01T10:07:11.466+05:30 ERROR 13292 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -129,47 +185,16 @@ APPLICATION FAILED TO START
 
 Description:
 
-Web server failed to start. Port 9007 was already in use.
+No spring.config.import property has been defined
 
 Action:
 
-Identify and stop the process that's listening on port 9007 or configure this application to listen on another port.
+Add a spring.config.import=consul: property to your configuration.
+	If configuration is not required add spring.config.import=optional:consul: instead.
+	To disable this check, set spring.cloud.consul.config.enabled=false or 
+	spring.cloud.consul.config.import-check.enabled=false.
 
-2023-03-31T15:39:06.836+05:30  INFO 23604 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 23604 (C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service)
-2023-03-31T15:39:06.839+05:30  INFO 23604 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T15:39:06.893+05:30  INFO 23604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-31T15:39:06.893+05:30  INFO 23604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-31T15:39:07.701+05:30  INFO 23604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T15:39:07.843+05:30  INFO 23604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 2 JPA repository interfaces.
-2023-03-31T15:39:08.436+05:30  INFO 23604 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
-2023-03-31T15:39:08.545+05:30  INFO 23604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T15:39:08.582+05:30  INFO 23604 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T15:39:09.006+05:30  INFO 23604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
-2023-03-31T15:39:09.017+05:30  INFO 23604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T15:39:09.017+05:30  INFO 23604 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T15:39:09.100+05:30  INFO 23604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T15:39:09.102+05:30  INFO 23604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2209 ms
-2023-03-31T15:39:09.344+05:30  INFO 23604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T15:39:09.389+05:30  INFO 23604 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T15:39:09.618+05:30  INFO 23604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T15:39:09.766+05:30  INFO 23604 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58d4edbe
-2023-03-31T15:39:09.768+05:30  INFO 23604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T15:39:09.830+05:30  INFO 23604 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T15:39:10.526+05:30  INFO 23604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T15:39:10.535+05:30  INFO 23604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T15:39:10.879+05:30  WARN 23604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T15:39:11.609+05:30  WARN 23604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T15:39:11.765+05:30  WARN 23604 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T15:39:11.770+05:30  INFO 23604 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T15:39:11.874+05:30  WARN 23604 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2023-03-31T15:39:11.884+05:30  INFO 23604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T15:39:11.891+05:30  INFO 23604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T15:39:11.903+05:30  INFO 23604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-31T15:39:11.906+05:30  INFO 23604 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T15:39:11.931+05:30  INFO 23604 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-03-31T15:39:11.955+05:30 ERROR 23604 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2023-04-01T10:08:42.688+05:30 ERROR 13292 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -177,119 +202,328 @@ APPLICATION FAILED TO START
 
 Description:
 
-Web server failed to start. Port 9007 was already in use.
+No spring.config.import property has been defined
 
 Action:
 
-Identify and stop the process that's listening on port 9007 or configure this application to listen on another port.
+Add a spring.config.import=consul: property to your configuration.
+	If configuration is not required add spring.config.import=optional:consul: instead.
+	To disable this check, set spring.cloud.consul.config.enabled=false or 
+	spring.cloud.consul.config.import-check.enabled=false.
 
-2023-03-31T15:42:04.625+05:30  INFO 22180 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:42:07.476+05:30  WARN 22180 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A7df9c980-cfac-11ed-9a23-0351c6337e6a.obFLQ5wZ81X3S%2BX6deSvrKTVu3b910IopxkN%2Bj%2Ba6%2Bs; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:12:07 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:12:07 GMT
-2023-03-31T15:42:07.477+05:30  WARN 22180 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A7df9c980-cfac-11ed-9a23-0351c6337e6a.obFLQ5wZ81X3S%2BX6deSvrKTVu3b910IopxkN%2Bj%2Ba6%2Bs; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:12:07 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:12:07 GMT
-2023-03-31T15:42:34.309+05:30  INFO 22180 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:42:34.752+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A8e462680-cfac-11ed-98cd-d3236ce5cf06.cSSJX9QV6AQw3TIShT5KLRIiARKMnNGTV9Lprz4QX5A; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:12:34 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:12:34 GMT
-2023-03-31T15:42:34.754+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A8e462680-cfac-11ed-98cd-d3236ce5cf06.cSSJX9QV6AQw3TIShT5KLRIiARKMnNGTV9Lprz4QX5A; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:12:34 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:12:34 GMT
-2023-03-31T15:43:01.073+05:30  INFO 22180 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:43:02.321+05:30  WARN 22180 --- [http-nio-9007-exec-7] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A9eb6fb70-cfac-11ed-98cd-d3236ce5cf06.oVmXfBL2VFVL1Xh4bwfLkUeU40KSnihXxtn%2BR7DQR9Y; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:13:02 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:13:02 GMT
-2023-03-31T15:43:02.321+05:30  WARN 22180 --- [http-nio-9007-exec-7] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A9eb6fb70-cfac-11ed-98cd-d3236ce5cf06.oVmXfBL2VFVL1Xh4bwfLkUeU40KSnihXxtn%2BR7DQR9Y; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:13:02 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:13:02 GMT
-2023-03-31T15:44:18.825+05:30  INFO 22180 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:44:19.346+05:30  WARN 22180 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Acc9e3bc0-cfac-11ed-8669-09cabdc47259.CjBFc9MKjDOrV48YuDOdO%2BHiDgJ%2B6kgH%2BS5U7TjCFFU; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:14:19 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:14:19 GMT
-2023-03-31T15:44:19.349+05:30  WARN 22180 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Acc9e3bc0-cfac-11ed-8669-09cabdc47259.CjBFc9MKjDOrV48YuDOdO%2BHiDgJ%2B6kgH%2BS5U7TjCFFU; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:14:19 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:14:19 GMT
-2023-03-31T15:44:30.312+05:30  INFO 22180 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:44:30.743+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Ad3692000-cfac-11ed-b865-0d40a5f65385.%2FcoP8kwEa962XqlOQlL%2FueCHyAMLJFR2oqLJv25PTIw; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:14:30 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:14:30 GMT
-2023-03-31T15:44:30.744+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Ad3692000-cfac-11ed-b865-0d40a5f65385.%2FcoP8kwEa962XqlOQlL%2FueCHyAMLJFR2oqLJv25PTIw; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:14:30 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:14:30 GMT
-2023-03-31T15:45:59.441+05:30  INFO 22180 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:46:00.092+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A08a4e6f0-cfad-11ed-8f4e-394873f9339c.t5TAmDLsmgrrbSxMhpFQpp0IrciflQjyfDPJry8fiJ4; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:15:59 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:15:59 GMT
-2023-03-31T15:46:00.094+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A08a4e6f0-cfad-11ed-8f4e-394873f9339c.t5TAmDLsmgrrbSxMhpFQpp0IrciflQjyfDPJry8fiJ4; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:16:00 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:16:00 GMT
-2023-03-31T15:48:59.897+05:30  INFO 22180 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:49:00.531+05:30  WARN 22180 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A743251a0-cfad-11ed-bc6c-99977f422a49.Ra%2BeyKbohNLZSc4xEUigvJUOJ9MLIMnbklz2PZkaRwo; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:19:00 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:19:00 GMT
-2023-03-31T15:49:00.532+05:30  WARN 22180 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A743251a0-cfad-11ed-bc6c-99977f422a49.Ra%2BeyKbohNLZSc4xEUigvJUOJ9MLIMnbklz2PZkaRwo; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:19:00 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:19:00 GMT
-2023-03-31T15:49:05.881+05:30  INFO 22180 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:49:06.329+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A77a70600-cfad-11ed-9a23-0351c6337e6a.72azF44ipKuecKPT%2FwbpK9xOD%2FX5d6MJ6YfPu0bsdEQ; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:19:06 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:19:06 GMT
-2023-03-31T15:49:06.330+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A77a70600-cfad-11ed-9a23-0351c6337e6a.72azF44ipKuecKPT%2FwbpK9xOD%2FX5d6MJ6YfPu0bsdEQ; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:19:06 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:19:06 GMT
-2023-03-31T15:50:52.125+05:30  INFO 22180 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:50:52.688+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Ab70e6860-cfad-11ed-8897-83dc951af849.ppLmm5HGOQof2VmwkOuSEe%2Fj0sqkJ9iWQFyvI1iUUNA; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:20:52 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:20:52 GMT
-2023-03-31T15:50:52.688+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Ab70e6860-cfad-11ed-8897-83dc951af849.ppLmm5HGOQof2VmwkOuSEe%2Fj0sqkJ9iWQFyvI1iUUNA; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:20:52 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:20:52 GMT
-2023-03-31T15:53:33.928+05:30  INFO 22180 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:53:34.460+05:30  WARN 22180 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A1779c9b0-cfae-11ed-968c-57475c452a6a.KfhfAeuurpPBAFqgfnbezonnuZ%2BjlsarN%2F428Tz0OJ4; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:23:34 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:23:34 GMT
-2023-03-31T15:53:34.461+05:30  WARN 22180 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A1779c9b0-cfae-11ed-968c-57475c452a6a.KfhfAeuurpPBAFqgfnbezonnuZ%2BjlsarN%2F428Tz0OJ4; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:23:34 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:23:34 GMT
-2023-03-31T15:54:05.132+05:30  INFO 22180 --- [http-nio-9007-exec-5] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:54:05.583+05:30  WARN 22180 --- [http-nio-9007-exec-5] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A2a0b34b0-cfae-11ed-b50d-91121b58d731.jEEkFONKiJzgdk5%2BPf2jbZUn2F5gYzIm0V10OG7QQVw; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:24:05 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:24:05 GMT
-2023-03-31T15:54:05.583+05:30  WARN 22180 --- [http-nio-9007-exec-5] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A2a0b34b0-cfae-11ed-b50d-91121b58d731.jEEkFONKiJzgdk5%2BPf2jbZUn2F5gYzIm0V10OG7QQVw; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:24:05 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:24:05 GMT
-2023-03-31T15:56:55.931+05:30  INFO 22180 --- [http-nio-9007-exec-9] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T15:56:57.405+05:30  WARN 22180 --- [http-nio-9007-exec-9] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A906e72d0-cfae-11ed-a582-4dd13e98d2a3.va6PAsMU%2FtZ5AHLbbXKTCgzbhIMSSPCHKvqYy0f7A7U; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:26:57 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:26:57 GMT
-2023-03-31T15:56:57.407+05:30  WARN 22180 --- [http-nio-9007-exec-9] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A906e72d0-cfae-11ed-a582-4dd13e98d2a3.va6PAsMU%2FtZ5AHLbbXKTCgzbhIMSSPCHKvqYy0f7A7U; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:26:57 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:26:57 GMT
-2023-03-31T15:57:16.554+05:30  INFO 22180 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
-2023-03-31T16:01:07.242+05:30  INFO 22180 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Physician availability updated successfully
-2023-03-31T16:01:07.265+05:30  INFO 22180 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
-2023-03-31T16:01:16.616+05:30  INFO 22180 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Physician availability deleted successfully
-2023-03-31T16:01:16.855+05:30  INFO 22180 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
-2023-03-31T16:03:23.335+05:30  INFO 22180 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Physician availability updated successfully
-2023-03-31T16:03:23.447+05:30  INFO 22180 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
-2023-03-31T16:03:40.880+05:30  INFO 22180 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Physician availability updated successfully
-2023-03-31T16:03:40.952+05:30  INFO 22180 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
-2023-03-31T16:03:56.188+05:30  INFO 22180 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Physician availability updated successfully
-2023-03-31T16:03:56.234+05:30  INFO 22180 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
-2023-03-31T16:05:48.632+05:30  INFO 22180 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
-2023-03-31T16:18:05.266+05:30  INFO 22180 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T16:18:06.790+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A851106c0-cfb1-11ed-a77f-55ea12de0427.cNgZdD0N0AfRbii5eJpoO37ADlm8JD8fLCwZWkOYNfY; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:48:06 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:48:06 GMT
-2023-03-31T16:18:06.793+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A851106c0-cfb1-11ed-a77f-55ea12de0427.cNgZdD0N0AfRbii5eJpoO37ADlm8JD8fLCwZWkOYNfY; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:48:06 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:48:06 GMT
-2023-03-31T16:23:19.683+05:30  INFO 22180 --- [http-nio-9007-exec-9] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T16:23:20.290+05:30  WARN 22180 --- [http-nio-9007-exec-9] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A3ff088d0-cfb2-11ed-9fdb-7f32b070c5c2.FThklgHXETcwBRExY7H8alIWmzszfZrTNxfwLmG%2FCCE; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:53:20 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:53:20 GMT
-2023-03-31T16:23:20.292+05:30  WARN 22180 --- [http-nio-9007-exec-9] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A3ff088d0-cfb2-11ed-9fdb-7f32b070c5c2.FThklgHXETcwBRExY7H8alIWmzszfZrTNxfwLmG%2FCCE; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:53:20 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:53:20 GMT
-2023-03-31T16:24:59.551+05:30  INFO 22180 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T16:25:00.115+05:30  WARN 22180 --- [http-nio-9007-exec-1] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A7b68fdc0-cfb2-11ed-a77f-55ea12de0427.71ls4LMnRc5mPuaBDpmYbLmcpfq9um8JYOzqktS2Ydo; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:54:59 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:54:59 GMT
-2023-03-31T16:25:00.128+05:30  WARN 22180 --- [http-nio-9007-exec-1] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A7b68fdc0-cfb2-11ed-a77f-55ea12de0427.71ls4LMnRc5mPuaBDpmYbLmcpfq9um8JYOzqktS2Ydo; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:55:00 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:55:00 GMT
-2023-03-31T16:32:53.079+05:30  INFO 22180 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
-2023-03-31T16:32:54.004+05:30  WARN 22180 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A95d60440-cfb3-11ed-968c-57475c452a6a.ET5zrisU59UxQdMcinE7RDO3nFjLnAjXyzIu9xHeLgk; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 17:02:53 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 17:02:53 GMT
-2023-03-31T16:32:54.006+05:30  WARN 22180 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A95d60440-cfb3-11ed-968c-57475c452a6a.ET5zrisU59UxQdMcinE7RDO3nFjLnAjXyzIu9xHeLgk; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 17:02:53 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 17:02:53 GMT
-2023-03-31T19:23:10.769+05:30  WARN 22180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m45s174ms429µs).
-2023-03-31T21:32:42.760+05:30  WARN 22180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h48m31s622ms947µs500ns).
-2023-03-31T21:37:04.089+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T21:37:04.228+05:30  INFO 22180 --- [RMI TCP Connection(690)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T21:37:04.376+05:30  INFO 22180 --- [RMI TCP Connection(691)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T21:37:04.575+05:30  INFO 22180 --- [RMI TCP Connection(692)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T21:37:04.627+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T21:37:04.696+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-03-31T21:37:04.720+05:30  INFO 22180 --- [RMI TCP Connection(693)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T21:37:04.829+05:30  WARN 22180 --- [RMI TCP Connection(689)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Connection evictor] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2023-04-01T10:08:44.195+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:08:44.196+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:08:44.499+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:08:44.513+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+2023-04-01T10:08:44.710+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-04-01T10:08:44.736+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:08:44.738+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:08:44.788+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:08:44.789+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:08:44.789+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:08:44.813+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:08:44.813+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 616 ms
+2023-04-01T10:08:44.863+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:08:44.869+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-04-01T10:08:44.883+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2221d183
+2023-04-01T10:08:44.883+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-04-01T10:08:44.885+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:08:44.954+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:08:44.954+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:08:45.018+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:08:45.231+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:08:45.307+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:08:45.309+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:08:45.334+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:08:45.335+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:08:45.445+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 1.332 seconds (process running for 450.722)
+2023-04-01T10:08:45.448+05:30  INFO 13292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-01T10:08:47.104+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01T10:08:47.104+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01T10:08:47.105+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-01T10:09:06.953+05:30  INFO 13292 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-01T10:09:06.979+05:30  INFO 13292 --- [Thread-31] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T10:09:06.984+05:30  INFO 13292 --- [Thread-31] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-01T10:09:06.994+05:30  INFO 13292 --- [Thread-31] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T10:09:07.011+05:30  INFO 13292 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:09:07.014+05:30  INFO 13292 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-04-01T10:09:07.029+05:30  INFO 13292 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-04-01T10:09:07.391+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:09:07.392+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:09:07.576+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:09:07.584+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2023-04-01T10:09:07.723+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-04-01T10:09:07.735+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:09:07.736+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:09:07.781+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:09:07.782+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:09:07.782+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:09:07.803+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:09:07.803+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 409 ms
+2023-04-01T10:09:07.871+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:09:07.878+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-04-01T10:09:07.886+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@551abf18
+2023-04-01T10:09:07.886+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-04-01T10:09:07.887+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:09:07.936+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:09:07.936+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:09:08.014+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:09:08.231+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:09:08.331+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:09:08.333+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:09:08.356+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:09:08.357+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:09:08.423+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 1.17 seconds (process running for 473.701)
+2023-04-01T10:09:08.425+05:30  INFO 13292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-01T10:09:09.767+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01T10:09:09.768+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01T10:09:09.769+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-01T10:09:15.766+05:30  INFO 13292 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 1 deletion, 1 modification)
+2023-04-01T10:09:15.792+05:30  INFO 13292 --- [Thread-43] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T10:09:15.793+05:30  INFO 13292 --- [Thread-43] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-01T10:09:15.800+05:30  INFO 13292 --- [Thread-43] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T10:09:15.813+05:30  INFO 13292 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:09:15.817+05:30  INFO 13292 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-04-01T10:09:15.824+05:30  INFO 13292 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2023-04-01T10:09:16.183+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:09:16.183+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:09:16.431+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:09:16.445+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interfaces.
+2023-04-01T10:09:16.565+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3608f92d-e6bb-3a62-a89f-5617ba8ace6c
+2023-04-01T10:09:16.581+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:09:16.582+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:09:16.640+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:09:16.640+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:09:16.640+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:09:16.662+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:09:16.662+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 475 ms
+2023-04-01T10:09:16.732+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:09:16.740+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-04-01T10:09:16.744+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71052df8
+2023-04-01T10:09:16.744+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-04-01T10:09:16.746+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:09:16.784+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:09:16.784+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:09:16.852+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:09:17.073+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:09:17.160+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:09:17.163+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:09:17.185+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:09:17.186+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:09:17.258+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 1.26 seconds (process running for 482.536)
+2023-04-01T10:09:17.261+05:30  INFO 13292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-01T10:09:18.574+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01T10:09:18.574+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01T10:09:18.578+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-04-01T10:09:41.877+05:30  INFO 13292 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-04-01T10:09:41.889+05:30  INFO 13292 --- [Thread-49] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T10:09:41.889+05:30  INFO 13292 --- [Thread-49] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-01T10:09:41.892+05:30  INFO 13292 --- [Thread-49] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T10:09:41.903+05:30  INFO 13292 --- [Thread-49] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:09:41.904+05:30  INFO 13292 --- [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-04-01T10:09:41.907+05:30  INFO 13292 --- [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2023-04-01T10:09:42.044+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:09:42.045+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:09:42.195+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:09:42.201+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
+2023-04-01T10:09:42.303+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3608f92d-e6bb-3a62-a89f-5617ba8ace6c
+2023-04-01T10:09:42.315+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:09:42.317+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:09:42.360+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:09:42.361+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:09:42.361+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:09:42.384+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:09:42.384+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 338 ms
+2023-04-01T10:09:42.431+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:09:42.436+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2023-04-01T10:09:42.443+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55b2e24f
+2023-04-01T10:09:42.443+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2023-04-01T10:09:42.444+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:09:42.476+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:09:42.477+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:09:42.528+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:09:42.740+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:09:42.812+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:09:42.814+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:09:42.841+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:09:42.842+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:09:42.915+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 0.949 seconds (process running for 508.192)
+2023-04-01T10:09:42.921+05:30  INFO 13292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-01T10:09:43.709+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01T10:09:43.709+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01T10:09:43.710+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-01T10:09:53.258+05:30  INFO 13292 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-01T10:09:53.273+05:30  INFO 13292 --- [Thread-55] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T10:09:53.273+05:30  INFO 13292 --- [Thread-55] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-01T10:09:53.277+05:30  INFO 13292 --- [Thread-55] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T10:09:53.285+05:30  INFO 13292 --- [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:09:53.286+05:30  INFO 13292 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2023-04-01T10:09:53.292+05:30  INFO 13292 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2023-04-01T10:09:53.451+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:09:53.451+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:09:53.599+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:09:53.606+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
+2023-04-01T10:09:53.706+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3608f92d-e6bb-3a62-a89f-5617ba8ace6c
+2023-04-01T10:09:53.722+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:09:53.723+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:09:53.763+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:09:53.763+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:09:53.763+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:09:53.781+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:09:53.782+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 329 ms
+2023-04-01T10:09:53.829+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:09:53.833+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2023-04-01T10:09:53.838+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@276d9fe8
+2023-04-01T10:09:53.838+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2023-04-01T10:09:53.839+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:09:53.864+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:09:53.864+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:09:53.909+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:09:54.141+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:09:54.230+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:09:54.233+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:09:54.264+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:09:54.266+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:09:54.350+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 0.982 seconds (process running for 519.628)
+2023-04-01T10:09:54.353+05:30  INFO 13292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-01T10:09:56.262+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01T10:09:56.262+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01T10:09:56.263+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-01T10:10:48.397+05:30  INFO 13292 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-04-01T10:10:48.413+05:30  INFO 13292 --- [Thread-61] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T10:10:48.414+05:30  INFO 13292 --- [Thread-61] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-01T10:10:48.418+05:30  INFO 13292 --- [Thread-61] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T10:10:48.427+05:30  INFO 13292 --- [Thread-61] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:10:48.428+05:30  INFO 13292 --- [Thread-61] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2023-04-01T10:10:48.436+05:30  INFO 13292 --- [Thread-61] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2023-04-01T10:10:48.608+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 13292 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T10:10:48.608+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T10:10:48.833+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T10:10:48.839+05:30  INFO 13292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
+2023-04-01T10:10:48.954+05:30  INFO 13292 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3608f92d-e6bb-3a62-a89f-5617ba8ace6c
+2023-04-01T10:10:48.964+05:30  INFO 13292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T10:10:48.965+05:30  INFO 13292 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T10:10:49.000+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T10:10:49.001+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T10:10:49.001+05:30  INFO 13292 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T10:10:49.018+05:30  INFO 13292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T10:10:49.018+05:30  INFO 13292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 407 ms
+2023-04-01T10:10:49.068+05:30  INFO 13292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T10:10:49.072+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2023-04-01T10:10:49.080+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@120f997c
+2023-04-01T10:10:49.081+05:30  INFO 13292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2023-04-01T10:10:49.082+05:30  INFO 13292 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T10:10:49.115+05:30  INFO 13292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T10:10:49.115+05:30  INFO 13292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T10:10:49.157+05:30  WARN 13292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T10:10:49.350+05:30  WARN 13292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T10:10:49.420+05:30  WARN 13292 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T10:10:49.422+05:30  INFO 13292 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T10:10:49.445+05:30  INFO 13292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T10:10:49.446+05:30  INFO 13292 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T10:10:49.523+05:30  INFO 13292 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 1.017 seconds (process running for 574.8)
+2023-04-01T10:10:49.524+05:30  INFO 13292 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-01T10:10:56.408+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01T10:10:56.408+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01T10:10:56.409+05:30  INFO 13292 --- [http-nio-9007-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-01T10:34:46.551+05:30  INFO 13292 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-04-01T10:35:07.908+05:30  WARN 13292 --- [http-nio-9007-exec-7] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Ac55a4c20-d04a-11ed-a2a1-d3759c9dde91.%2FXSMCCzxuYEJakCE9MUyFf%2FSW78pd%2FTuo%2BqDmxhL5o8; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:05:07 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:05:07 GMT
+2023-04-01T10:35:07.908+05:30  WARN 13292 --- [http-nio-9007-exec-7] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Ac55a4c20-d04a-11ed-a2a1-d3759c9dde91.%2FXSMCCzxuYEJakCE9MUyFf%2FSW78pd%2FTuo%2BqDmxhL5o8; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:05:07 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:05:07 GMT
+2023-04-01T10:35:50.048+05:30 ERROR 13292 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-04-01T10:35:50.064+05:30  WARN 13292 --- [http-nio-9007-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-04-01T10:36:07.486+05:30  INFO 13292 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-04-01T10:36:28.052+05:30  WARN 13292 --- [http-nio-9007-exec-8] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Af54d13e0-d04a-11ed-9f54-c556d4272621.AeCYkQMoA4xb9atSF17AdNUK9t84c0wVBYn3%2FBKkrHY; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:06:27 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:06:27 GMT
+2023-04-01T10:36:28.052+05:30  WARN 13292 --- [http-nio-9007-exec-8] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Af54d13e0-d04a-11ed-9f54-c556d4272621.AeCYkQMoA4xb9atSF17AdNUK9t84c0wVBYn3%2FBKkrHY; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:06:28 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:06:28 GMT
+2023-04-01T10:37:03.388+05:30  INFO 13292 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-04-01T10:37:03.778+05:30  WARN 13292 --- [http-nio-9007-exec-7] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A0a96c110-d04b-11ed-a582-4dd13e98d2a3.wTLxTEWRSKqv5yyOrW14PVMfFfx0Sl8O3tdhPs2Nljw; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:07:03 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:07:03 GMT
+2023-04-01T10:37:03.778+05:30  WARN 13292 --- [http-nio-9007-exec-7] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A0a96c110-d04b-11ed-a582-4dd13e98d2a3.wTLxTEWRSKqv5yyOrW14PVMfFfx0Sl8O3tdhPs2Nljw; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:07:03 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:07:03 GMT
+2023-04-01T10:37:10.158+05:30 ERROR 13292 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-04-01T10:37:10.158+05:30  WARN 13292 --- [http-nio-9007-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-04-01T10:37:29.870+05:30  INFO 13292 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-04-01T10:37:30.285+05:30  WARN 13292 --- [http-nio-9007-exec-1] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A1a6366c0-d04b-11ed-a37e-87072a67206d.ESBsHNY5ymfYa%2F7MkwO%2B4dvmSKDSlTUgkrJwjZpOJGA; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:07:30 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:07:30 GMT
+2023-04-01T10:37:30.285+05:30  WARN 13292 --- [http-nio-9007-exec-1] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A1a6366c0-d04b-11ed-a37e-87072a67206d.ESBsHNY5ymfYa%2F7MkwO%2B4dvmSKDSlTUgkrJwjZpOJGA; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:07:30 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:07:30 GMT
+2023-04-01T10:37:45.964+05:30 ERROR 13292 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-04-01T10:37:45.965+05:30  WARN 13292 --- [http-nio-9007-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-04-01T10:38:12.367+05:30 ERROR 13292 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-04-01T10:38:12.368+05:30  WARN 13292 --- [http-nio-9007-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-04-01T10:41:27.737+05:30  INFO 13292 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-04-01T10:41:33.103+05:30  INFO 13292 --- [http-nio-9007-exec-9] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-04-01T10:42:11.415+05:30  INFO 13292 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-04-01T10:42:18.404+05:30  INFO 13292 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-04-01T10:42:32.182+05:30  WARN 13292 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Ace50f490-d04b-11ed-8897-83dc951af849.a1Tlr8Ryh6zoF0KSYgzm3ccJnEjnXlHUcG45gZW%2B5kg; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:12:32 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:12:32 GMT
+2023-04-01T10:42:32.183+05:30  WARN 13292 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Ace50f490-d04b-11ed-8897-83dc951af849.a1Tlr8Ryh6zoF0KSYgzm3ccJnEjnXlHUcG45gZW%2B5kg; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:12:32 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:12:32 GMT
+2023-04-01T10:42:38.534+05:30  INFO 13292 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-04-01T10:43:14.285+05:30 ERROR 13292 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-04-01T10:43:14.286+05:30  WARN 13292 --- [http-nio-9007-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-04-01T10:44:23.323+05:30  INFO 13292 --- [http-nio-9007-exec-5] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-04-01T10:44:43.925+05:30  WARN 13292 --- [http-nio-9007-exec-5] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A1cd8b710-d04c-11ed-a2a1-d3759c9dde91.de314ezBhJCg%2B3Kxu7hlGFBgvr6tLWSDa53lICLNCtY; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:14:43 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:14:43 GMT
+2023-04-01T10:44:43.925+05:30  WARN 13292 --- [http-nio-9007-exec-5] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A1cd8b710-d04c-11ed-a2a1-d3759c9dde91.de314ezBhJCg%2B3Kxu7hlGFBgvr6tLWSDa53lICLNCtY; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:14:43 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:14:43 GMT
+2023-04-01T10:45:13.195+05:30  INFO 13292 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-04-01T10:45:13.628+05:30  WARN 13292 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A2e8b33c0-d04c-11ed-bcfa-0973359c9128.7QSoWEeDy3D%2F1etLPzDDVoe5PBO%2BIWpWhHS5N86Ijn8; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:15:13 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:15:13 GMT
+2023-04-01T10:45:13.628+05:30  WARN 13292 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A2e8b33c0-d04c-11ed-bcfa-0973359c9128.7QSoWEeDy3D%2F1etLPzDDVoe5PBO%2BIWpWhHS5N86Ijn8; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:15:13 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:15:13 GMT
+2023-04-01T10:45:26.015+05:30 ERROR 13292 --- [http-nio-9007-exec-5] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-04-01T10:45:26.016+05:30  WARN 13292 --- [http-nio-9007-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-04-01T10:45:55.716+05:30 ERROR 13292 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-04-01T10:45:55.717+05:30  WARN 13292 --- [http-nio-9007-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-04-01T10:46:10.455+05:30  INFO 13292 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-04-01T10:46:15.422+05:30  INFO 13292 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-04-01T10:46:21.208+05:30  INFO 13292 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-04-01T10:46:31.113+05:30  WARN 13292 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A5cbcea90-d04c-11ed-b5e7-d94a29d219e2.9pOJw103ECTawYaeLwMerX22PNMGTabvePfTvKAJ5Hg; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:16:31 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:16:31 GMT
+2023-04-01T10:46:31.113+05:30  WARN 13292 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A5cbcea90-d04c-11ed-b5e7-d94a29d219e2.9pOJw103ECTawYaeLwMerX22PNMGTabvePfTvKAJ5Hg; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:16:31 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:16:31 GMT
+2023-04-01T10:46:35.998+05:30  WARN 13292 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A5fa404f0-d04c-11ed-8f4e-394873f9339c.ZTnhMLPn0a4lGVyYNrwrZ%2B1BZkqYSeZByjsfZ%2FbCHbI; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:16:35 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:16:35 GMT
+2023-04-01T10:46:35.999+05:30  WARN 13292 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A5fa404f0-d04c-11ed-8f4e-394873f9339c.ZTnhMLPn0a4lGVyYNrwrZ%2B1BZkqYSeZByjsfZ%2FbCHbI; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:16:35 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:16:35 GMT
+2023-04-01T10:46:41.998+05:30  WARN 13292 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A6318b950-d04c-11ed-9f54-c556d4272621.1PKxYLr1AtxviaYIhLxvX4zz8dlOzQHwVudtC4n8MYk; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:16:41 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:16:41 GMT
+2023-04-01T10:46:41.998+05:30  WARN 13292 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A6318b950-d04c-11ed-9f54-c556d4272621.1PKxYLr1AtxviaYIhLxvX4zz8dlOzQHwVudtC4n8MYk; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 11:16:41 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 11:16:41 GMT
+2023-04-01T10:47:13.239+05:30 ERROR 13292 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-04-01T10:47:13.240+05:30  WARN 13292 --- [http-nio-9007-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-04-01T10:47:18.111+05:30 ERROR 13292 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-04-01T10:47:18.112+05:30  WARN 13292 --- [http-nio-9007-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-04-01T10:47:24.116+05:30 ERROR 13292 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-04-01T10:47:24.117+05:30  WARN 13292 --- [http-nio-9007-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-04-01T11:42:24.064+05:30  WARN 13292 --- [HikariPool-11 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Thread starvation or clock leap detected (housekeeper delta=13m3s425ms755µs).
+2023-04-01T12:01:51.802+05:30  INFO 13292 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-04-01T17:00:04.005+05:30  WARN 13292 --- [http-nio-9007-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.text.ParseException: Unparseable date: "null"]
+2023-04-01T17:45:54.493+05:30  INFO 13292 --- [RMI TCP Connection(564)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-04-01T17:45:54.688+05:30  INFO 13292 --- [RMI TCP Connection(564)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-01T17:45:54.707+05:30  INFO 13292 --- [RMI TCP Connection(564)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-01T17:45:54.903+05:30  WARN 13292 --- [RMI TCP Connection(564)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Connection evictor] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.base@17.0.6/java.lang.Thread.sleep(Native Method)
  app//unirest.shaded.org.apache.http.impl.client.IdleConnectionEvictor$1.run(IdleConnectionEvictor.java:66)
  java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
-2023-03-31T21:37:04.885+05:30  INFO 22180 --- [RMI TCP Connection(694)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T21:37:04.913+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
-2023-03-31T21:37:05.016+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T21:37:05.123+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T21:37:05.156+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-31T21:51:02.085+05:30  INFO 15200 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 15200 (C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service)
-2023-03-31T21:51:02.089+05:30  INFO 15200 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T21:51:02.138+05:30  INFO 15200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-31T21:51:02.138+05:30  INFO 15200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-31T21:51:02.931+05:30  INFO 15200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T21:51:03.037+05:30  INFO 15200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 2 JPA repository interfaces.
-2023-03-31T21:51:03.510+05:30  INFO 15200 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
-2023-03-31T21:51:03.604+05:30  INFO 15200 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T21:51:03.648+05:30  INFO 15200 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T21:51:03.997+05:30  INFO 15200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
-2023-03-31T21:51:04.006+05:30  INFO 15200 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T21:51:04.006+05:30  INFO 15200 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T21:51:04.064+05:30  INFO 15200 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T21:51:04.065+05:30  INFO 15200 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1926 ms
-2023-03-31T21:51:04.262+05:30  INFO 15200 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T21:51:04.300+05:30  INFO 15200 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T21:51:04.521+05:30  INFO 15200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T21:51:04.659+05:30  INFO 15200 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54ff9958
-2023-03-31T21:51:04.661+05:30  INFO 15200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T21:51:04.718+05:30  INFO 15200 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T21:51:05.338+05:30  INFO 15200 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T21:51:05.348+05:30  INFO 15200 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T21:51:05.672+05:30  WARN 15200 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T21:51:06.322+05:30  WARN 15200 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T21:51:06.462+05:30  WARN 15200 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T21:51:06.466+05:30  INFO 15200 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T21:51:06.566+05:30  INFO 15200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
-2023-03-31T21:51:06.569+05:30  INFO 15200 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-03-31T21:51:06.700+05:30  INFO 15200 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 5.315 seconds (process running for 6.039)
-2023-03-31T21:51:07.723+05:30  INFO 15200 --- [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-03-31T21:51:07.723+05:30  INFO 15200 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-03-31T21:51:07.725+05:30  INFO 15200 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-01T17:45:55.012+05:30  INFO 13292 --- [RMI TCP Connection(564)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-04-01T17:45:55.079+05:30  INFO 13292 --- [RMI TCP Connection(564)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T17:45:55.150+05:30  INFO 13292 --- [RMI TCP Connection(564)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2023-04-01T17:45:55.180+05:30  INFO 13292 --- [RMI TCP Connection(564)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2023-04-01T17:46:48.980+05:30  INFO 1324 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 1324 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-physician-availability-service)
+2023-04-01T17:46:48.982+05:30  INFO 1324 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-01T17:46:49.027+05:30  INFO 1324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-01T17:46:49.027+05:30  INFO 1324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-01T17:46:49.793+05:30  INFO 1324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01T17:46:49.906+05:30  INFO 1324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interfaces.
+2023-04-01T17:46:50.405+05:30  INFO 1324 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2117a3a4-cea0-3e13-bdad-10bc8cfbb5ef
+2023-04-01T17:46:50.501+05:30  INFO 1324 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-01T17:46:50.539+05:30  INFO 1324 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-01T17:46:50.885+05:30  INFO 1324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-04-01T17:46:50.893+05:30  INFO 1324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-01T17:46:50.893+05:30  INFO 1324 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01T17:46:50.947+05:30  INFO 1324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-01T17:46:50.947+05:30  INFO 1324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1919 ms
+2023-04-01T17:46:51.140+05:30  INFO 1324 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01T17:46:51.175+05:30  INFO 1324 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-01T17:46:51.387+05:30  INFO 1324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-01T17:46:51.545+05:30  INFO 1324 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@afdc71
+2023-04-01T17:46:51.546+05:30  INFO 1324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-01T17:46:51.606+05:30  INFO 1324 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01T17:46:52.192+05:30  INFO 1324 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01T17:46:52.204+05:30  INFO 1324 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01T17:46:52.547+05:30  WARN 1324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01T17:46:53.600+05:30  WARN 1324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-01T17:46:53.741+05:30  WARN 1324 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-01T17:46:53.746+05:30  INFO 1324 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-01T17:46:53.849+05:30  INFO 1324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-04-01T17:46:53.851+05:30  INFO 1324 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-01T17:46:53.991+05:30  INFO 1324 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 5.682 seconds (process running for 6.429)
+2023-04-01T17:46:55.076+05:30  INFO 1324 --- [RMI TCP Connection(8)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-01T17:46:55.077+05:30  INFO 1324 --- [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-01T17:46:55.081+05:30  INFO 1324 --- [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-04-01T18:06:04.800+05:30  WARN 1324 --- [http-nio-9007-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.text.ParseException: Unparseable date: "Sat Apr 01 2023 00:00:00 GMT+0530 (India Standard Time)"]

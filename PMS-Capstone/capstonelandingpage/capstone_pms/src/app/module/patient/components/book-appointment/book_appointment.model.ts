@@ -6,4 +6,5 @@ export class CalenderUser {
   drFirstName: any;
   drLastName: any;
   patientId: any;
+  speciality:any;
 }

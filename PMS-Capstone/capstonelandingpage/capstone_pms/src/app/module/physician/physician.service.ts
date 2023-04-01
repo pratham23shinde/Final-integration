@@ -19,7 +19,7 @@ export class PhysicianService {
     acceptance: string
   ) {
     return this.http.get(
-      'http://localhost:9003/api/v1/appointment/' +
+      'http://localhost:9001/appointment-service/appointment/' +
         physicianEmail +
         '/' +
         date +
@@ -31,7 +31,7 @@ export class PhysicianService {
   //All pending appointments
   getPendingAppointments(physicianEmail: string, acceptance: string) {
     return this.http.get(
-      'http://localhost:9003/api/v1/appointment/' +
+      'http://localhost:9001/appointment-service/appointment/' +
         physicianEmail +
         '?' +
         acceptance
@@ -63,7 +63,7 @@ export class PhysicianService {
   //accepted appointment
   acceptappointment(appointmentId: number, acceptance: String) {
     return this.http.put(
-      'http://localhost:9003/api/v1/appointments/' +
+      'http://localhost:9001/appointment-service/appointments/' +
         appointmentId +
         '/' +
         acceptance,
@@ -73,7 +73,7 @@ export class PhysicianService {
   rejectAppointment(appointmentId: any, acceptance: string) {
     return this.http
       .put(
-        'http://localhost:9003/api/v1/rejectedappointments/' +
+        'http://localhost:9001/appointment-service/rejectedappointments/' +
           appointmentId +
           '/' +
           acceptance,
@@ -96,26 +96,26 @@ export class PhysicianService {
   //get all visit detials by patient id
   getvisitdetailsbyid(appointmentId: any) {
     return this.http.get(
-      `http://localhost:9005/api/v1/patient/health-records/${appointmentId}`
+      `http://localhost:9001/patient-health-records-service/patient/health-records/${appointmentId}`
     );
   }
 
   //Get visit history details by id
   getAppointmentHistoryDetailsById(patientId: any) {
     return this.http.get(
-      `http://localhost:9003/api/v1/appointment/${patientId}/previous`
+      `http://localhost:9001/appointment-service/appointment/${patientId}/previous`
     );
   }
 
   // prvious visit record detials by patient id
   getPreviousVisistRecordsByPatientId(patientId: any) {
     return this.http.get(
-      `http://localhost:9005/api/v1/patient/Previous-visitDetails-records-for-history/${patientId}`
+      `http://localhost:9001/patient-health-records-service/patient/Previous-visitDetails-records-for-history/${patientId}`
     );
   }
 
   getallTest() {
-    return this.http.get('http://localhost:9005/api/v1/tests').pipe(
+    return this.http.get('http://localhost:9001/patient-health-records-service/tests').pipe(
       tap(() => {
         this.refresh.next();
       })
@@ -123,36 +123,36 @@ export class PhysicianService {
   }
 
   getallPatient() {
-    return this.http.get('http://localhost:9006/api/v1/patient');
+    return this.http.get('http://localhost:9001/patient-info-service/patient');
   }
 
   getallPrescriptionbyvisitiddata(visitId: any) {
     return this.http.get(
-      `http://localhost:9005/api/v1/prescription/${visitId}`
+      `http://localhost:9001/patient-health-records-service/prescription/${visitId}`
     );
   }
 
   getPatientbyId(patientId: number) {
     return this.http.get(
-      `http://localhost:9006/api/v1/patient/${patientId}`
+      `http://localhost:9001/patient-info-service/patient/${patientId}`
     );
   }
 
   enterePrescriptionFormData(data: any) {
-    return this.http.post('http://localhost:9005/api/v1/prescription', data);
+    return this.http.post('http://localhost:9001/patient-health-records-service/prescription', data);
   }
 
   addPrescription(prescription: Prescription, visitId: any) {
     prescription.visitId = visitId;
     return this.http.post(
-      'http://localhost:9005/api/v1/patient/prescription',
+      'http://localhost:9001/patient-health-records-service/patient/prescription',
       prescription
     );
   }
 
   addObservation(test: Test, visitId: any) {
     test.visitId = visitId;
-    return this.http.post('http://localhost:9005/api/v1/savetest', test).pipe(
+    return this.http.post('http://localhost:9001/patient-health-records-service/savetest', test).pipe(
       tap(() => {
         this.refresh.next();
       })
@@ -162,7 +162,7 @@ export class PhysicianService {
   deletetest(testId: any) {
     console.log(testId);
     return this.http
-      .delete(`http://localhost:9005/api/v1/tests/${testId}`)
+      .delete(`http://localhost:9001/patient-health-records-service/tests/${testId}`)
       .pipe(
         tap(() => {
           this.refresh.next();
@@ -172,13 +172,13 @@ export class PhysicianService {
 
   getPrevTests(visitId: any) {
     return this.http.get(
-      `http://localhost:9005/api/v1/patient/${visitId}/test-records`);
+      `http://localhost:9001/patient-health-records-service/patient/${visitId}/test-records`);
   }
 
   //privious prescription in history component
   getPreviousPrescriptionRecordsByVisitId(visitId: any) {
     return this.http.get(
-      `http://localhost:9005/api/v1/prescription/${visitId}`
+      `http://localhost:9001/patient-health-records-service/prescription/${visitId}`
     );
   }
 
@@ -186,7 +186,7 @@ export class PhysicianService {
   testId: any;
   updateTest(test: Test, testId: any) {
     return this.http.put(
-      `http://localhost:9005/api/v1/updateTest/${testId}` + Test,
+      `http://localhost:9001/patient-health-records-service/updateTest/${testId}` + Test,
       ''
     );
   }
@@ -194,7 +194,7 @@ export class PhysicianService {
   //delete prescription by testid
   deletePrescription(testId: any) {
     return this.http.delete(
-      `http://localhost:9005/api/v1/deletePrescription/${testId}`
+      `http://localhost:9001/patient-health-records-service/deletePrescription/${testId}`
     );
   }
 
@@ -214,7 +214,7 @@ export class PhysicianService {
      // get all current user info
   physicianEmail:any=sessionStorage.getItem("currentUserEmail");
   getAllPhysicianInfo(physicianEmail:any){
-    return this.http.get(`http://localhost:9007/api/v1/doctorInfo/${physicianEmail}`)
+    return this.http.get(`http://localhost:9001/physician-availability-service/doctorInfo/${physicianEmail}`)
     
   }
    public myvar: any;

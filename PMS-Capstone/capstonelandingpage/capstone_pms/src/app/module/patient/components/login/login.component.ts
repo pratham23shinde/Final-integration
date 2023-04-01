@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PatientService } from '../../patient.service';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 export class Login {
   // patientId: number = 0;
@@ -14,10 +15,41 @@ export class Login {
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  myGroup: FormGroup;
+
   login = new Login();
   msg = '';
 
-  constructor(private patientService: PatientService, private router: Router) {}
+  constructor(private patientService: PatientService, private router: Router, private formBuilder: FormBuilder,
+    ) { this.myGroup = this.formBuilder.group(
+      {
+        inputEmail: ['', [Validators.required,Validators.email]],
+       inputPassword: ['', [Validators.required,Validators.minLength(8),Validators.maxLength(8)]],
+      }
+    );
+      }
+
+      // getEmailErrorMessage(emailControl: FormControl) {
+      //   if (emailControl.hasError('required')) {
+      //     return 'Email is required';
+      //   } else if (emailControl.hasError('email')) {
+      //     return 'Invalid email address';
+      //   } else {
+      //     return '';
+      //   }
+      // }
+    
+
+      // getEmailErrorMessage() {
+      //    const emailControl = this.myGroup.get('inputEmail');
+      //   if (emailControl.hasError('required')) {
+      //     return 'Email is required';
+      //   } else if (emailControl.hasError('inputEmail')) {
+      //     return 'Invalid email address';
+      //   } else {
+      //     return '';
+      //   }
+      // }
 
   ngOnInit(): void {}
 

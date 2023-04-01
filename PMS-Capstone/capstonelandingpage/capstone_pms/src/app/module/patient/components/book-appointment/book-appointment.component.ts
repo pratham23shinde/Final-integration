@@ -1,111 +1,3 @@
-// import { DatePipe } from '@angular/common';
-// import { Component, OnInit } from '@angular/core';
-// import { Router } from '@angular/router';
-// import { PatientService } from '../../patient.service';
-
-// interface Doctor {
-//   value: string;
-//   viewValue: string;
-// }
-
-// class AppointmentUser {
-//   drFirstName: any;
-//   drLastName: any;
-//   reason: any;
-//   date: any;
-//   patient_id: any;
-//   physician_email: any;
-//   submissionDate: any;
-//   doctorData:any;
-// }
-
-// export class CalenderUser{
-//   date: any;
-//     reason: any;
-//      physicianEmail: any;
-//     submissionDate: any;
-//     drFirstName:any;
-//     drLastName:any;
-//      patientId:any;
-
-// }
-// @Component({
-//   selector: 'app-book-appointment',
-//   templateUrl: './book-appointment.component.html',
-//   styleUrls: ['./book-appointment.component.scss']
-// })
-// export class BookAppointmentComponent  implements OnInit {
-
-//   appointmentUser=new AppointmentUser;
-//   cuser
-
-//   tittle = 'datePicker';
-//   calenderUser:CalenderUser=new CalenderUser();
-//   getDate: any;
-//   Date1:Date =new Date();
-//   constructor(private patientService: PatientService,
-//     private router:Router,
-//     private datePipe: DatePipe){}
-
-//   ngOnInit(){
-//     this.getDateTime();
-
-//   }
-
-//   minDate:any ="";
-//   getDateTime(){
-//     var date:any = new Date();
-//     var toDate:any =date.getDate();
-//     if(toDate < 10){
-//       toDate = '0' + toDate;
-//     }
-//     var month:any = date.getMonth() +1;
-//     if(month <10){
-//       month = '0' + month;
-//     }
-//     var year = date.getFullYear();
-//     this.minDate = year+ "-" + month +"-" + toDate;
-//     console.log(this.minDate);
-
-//   }
-
-//   selectedMatDate!:Date;
-
-//    doctors: Doctor[] = [
-//     {value: 'doctor-1', viewValue: 'Dr. Ashish Sabharwal'},
-//     {value: 'doctor-2', viewValue: 'Dr. Surbhi Anand'},
-//     {value: 'doctor-3', viewValue: 'Dr. Sanjay Sachdeva'},
-//     {value: 'doctor-4', viewValue: 'Dr. Aditya Gupta'},
-//   ];
-// getDoctor:any;
-//   // getAvailDoctor(){
-//   //   this.calenderService.getAvailDoctor().subscribe((respone: any)=>{
-//   //     this.getDoctor=respone;
-//   //     console.log(this.getDoctor);
-
-//   //   })
-//   // }
-
-//   saveUser(){
-//     this.patientService.addAppointment(this.calenderUser).subscribe((data: any)=>{
-//       console.log(data);
-//             // this.goToUserList();
-//     },
-//       (    error: any) => console.log(error));
-
-//  }
-// //  goToUserList(){
-// //   this.router.navigate(['/patient/register']);
-// // }
-// onSubmit(){
-//   this.calenderUser.submissionDate=this.datePipe.transform(this.Date1,"dd-MM-yyyy");
-//   this.calenderUser.date=this.datePipe.transform(this.calenderUser.date,"dd-MM-yyyy");
-//   console.log(this.calenderUser);
-//   this.saveUser();
-// }
-// }
-
-////////////////////////////
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
@@ -145,7 +37,7 @@ interface Doctor {
   styleUrls: ['./book-appointment.component.scss'],
 })
 export class BookAppointmentComponent implements OnInit {
-  appointmentUser = new AppointmentUser();
+  // appointmentUser = new AppointmentUser();
   cUser = new AppointmentUser();
 
   num: any = sessionStorage.getItem('patientid');
@@ -158,15 +50,7 @@ export class BookAppointmentComponent implements OnInit {
 
   doctorControl = new FormControl<Doctor | null>(null, Validators.required);
   selectFormControl = new FormControl('', Validators.required);
-  // animals: Doctor[] = [
-  //   { name: 'Rushikesh', sound: 'Woof!' },
-  //   { name: 'Cat', sound: 'Meow!' },
-  //   { name: 'Cow', sound: 'Moo!' },
-  //   { name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!' },
-  // ];
-
-  // displayedColumns: string[] = ['physicianEmail', 'first_name', 'last_name'];
-
+  
   tittle = 'datePicker';
   calenderUser: CalenderUser = new CalenderUser();
   getDate: any;
@@ -201,6 +85,7 @@ export class BookAppointmentComponent implements OnInit {
         this.calenderUser.physicianEmail = this.doctors[i].physicianEmail;
         this.calenderUser.drFirstName = this.doctors[i].first_name;
         this.calenderUser.drLastName = this.doctors[i].last_name;
+        this.calenderUser.speciality=this.doctors[i].speciality;
         this.calenderUser.patientId = this.num;
       }
     }

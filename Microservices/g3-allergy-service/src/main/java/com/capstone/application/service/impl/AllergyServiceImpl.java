@@ -33,7 +33,9 @@ public class AllergyServiceImpl implements AllergyService {
 		// TODO Auto-generated method stub
 		
 		List<Allergy> result= allergyRepository.findAll();
+		log.info("Allergy List:"+result);
 		if(result.size()==0) {
+			log.error("Couldn't find any allergy in the databse");	
 			throw new AllergyServiceException("No Allergy found in the Database");
 		}
 		
@@ -47,8 +49,10 @@ public class AllergyServiceImpl implements AllergyService {
 	public Optional<Allergy> findById(Integer allergyId) throws AllergyServiceException{
 
 		Optional<Allergy> result = allergyRepository.findById(allergyId);
+		log.info("Allergy by id found:"+result);
 		System.out.println(result);
 		if(result.isEmpty()) {
+			log.error("Couldn't find allergy by the id"+allergyId);
 			throw new AllergyServiceException("No Allergy found with ID "+allergyId);
 		}
 		else {

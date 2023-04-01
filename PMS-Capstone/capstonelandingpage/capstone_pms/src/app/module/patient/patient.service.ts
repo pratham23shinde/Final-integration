@@ -26,39 +26,39 @@ export class PatientService {
 
   public addUser(user: User): Observable<Object> {
     return this.httpClient.post(
-      `http://localhost:9004/api/v1/patient/register`,
+      `http://localhost:9001/authentication-service/patient/register`,
       user
     );
   }
 
   public loginUserFromRemote(login: Login): Observable<any> {
     return this.httpClient.post<any>(
-      'http://localhost:9004/api/v1/patient/login',
+      'http://localhost:9001/authentication-service/patient/login',
       login
     );
   }
 
   getAppointmentByPatient(patientId: number): Observable<any> {
     return this.httpClient.get(
-      `http://localhost:9003/api/v1/patient/${patientId}/appointments`
+      `http://localhost:9001/appointment-service/patient/${patientId}/appointments`
     );
   }
 
   public getPatientbyId(patientId: number) {
     return this.httpClient.get(
-      'http://localhost:9006/api/v1/patient/' + patientId
+      'http://localhost:9001/patient-info-service/patient/' + patientId
     );
   }
 
   getAllTests(visitId: number): Observable<TestList[]> {
     return this.httpClient.get<TestList[]>(
-      `http://localhost:9005/api/v1/patient/${visitId}/test-records`
+      `http://localhost:9001/patient-health-records-service/patient/${visitId}/test-records`
     );
   }
 
   getAllVisitId(patientId: number): Observable<VisitId[]> {
     return this.httpClient.get<VisitId[]>(
-      `http://localhost:9005/api/v1/patient/${patientId}/visitId`
+      `http://localhost:9001/patient-health-records-service/patient/${patientId}/visitId`
     );
   }
 
@@ -75,13 +75,13 @@ export class PatientService {
 
   getPeviousAppointment(patientId: number) {
     return this.httpClient.get(
-      `http://localhost:9003/api/v1/appointment/${patientId}/previous`
+      `http://localhost:9001/appointment-service/appointment/${patientId}/previous`
     );
   }
 
   getPeviousAppointmentVisitHistory(appointmentId: number) {
     return this.httpClient.get(
-      `http://localhost:9005/api/v1/patient/${appointmentId}/health-records`
+      `http://localhost:9001/patient-health-records-service/patient/${appointmentId}/health-records`
     );
   }
 
@@ -89,7 +89,7 @@ export class PatientService {
   //   return this.httpClient.get<PrescriptionList[]>(`http://localhost:8083/patient/${visitId}/prescription`)
   // }
 
-  private apiServerUrl = 'http://localhost:9003/api/v1/appointment';
+  private apiServerUrl = 'http://localhost:9001/appointment-service/appointment';
 
   public addAppointment(calenderUser: CalenderUser): Observable<Object> {
     return this.httpClient.post(`${this.apiServerUrl}`, calenderUser);
@@ -102,13 +102,13 @@ export class PatientService {
 
   getAllAppointmentByAcceptance(acceptance: string) {
     return this.httpClient.get(
-      'http://localhost:9003/api/v1/appointments' + '?' + acceptance
+      'http://localhost:9001/appointment-service/appointments' + '?' + acceptance
     );
   }
 
   getAllAppointments(patientId: number): Observable<AllAppointments[]> {
     return this.httpClient.get<AllAppointments[]>(
-      `http://localhost:9003/api/v1/patient/${patientId}/allappointments`
+      `http://localhost:9001/appointment-service/patient/${patientId}/allappointments`
     );
   }
 
@@ -116,13 +116,13 @@ export class PatientService {
     appointmentId: number
   ): Observable<AppointmentDetails[]> {
     return this.httpClient.get<AppointmentDetails[]>(
-      `http://localhost:9003/api/v1/appointments/${appointmentId}`
+      `http://localhost:9001/appointment-service/appointments/${appointmentId}`
     );
   }
 
   getAllPrescription(visitId: number): Observable<PrescriptionList[]> {
     return this.httpClient.get<PrescriptionList[]>(
-      `http://localhost:9005/api/v1/patient/${visitId}/prescription`
+      `http://localhost:9001/patient-health-records-service/patient/${visitId}/prescription`
     );
   }
 
@@ -130,12 +130,12 @@ export class PatientService {
   //   return this.httpClient.get(`http://localhost:9003/api/v1/appointment/${patientId}/previous`);
   // }
   getAppointmentHistoryDetailsById(patientId :any){
-    return this.httpClient.get(`http://localhost:9003/api/vi/appointment/${patientId}/previous`);
+    return this.httpClient.get(`http://localhost:9001/appointment-service/appointment/${patientId}/previous`);
   }
 
   getVisitDetails(VisitId:number):Observable<VisitDetails[]>{
     return this.httpClient.get<VisitDetails[]>(
-      `http://localhost:9005/api/v1/patient/${VisitId}/visit-details`
+      `http://localhost:9001/patient-health-records-service/patient/${VisitId}/visit-details`
     )
   }
 }
