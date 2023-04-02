@@ -85,6 +85,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		
+		<finalName>g3-gatewawy-service</finalName>
 	</build>
 
 </project>

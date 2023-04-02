@@ -106,15 +106,9 @@ public class PhysicianAvailabilityControllers {
 
 	@GetMapping("/addDoctors")
 	public boolean postDoctors() throws Exception, Throwable {
-		try {
 			log.info("Doctors added into doctor table successfully");
 			physicianAvailabilityService.postDoctors();
 			return true;
-		} catch (Exception e) {
-			log.error(e.getMessage());
-			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-		}
-
 	}
 
 	@GetMapping("/physician-available/OnthatDate/{date}")

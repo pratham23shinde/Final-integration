@@ -104,6 +104,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>g3-appointment-service</finalName>
 	</build>
 
 </project>
