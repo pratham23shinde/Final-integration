@@ -1,0 +1,409 @@
+2023-03-31T07:39:02.542+05:30  WARN 13208 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h37m58s473ms536µs801ns).
+2023-03-31T08:20:57.673+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-31T08:20:57.710+05:30  INFO 13208 --- [RMI TCP Connection(1002)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-31T08:20:57.832+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-31T08:20:57.856+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-31T08:20:57.880+05:30  WARN 13208 --- [RMI TCP Connection(1000)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Connection evictor] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/java.lang.Thread.sleep(Native Method)
+ app//unirest.shaded.org.apache.http.impl.client.IdleConnectionEvictor$1.run(IdleConnectionEvictor.java:66)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2023-03-31T08:20:57.881+05:30  INFO 13208 --- [RMI TCP Connection(1003)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-31T08:20:57.902+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-03-31T08:20:57.927+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T08:20:57.981+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-31T08:20:57.996+05:30  INFO 13208 --- [RMI TCP Connection(1000)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-31T08:23:23.733+05:30  INFO 22180 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 22180 (C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service)
+2023-03-31T08:23:23.736+05:30  INFO 22180 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-03-31T08:23:23.777+05:30  INFO 22180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-31T08:23:23.777+05:30  INFO 22180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-31T08:23:24.529+05:30  INFO 22180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-31T08:23:24.639+05:30  INFO 22180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 2 JPA repository interfaces.
+2023-03-31T08:23:25.104+05:30  INFO 22180 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-03-31T08:23:25.195+05:30  INFO 22180 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-31T08:23:25.229+05:30  INFO 22180 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-03-31T08:23:25.627+05:30  INFO 22180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-03-31T08:23:25.637+05:30  INFO 22180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-31T08:23:25.637+05:30  INFO 22180 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-31T08:23:25.707+05:30  INFO 22180 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-31T08:23:25.708+05:30  INFO 22180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1931 ms
+2023-03-31T08:23:25.914+05:30  INFO 22180 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-31T08:23:25.991+05:30  INFO 22180 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-31T08:23:26.305+05:30  INFO 22180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-31T08:23:26.431+05:30  INFO 22180 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44250445
+2023-03-31T08:23:26.433+05:30  INFO 22180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-31T08:23:26.495+05:30  INFO 22180 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-31T08:23:27.219+05:30  INFO 22180 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-31T08:23:27.230+05:30  INFO 22180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T08:23:27.528+05:30  WARN 22180 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-31T08:23:28.149+05:30  WARN 22180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-03-31T08:23:28.284+05:30  WARN 22180 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-03-31T08:23:28.289+05:30  INFO 22180 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-31T08:23:28.388+05:30  INFO 22180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-03-31T08:23:28.391+05:30  INFO 22180 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-03-31T08:23:28.504+05:30  INFO 22180 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 5.408 seconds (process running for 6.064)
+2023-03-31T08:23:29.369+05:30  INFO 22180 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-31T08:23:29.370+05:30  INFO 22180 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-31T08:23:29.372+05:30  INFO 22180 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-03-31T13:25:19.946+05:30  WARN 22180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m18s111ms563µs300ns).
+2023-03-31T15:38:27.823+05:30  INFO 16772 --- [main] .a.PhysicianAvailabilityApplicationTests : Starting PhysicianAvailabilityApplicationTests using Java 17.0.6 with PID 16772 (started by prath in C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service)
+2023-03-31T15:38:27.827+05:30  INFO 16772 --- [main] .a.PhysicianAvailabilityApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-03-31T15:38:28.950+05:30  INFO 16772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-31T15:38:29.117+05:30  INFO 16772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158 ms. Found 2 JPA repository interfaces.
+2023-03-31T15:38:29.914+05:30  INFO 16772 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc938cf4-8a29-33ab-8889-ecfc8addbce2
+2023-03-31T15:38:30.104+05:30  INFO 16772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-31T15:38:30.152+05:30  INFO 16772 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-03-31T15:38:30.423+05:30  INFO 16772 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-31T15:38:30.507+05:30  INFO 16772 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-31T15:38:30.863+05:30  INFO 16772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-31T15:38:31.049+05:30  INFO 16772 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71eafb64
+2023-03-31T15:38:31.053+05:30  INFO 16772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-31T15:38:31.124+05:30  INFO 16772 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-31T15:38:31.925+05:30  INFO 16772 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-31T15:38:31.947+05:30  INFO 16772 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T15:38:32.692+05:30  WARN 16772 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-31T15:38:33.942+05:30  WARN 16772 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-03-31T15:38:33.974+05:30  INFO 16772 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-31T15:38:34.111+05:30  INFO 16772 --- [main] .a.PhysicianAvailabilityApplicationTests : Started PhysicianAvailabilityApplicationTests in 7.258 seconds (process running for 8.896)
+2023-03-31T15:38:34.730+05:30  INFO 16772 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T15:38:34.734+05:30  INFO 16772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-31T15:38:34.746+05:30  INFO 16772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-31T15:38:48.269+05:30  INFO 24000 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 24000 (C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service)
+2023-03-31T15:38:48.272+05:30  INFO 24000 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-03-31T15:38:48.328+05:30  INFO 24000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-31T15:38:48.329+05:30  INFO 24000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-31T15:38:49.139+05:30  INFO 24000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-31T15:38:49.264+05:30  INFO 24000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 2 JPA repository interfaces.
+2023-03-31T15:38:49.903+05:30  INFO 24000 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-03-31T15:38:50.009+05:30  INFO 24000 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-31T15:38:50.046+05:30  INFO 24000 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-03-31T15:38:50.478+05:30  INFO 24000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-03-31T15:38:50.492+05:30  INFO 24000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-31T15:38:50.493+05:30  INFO 24000 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-31T15:38:50.636+05:30  INFO 24000 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-31T15:38:50.637+05:30  INFO 24000 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2306 ms
+2023-03-31T15:38:50.924+05:30  INFO 24000 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-31T15:38:50.964+05:30  INFO 24000 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-31T15:38:51.217+05:30  INFO 24000 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-31T15:38:51.354+05:30  INFO 24000 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d274185
+2023-03-31T15:38:51.355+05:30  INFO 24000 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-31T15:38:51.406+05:30  INFO 24000 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-31T15:38:52.177+05:30  INFO 24000 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-31T15:38:52.189+05:30  INFO 24000 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T15:38:52.502+05:30  WARN 24000 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-31T15:38:53.249+05:30  WARN 24000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-03-31T15:38:53.405+05:30  WARN 24000 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-03-31T15:38:53.410+05:30  INFO 24000 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-31T15:38:53.510+05:30  WARN 24000 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-03-31T15:38:53.515+05:30  INFO 24000 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T15:38:53.519+05:30  INFO 24000 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-31T15:38:53.515+05:30 ERROR 24000 --- [catalogWatchTaskScheduler-1] o.s.c.c.discovery.ConsulDiscoveryClient  : Error watching Consul CatalogServices
+
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'refreshEventListener': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:264) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:221) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:413) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:139) ~[spring-cloud-consul-discovery-4.0.1.jar:4.0.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.6.jar:6.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-03-31T15:38:53.528+05:30  INFO 24000 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-31T15:38:53.531+05:30  INFO 24000 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-31T15:38:53.553+05:30  INFO 24000 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-03-31T15:38:53.570+05:30 ERROR 24000 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9007 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9007 or configure this application to listen on another port.
+
+2023-03-31T15:39:06.836+05:30  INFO 23604 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 23604 (C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service)
+2023-03-31T15:39:06.839+05:30  INFO 23604 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-03-31T15:39:06.893+05:30  INFO 23604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-31T15:39:06.893+05:30  INFO 23604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-31T15:39:07.701+05:30  INFO 23604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-31T15:39:07.843+05:30  INFO 23604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 2 JPA repository interfaces.
+2023-03-31T15:39:08.436+05:30  INFO 23604 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-03-31T15:39:08.545+05:30  INFO 23604 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-31T15:39:08.582+05:30  INFO 23604 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-03-31T15:39:09.006+05:30  INFO 23604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-03-31T15:39:09.017+05:30  INFO 23604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-31T15:39:09.017+05:30  INFO 23604 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-31T15:39:09.100+05:30  INFO 23604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-31T15:39:09.102+05:30  INFO 23604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2209 ms
+2023-03-31T15:39:09.344+05:30  INFO 23604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-31T15:39:09.389+05:30  INFO 23604 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-31T15:39:09.618+05:30  INFO 23604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-31T15:39:09.766+05:30  INFO 23604 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58d4edbe
+2023-03-31T15:39:09.768+05:30  INFO 23604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-31T15:39:09.830+05:30  INFO 23604 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-31T15:39:10.526+05:30  INFO 23604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-31T15:39:10.535+05:30  INFO 23604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T15:39:10.879+05:30  WARN 23604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-31T15:39:11.609+05:30  WARN 23604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-03-31T15:39:11.765+05:30  WARN 23604 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-03-31T15:39:11.770+05:30  INFO 23604 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-31T15:39:11.874+05:30  WARN 23604 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-03-31T15:39:11.884+05:30  INFO 23604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T15:39:11.891+05:30  INFO 23604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-31T15:39:11.903+05:30  INFO 23604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-31T15:39:11.906+05:30  INFO 23604 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-31T15:39:11.931+05:30  INFO 23604 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-03-31T15:39:11.955+05:30 ERROR 23604 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9007 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9007 or configure this application to listen on another port.
+
+2023-03-31T15:42:04.625+05:30  INFO 22180 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:42:07.476+05:30  WARN 22180 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A7df9c980-cfac-11ed-9a23-0351c6337e6a.obFLQ5wZ81X3S%2BX6deSvrKTVu3b910IopxkN%2Bj%2Ba6%2Bs; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:12:07 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:12:07 GMT
+2023-03-31T15:42:07.477+05:30  WARN 22180 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A7df9c980-cfac-11ed-9a23-0351c6337e6a.obFLQ5wZ81X3S%2BX6deSvrKTVu3b910IopxkN%2Bj%2Ba6%2Bs; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:12:07 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:12:07 GMT
+2023-03-31T15:42:34.309+05:30  INFO 22180 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:42:34.752+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A8e462680-cfac-11ed-98cd-d3236ce5cf06.cSSJX9QV6AQw3TIShT5KLRIiARKMnNGTV9Lprz4QX5A; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:12:34 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:12:34 GMT
+2023-03-31T15:42:34.754+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A8e462680-cfac-11ed-98cd-d3236ce5cf06.cSSJX9QV6AQw3TIShT5KLRIiARKMnNGTV9Lprz4QX5A; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:12:34 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:12:34 GMT
+2023-03-31T15:43:01.073+05:30  INFO 22180 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:43:02.321+05:30  WARN 22180 --- [http-nio-9007-exec-7] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A9eb6fb70-cfac-11ed-98cd-d3236ce5cf06.oVmXfBL2VFVL1Xh4bwfLkUeU40KSnihXxtn%2BR7DQR9Y; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:13:02 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:13:02 GMT
+2023-03-31T15:43:02.321+05:30  WARN 22180 --- [http-nio-9007-exec-7] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A9eb6fb70-cfac-11ed-98cd-d3236ce5cf06.oVmXfBL2VFVL1Xh4bwfLkUeU40KSnihXxtn%2BR7DQR9Y; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:13:02 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:13:02 GMT
+2023-03-31T15:44:18.825+05:30  INFO 22180 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:44:19.346+05:30  WARN 22180 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Acc9e3bc0-cfac-11ed-8669-09cabdc47259.CjBFc9MKjDOrV48YuDOdO%2BHiDgJ%2B6kgH%2BS5U7TjCFFU; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:14:19 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:14:19 GMT
+2023-03-31T15:44:19.349+05:30  WARN 22180 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Acc9e3bc0-cfac-11ed-8669-09cabdc47259.CjBFc9MKjDOrV48YuDOdO%2BHiDgJ%2B6kgH%2BS5U7TjCFFU; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:14:19 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:14:19 GMT
+2023-03-31T15:44:30.312+05:30  INFO 22180 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:44:30.743+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Ad3692000-cfac-11ed-b865-0d40a5f65385.%2FcoP8kwEa962XqlOQlL%2FueCHyAMLJFR2oqLJv25PTIw; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:14:30 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:14:30 GMT
+2023-03-31T15:44:30.744+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Ad3692000-cfac-11ed-b865-0d40a5f65385.%2FcoP8kwEa962XqlOQlL%2FueCHyAMLJFR2oqLJv25PTIw; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:14:30 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:14:30 GMT
+2023-03-31T15:45:59.441+05:30  INFO 22180 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:46:00.092+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A08a4e6f0-cfad-11ed-8f4e-394873f9339c.t5TAmDLsmgrrbSxMhpFQpp0IrciflQjyfDPJry8fiJ4; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:15:59 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:15:59 GMT
+2023-03-31T15:46:00.094+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A08a4e6f0-cfad-11ed-8f4e-394873f9339c.t5TAmDLsmgrrbSxMhpFQpp0IrciflQjyfDPJry8fiJ4; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:16:00 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:16:00 GMT
+2023-03-31T15:48:59.897+05:30  INFO 22180 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:49:00.531+05:30  WARN 22180 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A743251a0-cfad-11ed-bc6c-99977f422a49.Ra%2BeyKbohNLZSc4xEUigvJUOJ9MLIMnbklz2PZkaRwo; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:19:00 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:19:00 GMT
+2023-03-31T15:49:00.532+05:30  WARN 22180 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A743251a0-cfad-11ed-bc6c-99977f422a49.Ra%2BeyKbohNLZSc4xEUigvJUOJ9MLIMnbklz2PZkaRwo; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:19:00 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:19:00 GMT
+2023-03-31T15:49:05.881+05:30  INFO 22180 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:49:06.329+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A77a70600-cfad-11ed-9a23-0351c6337e6a.72azF44ipKuecKPT%2FwbpK9xOD%2FX5d6MJ6YfPu0bsdEQ; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:19:06 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:19:06 GMT
+2023-03-31T15:49:06.330+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A77a70600-cfad-11ed-9a23-0351c6337e6a.72azF44ipKuecKPT%2FwbpK9xOD%2FX5d6MJ6YfPu0bsdEQ; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:19:06 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:19:06 GMT
+2023-03-31T15:50:52.125+05:30  INFO 22180 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:50:52.688+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Ab70e6860-cfad-11ed-8897-83dc951af849.ppLmm5HGOQof2VmwkOuSEe%2Fj0sqkJ9iWQFyvI1iUUNA; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:20:52 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:20:52 GMT
+2023-03-31T15:50:52.688+05:30  WARN 22180 --- [http-nio-9007-exec-6] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Ab70e6860-cfad-11ed-8897-83dc951af849.ppLmm5HGOQof2VmwkOuSEe%2Fj0sqkJ9iWQFyvI1iUUNA; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:20:52 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:20:52 GMT
+2023-03-31T15:53:33.928+05:30  INFO 22180 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:53:34.460+05:30  WARN 22180 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A1779c9b0-cfae-11ed-968c-57475c452a6a.KfhfAeuurpPBAFqgfnbezonnuZ%2BjlsarN%2F428Tz0OJ4; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:23:34 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:23:34 GMT
+2023-03-31T15:53:34.461+05:30  WARN 22180 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A1779c9b0-cfae-11ed-968c-57475c452a6a.KfhfAeuurpPBAFqgfnbezonnuZ%2BjlsarN%2F428Tz0OJ4; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:23:34 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:23:34 GMT
+2023-03-31T15:54:05.132+05:30  INFO 22180 --- [http-nio-9007-exec-5] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:54:05.583+05:30  WARN 22180 --- [http-nio-9007-exec-5] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A2a0b34b0-cfae-11ed-b50d-91121b58d731.jEEkFONKiJzgdk5%2BPf2jbZUn2F5gYzIm0V10OG7QQVw; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:24:05 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:24:05 GMT
+2023-03-31T15:54:05.583+05:30  WARN 22180 --- [http-nio-9007-exec-5] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A2a0b34b0-cfae-11ed-b50d-91121b58d731.jEEkFONKiJzgdk5%2BPf2jbZUn2F5gYzIm0V10OG7QQVw; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:24:05 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:24:05 GMT
+2023-03-31T15:56:55.931+05:30  INFO 22180 --- [http-nio-9007-exec-9] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T15:56:57.405+05:30  WARN 22180 --- [http-nio-9007-exec-9] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A906e72d0-cfae-11ed-a582-4dd13e98d2a3.va6PAsMU%2FtZ5AHLbbXKTCgzbhIMSSPCHKvqYy0f7A7U; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:26:57 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:26:57 GMT
+2023-03-31T15:56:57.407+05:30  WARN 22180 --- [http-nio-9007-exec-9] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A906e72d0-cfae-11ed-a582-4dd13e98d2a3.va6PAsMU%2FtZ5AHLbbXKTCgzbhIMSSPCHKvqYy0f7A7U; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:26:57 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:26:57 GMT
+2023-03-31T15:57:16.554+05:30  INFO 22180 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T16:01:07.242+05:30  INFO 22180 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Physician availability updated successfully
+2023-03-31T16:01:07.265+05:30  INFO 22180 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T16:01:16.616+05:30  INFO 22180 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Physician availability deleted successfully
+2023-03-31T16:01:16.855+05:30  INFO 22180 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T16:03:23.335+05:30  INFO 22180 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Physician availability updated successfully
+2023-03-31T16:03:23.447+05:30  INFO 22180 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T16:03:40.880+05:30  INFO 22180 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Physician availability updated successfully
+2023-03-31T16:03:40.952+05:30  INFO 22180 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T16:03:56.188+05:30  INFO 22180 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Physician availability updated successfully
+2023-03-31T16:03:56.234+05:30  INFO 22180 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T16:05:48.632+05:30  INFO 22180 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T16:18:05.266+05:30  INFO 22180 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T16:18:06.790+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A851106c0-cfb1-11ed-a77f-55ea12de0427.cNgZdD0N0AfRbii5eJpoO37ADlm8JD8fLCwZWkOYNfY; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:48:06 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:48:06 GMT
+2023-03-31T16:18:06.793+05:30  WARN 22180 --- [http-nio-9007-exec-3] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A851106c0-cfb1-11ed-a77f-55ea12de0427.cNgZdD0N0AfRbii5eJpoO37ADlm8JD8fLCwZWkOYNfY; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:48:06 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:48:06 GMT
+2023-03-31T16:23:19.683+05:30  INFO 22180 --- [http-nio-9007-exec-9] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T16:23:20.290+05:30  WARN 22180 --- [http-nio-9007-exec-9] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A3ff088d0-cfb2-11ed-9fdb-7f32b070c5c2.FThklgHXETcwBRExY7H8alIWmzszfZrTNxfwLmG%2FCCE; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:53:20 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:53:20 GMT
+2023-03-31T16:23:20.292+05:30  WARN 22180 --- [http-nio-9007-exec-9] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A3ff088d0-cfb2-11ed-9fdb-7f32b070c5c2.FThklgHXETcwBRExY7H8alIWmzszfZrTNxfwLmG%2FCCE; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:53:20 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:53:20 GMT
+2023-03-31T16:24:59.551+05:30  INFO 22180 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T16:25:00.115+05:30  WARN 22180 --- [http-nio-9007-exec-1] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A7b68fdc0-cfb2-11ed-a77f-55ea12de0427.71ls4LMnRc5mPuaBDpmYbLmcpfq9um8JYOzqktS2Ydo; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:54:59 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:54:59 GMT
+2023-03-31T16:25:00.128+05:30  WARN 22180 --- [http-nio-9007-exec-1] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A7b68fdc0-cfb2-11ed-a77f-55ea12de0427.71ls4LMnRc5mPuaBDpmYbLmcpfq9um8JYOzqktS2Ydo; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 16:55:00 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 16:55:00 GMT
+2023-03-31T16:32:53.079+05:30  INFO 22180 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T16:32:54.004+05:30  WARN 22180 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A95d60440-cfb3-11ed-968c-57475c452a6a.ET5zrisU59UxQdMcinE7RDO3nFjLnAjXyzIu9xHeLgk; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 17:02:53 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 17:02:53 GMT
+2023-03-31T16:32:54.006+05:30  WARN 22180 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A95d60440-cfb3-11ed-968c-57475c452a6a.ET5zrisU59UxQdMcinE7RDO3nFjLnAjXyzIu9xHeLgk; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 17:02:53 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 17:02:53 GMT
+2023-03-31T19:23:10.769+05:30  WARN 22180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m45s174ms429µs).
+2023-03-31T21:32:42.760+05:30  WARN 22180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h48m31s622ms947µs500ns).
+2023-03-31T21:37:04.089+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-31T21:37:04.228+05:30  INFO 22180 --- [RMI TCP Connection(690)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-31T21:37:04.376+05:30  INFO 22180 --- [RMI TCP Connection(691)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-31T21:37:04.575+05:30  INFO 22180 --- [RMI TCP Connection(692)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-31T21:37:04.627+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-31T21:37:04.696+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-31T21:37:04.720+05:30  INFO 22180 --- [RMI TCP Connection(693)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-31T21:37:04.829+05:30  WARN 22180 --- [RMI TCP Connection(689)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Connection evictor] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/java.lang.Thread.sleep(Native Method)
+ app//unirest.shaded.org.apache.http.impl.client.IdleConnectionEvictor$1.run(IdleConnectionEvictor.java:66)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2023-03-31T21:37:04.885+05:30  INFO 22180 --- [RMI TCP Connection(694)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-31T21:37:04.913+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-03-31T21:37:05.016+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T21:37:05.123+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-31T21:37:05.156+05:30  INFO 22180 --- [RMI TCP Connection(689)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-31T21:51:02.085+05:30  INFO 15200 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Starting PhysicianAvailabilityApplication using Java 17.0.6 with PID 15200 (C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\PMS-Merge\admin-backend-main\g3-physician-availability-service)
+2023-03-31T21:51:02.089+05:30  INFO 15200 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-03-31T21:51:02.138+05:30  INFO 15200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-31T21:51:02.138+05:30  INFO 15200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-31T21:51:02.931+05:30  INFO 15200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-31T21:51:03.037+05:30  INFO 15200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 2 JPA repository interfaces.
+2023-03-31T21:51:03.510+05:30  INFO 15200 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d0d99e-9238-31a1-876a-1a65c734d748
+2023-03-31T21:51:03.604+05:30  INFO 15200 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-31T21:51:03.648+05:30  INFO 15200 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-03-31T21:51:03.997+05:30  INFO 15200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2023-03-31T21:51:04.006+05:30  INFO 15200 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-31T21:51:04.006+05:30  INFO 15200 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-31T21:51:04.064+05:30  INFO 15200 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-31T21:51:04.065+05:30  INFO 15200 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1926 ms
+2023-03-31T21:51:04.262+05:30  INFO 15200 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-31T21:51:04.300+05:30  INFO 15200 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-31T21:51:04.521+05:30  INFO 15200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-31T21:51:04.659+05:30  INFO 15200 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54ff9958
+2023-03-31T21:51:04.661+05:30  INFO 15200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-31T21:51:04.718+05:30  INFO 15200 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-31T21:51:05.338+05:30  INFO 15200 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-31T21:51:05.348+05:30  INFO 15200 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T21:51:05.672+05:30  WARN 15200 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-31T21:51:06.322+05:30  WARN 15200 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-03-31T21:51:06.462+05:30  WARN 15200 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-03-31T21:51:06.466+05:30  INFO 15200 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-31T21:51:06.566+05:30  INFO 15200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path ''
+2023-03-31T21:51:06.569+05:30  INFO 15200 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-physician-availability-service-9007', name='g3-physician-availability-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9007, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9007/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-03-31T21:51:06.700+05:30  INFO 15200 --- [restartedMain] c.c.a.PhysicianAvailabilityApplication   : Started PhysicianAvailabilityApplication in 5.315 seconds (process running for 6.039)
+2023-03-31T21:51:07.723+05:30  INFO 15200 --- [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-31T21:51:07.723+05:30  INFO 15200 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-31T21:51:07.725+05:30  INFO 15200 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-03-31T22:35:30.711+05:30  INFO 15200 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T22:35:41.344+05:30  INFO 15200 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T22:35:50.712+05:30  INFO 15200 --- [http-nio-9007-exec-5] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:35:52.039+05:30  WARN 15200 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A4aa10e10-cfe6-11ed-ade7-4f44b3aabacb.qiGWFHMZ0L5tsG7h%2BCY1G7vCbQ%2FQAhdrriX9miqv7WI; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:05:51 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:05:51 GMT
+2023-03-31T22:35:52.039+05:30  WARN 15200 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A4aa10e10-cfe6-11ed-ade7-4f44b3aabacb.qiGWFHMZ0L5tsG7h%2BCY1G7vCbQ%2FQAhdrriX9miqv7WI; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:05:52 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:05:52 GMT
+2023-03-31T22:36:01.948+05:30  WARN 15200 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A50840350-cfe6-11ed-9a23-0351c6337e6a.hVJUfZFAGd2T4c8ZDjwJFfgjNB6I6txcb5QHLwx4NdY; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:06:01 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:06:01 GMT
+2023-03-31T22:36:01.948+05:30  WARN 15200 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A50840350-cfe6-11ed-9a23-0351c6337e6a.hVJUfZFAGd2T4c8ZDjwJFfgjNB6I6txcb5QHLwx4NdY; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:06:01 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:06:01 GMT
+2023-03-31T22:36:17.541+05:30  INFO 15200 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Physician availability updated successfully
+2023-03-31T22:36:17.605+05:30  INFO 15200 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:36:34.222+05:30 ERROR 15200 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T22:36:34.238+05:30  WARN 15200 --- [http-nio-9007-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T22:36:44.076+05:30 ERROR 15200 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T22:36:44.076+05:30  WARN 15200 --- [http-nio-9007-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T22:39:00.754+05:30  INFO 15200 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:39:06.130+05:30  INFO 15200 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:40:21.286+05:30  INFO 15200 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:40:39.745+05:30  INFO 15200 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:40:45.903+05:30  INFO 15200 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:40:56.499+05:30  INFO 15200 --- [http-nio-9007-exec-9] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:40:59.767+05:30  INFO 15200 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:41:37.152+05:30  INFO 15200 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:41:38.986+05:30  INFO 15200 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:41:59.692+05:30  INFO 15200 --- [http-nio-9007-exec-9] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:42:00.907+05:30  INFO 15200 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:42:23.418+05:30  INFO 15200 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:42:28.079+05:30  INFO 15200 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:42:37.435+05:30  INFO 15200 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:42:40.721+05:30  INFO 15200 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:42:59.189+05:30  INFO 15200 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:43:01.736+05:30  INFO 15200 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:43:21.366+05:30  INFO 15200 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:43:25.871+05:30  INFO 15200 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:43:44.101+05:30  INFO 15200 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Physician availability updated successfully
+2023-03-31T22:43:44.148+05:30  INFO 15200 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:43:44.157+05:30  INFO 15200 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:59:12.679+05:30  INFO 15200 --- [http-nio-9007-exec-9] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T22:59:25.566+05:30  INFO 15200 --- [http-nio-9007-exec-3] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T22:59:33.442+05:30  WARN 15200 --- [http-nio-9007-exec-9] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A99c07550-cfe9-11ed-b5e7-d94a29d219e2.6%2FlfkNgQk%2F2ylrrT508bA1qlXnciy9kUU7AJIXF0Sa4; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:29:33 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:29:33 GMT
+2023-03-31T22:59:33.446+05:30  WARN 15200 --- [http-nio-9007-exec-9] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A99c07550-cfe9-11ed-b5e7-d94a29d219e2.6%2FlfkNgQk%2F2ylrrT508bA1qlXnciy9kUU7AJIXF0Sa4; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:29:33 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:29:33 GMT
+2023-03-31T23:00:15.632+05:30 ERROR 15200 --- [http-nio-9007-exec-9] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T23:00:15.637+05:30  WARN 15200 --- [http-nio-9007-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T23:00:15.782+05:30  INFO 15200 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T23:17:14.154+05:30  INFO 15200 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T23:17:16.583+05:30  INFO 15200 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T23:17:26.061+05:30  INFO 15200 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T23:17:46.664+05:30  WARN 15200 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A2578f930-cfec-11ed-bcfa-0973359c9128.mv2yTV8o8KMWEGp%2F4lfjn3tHLQvLvguM47bVN0SQsfM; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:47:46 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:47:46 GMT
+2023-03-31T23:17:46.666+05:30  WARN 15200 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A2578f930-cfec-11ed-bcfa-0973359c9128.mv2yTV8o8KMWEGp%2F4lfjn3tHLQvLvguM47bVN0SQsfM; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:47:46 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:47:46 GMT
+2023-03-31T23:18:07.735+05:30  INFO 15200 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T23:18:08.316+05:30  WARN 15200 --- [http-nio-9007-exec-1] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A32494ed0-cfec-11ed-8897-83dc951af849.R1FkjtVIBnY6rGDxL%2FkxxGvvVzIqyX785h5M0rSN6Wg; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:48:08 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:48:08 GMT
+2023-03-31T23:18:08.317+05:30  WARN 15200 --- [http-nio-9007-exec-1] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A32494ed0-cfec-11ed-8897-83dc951af849.R1FkjtVIBnY6rGDxL%2FkxxGvvVzIqyX785h5M0rSN6Wg; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:48:08 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:48:08 GMT
+2023-03-31T23:18:28.741+05:30 ERROR 15200 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T23:18:28.751+05:30  WARN 15200 --- [http-nio-9007-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T23:18:50.413+05:30 ERROR 15200 --- [http-nio-9007-exec-1] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T23:18:50.416+05:30  WARN 15200 --- [http-nio-9007-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T23:26:30.903+05:30  INFO 15200 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T23:26:42.347+05:30  INFO 15200 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T23:26:52.370+05:30  WARN 15200 --- [http-nio-9007-exec-7] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A6ab68a20-cfed-11ed-a582-4dd13e98d2a3.FrNEJJ5ZorKF4sO2cGJhMpRVeW%2BQJpHrZhFf0cxQsaQ; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:56:52 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:56:52 GMT
+2023-03-31T23:26:52.372+05:30  WARN 15200 --- [http-nio-9007-exec-7] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A6ab68a20-cfed-11ed-a582-4dd13e98d2a3.FrNEJJ5ZorKF4sO2cGJhMpRVeW%2BQJpHrZhFf0cxQsaQ; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:56:52 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:56:52 GMT
+2023-03-31T23:27:03.037+05:30  WARN 15200 --- [http-nio-9007-exec-8] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A71056090-cfed-11ed-968c-57475c452a6a.3XAEBzkDjItwy3rnA2vsK65tiS06JKemaNG5kwOQt70; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:57:02 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:57:02 GMT
+2023-03-31T23:27:03.038+05:30  WARN 15200 --- [http-nio-9007-exec-8] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A71056090-cfed-11ed-968c-57475c452a6a.3XAEBzkDjItwy3rnA2vsK65tiS06JKemaNG5kwOQt70; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:57:02 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:57:02 GMT
+2023-03-31T23:27:05.485+05:30  INFO 15200 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T23:27:05.840+05:30  WARN 15200 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A72c782f0-cfed-11ed-ade7-4f44b3aabacb.uXBJydXM%2BrYzRUF0dKJcNbODHlGahTq79GpItniUTGU; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:57:05 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:57:05 GMT
+2023-03-31T23:27:05.841+05:30  WARN 15200 --- [http-nio-9007-exec-10] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A72c782f0-cfed-11ed-ade7-4f44b3aabacb.uXBJydXM%2BrYzRUF0dKJcNbODHlGahTq79GpItniUTGU; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:57:05 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:57:05 GMT
+2023-03-31T23:27:34.473+05:30 ERROR 15200 --- [http-nio-9007-exec-7] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T23:27:34.483+05:30  WARN 15200 --- [http-nio-9007-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T23:27:45.088+05:30  INFO 15200 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T23:27:45.139+05:30 ERROR 15200 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T23:27:45.143+05:30  WARN 15200 --- [http-nio-9007-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T23:27:45.594+05:30  WARN 15200 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3A8a6a8970-cfed-11ed-ade7-4f44b3aabacb.sXWLrWzGmgvyYw0WruYY%2Fj55g3KTjXdWzTzMZP%2BEOe0; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:57:45 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:57:45 GMT
+2023-03-31T23:27:45.595+05:30  WARN 15200 --- [http-nio-9007-exec-4] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3A8a6a8970-cfed-11ed-ade7-4f44b3aabacb.sXWLrWzGmgvyYw0WruYY%2Fj55g3KTjXdWzTzMZP%2BEOe0; Max-Age=31557600; Path=/; Expires=Sat, 30 Mar 2024 23:57:45 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sat, 30 Mar 2024 23:57:45 GMT
+2023-03-31T23:27:47.930+05:30 ERROR 15200 --- [http-nio-9007-exec-10] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T23:27:47.931+05:30  WARN 15200 --- [http-nio-9007-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T23:28:10.824+05:30  INFO 15200 --- [http-nio-9007-exec-6] c.c.a.c.PhysicianAvailabilityControllers : Physician Availability list fetched successfully
+2023-03-31T23:28:27.714+05:30 ERROR 15200 --- [http-nio-9007-exec-4] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T23:28:27.715+05:30  WARN 15200 --- [http-nio-9007-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T23:29:45.621+05:30  INFO 15200 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T23:29:52.077+05:30  INFO 15200 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : Doctors added into doctor table successfully
+2023-03-31T23:30:06.402+05:30  WARN 15200 --- [http-nio-9007-exec-8] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Ade3dbc20-cfed-11ed-a37e-87072a67206d.gkpiit6qynxoiX3XvUj7sgybrq4lCK2ja3EMAQ2k9RM; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 00:00:06 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 00:00:06 GMT
+2023-03-31T23:30:06.403+05:30  WARN 15200 --- [http-nio-9007-exec-8] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Ade3dbc20-cfed-11ed-a37e-87072a67206d.gkpiit6qynxoiX3XvUj7sgybrq4lCK2ja3EMAQ2k9RM; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 00:00:06 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 00:00:06 GMT
+2023-03-31T23:30:12.803+05:30  WARN 15200 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did=s%3Av0%3Ae21c55e0-cfed-11ed-bcfa-0973359c9128.IamNspZ7pksn1DgH0WsyTsEu7u13NgJuEmcPeZceyJo; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 00:00:12 GMT; HttpOnly; Secure; SameSite=None". Invalid 'expires' attribute: Sun, 31 Mar 2024 00:00:12 GMT
+2023-03-31T23:30:12.804+05:30  WARN 15200 --- [http-nio-9007-exec-2] u.s.o.a.h.c.p.ResponseProcessCookies     : Invalid cookie header: "Set-Cookie: did_compat=s%3Av0%3Ae21c55e0-cfed-11ed-bcfa-0973359c9128.IamNspZ7pksn1DgH0WsyTsEu7u13NgJuEmcPeZceyJo; Max-Age=31557600; Path=/; Expires=Sun, 31 Mar 2024 00:00:12 GMT; HttpOnly; Secure". Invalid 'expires' attribute: Sun, 31 Mar 2024 00:00:12 GMT
+2023-03-31T23:30:48.496+05:30 ERROR 15200 --- [http-nio-9007-exec-8] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T23:30:48.500+05:30  WARN 15200 --- [http-nio-9007-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T23:30:54.896+05:30 ERROR 15200 --- [http-nio-9007-exec-2] c.c.a.c.PhysicianAvailabilityControllers : null
+2023-03-31T23:30:54.900+05:30  WARN 15200 --- [http-nio-9007-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpClientErrorException: 500 INTERNAL_SERVER_ERROR]
+2023-03-31T23:36:15.742+05:30  INFO 15200 --- [RMI TCP Connection(117)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-31T23:36:15.843+05:30  INFO 15200 --- [RMI TCP Connection(117)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-31T23:36:15.857+05:30  INFO 15200 --- [RMI TCP Connection(117)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-31T23:36:15.878+05:30  WARN 15200 --- [RMI TCP Connection(117)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Connection evictor] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/java.lang.Thread.sleep(Native Method)
+ app//unirest.shaded.org.apache.http.impl.client.IdleConnectionEvictor$1.run(IdleConnectionEvictor.java:66)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2023-03-31T23:36:15.880+05:30  WARN 15200 --- [RMI TCP Connection(117)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HttpClient-9-SelectorManager] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/sun.nio.ch.WEPoll.wait(Native Method)
+ java.base@17.0.6/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+ java.base@17.0.6/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+ java.base@17.0.6/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+ platform/java.net.http@17.0.6/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:889)
+2023-03-31T23:36:15.881+05:30  WARN 15200 --- [RMI TCP Connection(117)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HttpClient-10-SelectorManager] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/sun.nio.ch.WEPoll.wait(Native Method)
+ java.base@17.0.6/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+ java.base@17.0.6/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+ java.base@17.0.6/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+ platform/java.net.http@17.0.6/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:889)
+2023-03-31T23:36:15.882+05:30  WARN 15200 --- [RMI TCP Connection(117)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HttpClient-11-SelectorManager] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/sun.nio.ch.WEPoll.wait(Native Method)
+ java.base@17.0.6/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+ java.base@17.0.6/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+ java.base@17.0.6/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+ platform/java.net.http@17.0.6/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:889)
+2023-03-31T23:36:15.898+05:30  INFO 15200 --- [RMI TCP Connection(117)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-physician-availability-service-9007
+2023-03-31T23:36:15.927+05:30  INFO 15200 --- [RMI TCP Connection(117)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-31T23:36:15.948+05:30  INFO 15200 --- [RMI TCP Connection(117)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-31T23:36:15.956+05:30  INFO 15200 --- [RMI TCP Connection(117)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

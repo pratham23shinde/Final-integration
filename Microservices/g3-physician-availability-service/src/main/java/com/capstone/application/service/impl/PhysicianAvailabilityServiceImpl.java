@@ -15,9 +15,11 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capstone.application.model.PhysicianAvailabiityModel;
+import com.capstone.application.repository.DoctorInfoRepo;
 import com.capstone.application.repository.PhysicianAvailabilityRepository;
 import com.capstone.application.service.PhysicianAvailabilityService;
 
@@ -30,6 +32,8 @@ public class PhysicianAvailabilityServiceImpl implements PhysicianAvailabilitySe
 	
 	private PhysicianAvailabilityRepository physicianAvailabilityRepository;
 	
+	@Autowired
+	private DoctorInfoRepo doctorInfoRepo;
 
 
 	public PhysicianAvailabilityServiceImpl(PhysicianAvailabilityRepository physicianAvailabilityRepository) {

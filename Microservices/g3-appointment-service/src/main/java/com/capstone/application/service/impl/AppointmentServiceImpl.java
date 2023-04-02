@@ -114,8 +114,6 @@ public class AppointmentServiceImpl implements AppointmentService{
 
 	@Override
 	public Appointment saveAppointment(Appointment appointment) throws AppointmentServiceException {
-		
-		appointment.setAcceptance("Pending");
 		Appointment result = appointmentRepository.save(appointment);
 		
 		if(result == null) {

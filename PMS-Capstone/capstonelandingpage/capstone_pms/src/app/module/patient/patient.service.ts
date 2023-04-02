@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject, pipe, tap } from 'rxjs';
 import { CalenderUser } from './components/book-appointment/book_appointment.model';
 // import { CalenderUser } from './components/book-appointment/book_appointment.model';
 import { Login } from './components/login/login.component';
@@ -24,6 +24,12 @@ import { PrescriptionList } from './components/viewprescription/viewprescription
 export class PatientService {
   constructor(private httpClient: HttpClient) {}
 
+  private refresh = new Subject<void>();
+  get refreshNeeded() {
+    return this.refresh;
+  }
+
+
   public addUser(user: User): Observable<Object> {
     return this.httpClient.post(
       `http://localhost:9001/authentication-service/patient/register`,
@@ -41,6 +47,11 @@ export class PatientService {
   getAppointmentByPatient(patientId: number): Observable<any> {
     return this.httpClient.get(
       `http://localhost:9001/appointment-service/patient/${patientId}/appointments`
+    )
+    .pipe(
+      tap(() => {
+        this.refresh.next();
+      })
     );
   }
 

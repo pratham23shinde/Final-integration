@@ -112,6 +112,8 @@
      				  </configuration>
 			</plugin>
 		</plugins>
+		
+		<finalName>g3-allergy-service</finalName>
 	</build>
 
 </project>
