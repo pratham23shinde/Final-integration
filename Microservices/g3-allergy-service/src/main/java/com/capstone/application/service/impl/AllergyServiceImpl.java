@@ -59,5 +59,6 @@ public class AllergyServiceImpl implements AllergyService {
 		return result;
 		}
 	}
+	
 
 }

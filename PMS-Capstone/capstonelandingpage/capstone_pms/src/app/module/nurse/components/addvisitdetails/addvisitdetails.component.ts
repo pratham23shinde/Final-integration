@@ -184,4 +184,6 @@ floatValidator(event:any){
   if(event.target.value<0){event.target.value= 1}
 }
  
+///visitid appoitmentid
+curentVisitDetails:any;
 }

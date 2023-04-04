@@ -43,14 +43,20 @@ public class Patient
 	@Column(name="address")
 	private String address;
 	
+	@Column(name="blood_group")
+	private String bloodGroup;
 	
 
 	public Patient() {
 		super();
 	}
 
+
+	
+	
+
 	public Patient(int patientId, String email, String title, String firstName, String lastName, String dob,
-			String contactNumber, String password, String gender, String address) {
+			String contactNumber, String password, String gender, String address, String bloodGroup) {
 		super();
 		this.patientId = patientId;
 		this.email = email;
@@ -62,7 +68,24 @@ public class Patient
 		this.password = password;
 		this.gender = gender;
 		this.address = address;
+		this.bloodGroup = bloodGroup;
 	}
+
+
+
+
+
+	public String getBloodGroup() {
+		return bloodGroup;
+	}
+
+
+
+	public void setBloodGroup(String bloodGroup) {
+		this.bloodGroup = bloodGroup;
+	}
+
+
 
 	public int getPatientId() {
 		return patientId;

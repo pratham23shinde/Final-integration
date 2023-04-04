@@ -9,13 +9,8 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PatientService } from '../../patient.service';
-import { ValidationErrors, ValidatorFn} from '@angular/forms';
-
 
 export class User {
-  reset(arg0: {}) {
-    throw new Error('Method not implemented.');
-  }
   title: any;
   firstName: any;
   lastName: any;
@@ -54,7 +49,7 @@ export class RegisterComponent implements OnInit {
   ) {
     this.myGroup = this.formBuilder.group(
       {
-        password1: ['', [Validators.required,Validators.minLength(8),this.createPasswordStrengthValidator()]],
+        password1: ['', [Validators.required,Validators.minLength(8)]],
         confirmPassword: ['', [Validators.required]],
         myInputTitle: ['', [Validators.required]],
         myInputFirst: ['', [Validators.required]],
@@ -71,31 +66,6 @@ export class RegisterComponent implements OnInit {
     this.passwordFormControl = this.myGroup.get('password1');
     this.confirmPasswordFormControl = this.myGroup.get('confirmPassword');
   }
-
-    createPasswordStrengthValidator(): ValidatorFn {
-    return (control:AbstractControl) : ValidationErrors | null => {
-
-        const value = control.value;
-
-        if (!value) {
-            return null;
-        }
-
-        const hasUpperCase = /[A-Z]+/.test(value);
-
-        const hasLowerCase = /[a-z]+/.test(value);
-
-        const hasNumeric = /[0-9]+/.test(value);
-
-        // const hasSpecial=/[]
-
-        const passwordValid = hasUpperCase && hasLowerCase && hasNumeric;
-
-        return !passwordValid ? {passwordStrength:true}: null;
-    }
-}
-
-
 
   passwordMatchValidator(formGroup: FormGroup) {
     const password1 = formGroup.controls['password1'];
@@ -114,8 +84,7 @@ export class RegisterComponent implements OnInit {
     this.patientService.addUser(this.user).subscribe(
       (data) => {
         console.log(data);
-        this.user.reset({});
-        // this.router.navigate(['/patient/login']);
+        this.router.navigate(['/patient/login']);
         this.user.dob = this.datePipe.transform(this.user.dob, 'dd-MM-YYYY');
       },
       (error) => console.log(error)

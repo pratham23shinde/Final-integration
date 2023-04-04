@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpClientErrorException;
 
+import com.capstone.application.exception.PhysicianAvailabilityException;
 import com.capstone.application.model.PhysicianAvailabiityModel;
 import com.capstone.application.service.PhysicianAvailabilityService;
 
@@ -106,9 +107,15 @@ public class PhysicianAvailabilityControllers {
 
 	@GetMapping("/addDoctors")
 	public boolean postDoctors() throws Exception, Throwable {
+		try {
 			log.info("Doctors added into doctor table successfully");
 			physicianAvailabilityService.postDoctors();
 			return true;
+		} catch (Exception e) {
+			log.error(e.getMessage());
+			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
+		}
+
 	}
 
 	@GetMapping("/physician-available/OnthatDate/{date}")
@@ -118,7 +125,7 @@ public class PhysicianAvailabilityControllers {
 	}
 
 	@GetMapping("/doctorInfo/{email}")
-	public Optional<PhysicianAvailabiityModel> findDoctorInfoByEmail(@PathVariable String email){
+	public Optional<PhysicianAvailabiityModel> findDoctorInfoByEmail(@PathVariable String email) throws PhysicianAvailabilityException{
 		return physicianAvailabilityService.findDoctorInfoByEmailId(email);
 	
 }

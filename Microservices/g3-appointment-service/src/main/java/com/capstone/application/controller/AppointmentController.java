@@ -51,18 +51,7 @@ public class AppointmentController
 		return appointmentService.findAllAppointmentsByPatientId(patientId);
 	}
 
-//	@GetMapping("/appointment/{patientId}/previous")
-//	public Appointment previousAppointment(@PathVariable int patientId) {
-//		try {
-//			log.info("Patient's previous appointment fetched by patientId successfully");
-//	return appointmentService.findPreviousAppointmentByPatientId(patientId);
-//		}
-//		catch(Exception e)
-//		{
-//			log.error(e.getMessage());
-//			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
-//		}
-//	}
+
 	
 	
 	

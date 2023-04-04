@@ -1,20 +1,23 @@
 package com.capstone.application;
 
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.hamcrest.CoreMatchers.is;
-import static org.mockito.Mockito.*;
 
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,9 +27,11 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import com.capstone.application.controller.AllergyController;
+import com.capstone.application.exception.AllergyServiceException;
 import com.capstone.application.model.Allergy;
+import com.capstone.application.repository.AllergyRepository;
 import com.capstone.application.service.AllergyService;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.capstone.application.service.impl.AllergyServiceImpl;
 
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
@@ -35,8 +40,8 @@ class AllergyServiceApplicationTests {
 	@InjectMocks
 	AllergyController allergyController;
 	
-//	@Mock private AllergyRepository allergyRepo;
-//	private AllergyServiceImpl allergyService;
+	@Mock private AllergyRepository allergyRepo;
+	private AllergyServiceImpl allergyService1;
 	
 	@MockBean
 	private AllergyService allergyService;
@@ -71,10 +76,42 @@ class AllergyServiceApplicationTests {
 		
 	}
 	
+	@BeforeEach
+	void setups()
+	{
+		this.allergyService1=new AllergyServiceImpl(this.allergyRepo);
+	}
+	
+	
+	@Test
+	void getAllergyList()
+	{
+		try {
+			allergyService1.findAll();
+		} catch (AllergyServiceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		verify(allergyRepo).findAll();
+		
+	}
+	
+	@Test
+	void getAllergybyId()
+	{
+		try {
+			allergyService1.findById(1);
+		} catch (AllergyServiceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		verify(allergyRepo).findById(1);
+		
+	}
+	
+	
 	@Test
 	void allergyList() throws Exception {
-//		allergyService.findAll();
-//		verify(allergyRepo).findAll();
 		List<Allergy> list = new ArrayList<>();
 		list.add(drug);
 		
@@ -88,8 +125,6 @@ class AllergyServiceApplicationTests {
 	
 	@Test
 	void allergybyId() throws Exception {
-//		allergyService.findById(1);
-//		verify(allergyRepo).findById(1);
 		
 		Optional<Allergy> x=Optional.ofNullable(drug);
 		when(allergyService.findById(any())).thenReturn(x);

@@ -94,6 +94,12 @@
 			<version>4.0.1</version>
 		</dependency>
 		
+		<dependency>
+    		<groupId>org.jacoco</groupId>
+    		<artifactId>org.jacoco.core</artifactId>
+    		<version>0.8.7</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
@@ -101,6 +107,50 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			
+				<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.7</version>
+				
+				<configuration>
+					
+					<excludes>
+						<exclude>com/capstone/application/model/*.*</exclude>
+						<exclude>com/capstone/application/exception/*.*</exclude>
+						<exclude>com/capstone/application/*.*</exclude>
+						<exclude>com/capstone/application/repository/*.*</exclude>
+						<exclude>com/capstone/application/service/*.*</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-site</id>
+						<phase>package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 		<finalName>g3-authentication-service</finalName>

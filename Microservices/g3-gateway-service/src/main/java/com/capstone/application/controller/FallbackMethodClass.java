@@ -14,6 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FallbackMethodClass {
 
+	
+	
+	@GetMapping("/g3-auth0-service-fallback")
+	public ResponseEntity<ErrorResponse> auth0servicefallbackFallback() {
+		System.out.println("hii");
+		ErrorResponse errorDetails = new ErrorResponse(HttpStatus.SERVICE_UNAVAILABLE, LocalDateTime.now(),
+			
+				"Auth0 Service is down! Please try later", "For critical support please call on 18080800000 or mail us on spport@revature.com");
+		return new ResponseEntity<ErrorResponse>(errorDetails, HttpStatus.SERVICE_UNAVAILABLE);
+	}
 
 	@GetMapping("/g3-allergy-service-fallback")
 	public ResponseEntity<ErrorResponse> allergyServiceFallback() {
@@ -27,28 +37,28 @@ public class FallbackMethodClass {
 	@GetMapping("/g3-appointment-service-fallback")
 	public ResponseEntity<ErrorResponse> appointmentServiceFallback() {
 		ErrorResponse errorDetails = new ErrorResponse(HttpStatus.SERVICE_UNAVAILABLE, LocalDateTime.now(),
-				"Health Record Service is down! Please try later", "For critical support please call on 18080800000 or mail us on spport@revature.com");
+				"Appointment Service is down! Please try later", "For critical support please call on 18080800000 or mail us on spport@revature.com");
 		return new ResponseEntity<ErrorResponse>(errorDetails, HttpStatus.SERVICE_UNAVAILABLE);
 	}
 	
 	@GetMapping("/g3-authentication-service-fallback")
 	public ResponseEntity<ErrorResponse> authenticationServiceFallback() {
 		ErrorResponse errorDetails = new ErrorResponse(HttpStatus.SERVICE_UNAVAILABLE, LocalDateTime.now(),
-				"Health Record Service is down! Please try later", "For critical support please call on 18080800000 or mail us on spport@revature.com");
+				"Authentication Service is down! Please try later", "For critical support please call on 18080800000 or mail us on spport@revature.com");
 		return new ResponseEntity<ErrorResponse>(errorDetails, HttpStatus.SERVICE_UNAVAILABLE);
 	}
 	
 	@GetMapping("/g3-physician-availability-service-fallback")
 	public ResponseEntity<ErrorResponse> physicianAvailabilityServiceFallback() {
 		ErrorResponse errorDetails = new ErrorResponse(HttpStatus.SERVICE_UNAVAILABLE, LocalDateTime.now(),
-				"Health Record Service is down! Please try later", "For critical support please call on 18080800000 or mail us on spport@revature.com");
+				"Physician Availability Service is down! Please try later", "For critical support please call on 18080800000 or mail us on spport@revature.com");
 		return new ResponseEntity<ErrorResponse>(errorDetails, HttpStatus.SERVICE_UNAVAILABLE);
 	}
 	
 	@GetMapping("/g3-patient-info-service-fallback")
 	public ResponseEntity<ErrorResponse> patientInfoServiceFallback() {
 		ErrorResponse errorDetails = new ErrorResponse(HttpStatus.SERVICE_UNAVAILABLE, LocalDateTime.now(),
-				"Health Record Service is down! Please try later", "For critical support please call on 18080800000 or mail us on spport@revature.com");
+				"Patient Info Service is down! Please try later", "For critical support please call on 18080800000 or mail us on spport@revature.com");
 		return new ResponseEntity<ErrorResponse>(errorDetails, HttpStatus.SERVICE_UNAVAILABLE);
 	}
 	

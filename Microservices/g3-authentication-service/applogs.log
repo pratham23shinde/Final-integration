@@ -1,561 +1,83 @@
-2023-03-31T07:39:10.587+05:30  WARN 3924 --- [HikariPool-11 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Thread starvation or clock leap detected (housekeeper delta=5h37m58s457ms867µs).
-2023-03-31T08:20:29.026+05:30  INFO 3924 --- [RMI TCP Connection(1040)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T08:20:29.065+05:30  INFO 3924 --- [RMI TCP Connection(1042)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T08:20:29.210+05:30  INFO 3924 --- [RMI TCP Connection(1040)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T08:20:29.226+05:30  INFO 3924 --- [RMI TCP Connection(1040)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-03-31T08:20:29.240+05:30  INFO 3924 --- [RMI TCP Connection(1043)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T08:20:29.320+05:30  INFO 3924 --- [RMI TCP Connection(1040)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
-2023-03-31T08:20:29.353+05:30  INFO 3924 --- [RMI TCP Connection(1040)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T08:20:29.384+05:30  INFO 3924 --- [RMI TCP Connection(1040)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
-2023-03-31T08:20:29.396+05:30  INFO 3924 --- [RMI TCP Connection(1040)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
-2023-03-31T08:22:17.213+05:30  INFO 21400 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 21400 (C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service)
-2023-03-31T08:22:17.216+05:30  INFO 21400 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T08:22:17.255+05:30  INFO 21400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-31T08:22:17.255+05:30  INFO 21400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-31T08:22:18.346+05:30  INFO 21400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T08:22:18.451+05:30  INFO 21400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interfaces.
-2023-03-31T08:22:18.668+05:30  INFO 21400 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-03-31T08:22:18.757+05:30  INFO 21400 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T08:22:18.791+05:30  INFO 21400 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T08:22:19.143+05:30  INFO 21400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-03-31T08:22:19.151+05:30  INFO 21400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T08:22:19.152+05:30  INFO 21400 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T08:22:19.212+05:30  INFO 21400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T08:22:19.213+05:30  INFO 21400 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1958 ms
-2023-03-31T08:22:19.413+05:30  INFO 21400 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T08:22:19.447+05:30  INFO 21400 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T08:22:19.645+05:30  INFO 21400 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T08:22:19.768+05:30  INFO 21400 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c979961
-2023-03-31T08:22:19.770+05:30  INFO 21400 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T08:22:19.832+05:30  INFO 21400 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T08:22:20.417+05:30  INFO 21400 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T08:22:20.425+05:30  INFO 21400 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T08:22:20.819+05:30  WARN 21400 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T08:22:21.869+05:30  WARN 21400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T08:22:22.008+05:30  WARN 21400 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T08:22:22.015+05:30  INFO 21400 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T08:22:22.118+05:30  INFO 21400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9004 (http) with context path ''
-2023-03-31T08:22:22.121+05:30  INFO 21400 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-authentication-service-9004', name='g3-authentication-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9004, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9004/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-03-31T08:22:22.215+05:30  INFO 21400 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Started AuthenticationServiceApplication in 5.653 seconds (process running for 6.373)
-2023-03-31T08:22:23.346+05:30  INFO 21400 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-03-31T08:22:23.346+05:30  INFO 21400 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-03-31T08:22:23.348+05:30  INFO 21400 --- [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-03-31T10:17:09.883+05:30  INFO 22384 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 22384 (C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service)
-2023-03-31T10:17:09.886+05:30  INFO 22384 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T10:17:09.934+05:30  INFO 22384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-31T10:17:09.934+05:30  INFO 22384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-31T10:17:11.492+05:30  INFO 22384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T10:17:11.667+05:30  INFO 22384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 1 JPA repository interfaces.
-2023-03-31T10:17:11.951+05:30  INFO 22384 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-03-31T10:17:12.069+05:30  INFO 22384 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T10:17:12.131+05:30  INFO 22384 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T10:17:12.644+05:30  INFO 22384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-03-31T10:17:12.656+05:30  INFO 22384 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T10:17:12.656+05:30  INFO 22384 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T10:17:12.729+05:30  INFO 22384 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T10:17:12.730+05:30  INFO 22384 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2794 ms
-2023-03-31T10:17:12.987+05:30  INFO 22384 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T10:17:13.073+05:30  INFO 22384 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T10:17:13.410+05:30  INFO 22384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T10:17:13.578+05:30  INFO 22384 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2048fe7b
-2023-03-31T10:17:13.580+05:30  INFO 22384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T10:17:13.681+05:30  INFO 22384 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T10:17:14.447+05:30  INFO 22384 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T10:17:14.458+05:30  INFO 22384 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T10:17:14.910+05:30  WARN 22384 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T10:17:16.204+05:30  WARN 22384 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T10:17:16.363+05:30  WARN 22384 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T10:17:16.372+05:30  INFO 22384 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T10:17:16.477+05:30  WARN 22384 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2023-03-31T10:17:16.484+05:30  INFO 22384 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T10:17:16.488+05:30  INFO 22384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T10:17:16.483+05:30 ERROR 22384 --- [catalogWatchTaskScheduler-1] o.s.c.c.discovery.ConsulDiscoveryClient  : Error watching Consul CatalogServices
-
-org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'refreshEventListener': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:264) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:221) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:413) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:139) ~[spring-cloud-consul-discovery-4.0.1.jar:4.0.1]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.6.jar:6.0.6]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2023-03-31T10:17:16.498+05:30  INFO 22384 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-31T10:17:16.503+05:30  INFO 22384 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T10:17:16.530+05:30  INFO 22384 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-03-31T10:17:16.551+05:30 ERROR 22384 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 9004 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 9004 or configure this application to listen on another port.
-
-2023-03-31T10:20:00.516+05:30  INFO 21400 --- [RMI TCP Connection(133)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T10:20:01.139+05:30  INFO 21400 --- [RMI TCP Connection(133)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T10:20:01.205+05:30  INFO 21400 --- [RMI TCP Connection(133)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-03-31T10:20:01.423+05:30  INFO 21400 --- [RMI TCP Connection(133)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
-2023-03-31T10:20:01.535+05:30  INFO 21400 --- [RMI TCP Connection(133)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T10:20:01.663+05:30  INFO 21400 --- [RMI TCP Connection(133)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T10:20:01.709+05:30  INFO 21400 --- [RMI TCP Connection(133)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-31T10:20:08.534+05:30  INFO 14256 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 14256 (C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service)
-2023-03-31T10:20:08.537+05:30  INFO 14256 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T10:20:08.582+05:30  INFO 14256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-31T10:20:08.582+05:30  INFO 14256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-31T10:20:09.740+05:30  INFO 14256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T10:20:09.862+05:30  INFO 14256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interfaces.
-2023-03-31T10:20:10.123+05:30  INFO 14256 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-03-31T10:20:10.243+05:30  INFO 14256 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T10:20:10.310+05:30  INFO 14256 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T10:20:10.749+05:30  INFO 14256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-03-31T10:20:10.761+05:30  INFO 14256 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T10:20:10.761+05:30  INFO 14256 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T10:20:10.850+05:30  INFO 14256 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T10:20:10.850+05:30  INFO 14256 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2267 ms
-2023-03-31T10:20:11.095+05:30  INFO 14256 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T10:20:11.170+05:30  INFO 14256 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T10:20:11.491+05:30  INFO 14256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T10:20:11.622+05:30  INFO 14256 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b11a2a4
-2023-03-31T10:20:11.624+05:30  INFO 14256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T10:20:11.716+05:30  INFO 14256 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T10:20:12.465+05:30  INFO 14256 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T10:20:12.477+05:30  INFO 14256 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T10:20:12.891+05:30  WARN 14256 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T10:20:14.184+05:30  WARN 14256 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T10:20:14.364+05:30  WARN 14256 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T10:20:14.376+05:30  INFO 14256 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T10:20:14.502+05:30  INFO 14256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9004 (http) with context path ''
-2023-03-31T10:20:14.505+05:30  INFO 14256 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-authentication-service-9004', name='g3-authentication-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9004, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9004/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-03-31T10:20:14.646+05:30  INFO 14256 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Started AuthenticationServiceApplication in 6.832 seconds (process running for 7.705)
-2023-03-31T10:20:14.672+05:30  INFO 14256 --- [http-nio-9004-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-03-31T10:20:14.672+05:30  INFO 14256 --- [http-nio-9004-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-03-31T10:20:14.675+05:30  INFO 14256 --- [http-nio-9004-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-03-31T13:25:33.085+05:30  WARN 14256 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m18s115ms625µs100ns).
-2023-03-31T14:05:31.902+05:30  INFO 14256 --- [http-nio-9004-exec-3] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T14:05:31.919+05:30  INFO 14256 --- [http-nio-9004-exec-3] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T14:08:46.448+05:30  INFO 14256 --- [http-nio-9004-exec-4] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T14:08:46.448+05:30  INFO 14256 --- [http-nio-9004-exec-4] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T14:12:33.742+05:30  INFO 14256 --- [http-nio-9004-exec-8] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T14:12:33.747+05:30  INFO 14256 --- [http-nio-9004-exec-8] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T14:13:27.589+05:30  INFO 14256 --- [http-nio-9004-exec-5] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T14:13:27.593+05:30  INFO 14256 --- [http-nio-9004-exec-5] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T14:16:35.068+05:30  INFO 14256 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2023-03-31T14:16:35.506+05:30  INFO 14256 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T14:16:35.571+05:30  INFO 14256 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-03-31T14:16:35.841+05:30  INFO 14256 --- [Thread-1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
-2023-03-31T14:16:36.062+05:30  INFO 14256 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T14:16:36.245+05:30  INFO 14256 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T14:16:36.304+05:30  INFO 14256 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-31T14:16:37.688+05:30  INFO 14256 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 14256 (C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service)
-2023-03-31T14:16:37.689+05:30  INFO 14256 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T14:16:38.789+05:30  INFO 14256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T14:16:38.824+05:30  INFO 14256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
-2023-03-31T14:16:39.073+05:30  INFO 14256 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-03-31T14:16:39.127+05:30  INFO 14256 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T14:16:39.134+05:30  INFO 14256 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T14:16:39.319+05:30  INFO 14256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-03-31T14:16:39.321+05:30  INFO 14256 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T14:16:39.321+05:30  INFO 14256 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T14:16:39.357+05:30  INFO 14256 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T14:16:39.357+05:30  INFO 14256 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1659 ms
-2023-03-31T14:16:39.442+05:30  INFO 14256 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T14:16:39.448+05:30  INFO 14256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-03-31T14:16:39.471+05:30  INFO 14256 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@521b2a5a
-2023-03-31T14:16:39.472+05:30  INFO 14256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-03-31T14:16:39.477+05:30  INFO 14256 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T14:16:39.558+05:30  INFO 14256 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T14:16:39.558+05:30  INFO 14256 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T14:16:39.675+05:30  WARN 14256 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T14:16:40.457+05:30  WARN 14256 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T14:16:40.561+05:30  WARN 14256 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T14:16:40.564+05:30  INFO 14256 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T14:16:40.628+05:30  INFO 14256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9004 (http) with context path ''
-2023-03-31T14:16:40.628+05:30  INFO 14256 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-authentication-service-9004', name='g3-authentication-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9004, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9004/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-03-31T14:16:40.766+05:30  INFO 14256 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Started AuthenticationServiceApplication in 3.325 seconds (process running for 14193.225)
-2023-03-31T14:16:40.772+05:30  INFO 14256 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-03-31T14:16:47.062+05:30  INFO 14256 --- [http-nio-9004-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-03-31T14:16:47.062+05:30  INFO 14256 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-03-31T14:16:47.064+05:30  INFO 14256 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-03-31T14:17:16.935+05:30  INFO 14256 --- [http-nio-9004-exec-5] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T14:17:16.935+05:30  INFO 14256 --- [http-nio-9004-exec-5] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T16:20:03.899+05:30  INFO 14256 --- [http-nio-9004-exec-6] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T16:20:03.998+05:30  INFO 14256 --- [http-nio-9004-exec-6] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T16:20:09.110+05:30  INFO 14256 --- [http-nio-9004-exec-7] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T16:20:09.111+05:30  INFO 14256 --- [http-nio-9004-exec-7] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T16:20:27.267+05:30  INFO 14256 --- [http-nio-9004-exec-1] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T16:20:27.270+05:30  INFO 14256 --- [http-nio-9004-exec-1] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T16:20:34.252+05:30  INFO 14256 --- [http-nio-9004-exec-2] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T16:20:34.254+05:30  INFO 14256 --- [http-nio-9004-exec-2] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T16:20:45.429+05:30  INFO 14256 --- [http-nio-9004-exec-5] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T16:20:45.431+05:30  INFO 14256 --- [http-nio-9004-exec-5] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T17:29:15.905+05:30 ERROR 14256 --- [http-nio-9004-exec-10] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 2
-2023-03-31T17:29:44.710+05:30 ERROR 14256 --- [http-nio-9004-exec-4] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 2
-2023-03-31T17:29:46.681+05:30 ERROR 14256 --- [http-nio-9004-exec-5] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 2
-2023-03-31T17:32:18.078+05:30 ERROR 14256 --- [http-nio-9004-exec-2] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 2
-2023-03-31T17:32:52.419+05:30  INFO 10276 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 10276 (C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service)
-2023-03-31T17:32:52.422+05:30  INFO 10276 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T17:32:52.472+05:30  INFO 10276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-31T17:32:52.473+05:30  INFO 10276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-31T17:32:53.959+05:30  INFO 10276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T17:32:54.150+05:30  INFO 10276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 181 ms. Found 1 JPA repository interfaces.
-2023-03-31T17:32:54.605+05:30  INFO 10276 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-03-31T17:32:54.735+05:30  INFO 10276 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T17:32:54.794+05:30  INFO 10276 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T17:32:55.271+05:30  INFO 10276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-03-31T17:32:55.283+05:30  INFO 10276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T17:32:55.284+05:30  INFO 10276 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T17:32:55.360+05:30  INFO 10276 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T17:32:55.360+05:30  INFO 10276 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2887 ms
-2023-03-31T17:32:55.619+05:30  INFO 10276 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T17:32:55.701+05:30  INFO 10276 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T17:32:56.045+05:30  INFO 10276 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T17:32:56.198+05:30  INFO 10276 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e46fb92
-2023-03-31T17:32:56.200+05:30  INFO 10276 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T17:32:56.291+05:30  INFO 10276 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T17:32:57.063+05:30  INFO 10276 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T17:32:57.073+05:30  INFO 10276 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T17:32:57.550+05:30  WARN 10276 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T17:32:58.824+05:30  WARN 10276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T17:32:58.980+05:30  WARN 10276 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T17:32:58.988+05:30  INFO 10276 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T17:32:59.081+05:30  WARN 10276 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2023-03-31T17:32:59.087+05:30  INFO 10276 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T17:32:59.089+05:30  INFO 10276 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T17:32:59.096+05:30  INFO 10276 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-31T17:32:59.100+05:30  INFO 10276 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T17:32:59.121+05:30  INFO 10276 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-03-31T17:32:59.146+05:30 ERROR 10276 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 9004 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 9004 or configure this application to listen on another port.
-
-2023-03-31T17:33:33.104+05:30 ERROR 14256 --- [http-nio-9004-exec-1] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 2
-2023-03-31T17:33:33.885+05:30 ERROR 14256 --- [http-nio-9004-exec-3] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 2
-2023-03-31T17:33:34.094+05:30 ERROR 14256 --- [http-nio-9004-exec-4] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 2
-2023-03-31T17:33:34.413+05:30 ERROR 14256 --- [http-nio-9004-exec-5] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 2
-2023-03-31T17:33:34.613+05:30 ERROR 14256 --- [http-nio-9004-exec-6] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 2
-2023-03-31T17:33:34.870+05:30 ERROR 14256 --- [http-nio-9004-exec-8] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 2
-2023-03-31T17:33:51.108+05:30 ERROR 14256 --- [http-nio-9004-exec-9] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 4
-2023-03-31T17:35:00.391+05:30 ERROR 14256 --- [http-nio-9004-exec-7] c.a.s.i.PatientAuthenticationServiceImpl : query did not return a unique result: 4
-2023-03-31T18:25:04.626+05:30  INFO 14256 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2023-03-31T18:25:04.799+05:30  INFO 14256 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T18:25:04.819+05:30  INFO 14256 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-03-31T18:25:04.975+05:30  INFO 14256 --- [Thread-7] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
-2023-03-31T18:25:05.028+05:30  INFO 14256 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T18:25:05.067+05:30  INFO 14256 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2023-03-31T18:25:05.094+05:30  INFO 14256 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2023-03-31T18:25:06.015+05:30  INFO 14256 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 14256 (C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service)
-2023-03-31T18:25:06.017+05:30  INFO 14256 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T18:25:06.626+05:30  INFO 14256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T18:25:06.639+05:30  INFO 14256 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
-2023-03-31T18:25:06.757+05:30  INFO 14256 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-03-31T18:25:06.786+05:30  INFO 14256 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T18:25:06.791+05:30  INFO 14256 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T18:25:06.888+05:30  INFO 14256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-03-31T18:25:06.889+05:30  INFO 14256 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T18:25:06.889+05:30  INFO 14256 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T18:25:06.914+05:30  INFO 14256 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T18:25:06.914+05:30  INFO 14256 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 893 ms
-2023-03-31T18:25:06.969+05:30  INFO 14256 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T18:25:06.976+05:30  INFO 14256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2023-03-31T18:25:06.988+05:30  INFO 14256 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1beb1552
-2023-03-31T18:25:06.988+05:30  INFO 14256 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2023-03-31T18:25:06.990+05:30  INFO 14256 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T18:25:07.103+05:30  INFO 14256 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T18:25:07.104+05:30  INFO 14256 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T18:25:07.180+05:30  WARN 14256 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T18:25:07.737+05:30  WARN 14256 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T18:25:07.814+05:30  WARN 14256 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T18:25:07.820+05:30  INFO 14256 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T18:25:07.853+05:30  INFO 14256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9004 (http) with context path ''
-2023-03-31T18:25:07.854+05:30  INFO 14256 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-authentication-service-9004', name='g3-authentication-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9004, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9004/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-03-31T18:25:07.941+05:30  INFO 14256 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Started AuthenticationServiceApplication in 2.143 seconds (process running for 29100.401)
-2023-03-31T18:25:07.945+05:30  INFO 14256 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-03-31T18:25:12.718+05:30  INFO 14256 --- [http-nio-9004-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-03-31T18:25:12.718+05:30  INFO 14256 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-03-31T18:25:12.721+05:30  INFO 14256 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2023-03-31T19:22:53.000+05:30  WARN 14256 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=9m45s167ms183µs600ns).
-2023-03-31T21:32:55.078+05:30  WARN 14256 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h48m31s625ms887µs100ns).
-2023-03-31T21:36:33.094+05:30  INFO 9628 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 9628 (C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service)
-2023-03-31T21:36:33.096+05:30  INFO 9628 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T21:36:33.138+05:30  INFO 9628 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-31T21:36:33.139+05:30  INFO 9628 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-31T21:36:34.508+05:30  INFO 9628 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T21:36:34.649+05:30  INFO 9628 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 1 JPA repository interfaces.
-2023-03-31T21:36:34.917+05:30  INFO 9628 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-03-31T21:36:35.040+05:30  INFO 9628 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T21:36:35.119+05:30  INFO 9628 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T21:36:35.630+05:30  INFO 9628 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-03-31T21:36:35.643+05:30  INFO 9628 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T21:36:35.643+05:30  INFO 9628 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T21:36:35.724+05:30  INFO 9628 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T21:36:35.725+05:30  INFO 9628 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2586 ms
-2023-03-31T21:36:35.993+05:30  INFO 9628 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T21:36:36.084+05:30  INFO 9628 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T21:36:36.437+05:30  INFO 9628 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T21:36:36.607+05:30  INFO 9628 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@570bc14c
-2023-03-31T21:36:36.608+05:30  INFO 9628 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T21:36:36.702+05:30  INFO 9628 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T21:36:37.444+05:30  INFO 9628 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T21:36:37.455+05:30  INFO 9628 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T21:36:37.850+05:30  WARN 9628 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T21:36:39.238+05:30  WARN 9628 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-31T21:36:39.414+05:30  WARN 9628 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T21:36:39.425+05:30  INFO 9628 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T21:36:39.549+05:30  WARN 9628 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2023-03-31T21:36:39.556+05:30  INFO 9628 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T21:36:39.555+05:30 ERROR 9628 --- [catalogWatchTaskScheduler-1] o.s.c.c.discovery.ConsulDiscoveryClient  : Error watching Consul CatalogServices
-
-org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'refreshEventListener': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:264) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:221) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:413) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:370) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:139) ~[spring-cloud-consul-discovery-4.0.1.jar:4.0.1]
-	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.6.jar:6.0.6]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2023-03-31T21:36:39.563+05:30  INFO 9628 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T21:36:39.574+05:30  INFO 9628 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-31T21:36:39.579+05:30  INFO 9628 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T21:36:39.607+05:30  INFO 9628 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-03-31T21:36:39.631+05:30 ERROR 9628 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 9004 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 9004 or configure this application to listen on another port.
-
-2023-03-31T21:37:51.310+05:30  INFO 14256 --- [RMI TCP Connection(615)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T21:37:51.414+05:30  INFO 14256 --- [RMI TCP Connection(616)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T21:37:51.521+05:30  INFO 14256 --- [RMI TCP Connection(615)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T21:37:51.537+05:30  INFO 14256 --- [RMI TCP Connection(615)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-03-31T21:37:51.558+05:30  INFO 14256 --- [RMI TCP Connection(617)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T21:37:51.621+05:30  INFO 14256 --- [RMI TCP Connection(615)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
-2023-03-31T21:37:51.654+05:30  INFO 14256 --- [RMI TCP Connection(615)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T21:37:51.691+05:30  INFO 14256 --- [RMI TCP Connection(615)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2023-03-31T21:37:51.707+05:30  INFO 14256 --- [RMI TCP Connection(615)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2023-03-31T21:38:27.790+05:30  INFO 17884 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 17884 (C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\pranit\PMS_Project-Capstone-main\Microservices\g3-authentication-service)
-2023-03-31T21:38:27.793+05:30  INFO 17884 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-03-31T21:38:27.830+05:30  INFO 17884 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-31T21:38:27.830+05:30  INFO 17884 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-31T21:38:28.784+05:30  INFO 17884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-31T21:38:28.886+05:30  INFO 17884 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interfaces.
-2023-03-31T21:38:29.101+05:30  INFO 17884 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-03-31T21:38:29.185+05:30  INFO 17884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-03-31T21:38:29.224+05:30  INFO 17884 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-03-31T21:38:29.600+05:30  INFO 17884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-03-31T21:38:29.613+05:30  INFO 17884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-31T21:38:29.614+05:30  INFO 17884 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-31T21:38:29.681+05:30  INFO 17884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-31T21:38:29.682+05:30  INFO 17884 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1850 ms
-2023-03-31T21:38:29.906+05:30  INFO 17884 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-31T21:38:29.978+05:30  INFO 17884 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-31T21:38:30.257+05:30  INFO 17884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-31T21:38:30.373+05:30  INFO 17884 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16033c75
-2023-03-31T21:38:30.375+05:30  INFO 17884 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-31T21:38:30.445+05:30  INFO 17884 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-31T21:38:31.102+05:30  INFO 17884 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-31T21:38:31.113+05:30  INFO 17884 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T21:38:31.466+05:30  WARN 17884 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-31T21:38:32.495+05:30  INFO 17884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-03-31T21:38:32.633+05:30  WARN 17884 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-31T21:38:32.641+05:30  INFO 17884 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-31T21:38:32.747+05:30  INFO 17884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9004 (http) with context path ''
-2023-03-31T21:38:32.750+05:30  INFO 17884 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-authentication-service-9004', name='g3-authentication-service', tags=[], address='PRATHAMESH', meta={secure=false}, port=9004, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://PRATHAMESH:9004/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-03-31T21:38:32.850+05:30  INFO 17884 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Started AuthenticationServiceApplication in 5.658 seconds (process running for 6.289)
-2023-03-31T21:38:33.943+05:30  INFO 17884 --- [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-03-31T21:38:33.944+05:30  INFO 17884 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-03-31T21:38:33.946+05:30  INFO 17884 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-03-31T21:42:35.922+05:30  INFO 17884 --- [http-nio-9004-exec-2] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T21:42:35.938+05:30  INFO 17884 --- [http-nio-9004-exec-2] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T23:26:13.260+05:30  INFO 17884 --- [http-nio-9004-exec-4] c.c.a.c.AuthenticationServiceController  : Patient registrated successfully
-2023-03-31T23:26:13.295+05:30  INFO 17884 --- [http-nio-9004-exec-4] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-03-31T23:34:55.174+05:30  INFO 17884 --- [RMI TCP Connection(129)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-03-31T23:34:55.418+05:30  INFO 17884 --- [RMI TCP Connection(129)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-31T23:34:55.446+05:30  INFO 17884 --- [RMI TCP Connection(129)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-03-31T23:34:55.536+05:30  INFO 17884 --- [RMI TCP Connection(129)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
-2023-03-31T23:34:55.592+05:30  INFO 17884 --- [RMI TCP Connection(129)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-31T23:34:55.644+05:30  INFO 17884 --- [RMI TCP Connection(129)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-31T23:34:55.658+05:30  INFO 17884 --- [RMI TCP Connection(129)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-02T11:16:33.810+05:30  INFO 16436 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 14 class path changes (0 additions, 0 deletions, 14 modifications)
-2023-04-02T11:16:34.113+05:30  INFO 16436 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-02T11:16:34.137+05:30  INFO 16436 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-02T11:16:34.282+05:30  INFO 16436 --- [Thread-1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
-2023-04-02T11:16:34.364+05:30  INFO 16436 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-02T11:16:34.462+05:30  INFO 16436 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-02T11:16:34.487+05:30  INFO 16436 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-02T11:16:35.070+05:30  INFO 16436 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 16436 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service)
-2023-04-02T11:16:35.071+05:30  INFO 16436 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-02T11:16:36.248+05:30  INFO 16436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-02T11:16:36.287+05:30  INFO 16436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interfaces.
-2023-04-02T11:16:36.494+05:30  INFO 16436 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-04-02T11:16:36.542+05:30  INFO 16436 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-02T11:16:36.551+05:30  INFO 16436 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-02T11:16:36.723+05:30  INFO 16436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-04-02T11:16:36.724+05:30  INFO 16436 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-02T11:16:36.724+05:30  INFO 16436 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-02T11:16:36.755+05:30  INFO 16436 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-04-02T11:16:36.755+05:30  INFO 16436 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1678 ms
-2023-04-02T11:16:36.848+05:30  INFO 16436 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-02T11:16:36.863+05:30  INFO 16436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-04-02T11:16:36.875+05:30  INFO 16436 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2df95a1c
-2023-04-02T11:16:36.876+05:30  INFO 16436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-04-02T11:16:36.879+05:30  INFO 16436 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-02T11:16:36.954+05:30  INFO 16436 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-02T11:16:36.955+05:30  INFO 16436 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-02T11:16:37.082+05:30  WARN 16436 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-02T11:16:37.700+05:30  WARN 16436 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-04-02T11:16:37.806+05:30  WARN 16436 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-02T11:16:37.815+05:30  INFO 16436 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-04-02T11:16:37.913+05:30  INFO 16436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9004 (http) with context path ''
-2023-04-02T11:16:37.915+05:30  INFO 16436 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-authentication-service-9004', name='g3-authentication-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9004, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9004/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-02T11:16:38.093+05:30  INFO 16436 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Started AuthenticationServiceApplication in 3.176 seconds (process running for 29467.998)
-2023-04-02T11:16:38.097+05:30  INFO 16436 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-02T11:16:38.265+05:30  INFO 16436 --- [http-nio-9004-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-02T11:16:38.266+05:30  INFO 16436 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-02T11:16:38.267+05:30  INFO 16436 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-04-02T11:19:37.215+05:30  INFO 16436 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 0 deletions, 5 modifications)
-2023-04-02T11:19:37.233+05:30  INFO 16436 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-02T11:19:37.234+05:30  INFO 16436 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-02T11:19:37.240+05:30  INFO 16436 --- [Thread-7] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
-2023-04-02T11:19:37.250+05:30  INFO 16436 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-02T11:19:37.251+05:30  INFO 16436 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2023-04-02T11:19:37.256+05:30  INFO 16436 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2023-04-02T11:19:37.527+05:30  INFO 16436 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 16436 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service)
-2023-04-02T11:19:37.527+05:30  INFO 16436 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-02T11:19:38.244+05:30  INFO 16436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-02T11:19:38.269+05:30  INFO 16436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interfaces.
-2023-04-02T11:19:38.576+05:30  INFO 16436 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-04-02T11:19:38.612+05:30  INFO 16436 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-02T11:19:38.616+05:30  INFO 16436 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-02T11:19:38.824+05:30  INFO 16436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-04-02T11:19:38.829+05:30  INFO 16436 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-02T11:19:38.831+05:30  INFO 16436 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-02T11:19:38.879+05:30  INFO 16436 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-04-02T11:19:38.879+05:30  INFO 16436 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1350 ms
-2023-04-02T11:19:39.025+05:30  INFO 16436 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-02T11:19:39.037+05:30  INFO 16436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2023-04-02T11:19:39.045+05:30  INFO 16436 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ef0bf9c
-2023-04-02T11:19:39.045+05:30  INFO 16436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2023-04-02T11:19:39.047+05:30  INFO 16436 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-02T11:19:39.113+05:30  INFO 16436 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-02T11:19:39.113+05:30  INFO 16436 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-02T11:19:39.409+05:30  WARN 16436 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-02T11:19:40.536+05:30  WARN 16436 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-04-02T11:19:40.661+05:30  WARN 16436 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-02T11:19:40.666+05:30  INFO 16436 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-04-02T11:19:40.711+05:30  INFO 16436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9004 (http) with context path ''
-2023-04-02T11:19:40.713+05:30  INFO 16436 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-authentication-service-9004', name='g3-authentication-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9004, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9004/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-02T11:19:40.793+05:30  INFO 16436 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Started AuthenticationServiceApplication in 3.437 seconds (process running for 29650.699)
-2023-04-02T11:19:40.797+05:30  INFO 16436 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-02T11:19:50.136+05:30  INFO 16436 --- [http-nio-9004-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-02T11:19:50.138+05:30  INFO 16436 --- [http-nio-9004-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-02T11:19:50.140+05:30  INFO 16436 --- [http-nio-9004-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-04-02T11:19:52.134+05:30  INFO 16436 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2023-04-02T11:19:52.145+05:30  INFO 16436 --- [Thread-13] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-02T11:19:52.145+05:30  INFO 16436 --- [Thread-13] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-02T11:19:52.149+05:30  INFO 16436 --- [Thread-13] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
-2023-04-02T11:19:52.159+05:30  INFO 16436 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-02T11:19:52.161+05:30  INFO 16436 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2023-04-02T11:19:52.165+05:30  INFO 16436 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2023-04-02T11:19:52.311+05:30  INFO 16436 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 16436 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service)
-2023-04-02T11:19:52.312+05:30  INFO 16436 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-02T11:19:52.554+05:30  INFO 16436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-02T11:19:52.561+05:30  INFO 16436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
-2023-04-02T11:19:52.625+05:30  INFO 16436 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
-2023-04-02T11:19:52.638+05:30  INFO 16436 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-02T11:19:52.640+05:30  INFO 16436 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-02T11:19:52.677+05:30  INFO 16436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
-2023-04-02T11:19:52.678+05:30  INFO 16436 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-02T11:19:52.678+05:30  INFO 16436 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-02T11:19:52.698+05:30  INFO 16436 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-04-02T11:19:52.698+05:30  INFO 16436 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 385 ms
-2023-04-02T11:19:52.758+05:30  INFO 16436 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-02T11:19:52.765+05:30  INFO 16436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2023-04-02T11:19:52.770+05:30  INFO 16436 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e4f8726
-2023-04-02T11:19:52.771+05:30  INFO 16436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2023-04-02T11:19:52.772+05:30  INFO 16436 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-02T11:19:52.811+05:30  INFO 16436 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-02T11:19:52.812+05:30  INFO 16436 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-02T11:19:52.871+05:30  WARN 16436 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-02T11:19:53.335+05:30  WARN 16436 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-04-02T11:19:53.403+05:30  WARN 16436 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-02T11:19:53.406+05:30  INFO 16436 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-04-02T11:19:53.437+05:30  INFO 16436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9004 (http) with context path ''
-2023-04-02T11:19:53.439+05:30  INFO 16436 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-authentication-service-9004', name='g3-authentication-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9004, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9004/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-02T11:19:53.515+05:30  INFO 16436 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Started AuthenticationServiceApplication in 1.286 seconds (process running for 29663.421)
-2023-04-02T11:19:53.518+05:30  INFO 16436 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-02T11:20:03.125+05:30  INFO 16436 --- [http-nio-9004-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-02T11:20:03.125+05:30  INFO 16436 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-02T11:20:03.126+05:30  INFO 16436 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-04-02T11:28:13.261+05:30  INFO 6528 --- [main] .a.AuthenticationServiceApplicationTests : Starting AuthenticationServiceApplicationTests using Java 17.0.6 with PID 6528 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service)
-2023-04-02T11:28:13.264+05:30  INFO 6528 --- [main] .a.AuthenticationServiceApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2023-04-02T11:28:15.317+05:30  INFO 6528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-02T11:28:15.545+05:30  INFO 6528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 208 ms. Found 1 JPA repository interfaces.
-2023-04-02T11:28:15.979+05:30  INFO 6528 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f7ebe1b0-786d-37de-954e-4d25cbd69977
-2023-04-02T11:28:16.201+05:30  INFO 6528 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-02T11:28:16.262+05:30  INFO 6528 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-02T11:28:16.528+05:30  INFO 6528 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-02T11:28:16.611+05:30  INFO 6528 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-02T11:28:17.094+05:30  INFO 6528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-02T11:28:17.447+05:30  INFO 6528 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9facde
-2023-04-02T11:28:17.453+05:30  INFO 6528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-02T11:28:17.572+05:30  INFO 6528 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-02T11:28:18.645+05:30  INFO 6528 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-02T11:28:18.663+05:30  INFO 6528 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-02T11:28:19.533+05:30  WARN 6528 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-02T11:28:21.970+05:30  WARN 6528 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-02T11:28:21.999+05:30  INFO 6528 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-04-02T11:28:22.134+05:30  INFO 6528 --- [main] .a.AuthenticationServiceApplicationTests : Started AuthenticationServiceApplicationTests in 10.211 seconds (process running for 12.343)
-2023-04-02T11:28:22.687+05:30  INFO 6528 --- [main] c.a.s.i.PatientAuthenticationServiceImpl : Patient registered successfully
-2023-04-02T11:28:22.691+05:30 ERROR 6528 --- [main] c.a.s.i.PatientAuthenticationServiceImpl : Cannot invoke "org.modelmapper.ModelMapper.map(Object, java.lang.Class)" because "this.modelmapper" is null
-2023-04-02T11:28:23.325+05:30  INFO 6528 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-02T11:28:23.330+05:30  INFO 6528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-02T11:28:23.342+05:30  INFO 6528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-04T07:29:19.353+05:30  WARN 25852 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=8h13m49s941ms680µs500ns).
+2023-04-04T09:30:41.696+05:30  INFO 25852 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-04-04T09:30:41.837+05:30  INFO 25852 --- [Thread-13] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-04T09:30:41.854+05:30  INFO 25852 --- [Thread-13] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-04T09:30:41.934+05:30  INFO 25852 --- [Thread-13] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
+2023-04-04T09:30:41.986+05:30  INFO 25852 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-04T09:30:42.011+05:30  INFO 25852 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-04-04T09:30:42.019+05:30  INFO 25852 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-04-04T09:30:42.396+05:30  INFO 25852 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 25852 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service)
+2023-04-04T09:30:42.396+05:30  INFO 25852 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-04T09:30:43.217+05:30  INFO 25852 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-04T09:30:43.237+05:30  INFO 25852 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2023-04-04T09:30:43.396+05:30  INFO 25852 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
+2023-04-04T09:30:43.433+05:30  INFO 25852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-04T09:30:43.441+05:30  INFO 25852 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-04T09:30:43.611+05:30  INFO 25852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
+2023-04-04T09:30:43.613+05:30  INFO 25852 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-04T09:30:43.613+05:30  INFO 25852 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-04T09:30:43.654+05:30  INFO 25852 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-04T09:30:43.655+05:30  INFO 25852 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1255 ms
+2023-04-04T09:30:43.737+05:30  INFO 25852 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-04T09:30:43.748+05:30  INFO 25852 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-04-04T09:30:43.761+05:30  INFO 25852 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@88ae1a4
+2023-04-04T09:30:43.762+05:30  INFO 25852 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-04-04T09:30:43.771+05:30  INFO 25852 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-04T09:30:43.845+05:30  INFO 25852 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-04T09:30:43.845+05:30  INFO 25852 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-04T09:30:43.940+05:30  WARN 25852 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-04T09:30:44.698+05:30  WARN 25852 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-04T09:30:44.819+05:30  WARN 25852 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-04T09:30:44.825+05:30  INFO 25852 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-04T09:30:44.897+05:30  INFO 25852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9004 (http) with context path ''
+2023-04-04T09:30:44.899+05:30  INFO 25852 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-authentication-service-9004', name='g3-authentication-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9004, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9004/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-04T09:30:45.098+05:30  INFO 25852 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Started AuthenticationServiceApplication in 2.865 seconds (process running for 151610.31)
+2023-04-04T09:30:45.102+05:30  INFO 25852 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-04T09:30:47.968+05:30  INFO 25852 --- [http-nio-9004-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-04T09:30:47.968+05:30  INFO 25852 --- [http-nio-9004-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-04T09:30:47.970+05:30  INFO 25852 --- [http-nio-9004-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-04-04T09:32:22.189+05:30  INFO 25852 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 14 class path changes (0 additions, 0 deletions, 14 modifications)
+2023-04-04T09:32:22.309+05:30  INFO 25852 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-04T09:32:22.320+05:30  INFO 25852 --- [Thread-19] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-04T09:32:22.461+05:30  INFO 25852 --- [Thread-19] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
+2023-04-04T09:32:22.512+05:30  INFO 25852 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-04T09:32:22.562+05:30  INFO 25852 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-04-04T09:32:22.590+05:30  INFO 25852 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-04-04T09:32:23.095+05:30  INFO 25852 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Starting AuthenticationServiceApplication using Java 17.0.6 with PID 25852 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-authentication-service)
+2023-04-04T09:32:23.095+05:30  INFO 25852 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-04T09:32:23.771+05:30  INFO 25852 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-04T09:32:23.783+05:30  INFO 25852 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
+2023-04-04T09:32:23.887+05:30  INFO 25852 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8dbabca3-eeca-3b3a-bd55-90c863c09f38
+2023-04-04T09:32:23.910+05:30  INFO 25852 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-04T09:32:23.916+05:30  INFO 25852 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-04T09:32:24.199+05:30  INFO 25852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9004 (http)
+2023-04-04T09:32:24.200+05:30  INFO 25852 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-04T09:32:24.200+05:30  INFO 25852 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-04T09:32:24.244+05:30  INFO 25852 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-04T09:32:24.245+05:30  INFO 25852 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1148 ms
+2023-04-04T09:32:24.353+05:30  INFO 25852 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-04T09:32:24.363+05:30  INFO 25852 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-04-04T09:32:24.413+05:30  INFO 25852 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5441b4fb
+2023-04-04T09:32:24.413+05:30  INFO 25852 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-04-04T09:32:24.421+05:30  INFO 25852 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-04T09:32:24.525+05:30  INFO 25852 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-04T09:32:24.526+05:30  INFO 25852 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-04T09:32:24.641+05:30  WARN 25852 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-04T09:32:25.526+05:30  WARN 25852 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-04T09:32:25.679+05:30  WARN 25852 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-04T09:32:25.693+05:30  INFO 25852 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-04T09:32:25.760+05:30  INFO 25852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9004 (http) with context path ''
+2023-04-04T09:32:25.762+05:30  INFO 25852 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-authentication-service-9004', name='g3-authentication-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9004, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9004/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2023-04-04T09:32:25.888+05:30  INFO 25852 --- [restartedMain] c.c.a.AuthenticationServiceApplication   : Started AuthenticationServiceApplication in 2.91 seconds (process running for 151711.098)
+2023-04-04T09:32:25.893+05:30  INFO 25852 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-04-04T09:32:33.427+05:30  INFO 25852 --- [http-nio-9004-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-04T09:32:33.427+05:30  INFO 25852 --- [http-nio-9004-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-04T09:32:33.430+05:30  INFO 25852 --- [http-nio-9004-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-04-04T10:51:57.311+05:30  WARN 25852 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=18m1s771ms93µs300ns).
+2023-04-04T11:59:21.548+05:30  INFO 25852 --- [RMI TCP Connection(1456)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-04-04T11:59:21.752+05:30  INFO 25852 --- [RMI TCP Connection(1456)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-04T11:59:21.766+05:30  INFO 25852 --- [RMI TCP Connection(1456)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-04T11:59:21.881+05:30  INFO 25852 --- [RMI TCP Connection(1456)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-authentication-service-9004
+2023-04-04T11:59:21.927+05:30  INFO 25852 --- [RMI TCP Connection(1456)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-04T11:59:21.969+05:30  INFO 25852 --- [RMI TCP Connection(1456)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-04-04T11:59:21.979+05:30  INFO 25852 --- [RMI TCP Connection(1456)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.

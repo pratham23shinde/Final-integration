@@ -14,4 +14,5 @@ public interface AllergyService
 	public List<Allergy> findAll() throws AllergyServiceException;
 	
 	public Optional<Allergy> findById(Integer allergyId) throws AllergyServiceException;
+	
 }

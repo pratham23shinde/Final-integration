@@ -40,26 +40,22 @@ export class AppointmentHistoryComponent implements OnInit {
 
   constructor(private patientService: PatientService) {}
   ngOnInit() {
-    this.patientService.refreshNeeded.subscribe(() => {
-      this.getAppointmentByPatient();
-    });
-
     this.getAppointmentByPatient();
-    // this.getAllAppointment();
+    this.getAllAppointment();
   }
 @ViewChild(MatPaginator) paginator!:MatPaginator;
   ngAfterViewInit(){
     this.dataSource.paginator=this.paginator;
   }
-  // getAppointment: any;
-  // getAllAppointment() {
-  //   this.patientService
-  //     .getAllAppointmentByAcceptance('acceptance=Pending')
-  //     .subscribe((respone) => {
-  //       this.getAppointment = respone;
-  //       console.log('Me basti ka hasti bro', this.getAppointment);
-  //     });
-  // }
+  getAppointment: any;
+  getAllAppointment() {
+    this.patientService
+      .getAllAppointmentByAcceptance('acceptance=Pending')
+      .subscribe((respone) => {
+        this.getAppointment = respone;
+        console.log('Me basti ka hasti bro', this.getAppointment);
+      });
+  }
 
   pId: any = sessionStorage.getItem('patientid');
   dataSource:any;

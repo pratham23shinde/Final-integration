@@ -62,7 +62,7 @@
         <mat-label>Select Doctor</mat-label>
         <mat-select [formControl]="doctorControl" required #clientValue  (selectionChange)="changeClient($event.value)">
           <mat-option>Select</mat-option>
-          <mat-option *ngFor="let doctor of doctors" [value]="doctor.physicianEmail">Dr. {{doctor.first_name}} {{doctor.last_name}} - ({{doctor.speciality}})  
+          <mat-option *ngFor="let doctor of doctors" [value]="doctor.physicianEmail">({{doctor.speciality}})  
           </mat-option>
         </mat-select>
         <mat-error *ngIf="doctorControl.hasError('required')">Please choose an doctor</mat-error>

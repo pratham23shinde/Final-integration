@@ -1,3 +1,4 @@
+<!-- <div class="main"> -->
   <div class="formdivclass">
     <form class="formclass" [formGroup]="myGroup" (ngSubmit)=onSubmit()  method="post" action="/submit-myForm">
     <!-- [formGroup]="myForm">  -->
@@ -107,8 +108,7 @@
           <mat-label>Password</mat-label>
           <input matInput type="password" name="password" placeholder="Enter your password" formControlName="password1" required [(ngModel)]="user.password">
           <!-- <mat-error *ngIf="passwordFormControl.hasError('required')">Password is required</mat-error> -->
-        <mat-error *ngIf="myGroup.get('password1')">Password Is Required</mat-error>
-        
+        <mat-error *ngIf="myGroup.get('password1')">Paaword Is Required</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Confirm Password</mat-label>
@@ -202,36 +202,17 @@
       
         <!-- </mat-form-field> -->
       </div>
-
-      <div class="space-evenly">
-
-        <mat-form-field appearance="outline" class="width-50">
-          <mat-label>Blood Group</mat-label>
-          <mat-error *ngIf="myGroup.get('myInputGender')">Blood Group is required</mat-error>
-          <mat-select id="gender" name="gender" [(ngModel)]="user.gender" formControlName="myInputGender">
-            <mat-option value="A+">A+</mat-option>
-            <mat-option value="A-">A-</mat-option>
-            <mat-option value="B+">B+</mat-option>
-            <mat-option value="B-">B-</mat-option>
-            <mat-option value="O+">O+</mat-option>
-            <mat-option value="O-">O-</mat-option>
-            <mat-option value="AB+">AB+</mat-option>
-            <mat-option value="AB-">AB-</mat-option>
-
-          </mat-select>
-        </mat-form-field>
-    
-
-        <mat-form-field appearance="outline" class="width-50" class="addressClass">
+      <div class="address">
+        <mat-form-field class="example-full-width" appearance="outline">
           <mat-label>Address</mat-label>
-          <input matInput name="address" [(ngModel)]="user.address" formControlName="myInputAddress">
+          <input matInput name="address" [(ngModel)]="user.address" formControlName="myInputAddress" >
           <mat-error *ngIf="myGroup.get('myInputAddress')">Address is required</mat-error>
-        </mat-form-field>
 
-        
+          <textarea matInput placeholder=""></textarea>
+        </mat-form-field>
       </div>
 
-      <button mat-raised-button color="primary" type="submit" style="float: right;" [disabled]="!myGroup.valid">Submit</button>
+      <button mat-raised-button color="primary" type="submit" style="float: right;">Submit</button>
       <span> Register User? </span>
       <button
         mat-stroked-button
