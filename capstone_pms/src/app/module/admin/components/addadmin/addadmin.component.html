@@ -1,0 +1,44 @@
+<div class="form">
+    <h2>Add Admin</h2>
+    
+        <form #admin="ngForm" (ngSubmit)="onClickSubmit()">
+
+
+        <mat-form-field  appearance="outline" class="formFields">
+            <mat-label>Admin Email</mat-label>
+            <input [(ngModel)]="addadmin.email" name="email" matInput placeholder="Email ID" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="outline" class="formFields" >
+            <mat-label>First Name</mat-label>
+            <input  [(ngModel)]="addadmin.firstName" name="first_name" matInput placeholder="First Name" required />
+          </mat-form-field>
+    
+
+        <mat-form-field appearance="outline" class="formFields">
+            <mat-label>Last Name</mat-label>
+            <input  [(ngModel)]="addadmin.lastName" name="last_name" matInput placeholder="Last Name" required />
+          </mat-form-field>
+        <br>
+        
+        <mat-form-field appearance="outline" class="formFields">
+            <mat-label>Password</mat-label>
+            <input  [(ngModel)]="addadmin.password" name="password" matInput [type]="hide ? 'password' : 'text'"  placeholder="Password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+    <div >
+        <button class="buttons" mat-raised-button color="primary" type="submit" value="submit">
+            Save
+        </button>
+        <button class="buttons" mat-raised-button color="warn" type="button" (click)="onNoClick()">
+            Cancel
+        </button>
+    </div>
+</form>
+</div>

@@ -1,0 +1,100 @@
+<div class="updation">
+  <!-- [formGroup]="myGroup" -->
+
+  <form   name="myFrom"  
+  #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm.value)" class="updateprofile">
+    <div class="name">
+      <mat-form-field appearance="outline" class="width-50 ">
+        <mat-label >Title</mat-label>
+        <!-- <mat-error *ngIf="myGroup.get('myInputTitle')"
+            >Title is required</mat-error
+          > -->
+        <mat-select required id="title" name="title" [(ngModel)]="patient.title">
+          <mat-option value="Mr">Mr</mat-option>
+          <mat-option value="Ms">Ms</mat-option>
+          <mat-option value="Miss">Miss</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>FirstName</mat-label>
+        <!-- <mat-error *ngIf="myGroup.get('myInputFirst')"
+            >First Name is required</mat-error
+          > -->
+        <input required matInput name="firstName" [(ngModel)]="patient.firstName" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>LastName</mat-label>
+        <input  matInput name="lastName" [(ngModel)]="patient.lastName"  required/>
+        <!-- <mat-error *ngIf="myGroup.get('myInputLast')"
+        >Last Name is required</mat-error
+      > -->
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Contact Number</mat-label>
+      <input  matInput name="contactNumber" [(ngModel)]="patient.contactNumber" required />
+      <!-- <mat-error *ngIf="myInputContact.hasError('required')"
+      >Phone number is required</mat-error
+    >
+    <mat-error *ngIf="myInputContact.errors?.['phoneNumber']"
+      >Invalid phone number</mat-error
+    > -->
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="width-50">
+      <mat-label>DOB </mat-label>
+      <input
+        matInput
+        name="dob"
+        [max]="currentDate"
+required
+        [(ngModel)]="patient.dob"
+        [matDatepicker]="picker"
+      />
+      <!-- <mat-error *ngIf="myGroup.get('myInputDob')"
+            >DOB is required</mat-error
+          > -->
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="width-50">
+      <mat-label>Gender</mat-label>
+      <!-- <mat-error *ngIf="myGroup.get('myInputGender')"
+      >Gender is required</mat-error
+    > -->
+      <mat-select   required
+      id="gender" name="gender" [(ngModel)]="patient.gender">
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+        <mat-option value="Other">Other</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <mat-form-field appearance="outline" style="width: 100%">
+        <mat-label>Address</mat-label>
+        <textarea   required         
+        matInput name="address" [(ngModel)]="patient.address"></textarea>
+        <!-- <mat-error *ngIf="myGroup.get('myInputAddress')"
+        >Address is required</mat-error
+      > -->
+      </mat-form-field>
+    </div>
+    <button
+    
+      type="submit"
+      mat-raised-button
+      color="primary"
+      routerLinkActive="active"
+      ng-disabled="!myForm.$valid"
+    >
+      Update
+    </button>
+  </form>
+</div>

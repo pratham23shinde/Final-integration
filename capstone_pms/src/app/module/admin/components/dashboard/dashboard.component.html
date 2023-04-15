@@ -1,0 +1,107 @@
+<h4>
+  <i class="fa-solid fa-person-dots-from-line" style="font-size: 20px"></i
+  ><span>Welcome Admin</span>
+</h4>
+<div class="info" style="display: flex;">
+  <div class="leftcard" style="display: flex;">
+    <div class="cardleft">
+      <mat-card class="Card">
+        <mat-card-title>Doctors</mat-card-title>
+        <br />
+        <i class="fa-solid fa-user-doctor" style="font-size: 35px"></i><br />{{
+          dCount
+        }}</mat-card
+      >
+      <mat-card class="Card">
+        <mat-card-title>Patients</mat-card-title>
+        <br />
+        <i class="fa-sharp fa-solid fa-bed-pulse" style="font-size: 35px"></i
+        ><br />{{ pCount }}
+      </mat-card>
+    </div>
+    <div class="cardright">
+      <mat-card class="Card">
+        <mat-card-title>Nurses</mat-card-title>
+        <br />
+        <i class="fa-solid fa-user-nurse" style="font-size: 35px"></i> <br />{{
+          nCount
+        }}
+      </mat-card>
+      <mat-card class="Card">
+        <mat-card-title>Total Appointments</mat-card-title>
+        <br />
+        <i class="fa-regular fa-calendar-check" style="font-size: 35px"></i>
+        <br />{{ aCount }}
+      </mat-card>
+    </div>
+  </div>
+  <!-- <div class="rightcard" style="width: 45%; margin-top: 25px;">
+    <mat-card class="sideCard">
+      <h2>Roles <mat-icon>face</mat-icon></h2>
+      <mat-accordion>
+        <mat-expansion-panel hideToggle class="expansion1">
+          <mat-expansion-panel-header>
+            <mat-panel-title> Doctor </mat-panel-title>
+          </mat-expansion-panel-header>
+          <button mat-raised-button class="button" (click)="openDialogAddDoc()">
+            Add Doctor
+          </button>
+          <br />
+          <button
+            mat-raised-button
+            class="button"
+            [routerLink]="['/admin/doctor-info']"
+          >
+            View Doctors
+          </button>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel hideToggle class="expansion1">
+          <mat-expansion-panel-header>
+            <mat-panel-title> Nurse </mat-panel-title>
+          </mat-expansion-panel-header>
+          <button
+            mat-raised-button
+            color="primary"
+            class="button"
+            (click)="openDialogAddNurse()"
+          >
+            Add Nurses
+          </button>
+          <br />
+          <button
+            mat-raised-button
+            color="primary"
+            class="button"
+            [routerLink]="['/admin/nurse-info']"
+          >
+            View Nurse
+          </button>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel hideToggle class="expansion1">
+          <mat-expansion-panel-header>
+            <mat-panel-title> Admin </mat-panel-title>
+          </mat-expansion-panel-header>
+          <button
+            mat-raised-button
+            class="button"
+            (click)="openDialogAddAdmin()"
+          >
+            Add Admin User
+          </button>
+          <br />
+          <button
+            mat-raised-button
+            class="button"
+            [routerLink]="['/admin/admin-info']"
+          >
+            View Admin Users
+          </button>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card>
+  </div>-->
+</div> 
+
+<app-doctoravailability></app-doctoravailability>

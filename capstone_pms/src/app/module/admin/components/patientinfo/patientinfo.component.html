@@ -1,0 +1,141 @@
+<h4><i class="fa-solid fa-bed-pulse"></i><span>Registered Patients</span></h4>
+
+<mat-form-field appearance="outline" style="float: right">
+  <mat-label>Search</mat-label>
+  <input matInput (keyup)="applyFilter($event)" />
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>
+
+<table
+  mat-table
+  [dataSource]="dataSource"
+  matSort
+  (matSortChange)="announceSortChange($event)"
+  class="mat-elevation-z8"
+>
+  <!-- id Column -->
+  <ng-container matColumnDef="patientId" class="table-row">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header
+      sortActionDescription="Sort by ID" class="thead"
+    >
+      Patient ID
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.patientId }}</td>
+  </ng-container>
+  <!-- Title -->
+  <ng-container matColumnDef="title" class="table-row">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header
+      sortActionDescription="Sort by title" class="thead"
+    >
+      Title
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+  </ng-container>
+
+  <!-- first name -->
+  <ng-container matColumnDef="firstName" class="table-row">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header
+      sortActionDescription="Sort by firstName" class="thead"
+    >
+      First Name
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.firstName }}</td>
+  </ng-container>
+
+  <!-- lastname -->
+  <ng-container matColumnDef="lastName" class="table-row">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header
+      sortActionDescription="Sort by lastName" class="thead"
+    >
+      Last Name
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
+  </ng-container>
+
+  <!-- email -->
+  <ng-container matColumnDef="email" class="table-row">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header
+      sortActionDescription="Sort by email" class="thead"
+    >
+      Email ID
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="dob" class="table-row">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header
+      sortActionDescription="Sort by dob" class="thead"
+    >
+      DOB
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.dob }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="contactNumber" class="table-row">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header
+      sortActionDescription="Sort by contactNumber" class="thead"
+    >
+      Contact Number
+    </th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.contactNumber }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="address" class="table-row">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header
+      sortActionDescription="Sort by address" class="thead"
+    >
+      Address
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.address }}</td>
+  </ng-container>
+
+  <!-- Notes -->
+  <ng-container matColumnDef="gender" class="table-row">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header
+      sortActionDescription="Sort by gender" class="thead"
+    >
+      Gender
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.gender }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    class="table-row"
+  ></tr>
+</table>
+<mat-paginator
+  [pageSizeOptions]="[5, 10, 15]"
+  showFirstLastButtons
+></mat-paginator>

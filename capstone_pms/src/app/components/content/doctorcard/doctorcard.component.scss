@@ -1,0 +1,115 @@
+.maincardclass {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 0;
+    background-color: aliceblue;
+    .card {
+      width: 20%;
+      // background-color: #edf3f6;
+      background-color: #fff;
+      padding: 55px 40px;
+      border-radius: 8px;
+      img {
+        display: block;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        border: 10px solid #edf3f6;
+      }
+      h3 {
+        font-size: 26px;
+        text-align: center;
+      }
+      h6 {
+        font-size: 20px;
+        background-color: #47ccc8;
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+      }
+      p {
+        text-align: center;
+        font-size: 17px;
+      }
+      h3,
+      h6,
+      p {
+        color: #2d3663;
+      }
+    }
+  }
+  /* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+  .maincardclass {
+    padding: 45px 0;
+    .card {
+      width: 25%;
+      padding: 5px 10px;
+      img {
+        width: 60%;
+      }
+      h3 {
+        font-size: 17px;
+      }
+      h6,
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+/* Small screen devices (595px and above) */
+@media only screen and (min-width: 595px) {
+  .maincardclass {
+    padding: 45px 0;
+    .card {
+      width: 25%;
+      padding: 5px 10px;
+      img {
+        width: 60%;
+      }
+      h3 {
+        font-size: 17px;
+      }
+      h6,
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .maincardclass {
+    padding: 100px 0;
+    .card {
+      width: 25%;
+      padding: 25px 40px;
+      img {
+        width: 80%;
+      }
+      h3 {
+        font-size: 30px;
+      }
+      h6,
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}

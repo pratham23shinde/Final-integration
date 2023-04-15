@@ -1,0 +1,41 @@
+* {
+  color: #2d3663;
+}
+h4 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+  font-size: 17px;
+  span {
+    padding: 15px;
+  }
+}
+.mat-elevation-z8 {
+  width: 100%;
+  margin-top: 40px;
+  .table-row:hover{
+    background-color: #cff5e7;
+  }
+  .thead {
+    background: #cff5e7;
+  }
+}
+.example-card {
+  max-width: 100%;
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: large;
+  color: darkblue;
+
+  margin: 30px;
+}
+.mat-elevation-z8{
+  .thead {
+    background: #cff5e7;
+  }
+  .table-row:hover{
+    background-color: #cff5e7;
+  }
+}

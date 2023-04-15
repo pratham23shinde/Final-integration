@@ -25,6 +25,7 @@ public interface AppointmentService
 				public long countAppointments();
 				
 		//gayatri
-				public List<Appointment> findAppointmentByDate(String date, String acceptance) throws AppointmentServiceException;		
+				public List<Appointment> findAppointmentByDate(String date, String acceptance) throws AppointmentServiceException;
+				public Appointment findPreviousAppointmentforNurseDoctor(int patientId) throws AppointmentServiceException;		
 
 }

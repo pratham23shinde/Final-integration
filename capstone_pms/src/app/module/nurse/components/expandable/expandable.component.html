@@ -1,0 +1,31 @@
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Tests </mat-panel-title>
+      <mat-panel-description>
+        Test conducted for patient
+        <mat-icon>injection</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-test></app-test>
+
+    <mat-action-row>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Prescription </mat-panel-title>
+      <mat-panel-description>
+        view added prescription
+        <mat-icon>list</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-prescription></app-prescription>
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

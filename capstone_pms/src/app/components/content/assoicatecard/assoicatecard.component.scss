@@ -1,0 +1,66 @@
+.associatesimg {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+    padding: 40px;
+    .hoverimg:hover {
+      transition: -webkit-transform 0.6s, -moz-transform 0.6s, -o-transform 0.6s,
+        transform 0.6s;
+      transform: scale(1.1);
+    }
+  }
+  
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+  .associatesimg {
+    margin: 0 !important;
+    padding: 10px 0 !important;
+    img {
+      height: 60px;
+    }
+  }
+}
+
+/* Small screen devices (595px and above) */
+@media only screen and (min-width: 595px) {
+  .associatesimg {
+    margin: 0 !important;
+    padding: 10px 0 !important;
+    img {
+      height: 60px;
+    }
+  }
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+  .associatesimg {
+    margin: 10px !important;
+    padding: 10px 0 !important;
+    img {
+      height: 90px;
+    }
+  }
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+  .associatesimg {
+    margin: 15px !important;
+    padding: 10px 0 !important;
+    img {
+      height: 100px;
+    }
+  }
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .associatesimg {
+    margin: 35px !important;
+    padding: 30px 0 !important;
+    img {
+      height: 160px;
+    }
+  }
+}

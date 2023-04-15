@@ -1,0 +1,37 @@
+$borderbottomcolor: grey;
+$tablehoverbgcolor: #f1f1f1;
+$white: #ffffff;
+$textcolor: #2d3663;
+
+.mainclass {
+  display: flex;
+  justify-content: space-between;
+  // margin-top: 50px;
+  .childclass {
+    background-color: #cff5e7;
+    letter-spacing: 1px;
+    border-top: 5px solid #159895;
+    border-radius: 8px;
+    padding: 35px 31px;
+    margin-right: 50px;
+
+    //animation
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 1000ms ease-in-out;
+    -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.05);
+    span {
+      font-weight: 500;
+    }
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+  .childclass1 {
+    width: 70%;
+    border-top: 5px solid #159895;
+  }
+  .childclass2 {
+    width: 70%;
+  }
+}

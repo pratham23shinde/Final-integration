@@ -1,0 +1,240 @@
+.maincardclass {
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -125px;
+    height: 525px;
+    .leftcardclass {
+      width: 25%;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: #47ccc8;
+      padding: 33px 35px;
+      h2 {
+        color: white;
+        font-size: 45px;
+        //   text-align: center;
+        span {
+          color: #2d3663;
+        }
+      }
+      p {
+        color: #2d3663;
+        font-size: 20px;
+        font-weight: 100;
+        //   text-align: center;
+      }
+      button {
+        display: flex;
+        width: 60%;
+        background-color: #2d3663;
+        border-radius: 40px;
+        padding: 35px;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 19px;
+        &:hover {
+          transition: all 0.5s ease-in-out;
+          background-color: #fff;
+          color: #2d3663;
+          font-weight: 700;
+        }
+      }
+    }
+    .rightcardclass {
+      width: 65%;
+      padding: 10px;
+      display: flex;
+      background-color: #edf3f6;
+      padding: 30px 33px;
+      border-radius: 8px;
+  
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 100%;
+        grid-gap: 5%;
+        .grid-item {
+          border-radius: 8px;
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+          background-color: #fff;
+          img {
+            height: 150px;
+          }
+          h6 {
+            margin: 0;
+            font-weight: 500;
+            color: #2d3663;
+          }
+          &:hover {
+            transition: all 0.9s ease-out;
+            background-color: #47ccc8;
+            h6 {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+  .maincardclass {
+    height: 415px !important;
+    margin-top: -30px;
+    .leftcardclass {
+      padding: 5px 10px !important;
+      h2 {
+        font-size: 20px !important;
+      }
+      p {
+        font-size: 13px !important;
+      }
+      button {
+        width: 100%;
+        border-radius: 33px;
+        padding: 34px;
+        font-size: 13px;
+      }
+    }
+    .rightcardclass {
+      padding: 5px 10px;
+      .grid-container {
+        // grid-gap: 2%;
+
+        .grid-item {
+          padding: 2px;
+          // height: 60%;
+          .child-grid-item {
+          }
+          img {
+            height: 60px;
+            padding-top: 50%;
+          }
+          h6 {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Small screen devices (595px and above) */
+@media only screen and (min-width: 595px) {
+  .maincardclass {
+    height: 450px !important;
+    .leftcardclass {
+      padding: 10px 15px !important;
+      h2 {
+        font-size: 18px !important;
+      }
+      p {
+        font-size: 13px !important;
+      }
+      button {
+        width: 100%;
+        border-radius: 33px;
+        padding: 34px;
+        font-size: 16px;
+      }
+    }
+    .rightcardclass {
+      padding: 10px 15px;
+      .grid-container {
+        // grid-gap: 2%;
+
+        .grid-item {
+          padding: 2px;
+          // height: 60%;
+          .child-grid-item {
+          }
+          img {
+            height: 60px;
+            padding-top: 50%;
+          }
+          h6 {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+  .maincardclass {
+    .leftcardclass {
+      padding: 15px 25px !important;
+      h2 {
+        font-size: 27px !important;
+      }
+      p {
+        font-size: 15px !important;
+      }
+    }
+    .rightcardclass {
+      padding: 15px 20px;
+      .grid-container {
+        // grid-gap: 2%;
+
+        .grid-item {
+          padding: 2px;
+          // height: 60%;
+          .child-grid-item {
+          }
+          img {
+            height: 85px;
+            padding-top: 30%;
+          }
+          h6 {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .maincardclass {
+    height: 550px !important;
+    .leftcardclass {
+      padding: 15px 25px !important;
+      h2 {
+        font-size: 43px !important;
+      }
+      p {
+        font-size: 20px !important;
+      }
+    }
+    .rightcardclass {
+      padding: 15px 20px;
+      .grid-container {
+        .grid-item {
+          padding: 2px;
+          // height: 60%;
+          .child-grid-item {
+          }
+          img {
+            height: 150px;
+            padding-top: 20%;
+          }
+          h6 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<button mat-icon-button matDialogClose>
+  <mat-icon>close</mat-icon>
+</button>
+<mat-dialog-content>
+  <form          method="post"
+  [formGroup]="myGroup"
+  (ngSubmit)="onSubmit()" class="form-field">
+    <input
+    formControlName="testInput"
+
+      type="text"
+      name="testName"
+      placeholder="Test Conducted*"
+      class="input-style"
+      [(ngModel)]="test.testName"
+    />
+    <div class="internal-style">
+      <input
+      formControlName="testResultInput"
+
+        type="text"
+        name="result"
+        placeholder="Actual Result*"
+        class="internal-input-style mr"
+        [(ngModel)]="test.result"
+      />
+      <input
+      formControlName="testNotesInput"
+
+        type="text"
+        name="testNotes"
+        placeholder="Status*"
+        class="internal-input-style"
+        [(ngModel)]="test.testNotes"
+      />
+    </div>
+
+    <button type="submit" class="submit">save</button>
+  </form>
+</mat-dialog-content>
+  

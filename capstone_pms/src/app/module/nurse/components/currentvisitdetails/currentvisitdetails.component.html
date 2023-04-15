@@ -1,0 +1,36 @@
+<mat-card>
+  <mat-card-title>Current Filled Visit details </mat-card-title>
+  <mat-card-subtitle
+    ><span>Height:</span>
+    {{ curentVisitDetails.height }} ft </mat-card-subtitle
+  >
+  <mat-card-subtitle
+    ><span>Weight :</span>
+    {{ curentVisitDetails.weight }} kgs</mat-card-subtitle
+  >
+  <mat-card-subtitle
+    ><span> Respiration Rate:</span>
+    {{ curentVisitDetails.repirationRate }} bpm</mat-card-subtitle
+  >
+  <mat-card-subtitle
+    ><span>Body Temperature :</span>
+    {{ curentVisitDetails.bodyTemperature }} C</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <span> Blood Pressure :</span> {{ curentVisitDetails.bpSystolic }}/{{
+      curentVisitDetails.bpDiastolic
+    }}
+    mmHg
+  </mat-card-subtitle>
+  <mat-card-subtitle
+    ><span>Blood Group : </span>
+    {{ curentVisitDetails.bloodGroup }}</mat-card-subtitle
+  >
+  <mat-card-subtitle
+    ><span>Allery : </span>
+    {{ curentVisitDetails.allergyName }}</mat-card-subtitle
+  >
+  <mat-card-subtitle>
+    <span>Notes :</span> {{ curentVisitDetails.keyNotes }}</mat-card-subtitle
+  >
+</mat-card>

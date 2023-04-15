@@ -1,0 +1,254 @@
+<div class="formdivclass">
+  <div class="svg">
+    <img src="./assets/image/Signup.gif" alt="" />
+  </div>
+  <div class="form">
+    <form
+      class="formclass"
+      [formGroup]="myGroup"
+      (ngSubmit)="onSubmit()"
+      method="post"
+      action="/submit-myForm"
+    >
+      <!-- [formGroup]="myForm">  -->
+      <h1>Sign Up</h1>
+      <div class="space-evenly">
+        <mat-form-field appearance="outline" class="width-50">
+          <mat-label>Title</mat-label>
+          <!-- <mat-error *ngIf="myGroup.hasError('required')">Title is required</mat-error> -->
+          <mat-error *ngIf="myGroup.get('myInputTitle')"
+            >Title is required</mat-error
+          >
+
+          <mat-select
+            id="title"
+            name="title"
+            [(ngModel)]="user.title"
+            formControlName="myInputTitle"
+          >
+            <mat-option value="Mr">Mr</mat-option>
+            <mat-option value="Ms">Ms</mat-option>
+            <mat-option value="Miss">Miss</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="width-50">
+          <mat-label color="palette ">First Name</mat-label>
+          <input
+            matInput
+            name="firstName"
+            [(ngModel)]="user.firstName"
+            formControlName="myInputFirst"
+          />
+          <mat-error *ngIf="myGroup.get('myInputFirst')"
+            >First Name is required</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="width-50">
+          <mat-label>Last Name</mat-label>
+          <input
+            matInput
+            name="lastName"
+            [(ngModel)]="user.lastName"
+            formControlName="myInputLast"
+          />
+          <mat-error *ngIf="myGroup.get('myInputLast')"
+            >Last Name is required</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="space-evenly">
+        <mat-form-field appearance="outline" class="width-50">
+          <input
+            (blur)="search()"
+            matInput
+            placeholder="Email"
+            [(ngModel)]="user.email"
+            name="email"
+            formControlName="myInputEmail"
+          />
+          <mat-error *ngIf="myInputEmail.hasError('required')"
+            >Email is required</mat-error
+          >
+          <mat-error *ngIf="myInputEmail.hasError('email')"
+            >Invalid email address</mat-error
+          >
+          <mat-error *ngIf="myInputEmail.errors?.['emailExistOrNot']"
+            >Email is already present</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="width-50">
+          <mat-label>Contact Number</mat-label>
+          <input
+            maxlength="10"
+            matInput
+            name="contactNumber"
+            [(ngModel)]="user.contactNumber"
+            formControlName="myInputContact"
+          />
+          <mat-error *ngIf="myInputContact.hasError('required')"
+            >Phone number is required</mat-error
+          >
+          <mat-error *ngIf="myInputContact.errors?.['phoneNumber']"
+            >Invalid phone number</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <input
+            name="dob"
+            [(ngModel)]="user.dob"
+            formControlName="myInputDob"
+            matInput
+            [matDatepicker]="picker"
+            [max]="currentDate"
+            placeholder="DOB"
+          />
+          <mat-error *ngIf="myGroup.get('myInputDob')"
+            >DOB is required
+            </mat-error
+          >
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="space-evenly">
+        <mat-form-field appearance="outline" class="width-50">
+          <mat-label>Gender</mat-label>
+          <mat-error *ngIf="myGroup.get('myInputGender')"
+            >Gender is required</mat-error
+          >
+          <mat-select
+            id="gender"
+            name="gender"
+            [(ngModel)]="user.gender"
+            formControlName="myInputGender"
+          >
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label for="password">Password</mat-label>
+          <input
+            matInput
+            [type]="hide ?'password':'text' "
+            name="password"
+            placeholder="Enter your password"
+            formControlName="password1"
+            required
+            [(ngModel)]="user.password"
+          />
+          
+          <mat-icon
+            (click)="  hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="  hide
+            "
+            matSuffix
+            >{{ hide ? "visibility_off" : "visibility" }}</mat-icon
+          >
+          <mat-error *ngIf="password1.hasError('required')"
+            >Password Is Required</mat-error
+          >
+          <mat-error *ngIf="password1.errors?.['passwordStrength']"
+            >Your password must have one lower case,one upper case and one
+            numeric characters.
+          </mat-error>
+
+          <mat-error *ngIf="password1.hasError('minLength')"
+            >Password Should Atleast 8
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm Password</mat-label>
+          <input
+            matInput
+            [type]="hide1?'password':'text' "
+
+            type="password"
+            placeholder="Confirm your password"
+            formControlName="confirmPassword"
+            required
+          />  
+          <!-- <mat-icon
+          (click)="  hide1 = !hide1"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="  hide1
+          "
+          matSuffix
+          >{{ hide ? "visibility_off" : "visibility" }}</mat-icon -->
+        
+          <!-- <mat-error *ngIf="myGroup.get('confirmPassword')"
+            >Confirm password is required</mat-error
+          > -->
+          <mat-error
+            *ngIf="confirmPasswordFormControl.errors?.['matchPassword']"
+            >Password and confirmation password do not match
+          </mat-error>
+
+          <!-- <div
+            *ngIf="
+              confirmPasswordFormControl.errors &&
+              confirmPasswordFormControl.errors.mismatch
+            "
+          >
+            {{ confirmPasswordFormControl() }}
+          </div> -->
+        </mat-form-field>
+      </div>
+
+      <div class="space-evenly">
+        <mat-form-field
+          appearance="outline"
+          class="width-50"
+          class="addressClass"
+        >
+          <mat-label>Address</mat-label>
+          <input
+            matInput
+            name="address"
+            [(ngModel)]="user.address"
+            formControlName="myInputAddress"
+          />
+          <mat-error *ngIf="myGroup.get('myInputAddress')"
+            >Address is required</mat-error
+          >
+        </mat-form-field>
+      </div>
+      <div class="bottom">
+        <button
+        [disabled]="!myGroup.valid"
+          mat-raised-button
+          color="primary"
+          type="submit"
+          style="float: right"
+          (click)="openDialogRegister(); resetForm()"
+        > 
+          Submit
+        </button>
+        <span> Register User? </span>
+        <button
+          mat-raised-button
+          color="primary"
+          class="button"
+          routerLink="/patient/login"
+          routerLinkActive="active current"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- </div> -->
+<router-outlet></router-outlet>

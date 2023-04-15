@@ -1,4 +1,0 @@
-{
-    "packagePath": "projects/auth0-angular",
-    "postbump": "npm run build"
-}

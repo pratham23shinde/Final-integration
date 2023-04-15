@@ -6,4 +6,6 @@ import com.capstone.application.model.Patient;
 
 public interface PatientInfoRepository extends JpaRepository<Patient,Integer>{
 
+	
+
 }

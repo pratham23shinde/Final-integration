@@ -1,0 +1,48 @@
+<div *ngIf="hide">
+<div class="mat-elevation-z8">
+  <table
+    mat-table
+    [dataSource]="prescriptions"
+    style="background-color: aliceblue"
+  >
+    <!-- Position Column -->
+
+    <!-- <ng-container matColumnDef="prescriptionId">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.prescriptionId }}
+      </td>
+    </ng-container> -->
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="prescriptionName">
+      <th mat-header-cell *matHeaderCellDef>Medicine</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.prescriptionName }}
+      </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="dosage">
+      <th mat-header-cell *matHeaderCellDef>Dosage</th>
+      <td mat-cell *matCellDef="let element">{{ element.dosage }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="prescriptionNotes">
+      <th mat-header-cell *matHeaderCellDef>Notes</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.prescriptionNotes }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
+</div>
+<div class="mainclass" *ngIf="show">
+  <p>No prescription for this visit</p>
+</div>
+
+

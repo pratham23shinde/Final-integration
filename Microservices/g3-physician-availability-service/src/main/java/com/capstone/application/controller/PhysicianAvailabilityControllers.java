@@ -119,19 +119,22 @@ public class PhysicianAvailabilityControllers {
 	}
 
 	@GetMapping("/physician-available/OnthatDate/{date}")
-	public List<PhysicianAvailabiityModel> AvailablePhysicianOnthatDate(@PathVariable String date) throws ParseException {
-		
+	public List<PhysicianAvailabiityModel> AvailablePhysicianOnthatDate(@PathVariable String date)
+			throws ParseException {
+
 		return physicianAvailabilityService.findAllPhysicianOnDate(date);
 	}
 
 	@GetMapping("/doctorInfo/{email}")
-	public Optional<PhysicianAvailabiityModel> findDoctorInfoByEmail(@PathVariable String email) throws PhysicianAvailabilityException{
+	public Optional<PhysicianAvailabiityModel> findDoctorInfoByEmail(@PathVariable String email)
+			throws PhysicianAvailabilityException {
 		return physicianAvailabilityService.findDoctorInfoByEmailId(email);
-	
-}
-	//Sangeeta
-		@GetMapping("/doctorCount")
-		public long doctorCount() {
+
+	}
+
+	// Sangeeta
+	@GetMapping("/doctorCount")
+	public long doctorCount() {
 		return physicianAvailabilityService.countDoctors();
-		}
+	}
 }

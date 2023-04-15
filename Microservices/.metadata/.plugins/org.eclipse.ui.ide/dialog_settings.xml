@@ -43,6 +43,26 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\prath\Downloads\G3-SMTP-mailService\G3-SMTP-mailService"/>
+			<item value="C:\Users\prath\Downloads\G3-SMTP-mailService"/>
+			<item value="C:\Users\prath\Downloads\g3-SMTP-mailService (2)\g3-SMTP-mailService"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\finalrepo\final_repo\Microservices\g3-allergy-service"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\G3-SMTP-mailService"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-physician-availability-service"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-patient-info-service"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-patient-health-record-service"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-gateway-service\g3-gateway-service"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-authentication-service"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-auth0-service\g3-auth0-service"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-auth0-service"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-appointment-service"/>
+			<item value="C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-allergy-service"/>
+			<item value="C:\Users\KUNAL\Desktop\final-integration\Final-integration\Microservices\g3-gateway-service\g3-gateway-service"/>
+			<item value="C:\Users\KUNAL\Downloads\g3-SMTP-mailService (2)\g3-SMTP-mailService"/>
+			<item value="C:\Users\KUNAL\Desktop\final-integration\Final-integration\Microservices\G3-SMTP-mailService"/>
+			<item value="C:\Users\KUNAL\Desktop\final-integration\Final-integration\Microservices\g3-auth0-service\g3-auth0-service"/>
+			<item value="C:\Users\KUNAL\Desktop\final-integration\Final-integration\Microservices\g3-auth0-service"/>
+			<item value="C:\Users\KUNAL\Desktop\final-integration\Final-integration\Microservices"/>
 			<item value="C:\Users\prath\OneDrive\Desktop\Microservices\g3-patient-info-service"/>
 			<item value="C:\Users\prath\Downloads\HttpSession\HttpSession1"/>
 		</list>

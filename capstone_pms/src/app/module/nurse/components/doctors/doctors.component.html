@@ -1,0 +1,41 @@
+<div class="maindiv">
+  <div class="mainprofile" *ngFor="let a of details">
+    <!-- <img
+      src="http://holamed.like-themes.com/wp-content/uploads/2018/11/01.jpg"
+      alt="Physicia image"
+    /> -->
+    <div class="profileinfo">
+      <div class="nameandqualificatio">
+        <h2>
+          <i class="fa-solid fa-user-nurse"></i> {{ a.first_name }}
+          {{ a.last_name }} <br /><span></span>
+        </h2>
+        <div class="basicinfo">
+          <p><span>Specialization: </span>{{ a.speciality }}</p>
+        </div>
+      </div>
+
+      <div class="contact">
+        <h4><i class="fa-solid fa-envelope"></i> {{ a.physicianEmail }}</h4>
+
+        <div class="contact">
+          <!-- <h4>
+            <i class="fa-solid fa-envelope"></i> {{a.availability}}
+          </h4> -->
+        </div>
+      </div>
+      <button
+        type="submit"
+        name="submit"
+        mat-raised-button
+        color="primary"
+        class="button"
+        [routerLink]="['/nurse/doctors-appoitments']"
+        (click)="actionMethod(a.physicianEmail)"
+      >
+        View Appoitments
+      </button>
+    </div>
+      
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="main">
+  <div class="formclass">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="loginUser()" style="width: 150%">
+      <p style="text-align: center; color: red;">{{ msg }}</p>
+      <div style="display: flex; justify-content: center">
+        <mat-form-field appearance="outline" style="display: flex; width: 60%">
+          <mat-label>Email</mat-label>
+          <mat-error *ngIf="loginForm.get('emailInput')">Email required</mat-error>
+          <input
+            formControlName="emailInput"
+            matInput
+            name="email"
+            placeholder="Ex. pat@example.com"
+            [(ngModel)]="login.email"
+          />
+        </mat-form-field>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <mat-form-field appearance="outline" style="display: flex; width: 60%">
+          <mat-label>Password</mat-label>
+          <mat-error *ngIf="loginForm.get('passwordInput')">Password required</mat-error>
+
+          <input
+            matInput
+            formControlName="passwordInput"
+            name="password"
+            [type]="hide ? 'password' : 'text'"
+            [(ngModel)]="login.password"
+          />
+          <mat-icon
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+            matSuffix
+            >{{ hide ? "visibility_off" : "visibility" }}</mat-icon
+          >
+          <!-- <button
+            mat-icon-button
+            
+            
+          >
+            
+          </button> -->
+        </mat-form-field>
+      </div>
+      <div class="btnclass" style="display: flex; flex-direction: column">
+        <div class="btn1">
+          <button mat-stroked-button type="submit" color="primary" class="log">
+            LogIn
+          </button>
+        </div>
+        <div style="margin-top: 10px">
+          <a routerLink="/patient/forgot" style="text-decoration: none">
+            Forgot password ?
+          </a>
+        </div>
+
+        <div class="btn1" style="margin-top: 15px">
+          <span> New User? </span> <span>Register</span>
+          <a
+            routerLink="/register"
+            routerLink="/patient/register"
+            routerLinkActive="active current"
+            style="text-decoration: none"
+          >
+            here
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="svg">
+    <img src="./assets/image/Ambulance.gif" alt="" />
+  </div>
+</div>

@@ -15,50 +15,67 @@ import lombok.extern.log4j.Log4j2;
 
 @Service
 @Log4j2
-public class PatientAuthenticationServiceImpl implements PatientAuthenticationService{
-	private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager.getLogger(PatientAuthenticationServiceImpl.class);
+public class PatientAuthenticationServiceImpl implements PatientAuthenticationService {
+	private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager
+			.getLogger(PatientAuthenticationServiceImpl.class);
 
 	@Autowired
 	private ModelMapper modelmapper;
 
 	private PatientAuthenticationRepository patientAuthenticationRepository;
-	
+
 	public PatientAuthenticationServiceImpl(PatientAuthenticationRepository patientAuthenticationRepository) {
 		super();
 		this.patientAuthenticationRepository = patientAuthenticationRepository;
 	}
 
-
 	@Override
 	public Optional<Patient> patientLogin(String email, String password) {
 		// TODO Auto-generated method stub
 		try {
-			
-		return patientAuthenticationRepository.authenticateByEmailandPassword(email,password);
-		}
-		catch(Exception e)
-		{
-			 e.printStackTrace();
+
+			return patientAuthenticationRepository.authenticateByEmailandPassword(email, password);
+		} catch (Exception e) {
+			e.printStackTrace();
 			log.error(e.getMessage());
 		}
 		return null;
 	}
-	
+
 	@Override
 	public PatientDto createPatient(PatientDto patinetDto) {
 		try {
 			log.info("Patient registered successfully");
-		Patient patient=modelmapper.map(patinetDto, Patient.class);
-		Patient saveadPatient=patientAuthenticationRepository.save(patient);
-		PatientDto savedPatientDto=modelmapper.map(saveadPatient, PatientDto.class);
-		return savedPatientDto;
-		}
-		catch(Exception e)
-		{
-			 e.printStackTrace();
+			Patient patient = modelmapper.map(patinetDto, Patient.class);
+			Patient saveadPatient = patientAuthenticationRepository.save(patient);
+			PatientDto savedPatientDto = modelmapper.map(saveadPatient, PatientDto.class);
+			return savedPatientDto;
+		} catch (Exception e) {
+			e.printStackTrace();
 			log.error(e.getMessage());
 		}
 		return null;
+	}
+
+	@Override
+	public void updatepassword(String email, String password) {
+		// TODO Auto-generated method stub
+		patientAuthenticationRepository.updatePassword(email, password);
+	}
+
+
+@Override
+	public boolean checkEmailAlreadyExist(String email) {
+		// TODO Auto-generated method stub
+	
+	String exists=patientAuthenticationRepository.existEmail(email);
+	if(exists==null) {
+		return true;
+
+	}else {
+		return false;
+	}
+		
 	}
 
 }

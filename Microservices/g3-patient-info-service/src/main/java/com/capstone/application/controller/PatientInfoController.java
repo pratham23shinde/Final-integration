@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpClientErrorException;
 
+import com.capstone.application.dto.PatientDto;
 import com.capstone.application.model.Patient;
 import com.capstone.application.service.PatientInfoService;
 
@@ -87,5 +89,15 @@ public class PatientInfoController {
 		return patientInfoService.countPatient();
 		}
 	
+		//updateprofile
+		@PutMapping("/patient/{patientId}")
+		public PatientDto putPatient(@PathVariable("patientId")int patientId,@RequestBody PatientDto patientDto){
+			PatientDto patientChange=patientInfoService.updatePatientById(patientId, patientDto);
+			System.out.println("title"+patientDto.getTitle());
+			System.out.println("title"+patientDto.getDob()  );
+			System.out.println("title"+patientDto.getGender()  );
+
+			return patientChange; 
+		}
 
 }

@@ -1,0 +1,42 @@
+p{
+  margin-bottom: 40px;
+}
+.book {
+  float: right;
+  margin: 30px;
+}
+.main {
+  padding: 60px;
+  span {
+    font-weight: 400;
+  }
+}
+.submit {
+  background: none;
+  border: none;
+  background-color: #2d3663;
+  padding: 15px;
+//   width: 50%;
+//   margin-left: auto;
+//   margin-right: auto;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 15px;
+}
+.nameCard{
+  width: 20px;
+}
+.button {
+  float: right;
+  margin-top: 15px;
+  background-color: #0d4c92;
+  padding: 27px 20px;
+  color: whitesmoke;
+  margin-bottom: 15px;
+  &:hover {
+    background-color: #659fe1;
+    color: black;
+  }
+}

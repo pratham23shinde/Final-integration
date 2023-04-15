@@ -1,0 +1,201 @@
+<!-- <h4><mat-icon>calendar_today</mat-icon><span>Accepted Appointment</span></h4> -->
+<h4><mat-icon>calendar_today</mat-icon><span>Accepted Appointment</span></h4>
+
+<div class="inputfield">
+  <!-- <div class="parent1">
+    <div class="child1">
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          [matDatepicker]="picker"
+          placeholder="Choose a date"
+          [min]="todayDate"
+          (dateChange)="onDateSelected($event.target.value)"
+        />
+        <mat-datepicker #picker></mat-datepicker>
+        <i
+          (click)="picker.open()"
+          class="fa-solid fa-calendar-days"
+          matSuffix
+        ></i>
+      </mat-form-field>
+    </div>
+    <div class="child2">
+      <mat-form-field class="child21">
+        <mat-label>Search</mat-label>
+
+        <input
+          matInput
+          (keyup)="applyFilter($event)"
+          placeholder="search here"
+          #input
+          />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+  </div> -->
+
+  <div class="inputfield">
+    <div class="date">
+      <mat-form-field appearance="outline" (click)="picker.open()">
+        <mat-label>Calender</mat-label>
+        <input
+          [max]="currentDatee"
+          matInput
+          [matDatepicker]="picker"
+          [min]="todayDate"
+          (dateChange)="onDateSelected($event.target.value)"
+        />
+        <mat-datepicker #picker ></mat-datepicker>
+        <mat-icon matSuffix >calendar_today</mat-icon>
+      </mat-form-field>
+      <form class="example-form">
+        <mat-form-field appearance="outline" style="float: right">
+          <mat-label>Search</mat-label>
+          <input
+            matInput
+            #message
+            maxlength="25"
+            (keyup)="applyFilter($event)"
+          />
+          <mat-hint align="end">{{ message.value.length }} / 25</mat-hint>
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+
+  <!-- <div class="inputfield"> -->
+  <!-- <div class="parent1">
+  <div class="child1">
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="Choose a date"
+        [min]="todayDate"
+        (dateChange)="onDateSelected($event.target.value)"
+      />
+      <i
+        (click)="picker.open()"
+        class="fa-solid fa-calendar-days"
+        matSuffix
+      ></i>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="child2">
+    <mat-form-field class="child21">
+      <mat-label>Search</mat-label>
+
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="search here"
+        #input
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+</div> -->
+  <!-- </div> -->
+  <mat-card class="example-card"> </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-content>
+      <div class="mat-elevation-z8">
+        <table
+          mat-table
+          [dataSource]="dataSource"
+          matSort
+          (matSortChange)="announceSortChange($event)"
+        >
+          <!-- id Column -->
+          <ng-container matColumnDef="appointmentId" class="table-row">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              class="thead"
+              sortActionDescription="Sort by appointmentId"
+            >
+              Appoitment Id
+            </th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.appointmentId }}
+            </td>
+          </ng-container>
+
+          <!--namet Column -->
+          <ng-container matColumnDef="patientId" class="table-row">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              class="thead"
+              sortActionDescription="Sort by patientId"
+            >
+              Patient Id
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.patientId }}</td>
+            <!-- <td mat-cell *matCellDef="let element">{{patientbyIdData.firstName }} {{patientbyIdData.lastName }}</td> -->
+          </ng-container>
+
+          <!-- date Column -->
+          <ng-container matColumnDef="date" class="table-row">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              class="thead"
+              sortActionDescription="Sort by date"
+            >
+              Appointment Date
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="reason" class="table-row">
+            <th mat-header-cell *matHeaderCellDef class="thead">
+              Symtoms from Patient
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.reason }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="info" class="table-row">
+            <th mat-header-cell *matHeaderCellDef class="thead">
+              Dignosis Info
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <button
+                class="submit"
+                mat-raised-button
+                color="primary"
+                [routerLink]="['/nurse/patient-info']"
+                (click)="
+                  sendAppointmentData(
+                    row.physicianEmail,
+                    row.appointmentId,
+                    row.patientId
+                  )
+                "
+              >
+                Add Info
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+        <mat-paginator
+          [pageSizeOptions]="pageSizes"
+          showFirstLastButtons
+          aria-label="Select page of periodic elements"
+        >
+        </mat-paginator>
+      </div>
+    </mat-card-content>
+      </mat-card
+  >
+</div>

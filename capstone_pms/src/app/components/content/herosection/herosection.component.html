@@ -1,0 +1,62 @@
+<!-- <p>herosection works!</p> -->
+<div class="herosection">
+  <div class="centered">
+    <h1>Leading <span>Doctors</span></h1>
+    <p>
+      In hospitals, the practice of medicine is not just about treating
+      illnesses and injuries, it's about caring for the whole person. This quote
+      by the ancient Greek physician Hippocrates speaks to the idea that
+      medicine is not just a science, but an art that requires compassion and
+      empathy for those in need. It reminds us that the best hospitals are those
+      where patients are not only treated with the most advanced medical
+      techniques, but also with kindness and understanding.
+    </p>
+    <a
+      
+      class="upsale-button"
+      routerLink="patient/login"
+      >
+      <!-- *ngIf="(auth.isAuthenticated$ | async) === false" -->
+      <span>Book An Appointment</span>
+    </a>
+    <!-- <button routerLink="patient/login">btn</button> -->
+    <!-- <div *ngIf="(auth.isAuthenticated$ | async) === false">
+    </div> -->
+
+    <div *ngIf="auth.user$ | async as user" class="upsale-button">
+      <a routerLink="admin/dashboard" *ngIf="user['role'] == 'Admin'">
+        <button
+          mat-stroked-button
+          color="primary"
+          class="btnclass"
+          id="adminId"
+        >
+          <span>Admin Dashboard</span>
+        </button>
+      </a>
+
+      <a routerLink="physician/dashboard" *ngIf="user['role'] == 'Doctor'">
+        <button mat-stroked-button color="primary" class="btnclass">
+          <span>Physician Dashboard</span>
+        </button>
+      </a>
+
+      <a routerLink="nurse/dashboard" *ngIf="user['role'] == 'Nurse'">
+        <button mat-stroked-button color="primary" class="btnclass">
+          <span>Nurse Dashboard</span>
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- <div>
+      <div *ngIf="auth.user$ | async as user">
+        <a id="a" mat-raised-button color="accent" routerLink="admin/dashboard" *ngIf="user['role'] == 'Admin'">Admin
+          Dashboard</a>
+
+        <a mat-raised-button color="accent" routerLink="admin/dashboard" *ngIf="user['role'] == 'Doctor'">Physician
+          Doctordashboard</a>
+      </div>
+    </div>
+  </div> -->
+</div>

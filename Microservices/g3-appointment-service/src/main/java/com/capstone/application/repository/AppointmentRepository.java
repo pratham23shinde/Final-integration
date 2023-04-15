@@ -37,8 +37,11 @@ public interface AppointmentRepository extends JpaRepository<Appointment,Integer
 		@Query(value="update Appointment set acceptance=:status where appointment_id=:id",nativeQuery = true)
 		void update(@Param(value = "id") Integer id,@Param(value = "status") String status);
 		
-		@Query(value = "select * from Appointment where patient_id=:id and acceptance='Accepted' order by date asc limit 1,1" ,nativeQuery=true)
+		@Query(value = "select * from Appointment where patient_id=:id and acceptance='Accepted' order by appointment_id desc limit 1" ,nativeQuery=true)
 		public Appointment findPreviousAppointmentById(@Param(value="id") Integer id);
+		
+		@Query(value = "select * from Appointment where patient_id=:id and acceptance='Accepted' order by appointment_id desc limit 1,1" ,nativeQuery=true)
+		public Appointment findPreviousAppointmentforNurseDoctor(@Param(value="id") Integer id);
 
 		//gaytri
 		@Query(value = "SELECT * from Appointment where  date=?1 and acceptance=?2", nativeQuery=true)

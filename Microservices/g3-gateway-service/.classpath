@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="g3-gateway-service/src/main/java"/>
+	<classpathentry kind="src" path="g3-gateway-service/src/test/java"/>
+	<classpathentry kind="lib" path="g3-gateway-service/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="g3-gateway-service/target/g3-gatewawy-service.jar"/>
+	<classpathentry kind="output" path="g3-gateway-service/target/classes"/>
+</classpath>

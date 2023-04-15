@@ -104,6 +104,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		
+		<finalName>g3-patient-health-record-service</finalName>
 	</build>
 
 </project>

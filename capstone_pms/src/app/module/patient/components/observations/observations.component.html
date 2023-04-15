@@ -1,0 +1,40 @@
+<div *ngIf="show" class="maincard" style="display: flex; flex-wrap: wrap;">
+  <div *ngFor="let a of try">
+    <mat-card class="example-card2">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Observations Made :</mat-card-title>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngFor="let m of doctor">
+          <p *ngIf="m[0].appointmentId == a[0].visitId">
+            <span
+              >Doctor Name : {{ m[0].drFirstName }} {{ m[0].drLastName }}</span
+            >
+            <br />
+            <span>Date : {{ m[0].date }}</span>
+          </p>
+        </div>
+        <div class="btn">
+          <button
+            mat-stroked-button
+            class="submit"
+            color="primary"
+            (click)="openTestDialog(a[0].visitId)"
+          >
+            Test
+          </button>
+          <button
+            mat-stroked-button
+            class="submit"
+            color="primary"
+            (click)="openDialog(a[0].visitId)"
+          >
+            Prescription
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

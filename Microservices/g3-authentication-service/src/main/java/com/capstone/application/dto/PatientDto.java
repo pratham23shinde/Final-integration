@@ -9,19 +9,9 @@ public class PatientDto {
 	private String contactNumber;
 	private String gender;
 	private String password;
-	private String bloodGroup;
 	private String address;
 	
 	
-	public String getBloodGroup() {
-		return bloodGroup;
-	}
-
-
-
-	public void setBloodGroup(String bloodGroup) {
-		this.bloodGroup = bloodGroup;
-	}
 
 
 

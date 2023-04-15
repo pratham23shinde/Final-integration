@@ -1,0 +1,25 @@
+.prescription {
+  padding: 15px;
+  span {
+    font-weight: 500;
+  }
+}
+table {
+  width: 100%;
+  box-shadow: none;
+}
+.table-row:hover {
+  background-color: whitesmoke !important;
+  cursor: pointer;
+}
+.button {
+  float: right;
+  margin-top: 15px;
+  background-color: #0d4c92;
+  padding: 27px 20px;
+  color: whitesmoke;
+  &:hover {
+    background-color: #659fe1;
+    color: black;
+  }
+}

@@ -1,0 +1,64 @@
+<!-- <p>{{getAppointmentPatient.appointmentId}}</p>  -->
+
+<form class="example-form">
+  <mat-form-field appearance="outline" style="float: right">
+    <mat-label>Search</mat-label>
+    <input matInput #message maxlength="25" (keyup)="applyFilter($event)" />
+    <mat-hint align="end">{{ message.value.length }} / 25</mat-hint>
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</form>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Booked On -->
+  <ng-container matColumnDef="date" class="table-row">
+    <th mat-header-cell *matHeaderCellDef class="thead">Appointment Date</th>
+    <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="reason" class="table-row">
+    <th mat-header-cell *matHeaderCellDef class="thead">Reason</th>
+    <td mat-cell *matCellDef="let element">{{ element.reason }}</td>
+  </ng-container>
+
+  <!-- Notes -->
+  <ng-container matColumnDef="acceptance" class="table-row">
+    <th mat-header-cell *matHeaderCellDef class="thead">Acceptance</th>
+    <td mat-cell *matCellDef="let element">{{ element.acceptance }}</td>
+  </ng-container>
+
+  <!-- Basic Diagonosis Information -->
+  <!-- <ng-container matColumnDef="patientId" class="table-row">
+    <th mat-header-cell *matHeaderCellDef>Patient Id</th>
+    <td mat-cell *matCellDef="let element">{{ element.patientId}}</td>
+  </ng-container> -->
+
+  <ng-container matColumnDef="drFirstName" class="table-row">
+    <th mat-header-cell *matHeaderCellDef class="thead">Dr Name</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.drFirstName }} {{ element.drLastName }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="physicianEmail" class="table-row">
+    <th mat-header-cell *matHeaderCellDef class="thead">Physician Email</th>
+    <td mat-cell *matCellDef="let element">{{ element.physicianEmail }}</td>
+  </ng-container>
+
+  <!-- <ng-container matColumnDef="submissionDate" class="table-row">
+    <th mat-header-cell *matHeaderCellDef>submissionDate</th>
+    <td mat-cell *matCellDef="let element">{{ element.submissionDate }}</td>
+  </ng-container> -->
+  <!-- Action -->
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns" class="thead"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    class="table-row"
+  ></tr>
+</table>
+<mat-paginator
+  [pageSizeOptions]="[5, 10, 15]"
+  showFirstLastButtons
+></mat-paginator>

@@ -1,847 +1,162 @@
-2023-04-04T07:29:19.459+05:30  WARN 24020 --- [HikariPool-10 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Thread starvation or clock leap detected (housekeeper delta=8h13m49s938ms798µs700ns).
-2023-04-04T08:24:05.821+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2023-04-04T08:24:05.958+05:30  INFO 24020 --- [Thread-57] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T08:24:05.970+05:30  INFO 24020 --- [Thread-57] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T08:24:06.081+05:30  INFO 24020 --- [Thread-57] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T08:24:06.128+05:30  INFO 24020 --- [Thread-57] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:24:06.179+05:30  INFO 24020 --- [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
-2023-04-04T08:24:06.218+05:30  INFO 24020 --- [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
-2023-04-04T08:24:07.018+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:24:07.019+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:24:08.231+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:24:08.253+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:24:08.429+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T08:24:08.475+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:24:08.485+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:24:08.608+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T08:24:08.609+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T08:24:08.609+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T08:24:08.637+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T08:24:08.637+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1616 ms
-2023-04-04T08:24:08.704+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:24:08.712+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
-2023-04-04T08:24:08.772+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@765ae67d
-2023-04-04T08:24:08.772+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
-2023-04-04T08:24:08.775+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:24:08.874+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:24:08.874+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:24:08.957+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:24:10.628+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T08:24:10.713+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:24:10.715+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:24:10.749+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T08:24:10.750+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T08:24:10.835+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T08:24:10.835+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T08:24:10.837+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-04-04T08:24:10.875+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 3.998 seconds (process running for 147641.238)
-2023-04-04T08:24:10.877+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T08:25:15.396+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2023-04-04T08:25:15.411+05:30  INFO 24020 --- [Thread-63] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T08:25:15.412+05:30  INFO 24020 --- [Thread-63] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T08:25:15.417+05:30  INFO 24020 --- [Thread-63] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T08:25:15.428+05:30  INFO 24020 --- [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:25:15.429+05:30  INFO 24020 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
-2023-04-04T08:25:15.434+05:30  INFO 24020 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
-2023-04-04T08:25:15.645+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:25:15.645+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:25:15.911+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:25:15.917+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:25:15.971+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T08:25:15.982+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:25:15.983+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:25:16.024+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T08:25:16.024+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T08:25:16.024+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T08:25:16.042+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T08:25:16.042+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 396 ms
-2023-04-04T08:25:16.095+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:25:16.100+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
-2023-04-04T08:25:16.107+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50b217fb
-2023-04-04T08:25:16.107+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
-2023-04-04T08:25:16.108+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:25:16.149+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:25:16.149+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:25:16.204+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:25:16.818+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T08:25:16.906+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:25:16.908+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:25:16.936+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T08:25:16.939+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T08:25:17.026+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 1.475 seconds (process running for 147707.389)
-2023-04-04T08:25:17.029+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T08:25:24.377+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T08:25:24.377+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T08:25:24.379+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-04-04T08:28:11.053+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 12 class path changes (0 additions, 0 deletions, 12 modifications)
-2023-04-04T08:28:11.411+05:30  INFO 24020 --- [Thread-69] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T08:28:11.427+05:30  INFO 24020 --- [Thread-69] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T08:28:11.623+05:30  INFO 24020 --- [Thread-69] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T08:28:11.718+05:30  INFO 24020 --- [Thread-69] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:28:11.782+05:30  INFO 24020 --- [Thread-69] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
-2023-04-04T08:28:11.819+05:30  INFO 24020 --- [Thread-69] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
-2023-04-04T08:28:12.806+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:28:12.806+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:28:13.573+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:28:13.584+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:28:13.698+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T08:28:13.727+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:28:13.728+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:28:13.782+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T08:28:13.783+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T08:28:13.783+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T08:28:13.808+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T08:28:13.808+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 999 ms
-2023-04-04T08:28:13.864+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:28:13.871+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
-2023-04-04T08:28:13.875+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6690b460
-2023-04-04T08:28:13.876+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
-2023-04-04T08:28:13.878+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:28:13.932+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:28:13.932+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:28:14.010+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:28:14.574+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T08:28:14.650+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:28:14.652+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:28:14.680+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T08:28:14.681+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T08:28:14.793+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 2.114 seconds (process running for 147885.156)
-2023-04-04T08:28:14.796+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T08:28:23.304+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T08:28:23.304+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T08:28:23.305+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-04-04T08:29:23.509+05:30  INFO 1996 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 1996 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:29:23.511+05:30  INFO 1996 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:29:26.105+05:30  INFO 1996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:29:26.426+05:30  INFO 1996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 298 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:29:26.925+05:30  INFO 1996 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T08:29:28.086+05:30  INFO 1996 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:29:28.171+05:30  INFO 1996 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:29:28.531+05:30  INFO 1996 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:29:28.674+05:30  INFO 1996 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T08:29:29.022+05:30  INFO 1996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T08:29:29.422+05:30  INFO 1996 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39a60cc3
-2023-04-04T08:29:29.425+05:30  INFO 1996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T08:29:29.581+05:30  INFO 1996 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:29:30.806+05:30  INFO 1996 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:29:30.827+05:30  INFO 1996 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:29:31.252+05:30  WARN 1996 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:29:34.838+05:30  WARN 1996 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:29:34.850+05:30  INFO 1996 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:29:34.961+05:30  INFO 1996 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 12.968 seconds (process running for 16.036)
-2023-04-04T08:29:35.153+05:30  INFO 1996 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:29:35.154+05:30  INFO 1996 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:29:35.157+05:30  INFO 1996 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-2023-04-04T08:29:35.281+05:30  INFO 1996 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T08:29:35.489+05:30  INFO 1996 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:29:35.490+05:30  INFO 1996 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:29:35.492+05:30  INFO 1996 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T08:29:36.220+05:30  INFO 1996 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:29:36.228+05:30  INFO 1996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T08:29:36.241+05:30  INFO 1996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T08:32:37.294+05:30  INFO 14200 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 14200 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:32:37.298+05:30  INFO 14200 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:32:39.626+05:30  INFO 14200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:32:39.805+05:30  INFO 14200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 164 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:32:40.230+05:30  INFO 14200 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T08:32:41.405+05:30  INFO 14200 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:32:41.477+05:30  INFO 14200 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:32:41.792+05:30  INFO 14200 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:32:41.886+05:30  INFO 14200 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T08:32:42.216+05:30  INFO 14200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T08:32:42.482+05:30  INFO 14200 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec627d7
-2023-04-04T08:32:42.486+05:30  INFO 14200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T08:32:42.584+05:30  INFO 14200 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:32:43.691+05:30  INFO 14200 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:32:43.708+05:30  INFO 14200 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:32:44.090+05:30  WARN 14200 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:32:47.208+05:30  WARN 14200 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:32:47.216+05:30  INFO 14200 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:32:47.334+05:30  INFO 14200 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 11.51 seconds (process running for 14.192)
-2023-04-04T08:32:47.474+05:30  INFO 14200 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:32:47.475+05:30  INFO 14200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:32:47.476+05:30  INFO 14200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-04-04T08:32:47.545+05:30  INFO 14200 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T08:32:47.743+05:30  INFO 14200 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:32:47.744+05:30  INFO 14200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:32:47.746+05:30  INFO 14200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T08:32:47.809+05:30  INFO 14200 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:32:47.975+05:30  INFO 14200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T08:32:47.990+05:30  INFO 14200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T08:46:01.429+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2023-04-04T08:46:01.618+05:30  INFO 24020 --- [Thread-75] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T08:46:01.640+05:30  INFO 24020 --- [Thread-75] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T08:46:01.832+05:30  INFO 24020 --- [Thread-75] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T08:46:01.904+05:30  INFO 24020 --- [Thread-75] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:46:01.940+05:30  INFO 24020 --- [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
-2023-04-04T08:46:01.969+05:30  INFO 24020 --- [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
-2023-04-04T08:46:02.653+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:46:02.653+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:46:03.594+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:46:03.610+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:46:03.732+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T08:46:03.764+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:46:03.770+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:46:03.863+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T08:46:03.864+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T08:46:03.864+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T08:46:03.892+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T08:46:03.892+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1237 ms
-2023-04-04T08:46:03.945+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:46:03.950+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
-2023-04-04T08:46:03.973+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b8c1ba6
-2023-04-04T08:46:03.973+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
-2023-04-04T08:46:03.975+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:46:04.022+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:46:04.023+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:46:04.101+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:46:04.747+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T08:46:04.842+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:46:04.846+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:46:04.885+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T08:46:04.887+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T08:46:05.039+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 2.517 seconds (process running for 148955.344)
-2023-04-04T08:46:05.044+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T08:46:13.950+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T08:46:13.951+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T08:46:13.952+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-04-04T08:46:47.753+05:30  INFO 29140 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 29140 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:46:47.756+05:30  INFO 29140 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:46:49.936+05:30  INFO 29140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:46:50.151+05:30  INFO 29140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 198 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:46:50.495+05:30  INFO 29140 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T08:46:51.515+05:30  INFO 29140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:46:51.574+05:30  INFO 29140 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:46:51.944+05:30  INFO 29140 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:46:52.133+05:30  INFO 29140 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T08:46:52.355+05:30  INFO 29140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T08:46:52.563+05:30  INFO 29140 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e4c05a0
-2023-04-04T08:46:52.564+05:30  INFO 29140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T08:46:52.636+05:30  INFO 29140 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:46:53.396+05:30  INFO 29140 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:46:53.413+05:30  INFO 29140 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:46:53.957+05:30  WARN 29140 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:46:57.842+05:30  WARN 29140 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:46:57.863+05:30  INFO 29140 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:46:58.109+05:30  INFO 29140 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 11.42 seconds (process running for 12.941)
-2023-04-04T08:46:58.316+05:30  INFO 29140 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:46:58.317+05:30  INFO 29140 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:46:58.320+05:30  INFO 29140 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T08:46:58.439+05:30  INFO 29140 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T08:46:58.658+05:30  INFO 29140 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:46:58.663+05:30  INFO 29140 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:46:58.665+05:30  INFO 29140 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-04-04T08:46:58.762+05:30  INFO 29140 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:46:58.769+05:30  INFO 29140 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T08:46:58.792+05:30  INFO 29140 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T08:48:01.121+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2023-04-04T08:48:01.184+05:30  INFO 24020 --- [Thread-81] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T08:48:01.190+05:30  INFO 24020 --- [Thread-81] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T08:48:01.272+05:30  INFO 24020 --- [Thread-81] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T08:48:01.317+05:30  INFO 24020 --- [Thread-81] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:48:01.362+05:30  INFO 24020 --- [Thread-81] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
-2023-04-04T08:48:01.381+05:30  INFO 24020 --- [Thread-81] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
-2023-04-04T08:48:01.923+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:48:01.924+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:48:02.814+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:48:02.828+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:48:02.942+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T08:48:02.967+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:48:02.969+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:48:03.027+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T08:48:03.028+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T08:48:03.029+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T08:48:03.059+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T08:48:03.059+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1133 ms
-2023-04-04T08:48:03.117+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:48:03.122+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
-2023-04-04T08:48:03.130+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4beca6a2
-2023-04-04T08:48:03.130+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
-2023-04-04T08:48:03.132+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:48:03.169+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:48:03.169+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:48:03.239+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:48:03.783+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T08:48:03.860+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:48:03.862+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:48:03.892+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T08:48:03.893+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T08:48:03.988+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 2.17 seconds (process running for 149074.288)
-2023-04-04T08:48:03.991+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T08:48:13.460+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T08:48:13.460+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T08:48:13.462+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-04-04T08:48:34.473+05:30  INFO 1276 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 1276 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:48:34.476+05:30  INFO 1276 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:48:36.714+05:30  INFO 1276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:48:36.896+05:30  INFO 1276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 167 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:48:37.284+05:30  INFO 1276 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T08:48:38.329+05:30  INFO 1276 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:48:38.406+05:30  INFO 1276 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:48:38.836+05:30  INFO 1276 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:48:38.982+05:30  INFO 1276 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T08:48:39.360+05:30  INFO 1276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T08:48:39.632+05:30  INFO 1276 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ec06e97
-2023-04-04T08:48:39.637+05:30  INFO 1276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T08:48:39.699+05:30  INFO 1276 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:48:40.364+05:30  INFO 1276 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:48:40.380+05:30  INFO 1276 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:48:40.870+05:30  WARN 1276 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:48:44.002+05:30  WARN 1276 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:48:44.012+05:30  INFO 1276 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:48:44.127+05:30  INFO 1276 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 10.721 seconds (process running for 11.997)
-2023-04-04T08:48:44.279+05:30  INFO 1276 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:48:44.281+05:30  INFO 1276 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:48:44.284+05:30  INFO 1276 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T08:48:44.367+05:30  INFO 1276 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T08:48:44.526+05:30  INFO 1276 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:48:44.527+05:30  INFO 1276 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:48:44.529+05:30  INFO 1276 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T08:48:44.606+05:30  INFO 1276 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:48:44.610+05:30  INFO 1276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T08:48:44.622+05:30  INFO 1276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T08:50:39.427+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2023-04-04T08:50:39.465+05:30  INFO 24020 --- [Thread-87] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T08:50:39.467+05:30  INFO 24020 --- [Thread-87] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T08:50:39.492+05:30  INFO 24020 --- [Thread-87] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T08:50:39.504+05:30  INFO 24020 --- [Thread-87] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:50:39.509+05:30  INFO 24020 --- [Thread-87] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
-2023-04-04T08:50:39.515+05:30  INFO 24020 --- [Thread-87] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
-2023-04-04T08:50:39.807+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:50:39.808+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:50:40.139+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:50:40.146+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:50:40.219+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T08:50:40.239+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:50:40.241+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:50:40.295+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T08:50:40.296+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T08:50:40.296+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T08:50:40.321+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T08:50:40.321+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 512 ms
-2023-04-04T08:50:40.381+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:50:40.386+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
-2023-04-04T08:50:40.395+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e5cfce8
-2023-04-04T08:50:40.395+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
-2023-04-04T08:50:40.396+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:50:40.440+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:50:40.441+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:50:40.505+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:50:41.062+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T08:50:41.151+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:50:41.154+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:50:41.184+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T08:50:41.186+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T08:50:41.293+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 1.585 seconds (process running for 149231.585)
-2023-04-04T08:50:41.296+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T08:50:50.520+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T08:50:50.521+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T08:50:50.522+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-04-04T08:51:00.196+05:30  INFO 26232 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 26232 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:51:00.199+05:30  INFO 26232 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:51:01.804+05:30  INFO 26232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:51:02.054+05:30  INFO 26232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 225 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:51:02.348+05:30  INFO 26232 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T08:51:03.080+05:30  INFO 26232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:51:03.200+05:30  INFO 26232 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:51:03.455+05:30  INFO 26232 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:51:03.563+05:30  INFO 26232 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T08:51:03.795+05:30  INFO 26232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T08:51:03.994+05:30  INFO 26232 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cd6d147
-2023-04-04T08:51:03.996+05:30  INFO 26232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T08:51:04.067+05:30  INFO 26232 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:51:04.828+05:30  INFO 26232 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:51:04.841+05:30  INFO 26232 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:51:05.150+05:30  WARN 26232 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:51:07.615+05:30  WARN 26232 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:51:07.622+05:30  INFO 26232 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:51:07.727+05:30  INFO 26232 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 8.661 seconds (process running for 10.647)
-2023-04-04T08:51:07.879+05:30  INFO 26232 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:51:07.880+05:30  INFO 26232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:51:07.882+05:30  INFO 26232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T08:51:07.993+05:30  INFO 26232 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T08:51:08.195+05:30  INFO 26232 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:51:08.196+05:30  INFO 26232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:51:08.198+05:30  INFO 26232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T08:51:08.249+05:30  INFO 26232 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:51:08.256+05:30  INFO 26232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T08:51:08.267+05:30  INFO 26232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T08:53:57.888+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2023-04-04T08:53:57.947+05:30  INFO 24020 --- [Thread-93] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T08:53:57.954+05:30  INFO 24020 --- [Thread-93] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T08:53:58.045+05:30  INFO 24020 --- [Thread-93] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T08:53:58.070+05:30  INFO 24020 --- [Thread-93] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:53:58.101+05:30  INFO 24020 --- [Thread-93] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
-2023-04-04T08:53:58.113+05:30  INFO 24020 --- [Thread-93] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
-2023-04-04T08:53:58.456+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:53:58.457+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:53:58.898+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:53:58.908+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:53:59.013+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T08:53:59.041+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:53:59.052+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:53:59.108+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T08:53:59.108+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T08:53:59.109+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T08:53:59.134+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T08:53:59.134+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 675 ms
-2023-04-04T08:53:59.188+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:53:59.193+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
-2023-04-04T08:53:59.201+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27221e5b
-2023-04-04T08:53:59.201+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
-2023-04-04T08:53:59.203+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:53:59.241+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:53:59.241+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:53:59.316+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:53:59.812+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T08:53:59.892+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:53:59.894+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:53:59.920+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T08:53:59.922+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T08:54:00.069+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 1.718 seconds (process running for 149430.353)
-2023-04-04T08:54:00.072+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T08:54:03.807+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T08:54:03.807+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T08:54:03.809+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-04-04T08:54:28.159+05:30  INFO 14400 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 14400 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:54:28.163+05:30  INFO 14400 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:54:30.115+05:30  INFO 14400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:54:30.361+05:30  INFO 14400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 229 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:54:30.743+05:30  INFO 14400 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T08:54:31.552+05:30  INFO 14400 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:54:31.610+05:30  INFO 14400 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:54:31.878+05:30  INFO 14400 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:54:31.989+05:30  INFO 14400 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T08:54:32.312+05:30  INFO 14400 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T08:54:32.586+05:30  INFO 14400 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ac1161f
-2023-04-04T08:54:32.589+05:30  INFO 14400 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T08:54:32.679+05:30  INFO 14400 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:54:33.391+05:30  INFO 14400 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:54:33.405+05:30  INFO 14400 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:54:33.792+05:30  WARN 14400 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:54:36.759+05:30  WARN 14400 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:54:36.767+05:30  INFO 14400 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:54:36.913+05:30  INFO 14400 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 9.734 seconds (process running for 11.095)
-2023-04-04T08:54:37.102+05:30  INFO 14400 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:54:37.103+05:30  INFO 14400 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:54:37.106+05:30  INFO 14400 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T08:54:37.284+05:30  INFO 14400 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T08:54:37.457+05:30  INFO 14400 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:54:37.458+05:30  INFO 14400 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:54:37.464+05:30  INFO 14400 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
-2023-04-04T08:54:37.558+05:30  INFO 14400 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:54:37.566+05:30  INFO 14400 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T08:54:37.583+05:30  INFO 14400 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T08:57:09.223+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2023-04-04T08:57:09.305+05:30  INFO 24020 --- [Thread-99] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T08:57:09.314+05:30  INFO 24020 --- [Thread-99] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T08:57:09.400+05:30  INFO 24020 --- [Thread-99] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T08:57:09.438+05:30  INFO 24020 --- [Thread-99] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:57:09.468+05:30  INFO 24020 --- [Thread-99] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
-2023-04-04T08:57:09.475+05:30  INFO 24020 --- [Thread-99] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
-2023-04-04T08:57:09.935+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:57:09.935+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:57:10.332+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:57:10.345+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:57:10.445+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T08:57:10.475+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:57:10.479+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:57:10.578+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T08:57:10.578+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T08:57:10.579+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T08:57:10.601+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T08:57:10.601+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 664 ms
-2023-04-04T08:57:10.667+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:57:10.679+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
-2023-04-04T08:57:10.759+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64f74edc
-2023-04-04T08:57:10.759+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
-2023-04-04T08:57:10.766+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:57:10.869+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:57:10.869+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:57:10.969+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:57:11.512+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T08:57:11.598+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:57:11.601+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:57:11.628+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T08:57:11.630+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T08:57:11.722+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 1.917 seconds (process running for 149621.998)
-2023-04-04T08:57:11.730+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T08:57:18.196+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T08:57:18.196+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T08:57:18.198+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-04-04T08:57:49.187+05:30  INFO 7392 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 7392 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:57:49.189+05:30  INFO 7392 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:57:51.729+05:30  INFO 7392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:57:52.003+05:30  INFO 7392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 253 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:57:52.509+05:30  INFO 7392 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T08:57:53.644+05:30  INFO 7392 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:57:53.748+05:30  INFO 7392 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:57:54.091+05:30  INFO 7392 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:57:54.237+05:30  INFO 7392 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T08:57:54.652+05:30  INFO 7392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T08:57:55.040+05:30  INFO 7392 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29ab4fa0
-2023-04-04T08:57:55.043+05:30  INFO 7392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T08:57:55.175+05:30  INFO 7392 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:57:56.179+05:30  INFO 7392 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:57:56.208+05:30  INFO 7392 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:57:56.642+05:30  WARN 7392 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:57:59.727+05:30  WARN 7392 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:57:59.738+05:30  INFO 7392 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:57:59.855+05:30  INFO 7392 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 11.998 seconds (process running for 14.194)
-2023-04-04T08:58:00.009+05:30  INFO 7392 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:58:00.012+05:30  INFO 7392 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:58:00.025+05:30  INFO 7392 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 12 ms
-2023-04-04T08:58:00.111+05:30  INFO 7392 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T08:58:00.314+05:30  INFO 7392 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T08:58:00.314+05:30  INFO 7392 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T08:58:00.315+05:30  INFO 7392 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-04-04T08:58:00.369+05:30  INFO 7392 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:58:00.513+05:30  INFO 7392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T08:58:00.525+05:30  INFO 7392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T08:59:48.376+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2023-04-04T08:59:48.416+05:30  INFO 24020 --- [Thread-105] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T08:59:48.419+05:30  INFO 24020 --- [Thread-105] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T08:59:48.442+05:30  INFO 24020 --- [Thread-105] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T08:59:50.491+05:30  INFO 24020 --- [Thread-105] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:59:50.501+05:30  INFO 24020 --- [Thread-105] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
-2023-04-04T08:59:50.505+05:30  INFO 24020 --- [Thread-105] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
-2023-04-04T08:59:50.764+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:59:50.764+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:59:51.004+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:59:51.011+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:59:51.069+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T08:59:51.082+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:59:51.083+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:59:51.130+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T08:59:51.131+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T08:59:51.131+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T08:59:51.154+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T08:59:51.154+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 388 ms
-2023-04-04T08:59:51.218+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:59:51.223+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
-2023-04-04T08:59:51.230+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection com.mysql.cj.jdbc.ConnectionImpl@574c0688
-2023-04-04T08:59:51.230+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
-2023-04-04T08:59:51.232+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:59:51.263+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:59:51.263+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:59:51.324+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:59:51.960+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T08:59:52.060+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:59:52.063+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:59:52.092+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T08:59:52.094+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T08:59:52.198+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 1.521 seconds (process running for 149782.467)
-2023-04-04T08:59:52.201+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T08:59:57.447+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2023-04-04T08:59:57.463+05:30  INFO 24020 --- [Thread-111] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T08:59:57.466+05:30  INFO 24020 --- [Thread-111] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T08:59:57.485+05:30  INFO 24020 --- [Thread-111] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:59:57.489+05:30  INFO 24020 --- [Thread-111] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
-2023-04-04T08:59:57.501+05:30  INFO 24020 --- [Thread-111] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
-2023-04-04T08:59:57.864+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T08:59:57.865+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T08:59:58.283+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T08:59:58.295+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
-2023-04-04T08:59:58.391+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T08:59:58.414+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T08:59:58.417+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T08:59:58.492+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T08:59:58.493+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T08:59:58.493+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T08:59:58.523+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T08:59:58.523+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 652 ms
-2023-04-04T08:59:58.615+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T08:59:58.623+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
-2023-04-04T08:59:58.628+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e69787f
-2023-04-04T08:59:58.628+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
-2023-04-04T08:59:58.630+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T08:59:58.673+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T08:59:58.673+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T08:59:58.785+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T08:59:59.696+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T08:59:59.813+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T08:59:59.817+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T08:59:59.854+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T08:59:59.856+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T08:59:59.974+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 2.325 seconds (process running for 149790.243)
-2023-04-04T08:59:59.977+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T09:00:01.212+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T09:00:01.212+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T09:00:01.214+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-04-04T09:00:09.228+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
-2023-04-04T09:00:09.243+05:30  INFO 24020 --- [Thread-117] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T09:00:09.243+05:30  INFO 24020 --- [Thread-117] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T09:00:09.246+05:30  INFO 24020 --- [Thread-117] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T09:00:09.254+05:30  INFO 24020 --- [Thread-117] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:00:09.254+05:30  INFO 24020 --- [Thread-117] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
-2023-04-04T09:00:09.256+05:30  INFO 24020 --- [Thread-117] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
-2023-04-04T09:00:09.415+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T09:00:09.415+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T09:00:09.656+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T09:00:09.661+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
-2023-04-04T09:00:09.713+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T09:00:09.726+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T09:00:09.726+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T09:00:09.763+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T09:00:09.763+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T09:00:09.764+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T09:00:09.790+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T09:00:09.790+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 373 ms
-2023-04-04T09:00:09.849+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T09:00:09.854+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
-2023-04-04T09:00:09.859+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-21 - Added connection com.mysql.cj.jdbc.ConnectionImpl@678bec2
-2023-04-04T09:00:09.859+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
-2023-04-04T09:00:09.860+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T09:00:09.892+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T09:00:09.892+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:00:09.965+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T09:00:10.629+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T09:00:10.726+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T09:00:10.731+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T09:00:10.759+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T09:00:10.762+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T09:00:10.838+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 1.506 seconds (process running for 149801.106)
-2023-04-04T09:00:10.840+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T09:00:12.647+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T09:00:12.647+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T09:00:12.648+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-04-04T09:00:37.389+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2023-04-04T09:00:37.400+05:30  INFO 24020 --- [Thread-123] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T09:00:37.401+05:30  INFO 24020 --- [Thread-123] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T09:00:37.404+05:30  INFO 24020 --- [Thread-123] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T09:00:37.416+05:30  INFO 24020 --- [Thread-123] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:00:37.417+05:30  INFO 24020 --- [Thread-123] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
-2023-04-04T09:00:37.424+05:30  INFO 24020 --- [Thread-123] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
-2023-04-04T09:00:37.610+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T09:00:37.610+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T09:00:37.852+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T09:00:37.859+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
-2023-04-04T09:00:37.919+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T09:00:37.938+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T09:00:37.939+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T09:00:37.983+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T09:00:37.983+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T09:00:37.983+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T09:00:38.002+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T09:00:38.002+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 391 ms
-2023-04-04T09:00:38.053+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T09:00:38.057+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
-2023-04-04T09:00:38.061+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fd8c01
-2023-04-04T09:00:38.062+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
-2023-04-04T09:00:38.063+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T09:00:38.094+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T09:00:38.094+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:00:38.177+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T09:00:38.740+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T09:00:38.829+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T09:00:38.832+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T09:00:38.861+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T09:00:38.864+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T09:00:38.984+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 1.466 seconds (process running for 149829.252)
-2023-04-04T09:00:38.988+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T09:00:46.221+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T09:00:46.221+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T09:00:46.223+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-04-04T09:01:26.807+05:30  INFO 24020 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2023-04-04T09:01:26.821+05:30  INFO 24020 --- [Thread-129] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T09:01:26.822+05:30  INFO 24020 --- [Thread-129] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T09:01:26.831+05:30  INFO 24020 --- [Thread-129] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T09:01:26.846+05:30  INFO 24020 --- [Thread-129] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:01:26.851+05:30  INFO 24020 --- [Thread-129] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
-2023-04-04T09:01:26.857+05:30  INFO 24020 --- [Thread-129] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
-2023-04-04T09:01:27.040+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Starting AllergyServiceApplication using Java 17.0.6 with PID 24020 (C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T09:01:27.040+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T09:01:27.297+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T09:01:27.304+05:30  INFO 24020 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interfaces.
-2023-04-04T09:01:27.369+05:30  INFO 24020 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b4743ae2-2060-3986-be4b-628a2467b7a6
-2023-04-04T09:01:27.391+05:30  INFO 24020 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T09:01:27.393+05:30  INFO 24020 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T09:01:27.452+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2023-04-04T09:01:27.452+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-04T09:01:27.452+05:30  INFO 24020 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-04-04T09:01:27.472+05:30  INFO 24020 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2023-04-04T09:01:27.472+05:30  INFO 24020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 430 ms
-2023-04-04T09:01:27.522+05:30  INFO 24020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T09:01:27.527+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
-2023-04-04T09:01:27.533+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55d29792
-2023-04-04T09:01:27.533+05:30  INFO 24020 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
-2023-04-04T09:01:27.534+05:30  INFO 24020 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T09:01:27.571+05:30  INFO 24020 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T09:01:27.572+05:30  INFO 24020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:01:27.626+05:30  WARN 24020 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T09:01:28.137+05:30  INFO 24020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-04-04T09:01:28.216+05:30  WARN 24020 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T09:01:28.218+05:30  INFO 24020 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
-2023-04-04T09:01:28.252+05:30  INFO 24020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2023-04-04T09:01:28.254+05:30  INFO 24020 --- [restartedMain] o.s.c.c.s.ConsulServiceRegistry          : Registering service with consul: NewService{id='g3-allergy-service-9002', name='g3-allergy-service', tags=[], address='host.docker.internal', meta={secure=false}, port=9002, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://host.docker.internal:9002/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
-2023-04-04T09:01:28.346+05:30  INFO 24020 --- [restartedMain] c.c.a.AllergyServiceApplication          : Started AllergyServiceApplication in 1.396 seconds (process running for 149878.61)
-2023-04-04T09:01:28.348+05:30  INFO 24020 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-04-04T09:01:29.019+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-04T09:01:29.019+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-04T09:01:29.021+05:30  INFO 24020 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-04-04T09:12:45.198+05:30  INFO 19200 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 19200 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T09:12:45.204+05:30  INFO 19200 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T09:12:47.053+05:30  INFO 19200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T09:12:47.310+05:30  INFO 19200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 237 ms. Found 1 JPA repository interfaces.
-2023-04-04T09:12:47.742+05:30  INFO 19200 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T09:12:48.461+05:30  INFO 19200 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T09:12:48.515+05:30  INFO 19200 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T09:12:48.799+05:30  INFO 19200 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T09:12:48.897+05:30  INFO 19200 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T09:12:49.086+05:30  INFO 19200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T09:12:49.296+05:30  INFO 19200 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f53b345
-2023-04-04T09:12:49.299+05:30  INFO 19200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T09:12:49.390+05:30  INFO 19200 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T09:12:50.054+05:30  INFO 19200 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T09:12:50.069+05:30  INFO 19200 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:12:50.519+05:30  WARN 19200 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T09:12:53.487+05:30  WARN 19200 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T09:12:53.498+05:30  INFO 19200 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T09:12:53.638+05:30  INFO 19200 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 9.624 seconds (process running for 10.95)
-2023-04-04T09:12:53.889+05:30  INFO 19200 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:12:53.890+05:30  INFO 19200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:12:53.896+05:30  INFO 19200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
-2023-04-04T09:12:53.929+05:30  INFO 19200 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy List:[]
-2023-04-04T09:12:53.930+05:30 ERROR 19200 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find any allergy in the databse
-2023-04-04T09:12:53.996+05:30  INFO 19200 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:12:53.996+05:30  INFO 19200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:12:53.999+05:30  INFO 19200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-2023-04-04T09:12:54.005+05:30  INFO 19200 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy by id found:Optional.empty
-2023-04-04T09:12:54.006+05:30 ERROR 19200 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find allergy by the id1
-2023-04-04T09:12:54.016+05:30  INFO 19200 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:12:54.017+05:30  INFO 19200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:12:54.019+05:30  INFO 19200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T09:12:54.097+05:30  INFO 19200 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T09:12:54.261+05:30  INFO 19200 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:12:54.261+05:30  INFO 19200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:12:54.264+05:30  INFO 19200 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T09:12:54.306+05:30  INFO 19200 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:12:54.312+05:30  INFO 19200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T09:12:54.332+05:30  INFO 19200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T09:18:31.156+05:30  INFO 18720 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 18720 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T09:18:31.160+05:30  INFO 18720 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T09:18:33.530+05:30  INFO 18720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T09:18:33.742+05:30  INFO 18720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 197 ms. Found 1 JPA repository interfaces.
-2023-04-04T09:18:34.166+05:30  INFO 18720 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T09:18:35.283+05:30  INFO 18720 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T09:18:35.352+05:30  INFO 18720 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T09:18:35.664+05:30  INFO 18720 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T09:18:35.810+05:30  INFO 18720 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T09:18:36.160+05:30  INFO 18720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T09:18:36.423+05:30  INFO 18720 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67dab5de
-2023-04-04T09:18:36.427+05:30  INFO 18720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T09:18:36.549+05:30  INFO 18720 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T09:18:37.462+05:30  INFO 18720 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T09:18:37.479+05:30  INFO 18720 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:18:37.861+05:30  WARN 18720 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T09:18:41.109+05:30  WARN 18720 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T09:18:41.123+05:30  INFO 18720 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T09:18:41.325+05:30  INFO 18720 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 11.593 seconds (process running for 14.126)
-2023-04-04T09:18:41.617+05:30  INFO 18720 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:18:41.619+05:30  INFO 18720 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:18:41.622+05:30  INFO 18720 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T09:18:41.662+05:30  INFO 18720 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy List:[]
-2023-04-04T09:18:41.663+05:30 ERROR 18720 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find any allergy in the databse
-2023-04-04T09:18:41.690+05:30  INFO 18720 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:18:41.691+05:30  INFO 18720 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:18:41.693+05:30  INFO 18720 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T09:18:41.697+05:30  INFO 18720 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy by id found:Optional.empty
-2023-04-04T09:18:41.697+05:30 ERROR 18720 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find allergy by the id1
-2023-04-04T09:18:41.709+05:30  INFO 18720 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:18:41.710+05:30  INFO 18720 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:18:41.711+05:30  INFO 18720 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-04-04T09:18:41.779+05:30  INFO 18720 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T09:18:41.980+05:30  INFO 18720 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:18:41.980+05:30  INFO 18720 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:18:41.981+05:30  INFO 18720 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-04-04T09:18:42.843+05:30  INFO 18720 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:18:42.846+05:30  INFO 18720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T09:18:42.859+05:30  INFO 18720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T09:24:03.650+05:30  INFO 24020 --- [http-nio-9002-exec-10] c.c.a.service.impl.AllergyServiceImpl    : Allergy List:[Allergy [allergyId=1, allergyName=Drug, allergyNotes=Allergy of drugs], Allergy [allergyId=2, allergyName=Food, allergyNotes=Allergy of Food], Allergy [allergyId=3, allergyName=Insect, allergyNotes=Allergy of Insect], Allergy [allergyId=4, allergyName=Latex, allergyNotes=Allergy of Latex], Allergy [allergyId=5, allergyName=Mold, allergyNotes=Allergy of Mold], Allergy [allergyId=6, allergyName=Pet, allergyNotes=Allergy of Pet], Allergy [allergyId=7, allergyName=Pollen, allergyNotes=Allergy of Pollen], Allergy [allergyId=8, allergyName=Milk, allergyNotes=Allergy of Milk], Allergy [allergyId=9, allergyName=Peanuts, allergyNotes=Allergy of Peanuts], Allergy [allergyId=10, allergyName=Soy, allergyNotes=Allergy of Soy]]
-2023-04-04T09:24:03.659+05:30  INFO 24020 --- [http-nio-9002-exec-10] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T09:24:58.815+05:30  INFO 26796 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 26796 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T09:24:58.818+05:30  INFO 26796 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T09:25:01.497+05:30  INFO 26796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T09:25:01.747+05:30  INFO 26796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 233 ms. Found 1 JPA repository interfaces.
-2023-04-04T09:25:02.208+05:30  INFO 26796 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T09:25:03.400+05:30  INFO 26796 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T09:25:03.473+05:30  INFO 26796 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T09:25:03.772+05:30  INFO 26796 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T09:25:03.892+05:30  INFO 26796 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T09:25:04.243+05:30  INFO 26796 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T09:25:04.573+05:30  INFO 26796 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@765f934e
-2023-04-04T09:25:04.577+05:30  INFO 26796 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T09:25:04.712+05:30  INFO 26796 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T09:25:05.816+05:30  INFO 26796 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T09:25:05.838+05:30  INFO 26796 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:25:06.177+05:30  WARN 26796 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T09:25:09.374+05:30  WARN 26796 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T09:25:09.384+05:30  INFO 26796 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T09:25:09.523+05:30  INFO 26796 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 12.354 seconds (process running for 15.024)
-2023-04-04T09:25:09.756+05:30  INFO 26796 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:25:09.757+05:30  INFO 26796 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:25:09.759+05:30  INFO 26796 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T09:25:09.788+05:30  INFO 26796 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy List:[]
-2023-04-04T09:25:09.790+05:30 ERROR 26796 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find any allergy in the databse
-2023-04-04T09:25:09.825+05:30  INFO 26796 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:25:09.825+05:30  INFO 26796 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:25:09.827+05:30  INFO 26796 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T09:25:09.829+05:30  INFO 26796 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy by id found:Optional.empty
-2023-04-04T09:25:09.830+05:30 ERROR 26796 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find allergy by the id1
-2023-04-04T09:25:09.848+05:30  INFO 26796 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:25:09.848+05:30  INFO 26796 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:25:09.850+05:30  INFO 26796 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-04-04T09:25:09.924+05:30  INFO 26796 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T09:25:10.086+05:30  INFO 26796 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:25:10.087+05:30  INFO 26796 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:25:10.089+05:30  INFO 26796 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T09:25:10.845+05:30  INFO 26796 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:25:10.851+05:30  INFO 26796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T09:25:10.867+05:30  INFO 26796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T09:25:43.276+05:30  INFO 18692 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 18692 (started by prath in C:\Users\prath\OneDrive\Desktop\Fianl integration\Final-integration\Microservices\g3-allergy-service)
-2023-04-04T09:25:43.282+05:30  INFO 18692 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2023-04-04T09:25:45.699+05:30  INFO 18692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-04T09:25:45.930+05:30  INFO 18692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 216 ms. Found 1 JPA repository interfaces.
-2023-04-04T09:25:46.311+05:30  INFO 18692 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
-2023-04-04T09:25:47.404+05:30  INFO 18692 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2023-04-04T09:25:47.473+05:30  INFO 18692 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2023-04-04T09:25:47.803+05:30  INFO 18692 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-04T09:25:47.935+05:30  INFO 18692 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-04-04T09:25:48.359+05:30  INFO 18692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-04T09:25:48.646+05:30  INFO 18692 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@512e737
-2023-04-04T09:25:48.650+05:30  INFO 18692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-04T09:25:48.795+05:30  INFO 18692 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-04-04T09:25:49.853+05:30  INFO 18692 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-04T09:25:49.872+05:30  INFO 18692 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:25:50.259+05:30  WARN 18692 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-04T09:25:53.310+05:30  WARN 18692 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-04-04T09:25:53.319+05:30  INFO 18692 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
-2023-04-04T09:25:53.427+05:30  INFO 18692 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 11.435 seconds (process running for 13.687)
-2023-04-04T09:25:53.642+05:30  INFO 18692 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:25:53.643+05:30  INFO 18692 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:25:53.644+05:30  INFO 18692 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-04-04T09:25:53.669+05:30  INFO 18692 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy List:[]
-2023-04-04T09:25:53.670+05:30 ERROR 18692 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find any allergy in the databse
-2023-04-04T09:25:53.716+05:30  INFO 18692 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:25:53.716+05:30  INFO 18692 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:25:53.718+05:30  INFO 18692 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2023-04-04T09:25:53.722+05:30  INFO 18692 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy by id found:Optional.empty
-2023-04-04T09:25:53.722+05:30 ERROR 18692 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find allergy by the id1
-2023-04-04T09:25:53.746+05:30  INFO 18692 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:25:53.747+05:30  INFO 18692 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:25:53.754+05:30  INFO 18692 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 7 ms
-2023-04-04T09:25:53.830+05:30  INFO 18692 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
-2023-04-04T09:25:54.001+05:30  INFO 18692 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-04-04T09:25:54.001+05:30  INFO 18692 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-04-04T09:25:54.002+05:30  INFO 18692 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-04-04T09:25:54.058+05:30  INFO 18692 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T09:25:54.219+05:30  INFO 18692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-04T09:25:54.233+05:30  INFO 18692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-04T10:52:00.804+05:30  WARN 24020 --- [HikariPool-23 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Thread starvation or clock leap detected (housekeeper delta=18m1s770ms751µs500ns).
-2023-04-04T11:58:49.843+05:30  INFO 24020 --- [RMI TCP Connection(1388)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-04-04T11:58:50.074+05:30  INFO 24020 --- [RMI TCP Connection(1388)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-04-04T11:58:50.094+05:30  INFO 24020 --- [RMI TCP Connection(1388)-127.0.0.1] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-04-04T11:58:50.286+05:30  INFO 24020 --- [RMI TCP Connection(1388)-127.0.0.1] o.s.c.c.s.ConsulServiceRegistry          : Deregistering service with consul: g3-allergy-service-9002
-2023-04-04T11:58:50.347+05:30  INFO 24020 --- [RMI TCP Connection(1388)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-04T11:58:50.391+05:30  INFO 24020 --- [RMI TCP Connection(1388)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown initiated...
-2023-04-04T11:58:50.408+05:30  INFO 24020 --- [RMI TCP Connection(1388)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown completed.
+2023-04-15T10:32:57.555+05:30  INFO 8232 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 8232 (started by prath in C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-allergy-service)
+2023-04-15T10:32:57.569+05:30  INFO 8232 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2023-04-15T10:33:00.280+05:30  INFO 8232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-15T10:33:00.551+05:30  INFO 8232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 256 ms. Found 1 JPA repository interfaces.
+2023-04-15T10:33:00.970+05:30  INFO 8232 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
+2023-04-15T10:33:02.008+05:30  INFO 8232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-15T10:33:02.090+05:30  INFO 8232 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-15T10:33:02.459+05:30  INFO 8232 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-15T10:33:02.591+05:30  INFO 8232 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-15T10:33:02.920+05:30  INFO 8232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-15T10:33:03.227+05:30  INFO 8232 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c6062bd
+2023-04-15T10:33:03.234+05:30  INFO 8232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-15T10:33:03.377+05:30  INFO 8232 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-15T10:33:04.349+05:30  INFO 8232 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-15T10:33:04.371+05:30  INFO 8232 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-15T10:33:04.773+05:30  WARN 8232 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-15T10:33:08.003+05:30  WARN 8232 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-15T10:33:08.011+05:30  INFO 8232 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2023-04-15T10:33:08.103+05:30 ERROR 8232 --- [catalogWatchTaskScheduler-1] o.s.c.c.discovery.ConsulDiscoveryClient  : Error watching Consul CatalogServices
+
+com.ecwid.consul.transport.TransportException: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8500 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:83) ~[consul-api-1.4.5.jar:na]
+	at com.ecwid.consul.transport.AbstractHttpTransport.makeGetRequest(AbstractHttpTransport.java:36) ~[consul-api-1.4.5.jar:na]
+	at com.ecwid.consul.v1.ConsulRawClient.makeGetRequest(ConsulRawClient.java:139) ~[consul-api-1.4.5.jar:na]
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:143) ~[consul-api-1.4.5.jar:na]
+	at com.ecwid.consul.v1.ConsulClient.getCatalogServices(ConsulClient.java:400) ~[consul-api-1.4.5.jar:na]
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:130) ~[spring-cloud-consul-discovery-4.0.1.jar:4.0.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.6.jar:6.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8500 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:221) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:165) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:140) ~[httpclient-4.5.14.jar:4.5.14]
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:70) ~[consul-api-1.4.5.jar:na]
+	... 12 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.14.jar:4.5.14]
+	... 24 common frames omitted
+
+2023-04-15T10:33:08.120+05:30  INFO 8232 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 11.996 seconds (process running for 14.37)
+2023-04-15T10:33:08.336+05:30  INFO 8232 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-15T10:33:08.336+05:30  INFO 8232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-15T10:33:08.338+05:30  INFO 8232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-04-15T10:33:08.367+05:30  INFO 8232 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy List:[]
+2023-04-15T10:33:08.368+05:30 ERROR 8232 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find any allergy in the databse
+2023-04-15T10:33:08.416+05:30  INFO 8232 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-15T10:33:08.417+05:30  INFO 8232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-15T10:33:08.420+05:30  INFO 8232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-04-15T10:33:08.426+05:30  INFO 8232 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy by id found:Optional.empty
+2023-04-15T10:33:08.427+05:30 ERROR 8232 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find allergy by the id1
+2023-04-15T10:33:08.446+05:30  INFO 8232 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-15T10:33:08.446+05:30  INFO 8232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-15T10:33:08.447+05:30  INFO 8232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-04-15T10:33:08.512+05:30  INFO 8232 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
+2023-04-15T10:33:08.713+05:30  INFO 8232 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-15T10:33:08.714+05:30  INFO 8232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-15T10:33:08.715+05:30  INFO 8232 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-04-15T10:33:08.776+05:30  INFO 8232 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-15T10:33:08.944+05:30  INFO 8232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-15T10:33:08.951+05:30  INFO 8232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-15T10:34:39.532+05:30  INFO 31480 --- [main] c.c.a.AllergyServiceApplicationTests     : Starting AllergyServiceApplicationTests using Java 17.0.6 with PID 31480 (started by prath in C:\Users\prath\OneDrive\Desktop\krunalfinalnew\Capstone-PMS\Microservices\g3-allergy-service)
+2023-04-15T10:34:39.536+05:30  INFO 31480 --- [main] c.c.a.AllergyServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2023-04-15T10:34:41.610+05:30  INFO 31480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-15T10:34:41.853+05:30  INFO 31480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 224 ms. Found 1 JPA repository interfaces.
+2023-04-15T10:34:42.230+05:30  INFO 31480 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7bc34de1-41c2-3d7b-b481-431129f8ee16
+2023-04-15T10:34:43.300+05:30  INFO 31480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-04-15T10:34:43.369+05:30  INFO 31480 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-04-15T10:34:43.691+05:30  INFO 31480 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-15T10:34:43.781+05:30  INFO 31480 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-15T10:34:44.011+05:30  INFO 31480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-15T10:34:44.260+05:30  INFO 31480 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1cdc4c6b
+2023-04-15T10:34:44.263+05:30  INFO 31480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-15T10:34:44.337+05:30  INFO 31480 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-15T10:34:45.309+05:30  INFO 31480 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-15T10:34:45.326+05:30  INFO 31480 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-15T10:34:45.699+05:30  WARN 31480 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-15T10:34:48.551+05:30  WARN 31480 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-15T10:34:48.561+05:30  INFO 31480 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2023-04-15T10:34:48.647+05:30 ERROR 31480 --- [catalogWatchTaskScheduler-1] o.s.c.c.discovery.ConsulDiscoveryClient  : Error watching Consul CatalogServices
+
+com.ecwid.consul.transport.TransportException: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8500 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:83) ~[consul-api-1.4.5.jar:na]
+	at com.ecwid.consul.transport.AbstractHttpTransport.makeGetRequest(AbstractHttpTransport.java:36) ~[consul-api-1.4.5.jar:na]
+	at com.ecwid.consul.v1.ConsulRawClient.makeGetRequest(ConsulRawClient.java:139) ~[consul-api-1.4.5.jar:na]
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:143) ~[consul-api-1.4.5.jar:na]
+	at com.ecwid.consul.v1.ConsulClient.getCatalogServices(ConsulClient.java:400) ~[consul-api-1.4.5.jar:na]
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:130) ~[spring-cloud-consul-discovery-4.0.1.jar:4.0.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.6.jar:6.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8500 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:221) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:165) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:140) ~[httpclient-4.5.14.jar:4.5.14]
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:70) ~[consul-api-1.4.5.jar:na]
+	... 12 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75) ~[httpclient-4.5.14.jar:4.5.14]
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.14.jar:4.5.14]
+	... 24 common frames omitted
+
+2023-04-15T10:34:48.669+05:30  INFO 31480 --- [main] c.c.a.AllergyServiceApplicationTests     : Started AllergyServiceApplicationTests in 10.453 seconds (process running for 12.639)
+2023-04-15T10:34:48.910+05:30  INFO 31480 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-15T10:34:48.910+05:30  INFO 31480 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-15T10:34:48.912+05:30  INFO 31480 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-04-15T10:34:48.932+05:30  INFO 31480 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy List:[]
+2023-04-15T10:34:48.933+05:30 ERROR 31480 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find any allergy in the databse
+2023-04-15T10:34:48.984+05:30  INFO 31480 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-15T10:34:48.984+05:30  INFO 31480 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-15T10:34:48.986+05:30  INFO 31480 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-04-15T10:34:48.990+05:30  INFO 31480 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Allergy by id found:Optional.empty
+2023-04-15T10:34:48.991+05:30 ERROR 31480 --- [main] c.c.a.service.impl.AllergyServiceImpl    : Couldn't find allergy by the id1
+2023-04-15T10:34:49.011+05:30  INFO 31480 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-15T10:34:49.012+05:30  INFO 31480 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-15T10:34:49.016+05:30  INFO 31480 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2023-04-15T10:34:49.069+05:30  INFO 31480 --- [main] c.c.a.controller.AllergyController       : Allergy controller passing controller to allergy service
+2023-04-15T10:34:49.247+05:30  INFO 31480 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-04-15T10:34:49.247+05:30  INFO 31480 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-04-15T10:34:49.248+05:30  INFO 31480 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-04-15T10:34:49.337+05:30  INFO 31480 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-15T10:34:49.493+05:30  INFO 31480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-15T10:34:49.507+05:30  INFO 31480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

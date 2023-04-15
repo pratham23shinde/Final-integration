@@ -1,0 +1,77 @@
+<div class="content">
+  <div class="toolbar">
+    <mat-toolbar
+      class="toolbar"
+      style="
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+      "
+    >
+      <div class="box">
+        <a
+          style="text-decoration: none"
+          routerLink="/patient/default/dashboard"
+          routerLinkActive="active current"
+          mat-button
+          ><span>Dashboard</span></a
+        >
+        <a
+          style="text-decoration: none"
+          routerLink="/patient/default/healthinfo"
+          routerLinkActive="active current"
+          mat-button
+          ><span>Health Info</span></a
+        >
+        <a
+          style="text-decoration: none"
+          routerLink="#"
+          routerLinkActive="active current"
+          mat-button
+          ><span class="material-icons">notifications</span></a
+        >
+
+        <a style="text-decoration: none" [matMenuTriggerFor]="menu" mat-button
+          ><span class="material-icons">account_circle</span></a
+        >
+
+        <mat-menu #menu="matMenu">
+          <a
+            style="text-decoration: none"
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/patient/default/profile"
+            routerLinkActive="active current"
+            ><button mat-menu-item>
+              <mat-icon>visibility</mat-icon>Profile
+            </button></a
+          >
+
+          <a
+            style="text-decoration: none"
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/patient/default/update"
+            routerLinkActive="active current"
+            ><button mat-menu-item>
+              <mat-icon>border_color</mat-icon>Edit Profile
+            </button></a
+          >
+
+          <a
+            class="nav-link active"
+            aria-current="page"
+            (click)="authService.logout()"
+            ><button mat-menu-item>
+              <mat-icon>power_settings_new</mat-icon>Logout
+            </button></a
+          >
+        </mat-menu>
+      </div>
+      <img src="./assets/image/spiral.png" alt="Logo" />
+    </mat-toolbar>
+  </div>
+</div>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>

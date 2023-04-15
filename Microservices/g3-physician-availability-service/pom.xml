@@ -96,6 +96,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>g3-physician-availability-service</finalName>
 	</build>
 
 </project>

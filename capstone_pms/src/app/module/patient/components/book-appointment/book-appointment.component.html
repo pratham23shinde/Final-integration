@@ -1,0 +1,96 @@
+<h3>Book an Appointment</h3>
+<div>
+  <form       [formGroup]="myGroup"
+  (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field class="datepicker" appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input
+        formControlName="dateInput"
+          matInput
+          name="date"
+          [matDatepicker]="picker"
+          min="{{ minDate }}"
+          (dateChange)="onDateSelected($event)"
+          [(ngModel)]="calenderUser.date"
+        />
+        <mat-datepicker-toggle matIconSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="selectDoctor" appearance="outline">
+        <mat-label>Select Speciality</mat-label>
+        <mat-select formControlName="specialityInput"
+          [(value)]="selectedItem"
+          (selectionChange)="onChangeSelectSpeciality($event.value)"
+        >
+          <!-- <mat-option *ngIf="this.select==false">No Doctors Available</mat-option> -->
+          <mat-option
+            *ngFor="let doctor of drWithSpeciality"
+            [value]="doctor.speciality"
+            >{{ doctor.speciality }}
+          </mat-option>
+        </mat-select>
+        <!-- <mat-error *ngIf="doctorControl.hasError('required')"
+          >Please choose an speciality</mat-error
+        > -->
+      </mat-form-field>
+
+      <mat-form-field class="selectDoctor" appearance="outline">
+        <mat-label>Select Doctor</mat-label>
+        <mat-select
+        formControlName="doctorInput"
+          #clientValue
+          (selectionChange)="changeClient($event.value)"
+        >
+          <!-- <mat-option *ngIf="this.select == false"
+            >No Doctors Available</mat-option
+          > -->
+          <mat-option
+            *ngFor="let doctor of drWithOnlyPerticularSpeciality"
+            [value]="doctor.physicianEmail"
+            >Dr. {{ doctor.first_name }} {{ doctor.last_name }}
+          </mat-option>
+        </mat-select>
+        <!-- <mat-error *ngIf="doctorControl.hasError('required')"
+          >Please choose an doctor</mat-error
+        > -->
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="note" appearance="outline" style="width: 97%">
+        <mat-label>Health issues</mat-label>
+        <mat-error *ngIf="myGroup.get('reasonInput')"
+        >Reason is required</mat-error
+      >
+        <textarea
+          matInput
+          name="reason"
+          formControlName="reasonInput"
+          placeholder="Health issues"
+          [(ngModel)]="calenderUser.reason"
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <div class="submit">
+      <button
+      [disabled]="!myGroup.valid"
+
+      (click)="openSnackBar()"
+        mat-stroked-button
+        class="book"
+        color="primary"
+        input
+        type="submit"
+        value="Submit"
+      >
+        Book
+      </button>
+      <button mat-stroked-button mat-dialog-close="" class="cancel">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

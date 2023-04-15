@@ -1,0 +1,17 @@
+.updateprofile {
+  position: absolute;
+  margin-top: 150px;
+  width: 50%;
+  margin-left: 300px;
+  display: flex;
+  flex-direction: column;
+  .name {
+    display: flex;
+    justify-content: space-between;
+  }
+  background-color: white;
+  padding: 34px;
+  box-shadow: 5px 15px 12px 3px lightgrey;
+  border-radius: 8px;
+  border-top: 6px solid;
+}

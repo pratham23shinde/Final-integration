@@ -9,5 +9,10 @@ public interface PatientAuthenticationService {
 
 	Optional<Patient> patientLogin(String email, String password);
 	PatientDto createPatient(PatientDto patienDto);
+	
+	void updatepassword(String email, String password);
+	boolean checkEmailAlreadyExist(String email);
+	
+
 
 }

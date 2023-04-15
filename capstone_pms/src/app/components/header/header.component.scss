@@ -1,0 +1,99 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.navigationmenu {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  img {
+    filter: invert(1);
+    margin-top: 27px;
+    height: 60px;
+    margin-right: 15px;
+    margin-bottom: 18px;
+  }
+  mat-toolbar {
+    // background: #2d3663;
+    background-color: transparent;
+    position: absolute;
+    mat-icon,
+    span {
+      color: #47ccc8;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .login {
+      position: relative;
+      z-index: 1;
+      height: calc(100% - 4px);
+      width: calc(100% - 4px);
+      top: 2px;
+      left: 2px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 8px;
+      color: white;
+      background: #47ccc8;
+      padding: 15px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+.btn {
+  background-color: #2d3663 !important;
+  mat-icon,
+  span {
+    color: #47ccc8;
+  }
+  &:hover {
+    background-color: #47ccc8 !important;
+    mat-icon,
+    span {
+      color: #2d3663;
+    }
+  }
+}
+.btn1 {
+  margin-top: -10px;
+}
+.btn3 {
+  margin-bottom: -8px;
+}
+
+/* Small screen devices (595px and above) */
+@media only screen and (min-width: 595px) {
+  .navigationmenu{
+    img{
+      height: 55px !important;
+    }
+    mat-toolbar{
+      span{
+        font-size: 30px !important;
+      }
+    }
+  }
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .navigationmenu{
+    img{
+      height: 65px !important;
+    }
+    mat-toolbar{
+      span{
+        font-size: 50px !important;
+      }
+    }
+  }
+}

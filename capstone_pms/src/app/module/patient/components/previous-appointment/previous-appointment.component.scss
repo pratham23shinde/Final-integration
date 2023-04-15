@@ -1,0 +1,39 @@
+$borderbottomcolor: grey;
+$tablehoverbgcolor: #f1f1f1;
+$white: #ffffff;
+$textcolor: #2d3663;
+
+* {
+  color: $textcolor;
+}
+
+.mainclass {
+  width: 30vw;
+  padding: 10px;
+  align-self: center;
+  border-radius: none;
+  border-top: 5px solid #59c1bd;
+  margin: 25px;
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  border-radius: 5px;
+
+  //new
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.05);
+  mat-card-title {
+    font-weight: 500;
+  }
+
+  &:hover {
+    transition: all 0.9s ease-out;
+    background-color: #47ccc8;
+    transform: scale(1.04);
+    mat-card-title,
+    mat-icon {
+      color: #fff;
+    }
+  }
+}

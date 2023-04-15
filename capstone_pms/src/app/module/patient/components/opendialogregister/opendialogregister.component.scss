@@ -1,0 +1,30 @@
+mat-dialog-content {
+  padding: 15px 90px !important;
+}
+p {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 15px;
+  font-weight: 400;
+  color: #47ccc8;
+  span {
+    margin-top: 15px;
+    padding: 15px 0;
+  }
+}
+.button {
+  margin-top: 15px;
+  margin-left: 5px;
+  background-color: #0d4c92;
+  padding: 15px 20px;
+  color: whitesmoke;
+  margin-bottom: 15px;
+  width: 52%;
+  margin-left: auto;
+  margin-right: auto;
+  &:hover {
+    background-color: #659fe1;
+    color: black;
+  }
+}

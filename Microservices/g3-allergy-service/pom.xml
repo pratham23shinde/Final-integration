@@ -128,7 +128,6 @@
 					<excludes>
 						<exclude>com/capstone/application/model/*.*</exclude>
 						<exclude>com/capstone/application/exception/*.*</exclude>
-						<exclude>com/capstone/application/*.*</exclude>
 						<exclude>com/capstone/application/repository/*.*</exclude>
 						<exclude>com/capstone/application/service/*.*</exclude>
 					</excludes>

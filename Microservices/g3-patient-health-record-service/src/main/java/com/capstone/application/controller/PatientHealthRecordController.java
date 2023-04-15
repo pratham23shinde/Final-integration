@@ -46,7 +46,7 @@ public class PatientHealthRecordController {
 	// Eshwari changes
 	@GetMapping("/patient/{patientId}/bloodgroup")
 
-	public Optional<VisitDetails> FindPatientBloodGroup(@PathVariable int patientId) throws PatientHealthException{
+	public Optional<VisitDetails> FindPatientBloodGroup(@PathVariable int patientId) throws PatientHealthException {
 
 		return patientHealthRecordService.findBloodGroupForPatient(patientId);
 
@@ -273,28 +273,58 @@ public class PatientHealthRecordController {
 		patientHealthRecordService.deleteTest(testId);
 
 	}
-	
-	//Sangeeta
-	
-		@GetMapping("/nurseCount")
-		public long nurseCount() {
+
+	// Sangeeta
+
+	@GetMapping("/nurseCount")
+	public long nurseCount() {
 		return patientHealthRecordService.countNurses();
-		}
-		
-		@GetMapping("/adminCount")
-		public long adminCount() {
+	}
+
+	@GetMapping("/adminCount")
+	public long adminCount() {
 		return patientHealthRecordService.countAdmins();
+	}
+
+	// mrunal
+	@GetMapping("/patient/{visitId}/visit-details")
+	public List<VisitDetails> findVisitDetailsByVisitId(@PathVariable int visitId) {
+		return patientHealthRecordService.findVisitDetailsByVisitId(visitId);
+	}
+
+	// gayatri
+	@GetMapping("/nursedetails/{nurse_email}")
+	public NurseInfo getNurseDetails(@PathVariable String nurse_email) {
+		return patientHealthRecordService.getNurseDetails(nurse_email);
+	}
+
+	@DeleteMapping("/deleteNurse/{nurseEmail}")
+	public ResponseEntity<?> deleteNurse(@PathVariable("nurseEmail") String nurseEmail) {
+		try {
+			log.info("deleted successfully");
+			patientHealthRecordService.deleteNurse(nurseEmail);
+			return new ResponseEntity<>(HttpStatus.OK);
+		} catch (Exception e) {
+			log.error(e.getMessage());
+			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
-		
-		//mrunal
-		@GetMapping("/patient/{visitId}/visit-details")
-		public List<VisitDetails> findVisitDetailsByVisitId(@PathVariable int visitId){
-			return patientHealthRecordService.findVisitDetailsByVisitId(visitId);
+	}
+
+	@DeleteMapping("/deleteAdmin/{adminEmail}")
+	public ResponseEntity<?> deleteAdmin(@PathVariable("adminEmail") String adminEmail) {
+		try {
+			log.info("Physician availability deleted successfully");
+			patientHealthRecordService.deleteAdmin(adminEmail);
+			return new ResponseEntity<>(HttpStatus.OK);
+		} catch (Exception e) {
+			log.error(e.getMessage());
+			throw new HttpClientErrorException(HttpStatusCode.valueOf(500));
 		}
-		//gayatri
-		@GetMapping("/nursedetails/{nurse_email}")
-		public NurseInfo getNurseDetails(@PathVariable String nurse_email) {
-			return patientHealthRecordService.getNurseDetails(nurse_email);
-		}
+	}
+
+	@GetMapping("/admin/{email}")
+	public Optional<AdminInfo> findDoctorInfoByEmail(@PathVariable String email) {
+		return patientHealthRecordService.findAdminInfoByEmailId(email);
+	}
 
 }

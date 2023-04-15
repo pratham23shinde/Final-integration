@@ -84,5 +84,14 @@ public interface PatientHealthRecordService {
 		
 		//gayatri
 		public NurseInfo getNurseDetails(String nurse_email);
+		
+		
+		public void deleteNurse(String nurseEmail);
+
+		public void deleteAdmin(String adminEmail);
+		
+		public Optional<AdminInfo> findAdminInfoByEmailId(String email);
+
+		
 
 }

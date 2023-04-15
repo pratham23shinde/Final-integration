@@ -1,0 +1,24 @@
+<div class="main">
+  <h3 style="color: black; text-align: center; font-weight: 500">
+    Are you sure you want to delete this record?
+  </h3>
+
+  <div style="display: flex; justify-content: space-evenly">
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      (click)="onNoClick()"
+    >
+      Cancel
+    </button>
+    <button
+      class="margin"
+      mat-raised-button
+      color="warn"
+      (click)="onDeleteClick()"
+    >
+      Delete
+    </button>
+  </div>
+</div>

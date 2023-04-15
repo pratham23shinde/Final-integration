@@ -1,0 +1,22 @@
+<div class="navigationmenu">
+  <mat-toolbar color="primary">
+    <img src="./assets/image/spiral.png" alt="Logo" />
+    <span>PMS</span>
+    <span class="example-spacer"></span>
+
+    <span *ngIf="(auth.isAuthenticated$ | async) === false">
+      <a
+        mat-stroked-button
+        color="accent"
+        (click)="loginWithRedirect()"
+        class="login"
+        >Login</a
+      >
+    </span>
+    <!-- <span *ngIf="auth.isAuthenticated$ | async">
+      <a mat-stroked-button color="accent" (click)="logout()" class="login"
+        >Logout</a
+      >
+    </span> -->
+  </mat-toolbar>
+</div>

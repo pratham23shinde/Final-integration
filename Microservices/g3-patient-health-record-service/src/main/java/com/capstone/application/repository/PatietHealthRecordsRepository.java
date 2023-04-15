@@ -10,7 +10,7 @@ import com.capstone.application.model.VisitDetails;
 
 public interface PatietHealthRecordsRepository extends JpaRepository<VisitDetails,Integer> {
 	
-	@Query(value="select visit_id from visit_details where patient_id=?1", nativeQuery=true)
+	@Query(value="select visit_id from visit_details where patient_id=?1 order by visit_id desc limit 12", nativeQuery=true)
 	List<Integer> findVisitIdByPatientId(int patientId);
 
 	

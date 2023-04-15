@@ -1,0 +1,20 @@
+.matclass {
+    h4 {
+      border-bottom: 1px solid grey;
+      padding-bottom: 10px;
+      color: green;
+    }
+    width: 250px;
+    height: 111px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 28px;
+    .btnclass {
+      display: flex;
+      justify-content: space-between;
+      .btn {
+        width: 40%;
+        justify-content: center;
+      }
+    }
+  }
