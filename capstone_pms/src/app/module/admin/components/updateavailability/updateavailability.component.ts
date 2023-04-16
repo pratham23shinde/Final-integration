@@ -78,7 +78,7 @@ export class UpdateavailabilityComponent {
 
   //date format
   convertDate(a: any) {
-    return this.datePipe.transform(a, 'dd-MM-yyyy');
+    return this.datePipe.transform(a, 'dd-MMM-yyyy');
   }
 
   onClickSubmit(arg0: any) {

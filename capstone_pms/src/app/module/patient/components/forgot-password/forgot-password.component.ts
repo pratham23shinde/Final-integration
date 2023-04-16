@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { PatientService } from '../../patient.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { PasswordChangedComponent } from '../password-changed/password-changed.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-forgot-password',
@@ -11,6 +12,9 @@ import { PasswordChangedComponent } from '../password-changed/password-changed.c
   styleUrls: ['./forgot-password.component.scss'],
 })
 export class ForgotPasswordComponent {
+  myGroup: FormGroup;
+  hide = true;
+
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
@@ -18,6 +22,7 @@ export class ForgotPasswordComponent {
 
   username!: string;
   password!: string;
+  password1: AbstractControl<any, any>;
   onsubmit() {
     console.log(this.username);
     console.log(this.password);
@@ -46,11 +51,62 @@ export class ForgotPasswordComponent {
   userEmail!: string;
   userOtp!: string;
   randomNum: any;
-  constructor(
+  constructor(    private formBuilder: FormBuilder,
+
+    private _snackBar:MatSnackBar,
     public dialog: MatDialog,
     private patientService: PatientService,
     private router: Router
-  ) {}
+  ) {
+// validators for reset password
+this.myGroup = this.formBuilder.group({
+
+  password1: [
+    '',
+    [
+      Validators.required,
+      Validators.minLength(8),
+      this.createPasswordStrengthValidator(),
+    ],
+  ],
+
+  confirmPassword: ['', [Validators.required]],
+
+});
+this.password1=this.myGroup.controls['password1'];
+
+
+
+
+
+
+
+
+
+
+  }
+
+  createPasswordStrengthValidator(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const value = control.value;
+
+      if (!value) {
+        return null;
+      }
+
+      const hasUpperCase = /[A-Z]+/.test(value);
+
+      const hasLowerCase = /[a-z]+/.test(value);
+
+      const hasNumeric = /[0-9]+/.test(value);
+
+      // const hasSpecial=/[]
+
+      const passwordValid = hasUpperCase && hasLowerCase && hasNumeric;
+
+      return !passwordValid ? { passwordStrength: true } : null;
+    };
+  }
 
   //
   openDialog(){
@@ -124,6 +180,8 @@ export class ForgotPasswordComponent {
       this.patientService
         .updatePatientPassword(this.userEmail, this.newPassword)
         .subscribe();
+        this._snackBar.open("Password Reset Successfully","",{duration: 2000});
+
       // console.log('Password reset successfully');
     } else {
       // Passwords don't match, show error message

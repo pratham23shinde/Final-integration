@@ -63,7 +63,9 @@ export class PendingappointmentComponent implements OnInit, AfterViewInit {
 
   displayedColumns: string[] = [
     'appointmentId',
-    'patientId',
+    // 'patientId',
+    'patientFirstName',
+    'patientLastName',
     'reason',
     'date',
     'acceptance',

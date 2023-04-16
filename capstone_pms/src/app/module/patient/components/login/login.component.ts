@@ -19,7 +19,7 @@ export class Login {
 export class LoginComponent implements OnInit {
   login = new Login();
   msg = '';
-loginForm:any;
+  loginForm:any;
   constructor(private patientService: PatientService, private router: Router,private authService :AuthService) {}
 
   ngOnInit(): void {
@@ -33,7 +33,6 @@ loginForm:any;
       (data) => {
         if (data != null) {
           sessionStorage.clear();
-          console.log("fghjlkjjjjjjjjjjjjjjjjjjjj")
           console.log(data);
           console.log(data.patientId);
           this.authService.login(this.loginForm.value.emailInput);

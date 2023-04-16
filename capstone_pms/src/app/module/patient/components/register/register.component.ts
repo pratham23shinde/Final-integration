@@ -14,10 +14,12 @@ import { ValidationErrors, ValidatorFn } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { OpendialogregisterComponent } from '../opendialogregister/opendialogregister.component';
 import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 export class User {
   reset(arg0: {}) {
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
   }
+  
   title: any;
   firstName: any;
   lastName: any;
@@ -48,6 +50,7 @@ export class RegisterComponent implements OnInit {
   password1: AbstractControl<any, any>;
 
   constructor(
+    private _snackBar:MatSnackBar,
     private formBuilder: FormBuilder,
     private patientService: PatientService,
     private router: Router,
@@ -101,6 +104,10 @@ this.password1=this.myGroup.controls['password1'];
       .subscribe((result: any) => {
         this.x=result;
         console.log(result);
+        if(result==false){
+          console.log("exists")
+          this.openSnackBar();
+        }
       })
     }
 
@@ -109,6 +116,8 @@ this.password1=this.myGroup.controls['password1'];
     //const password1 = formGroup.controls['myInputContact'];
     const myInputEmail = formGroup.controls['myInputEmail'];
     if (this.x==false) {
+      
+      this.openSnackBar();
       myInputEmail.setErrors({ emailExistOrNot: true });
     } else {
       myInputEmail.setErrors(null);
@@ -154,7 +163,7 @@ this.password1=this.myGroup.controls['password1'];
   user: User = new User();
 
   saveUser() {
-    // this.user.dob = this.datePipe.transform(this.user.dob, 'dd-MMM-yyyy');
+    this.user.dob = this.datePipe.transform(this.user.dob, 'dd-MMM-yyyy');
     this.patientService.addUser(this.user).subscribe(
       (data) => {
         console.log(data);
@@ -167,7 +176,9 @@ this.password1=this.myGroup.controls['password1'];
   
   onSubmit() {
     if (this.myGroup.valid) {
+      
       this.saveUser();
+      // this.resetForm();
     }
 
 
@@ -196,6 +207,15 @@ this.password1=this.myGroup.controls['password1'];
   }
   resetForm():void{
     this.myGroup.reset();
+  }
+
+  openSnackBar(){
+this._snackBar.open('Email already exist','close',{
+  horizontalPosition: 'center',
+  verticalPosition: 'top',
+  duration:3000,
+  panelClass: ['red_snackbar']
+})
   }
 
 }

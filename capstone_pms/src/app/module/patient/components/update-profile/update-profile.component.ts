@@ -78,7 +78,7 @@ export class UpdateProfileComponent implements OnInit {
     
     
     
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
   }
   phoneNumberValidator(control: FormControl): { [key: string]: any } | null {
     const phonePattern = /^\d{10}$/; // Define the phone number format (10 digits)
@@ -97,6 +97,10 @@ export class UpdateProfileComponent implements OnInit {
     this.patient.contactNumber = value.contactNumber;
     this.patient.dob = value.dob;
     this.patient.gender = value.gender;
+    this.patient.dob = this.datePipe.transform(
+        this.patient.dob,
+        'dd-MMM-yyyy'
+      );
 
     this.patient.address = value.address;
     // if (this.myGroup.valid) {

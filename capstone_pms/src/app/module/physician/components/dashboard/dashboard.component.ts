@@ -28,7 +28,9 @@ const ELEMENT_DATA: PeriodicElement[] = [];
 export class DashboardComponent implements OnInit {
   displayedColumns: string[] = [
     'appointmentId',
-    'patientId',
+    // 'patientId',
+    'patientFirstName',
+    'patientLastName',
     'reason',
     'date',
     'acceptance',
@@ -54,7 +56,7 @@ export class DashboardComponent implements OnInit {
   formattedDate: any;
   currentDate1: DatePipe = new DatePipe('en-us');
   onDateSelected(selectedDate: string) {
-    this.formattedDate = this.datepipe.transform(selectedDate, 'dd-MM-yyyy');
+    this.formattedDate = this.datepipe.transform(selectedDate, 'dd-MMM-yyyy');
     console.log(this.formattedDate);
     this.service
       .getTodaysAppointment(this.email, this.formattedDate, this.status)
@@ -70,7 +72,7 @@ export class DashboardComponent implements OnInit {
 
   getTodaysAppointment() {
     var date = new Date();
-    this.transformdate = this.currentDate.transform(date, 'dd-MM-YYYY');
+    this.transformdate = this.currentDate.transform(date, 'dd-MMM-YYYY');
     console.log(this.transformdate);
     this.service
       .getTodaysAppointment(this.email, this.transformdate, this.status)

@@ -36,10 +36,10 @@ public class PhysicianAvailabilityServiceImpl implements PhysicianAvailabilitySe
 			String cendDate) throws ParseException {
 
 		LocalDate timeNow = LocalDate.now();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-YYYY");
 		String today = formatter.format(timeNow).toString();
 
-		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
 		Date currentDate = sdf.parse(today);
 		Date startdate = sdf.parse(cstartDate);
 		Date enddate = sdf.parse(cendDate);
@@ -61,10 +61,10 @@ public class PhysicianAvailabilityServiceImpl implements PhysicianAvailabilitySe
 		List<PhysicianAvailabiityModel> l = physicianAvailabilityRepository.findAll();
 		for (PhysicianAvailabiityModel p : l) {
 			LocalDate timeNow = LocalDate.now();
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY");
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-YYYY");
 			String today = formatter.format(timeNow).toString();
 
-			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+			SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
 			Date currentDate = sdf.parse(today);
 			Date startdate = sdf.parse(p.getStartDate());
 			Date enddate = sdf.parse(p.getEndDate());
@@ -196,7 +196,7 @@ public class PhysicianAvailabilityServiceImpl implements PhysicianAvailabilitySe
 					doc.setLast_name(lastName.get(i));
 					doc.setSpeciality(speciality.get(i));
 					// System.out.println(role.get(i));
-					DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY");
+					DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-YYYY");
 					String yesterday = formatter.format(timeNow.minusDays(1)).toString();
 
 					doc.setStartDate(yesterday);
@@ -223,7 +223,7 @@ public class PhysicianAvailabilityServiceImpl implements PhysicianAvailabilitySe
 		for (PhysicianAvailabiityModel physician : allPhy) {
 			
 			
-			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+			SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
 			Date currentDate = sdf.parse(date);
 			
 			

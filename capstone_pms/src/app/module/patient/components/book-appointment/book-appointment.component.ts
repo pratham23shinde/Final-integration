@@ -17,6 +17,9 @@ class AppointmentUser {
   patient_id: any;
   physician_email: any;
   submissionDate: any;
+  patientTitle:any;
+  patientFirstName:any;
+  patientLastName:any;
   doctorData: any;
 }
 
@@ -34,6 +37,9 @@ export class BookAppointmentComponent implements OnInit {
   myGroup: FormGroup;
   cUser = new AppointmentUser();
   num: any = sessionStorage.getItem('patientid');
+  pTitle:any=sessionStorage.getItem('title');
+  pFName:any=sessionStorage.getItem('firstName');
+  pLName:any=sessionStorage.getItem('lastName')
   nameee: any;
 
   doctors: any[] = [];
@@ -83,6 +89,10 @@ export class BookAppointmentComponent implements OnInit {
         this.calenderUser.drLastName = this.doctors[i].last_name;
         this.calenderUser.speciality = this.doctors[i].speciality;
         this.calenderUser.patientId = this.num;
+        this.calenderUser.patientTitle = this.pTitle;
+        this.calenderUser.patientFirstName = this.pFName;
+        this.calenderUser.patientLastName = this.pLName;
+
       }
     }
   }
@@ -112,10 +122,6 @@ export class BookAppointmentComponent implements OnInit {
           appointmentDate
       )
       .subscribe((result: any) => {
-        // console.log(result);
-        // sessionStorage.setItem('doctorData',JSON.stringify(result));
-        //result.ph
-
         this.doctors = result;
         //this.drWithSpeciality = result;
         let mySet = new Set();
@@ -155,14 +161,10 @@ export class BookAppointmentComponent implements OnInit {
   saveUser() {
     this.patientService.addAppointment(this.calenderUser).subscribe(
       (data: any) => {
-        this.cUser.patient_id = this.num;
-        this.cUser.doctorData = this.arr;
-
         data = this.cUser;
         console.log(this.cUser);
 
         console.log(data);
-        // this.goToUserList();
       },
       (error: any) => console.log(error)
     );
@@ -171,16 +173,11 @@ export class BookAppointmentComponent implements OnInit {
 
   //////////////////////////////////////////////////////////////////
   onSubmit() {
-    // this.calenderUser.submissionDate = this.datePipe.transform(
-    //   this.Date1,
-    //   'dd-MM-yyyy'
-    // );
-    // this.calenderUser.date = this.datePipe.transform(
-    //   this.calenderUser.date,
-    //   'dd-MM-yyyy'
-    // );
-    // console.log(this.calenderUser);
-    // this.saveUser();
+    this.calenderUser.submissionDate = this.datePipe.transform(
+      this.Date1,
+      'dd-MMM-yyyy'
+    );
+   
 
     if (this.myGroup.valid) {
       this.saveUser();
@@ -191,7 +188,7 @@ export class BookAppointmentComponent implements OnInit {
     // Add your function logic here
     this.calenderUser.date = this.datePipe.transform(
       this.calenderUser.date,
-      'dd-MM-yyyy'
+      'dd-MMM-yyyy'
     );
 
     console.log('specialityjnnncc', this.selectedItem);
@@ -212,6 +209,10 @@ export class BookAppointmentComponent implements OnInit {
     }
   }
   openSnackBar() {
-    this._snackBar.open("Appointment Booked Succesfully","",{duration: 2000});
+    this._snackBar.open("Appointment Booked Succesfully","",{duration: 2000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+      panelClass:['snackbar']
+    });
   }
 }

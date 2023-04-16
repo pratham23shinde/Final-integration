@@ -21,6 +21,7 @@ import { DatePipe, CommonModule } from '@angular/common';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { AfterauthComponent } from './components/afterauth/afterauth.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { AfterauthComponent } from './components/afterauth/afterauth.component';
     DoctorcardComponent,
     AssoicatecardComponent,
     AfterauthComponent,
+    
   ],
   imports: [
     CommonModule,

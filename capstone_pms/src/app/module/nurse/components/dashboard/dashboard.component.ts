@@ -13,6 +13,8 @@ import { FormControl } from '@angular/forms';
 export interface AppointmentList {
   appointmentId: number;
   patientId: number;
+  patientFirstName:string;
+  patientLastName:string;
   date: string;
   reason: string;
   info: boolean;
@@ -51,7 +53,8 @@ export class DashboardComponent implements AfterViewInit, OnInit {
   isLoading = false;
   displayedColumns: string[] = [
     'appointmentId',
-    'patientId',
+    'patientFirstName',
+    'patientLastName',
     'date',
     'reason',
     'info',
@@ -93,12 +96,12 @@ export class DashboardComponent implements AfterViewInit, OnInit {
 
   todaysAppointment: any;
   transformdate: any;
-  email = 'aakash.solanke@gmail.com';
+  // email = 'aakash.solanke@gmail.com';
   status = 'acceptance=Accepted';
 
   formattedDate: any;
   onDateSelected(selectedDate: string) {
-    this.formattedDate = this.datepipe.transform(selectedDate, 'dd-MM-yyyy');
+    this.formattedDate = this.datepipe.transform(selectedDate, 'dd-MMM-yyyy');
     console.log(this.formattedDate);
     this.appointmentData
       .getTodaysAppointment(this.formattedDate, this.status)
@@ -114,7 +117,7 @@ export class DashboardComponent implements AfterViewInit, OnInit {
   }
   getTodaysAppointment() {
     var date = new Date();
-    this.transformdate = this.currentDate.transform(date, 'dd-MM-YYYY');
+    this.transformdate = this.currentDate.transform(date, 'dd-MMM-YYYY');
     console.log(this.transformdate);
     this.appointmentData
       .getTodaysAppointment(this.transformdate, this.status)

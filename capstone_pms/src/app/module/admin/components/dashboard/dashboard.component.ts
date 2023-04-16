@@ -23,20 +23,20 @@ export class DashboardComponent {
     this.getNurseCount();
 
     this.service.refreshNeeded.subscribe(() => {
-      this.docAvailability.availablePhysicians();
+      this.docAvailability?.availablePhysicians();
     });
   }
 
   openDialogAddDoc() {
-    this.dialog.open(AdddoctorComponent);
+    this.dialog.open(AdddoctorComponent,{disableClose:true});
   }
 
   openDialogAddNurse() {
-    this.dialog.open(AddnurseComponent);
+    this.dialog.open(AddnurseComponent,{disableClose:true});
   }
 
   openDialogAddAdmin() {
-    this.dialog.open(AddadminComponent);
+    this.dialog.open(AddadminComponent,{disableClose:true});
   }
 
   public aCount: any;

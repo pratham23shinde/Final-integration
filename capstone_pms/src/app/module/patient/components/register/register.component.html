@@ -62,13 +62,15 @@
       <div class="space-evenly">
         <mat-form-field appearance="outline" class="width-50">
           <input
-            (blur)="search()"
+          (blur)="search()"
+
             matInput
             placeholder="Email"
             [(ngModel)]="user.email"
             name="email"
             formControlName="myInputEmail"
-          />
+          />       
+
           <mat-error *ngIf="myInputEmail.hasError('required')"
             >Email is required</mat-error
           >
@@ -232,7 +234,7 @@
           color="primary"
           type="submit"
           style="float: right"
-          (click)="openDialogRegister(); resetForm()"
+          (click)="openDialogRegister()"
         > 
           Submit
         </button>

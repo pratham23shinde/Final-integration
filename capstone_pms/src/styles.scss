@@ -75,3 +75,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.snackbar{
+  color: white;
+  --mdc-snackbar-container-color: #198754;
+  --mat-mdc-snack-bar-button-color: white;
+}
+
+.red_snackbar{
+  color: white;
+  --mdc-snackbar-container-color: red;
+  --mat-mdc-snack-bar-button-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

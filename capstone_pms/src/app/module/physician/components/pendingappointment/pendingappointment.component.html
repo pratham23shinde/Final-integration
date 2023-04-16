@@ -13,6 +13,15 @@
     <td mat-cell *matCellDef="let element">{{ element.appointmentId }}</td>
   </ng-container>
 
+  <ng-container matColumnDef="patientFirstName" class="table-row">
+    <th mat-header-cell *matHeaderCellDef class="thead">patient First Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.patientFirstName }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="patientLastName" class="table-row">
+    <th mat-header-cell *matHeaderCellDef class="thead">patient Last Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.patientLastName }}</td>
+  </ng-container>
   <!-- Name Column -->
   <ng-container matColumnDef="reason" class="table-row">
     <th mat-header-cell *matHeaderCellDef class="thead">Reason</th>
@@ -32,10 +41,10 @@
   </ng-container>
 
   <!-- Basic Diagonosis Information -->
-  <ng-container matColumnDef="patientId" class="table-row">
+  <!-- <ng-container matColumnDef="patientId" class="table-row">
     <th mat-header-cell *matHeaderCellDef class="thead">Patient Id</th>
     <td mat-cell *matCellDef="let element">{{ element.patientId }}</td>
-  </ng-container>
+  </ng-container> -->
 
   <!-- <ng-container matColumnDef="physicianEmail" class="table-row">
     <th mat-header-cell *matHeaderCellDef>physicianEmail</th>

@@ -127,7 +127,7 @@
           </ng-container>
 
           <!--namet Column -->
-          <ng-container matColumnDef="patientId" class="table-row">
+          <!-- <ng-container matColumnDef="patientId" class="table-row">
             <th
               mat-header-cell
               *matHeaderCellDef
@@ -138,6 +138,34 @@
               Patient Id
             </th>
             <td mat-cell *matCellDef="let element">{{ element.patientId }}</td>
+          </ng-container> -->
+
+
+          <ng-container matColumnDef="patientFirstName" class="table-row">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              class="thead"
+              sortActionDescription="Sort by patientId"
+            >
+            Patient FirstName 
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.patientFirstName }}</td>
+            <!-- <td mat-cell *matCellDef="let element">{{patientbyIdData.firstName }} {{patientbyIdData.lastName }}</td> -->
+          </ng-container>
+
+          <ng-container matColumnDef="patientLastName" class="table-row">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              class="thead"
+              sortActionDescription="Sort by patientId"
+            >
+            Patient LastName 
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.patientLastName }}</td>
             <!-- <td mat-cell *matCellDef="let element">{{patientbyIdData.firstName }} {{patientbyIdData.lastName }}</td> -->
           </ng-container>
 

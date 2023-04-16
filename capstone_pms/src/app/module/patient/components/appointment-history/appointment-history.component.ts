@@ -43,26 +43,19 @@ export class AppointmentHistoryComponent implements OnInit {
     });
   }
 @ViewChild(MatPaginator) paginator!:MatPaginator;
-  ngAfterViewInit(){
-    this.dataSource.paginator=this.paginator;
-  }
-  // getAppointment: any;
-  // getAllAppointment() {
-  //   this.patientService
-  //     .getAllAppointmentByAcceptance('acceptance=Pending')
-  //     .subscribe((respone) => {
-  //       this.getAppointment = respone;
-  //       console.log('Me basti ka hasti bro', this.getAppointment);
-  //     });
+  // ngAfterViewInit(){
+  //   this.dataSource.paginator=this?.paginator;
   // }
 
+
+  /////////////////////////////
   pId: any = sessionStorage.getItem('patientid');
   dataSource:any;
   getAppointmentPatient: any;
   getAppointmentByPatient() {
     this.patientService
       .getAppointmentByPatient(this.pId)
-      .subscribe((response) => {
+      .subscribe((response?) => {
         this.getAppointmentPatient = response;
         // console.log('Object gained', this.getAppointmentPatient);
         this.dataSource=new MatTableDataSource(this.getAppointmentPatient);

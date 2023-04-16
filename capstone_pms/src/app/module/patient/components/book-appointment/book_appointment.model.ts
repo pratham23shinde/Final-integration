@@ -7,4 +7,8 @@ export class CalenderUser {
   drLastName: any;
   patientId: any;
   speciality:any;
+  patientTitle:any;
+  patientFirstName:any;
+  patientLastName:any;
+
 }

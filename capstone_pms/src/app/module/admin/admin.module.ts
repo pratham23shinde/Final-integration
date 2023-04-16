@@ -45,6 +45,7 @@ import { AddnurseComponent } from './components/addnurse/addnurse.component';
 import { AddadminComponent } from './components/addadmin/addadmin.component';
 import { DoctorinfoComponent } from './components/doctorinfo/doctorinfo.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatButtonToggleModule,
     MatMenuModule,
     RouterModule,
-    MatExpansionModule
+    MatExpansionModule,
+    ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

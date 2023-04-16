@@ -1,6 +1,6 @@
 <div class="form">
     <h2>Add Doctor</h2>
-    <form #doctor="ngForm" (ngSubmit)="onClickSubmit()">
+    <form [formGroup]="myGroup" #doctor="ngForm"  (ngSubmit)="onClickSubmit()" method="post" action="/submit-myForm">
         <mat-form-field  appearance="outline" class="formFields">
             <mat-label>Doctor Email</mat-label>
             <input 
@@ -8,27 +8,34 @@
             name="email" 
             type="email"
             matInput placeholder="Email ID" 
-            required
-            >
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            formControlName="myInputEmail">
+            <mat-error *ngIf="myInputEmail.hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="myInputEmail.hasError('email')">Email is invalid</mat-error>
+
         </mat-form-field>
         <br>
 
         <mat-form-field appearance="outline" class="formFields" >
             <mat-label>First Name</mat-label>
-            <input [(ngModel)]="adddoc.firstName" name="first_name" matInput placeholder="First Name" required />
+            <input [(ngModel)]="adddoc.firstName" name="first_name" matInput placeholder="First Name" formControlName="myInputFirst" />
+            <mat-error *ngIf="myGroup.get('myInputFirst')">First Name is required</mat-error>
+
           </mat-form-field>
     
 
         <mat-form-field appearance="outline" class="formFields">
             <mat-label>Last Name</mat-label>
-            <input [(ngModel)]="adddoc.lastName" name="last_name" matInput placeholder="First Name" required />
-          </mat-form-field>
+            <input [(ngModel)]="adddoc.lastName" name="last_name" matInput placeholder="Last Name" formControlName="myInputLast" />
+            <mat-error *ngIf="myGroup.get('myInputLast')">Last Name is required</mat-error>
+
+        </mat-form-field>
         <br>
 
         <mat-form-field appearance="outline" class="formFields">
             <mat-label>Speciality</mat-label>
-            <mat-select [(ngModel)]="adddoc.speciality" name="speciality">
+            <mat-error *ngIf="myGroup.get('myInputSpeciality')">Speciality is required</mat-error>
+
+            <mat-select [(ngModel)]="adddoc.speciality" name="speciality" formControlName="myInputSpeciality">
                 <mat-option value="Cardiologist">Cardiologist</mat-option>
                 <mat-option value="Neurologist">Neurologist</mat-option>
                 <mat-option value="Gynacologist">Gynacologist</mat-option>
@@ -41,7 +48,44 @@
         
         <mat-form-field appearance="outline" class="formFields">
             <mat-label>Password</mat-label>
-            <input [(ngModel)]="adddoc.password" name="password" matInput [type]="hide ? 'password' : 'text'">
+            <input 
+            name="password"
+            formControlName="password1" 
+            [(ngModel)]="adddoc.password" 
+            name="password" 
+            matInput [type]="hide ? 'password' : 'text'"
+            placeholder="Enter your password" >
+            <mat-error *ngIf="password1.hasError('required')"
+            >Password Is Required</mat-error
+          >
+          <mat-error *ngIf="password1.errors?.['passwordStrength']">Your password must have one lower case,one upper case and one numeric characters.
+          </mat-error>
+
+          <mat-error *ngIf="password1.hasError('minLength')"
+          >Password Should Atleast 8 </mat-error
+        >
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="formFields">
+            <mat-label>Confirm Password</mat-label>
+            <input 
+            placeholder="Confirm your password" 
+            formControlName="confirmPassword" 
+           
+            name="password" 
+            matInput [type]="hide ? 'password' : 'text'"
+            required>
+            <div *ngIf="confirmPasswordFormControl.errors && confirmPasswordFormControl.errors.mismatch">{{ confirmPasswordFormControl() }}</div>
+            
+            <mat-error *ngIf="confirmPasswordFormControl.errors?.['matchPassword']">Password and confirmation password do not match
+            </mat-error>
+          
+
+    
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -49,7 +93,8 @@
         </mat-form-field>
 
     <div >
-        <button class="buttons" mat-raised-button color="primary" type="submit" value="submit">
+        <button class="buttons" mat-raised-button color="primary" type="submit" value="submit"
+        [disabled]="!myGroup.valid">
             Save
         </button>
         <button class="buttons" mat-raised-button color="warn" type="button" (click)="onNoClick()">
