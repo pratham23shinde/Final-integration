@@ -12,7 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./forgot-password.component.scss'],
 })
 export class ForgotPasswordComponent {
-  myGroup: FormGroup;
+  // myGroup: FormGroup;
   hide = true;
 
   emailFormControl = new FormControl('', [
@@ -22,7 +22,7 @@ export class ForgotPasswordComponent {
 
   username!: string;
   password!: string;
-  password1: AbstractControl<any, any>;
+  // password1: AbstractControl<any, any>;
   onsubmit() {
     console.log(this.username);
     console.log(this.password);
@@ -59,21 +59,21 @@ export class ForgotPasswordComponent {
     private router: Router
   ) {
 // validators for reset password
-this.myGroup = this.formBuilder.group({
+// this.myGroup = this.formBuilder.group({
 
-  password1: [
-    '',
-    [
-      Validators.required,
-      Validators.minLength(8),
-      this.createPasswordStrengthValidator(),
-    ],
-  ],
+//   password1: [
+//     '',
+//     [
+//       Validators.required,
+//       Validators.minLength(8),
+//       this.createPasswordStrengthValidator(),
+//     ],
+//   ],
 
-  confirmPassword: ['', [Validators.required]],
+//   confirmPassword: ['', [Validators.required]],
 
-});
-this.password1=this.myGroup.controls['password1'];
+// });
+// this.password1=this.myGroup.controls['password1'];
 
 
 
@@ -180,7 +180,7 @@ this.password1=this.myGroup.controls['password1'];
       this.patientService
         .updatePatientPassword(this.userEmail, this.newPassword)
         .subscribe();
-        this._snackBar.open("Password Reset Successfully","",{duration: 2000});
+        // this._snackBar.open("Password Reset Successfully","",{duration: 2000});
 
       // console.log('Password reset successfully');
     } else {
@@ -188,7 +188,13 @@ this.password1=this.myGroup.controls['password1'];
       this.showPasswordMismatch = true;
     }
   }
-
+  openSnackBar() {
+    this._snackBar.open("Password reset successfully","",{duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      panelClass:['snackbar']
+    });
+  }
   showFirstCard = true;
   showSecondCard = true;
   showThirdCard = false;

@@ -2,7 +2,6 @@ package com.capstone.application.controller;
 
 import java.util.List;
 
-import org.springframework.http.HttpStatusCode;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.HttpClientErrorException;
 
 import com.capstone.application.exception.AppointmentServiceException;
 import com.capstone.application.model.Appointment;
@@ -24,7 +22,7 @@ import lombok.extern.log4j.Log4j2;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/appointment-service")
 @Log4j2
 public class AppointmentController {
 	private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager

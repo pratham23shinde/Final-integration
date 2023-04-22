@@ -32,7 +32,7 @@ export class PatientService {
 
   public addUser(user: User): Observable<Object> {
     return this.httpClient.post(
-      `http://localhost:9001/authentication-service/patient/register`,
+      `http://a511d608d51124024b85bc3d94832ef1-1113507109.us-east-1.elb.amazonaws.com:9001/api/v1/authentication-service/patient/register`,
       user
     );
   }
@@ -44,7 +44,7 @@ export class PatientService {
 
   public loginUserFromRemote(login: Login): Observable<any> {
     return this.httpClient.post<any>(
-      'http://localhost:9001/authentication-service/patient/login',
+      'http://a511d608d51124024b85bc3d94832ef1-1113507109.us-east-1.elb.amazonaws.com:9001/api/v1/authentication-service/patient/login',
       login
     );
   }

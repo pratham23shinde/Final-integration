@@ -121,8 +121,21 @@ export class UpdateProfileComponent implements OnInit {
         // );
         // this.dialogRef.close();
         this.router.navigate(['/profile']);
-        this._snackBar.open("Updated Successfully","",{duration: 2000});
+        this.openSnackBar();
       });
+  }
+  openSnackBar() {
+    const snackbarRef = this._snackBar.open('Updated Successfully', 'Profile', {
+      duration: 4000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      panelClass:['snackbar'],
+
+
+    });
+    snackbarRef.onAction().subscribe(() => {
+      this.router.navigate(['/patient/profile']);
+    });
   }
  
   // resetForm():void{

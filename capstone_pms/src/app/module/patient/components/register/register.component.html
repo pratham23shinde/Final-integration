@@ -182,17 +182,16 @@
             formControlName="confirmPassword"
             required
           />  
-          <!-- <mat-icon
+          
+          <mat-icon
           (click)="  hide1 = !hide1"
           [attr.aria-label]="'Hide password'"
           [attr.aria-pressed]="  hide1
           "
           matSuffix
-          >{{ hide ? "visibility_off" : "visibility" }}</mat-icon -->
-        
-          <!-- <mat-error *ngIf="myGroup.get('confirmPassword')"
-            >Confirm password is required</mat-error
-          > -->
+          >{{ hide1 ? "visibility_off" : "visibility" }}</mat-icon
+        >
+
           <mat-error
             *ngIf="confirmPasswordFormControl.errors?.['matchPassword']"
             >Password and confirmation password do not match

@@ -213,7 +213,7 @@ this.password1=this.myGroup.controls['password1'];
 this._snackBar.open('Email already exist','close',{
   horizontalPosition: 'center',
   verticalPosition: 'top',
-  duration:3000,
+  duration:4000,
   panelClass: ['red_snackbar']
 })
   }

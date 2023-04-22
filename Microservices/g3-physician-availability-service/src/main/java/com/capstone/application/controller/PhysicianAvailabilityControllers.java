@@ -27,7 +27,7 @@ import lombok.extern.log4j.Log4j2;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/physician-availability-service")
 @Log4j2
 public class PhysicianAvailabilityControllers {
 	private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager

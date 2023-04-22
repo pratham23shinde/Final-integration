@@ -242,7 +242,7 @@ export class AdminService {
   //Sangeeta
   public getAppointmentCount(): Observable<any> {
     return this.http.get<any>(
-      'http://localhost:9001/appointment-service/appointmentCount'
+      'http://a0f413fc618f247b4a324ed36d573866-880046724.us-east-1.elb.amazonaws.com:9001/api/v1/appointment-service/appointmentCount'
     );
   }
 
@@ -260,7 +260,7 @@ export class AdminService {
 
   public getNurseCount(): Observable<any> {
     return this.http.get<any>(
-      'http://localhost:9001/patient-health-records-service/nurseCount'
+      'http://a0f413fc618f247b4a324ed36d573866-880046724.us-east-1.elb.amazonaws.com:9001/api/v1/patient-health-record-service/nurseCount'
     );
   }
 }

@@ -30,7 +30,7 @@ import lombok.extern.log4j.Log4j2;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/patient-health-record-service")
 @Log4j2
 public class PatientHealthRecordController {
 	private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager

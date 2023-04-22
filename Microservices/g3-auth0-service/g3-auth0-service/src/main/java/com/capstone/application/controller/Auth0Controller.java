@@ -18,7 +18,7 @@ import lombok.extern.log4j.Log4j2;
 
 @RestController
 @CrossOrigin(origins="*")
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/auth0-service")
 @Log4j2
 public class Auth0Controller {
 	private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager.getLogger(Auth0Controller.class);

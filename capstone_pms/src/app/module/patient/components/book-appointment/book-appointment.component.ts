@@ -209,9 +209,9 @@ export class BookAppointmentComponent implements OnInit {
     }
   }
   openSnackBar() {
-    this._snackBar.open("Appointment Booked Succesfully","",{duration: 2000,
+    this._snackBar.open("Appointment Booked Succesfully","",{duration: 3000,
       horizontalPosition: 'center',
-      verticalPosition: 'top',
+      verticalPosition: 'bottom',
       panelClass:['snackbar']
     });
   }
