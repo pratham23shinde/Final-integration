@@ -11,15 +11,15 @@ import com.capstone.application.model.Patient;
 
 public interface PatientAuthenticationRepository extends JpaRepository<Patient,Integer> {
 
-	@Query(value = "SELECT * from Patient where email=?1 and password=?2", nativeQuery=true)
-	Optional<Patient> authenticateByEmailandPassword(String email, String password);
+	@Query(value = "SELECT * from patient where email=:email and password=:password", nativeQuery=true)
+	Optional<Patient> authenticateByEmailandPassword(@Param(value="email") String email,@Param(value="password") String password);
 	
 	@Modifying
-	@Query(value="update Patient set password=:password where email=:email",nativeQuery=true)
+	@Query(value="update patient set password=:password where email=:email",nativeQuery=true)
 	void updatePassword(@Param(value="email") String email,@Param(value="password") String password);
 
 	
-	@Query(value="SELECT email from Patient where email=?1",nativeQuery=true)
+	@Query(value="SELECT email from patient where email=?1",nativeQuery=true)
 	String existEmail(String email);
 
 }
