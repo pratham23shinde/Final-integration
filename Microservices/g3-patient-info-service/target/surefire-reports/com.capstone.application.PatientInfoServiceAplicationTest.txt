@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.capstone.application.PatientInfoServiceAplicationTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.994 s - in com.capstone.application.PatientInfoServiceAplicationTest

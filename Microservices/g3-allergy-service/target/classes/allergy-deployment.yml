@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: allergy-service
+spec:
+ replicas: 2
+ selector:
+  matchLabels:
+   app: allergy-service
+ template:
+  metadata:
+   labels:
+    app: allergy-service
+   spec:
+    containers:
+     - name: itsmepratham23/g3-allergy-service
+       image: itsmepratham23/g3-allergy-service
+       ports:
+        - containerPort: 9002
+       env:
+        - name: PORT
+          value: "9002"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: allergy-service
+spec:
+  type: LoadBalancer
+  ports:
+   - port: 9002
+     targetPort: 9002
+  selector:
+    app: allergy-service
+
+ 

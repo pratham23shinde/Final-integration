@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.capstone.application.AppointmentApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.537 s - in com.capstone.application.AppointmentApplicationTests

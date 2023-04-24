@@ -1,0 +1,9 @@
+com\capstone\application\PhysicianAvailabilityApplication.class
+com\capstone\application\exception\GlobalExceptionHandler.class
+com\capstone\application\exception\PhysicianAvailabilityException.class
+com\capstone\application\exception\ErrorResponse.class
+com\capstone\application\model\PhysicianAvailabiityModel.class
+com\capstone\application\service\PhysicianAvailabilityService.class
+com\capstone\application\service\impl\PhysicianAvailabilityServiceImpl.class
+com\capstone\application\controller\PhysicianAvailabilityControllers.class
+com\capstone\application\repository\PhysicianAvailabilityRepository.class

@@ -1,0 +1,94 @@
+server.port=9001
+spring.application.name=g3-gateway-service
+
+spring.main.web-application-type=reactive
+
+
+
+spring.cloud.gateway.httpclient.connect-timeout=10000
+spring.cloud.gateway.httpclient.response-timeout=50000
+
+#Consul configuration
+spring.config.import=optional:configserver:http://localhost:9000
+spring.cloud.config.uri=http://localhost:9000
+spring.cloud.consul.host=localhost
+spring.cloud.consul.port=8500
+spring.cloud.consul.discovery.enabled=true
+spring.cloud.consul.discovery.instanceId=${spring.application.name}:${server.port}
+spring.cloud.consul.discovery.healthCheckInterval=12s
+spring.cloud.consul.config.enabled=false
+
+#permissions for cloud gateway
+spring.cloud.gateway.metrics.enabled = true
+spring.cloud.gateway.discovery.locator.enabled=true
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true
+spring.cloud.gateway.globalcors.add-to-simple-url-handler-mapping=true
+spring.cloud.gateway.globalcors.corsConfigurations.[/**].allowedOrigins=*
+spring.cloud.gateway.globalcors.corsConfigurations.[/**].allowedHeaders=*
+spring.cloud.gateway.globalcors.corsConfigurations.[/**].allowedMethods=*
+
+
+#Allergy service
+spring.cloud.gateway.default-filters[0]=DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+spring.cloud.gateway.default-filters[1]=AddResponseHeader=Access-Control-Allow-Origin, *
+
+spring.cloud.gateway.routes[0].id=allergy_service_route
+spring.cloud.gateway.routes[0].uri=lb://g3-allergy-service/
+spring.cloud.gateway.routes[0].predicates[0]=Path=/allergy-service/**
+spring.cloud.gateway.routes[0].filters[0]=RewritePath=/allergy-service/(?<segment>.*), /api/v1/$\{segment}
+spring.cloud.gateway.routes[0].filters[1].name=CircuitBreaker
+spring.cloud.gateway.routes[0].filters[1].args.name=allergyServiceCircuitBreaker
+spring.cloud.gateway.routes[0].filters[1].args.fallbackUri=forward:/g3-allergy-service-fallback
+
+#Appointment service
+spring.cloud.gateway.routes[1].id=appointment_service_route
+spring.cloud.gateway.routes[1].uri=lb://g3-appointment-service/
+spring.cloud.gateway.routes[1].predicates[0]=Path=/appointment-service/**
+spring.cloud.gateway.routes[1].filters[0]=RewritePath=/appointment-service/(?<segment>.*), /api/v1/$\{segment}
+spring.cloud.gateway.routes[1].filters[1].name=CircuitBreaker
+spring.cloud.gateway.routes[1].filters[1].args.name=appointmentServiceCircuitBreaker
+spring.cloud.gateway.routes[1].filters[1].args.fallbackUri=forward:/g3-appointment-service-fallback
+
+
+#Authentication service
+spring.cloud.gateway.routes[2].id=authentication_service_route
+spring.cloud.gateway.routes[2].uri=lb://g3-authentication-service/
+spring.cloud.gateway.routes[2].predicates[0]=Path=/authentication-service/**
+spring.cloud.gateway.routes[2].filters[0]=RewritePath=/authentication-service/(?<segment>.*), /api/v1/$\{segment}
+
+
+
+#Patient Health Record service
+spring.cloud.gateway.routes[3].id=patient_health_record_service_route
+spring.cloud.gateway.routes[3].uri=lb://g3-patient-health-records-service/
+spring.cloud.gateway.routes[3].predicates[0]=Path=/patient-health-records-service/**
+spring.cloud.gateway.routes[3].filters[0]=RewritePath=/patient-health-records-service/(?<segment>.*), /api/v1/$\{segment}
+
+#Physician Availability
+spring.cloud.gateway.routes[4].id=physician_availability_service_route
+spring.cloud.gateway.routes[4].uri=lb://g3-physician-availability-service/
+spring.cloud.gateway.routes[4].predicates[0]=Path=/physician-availability-service/**
+spring.cloud.gateway.routes[4].filters[0]=RewritePath=/physician-availability-service/(?<segment>.*), /api/v1/$\{segment}
+
+#Patient Info
+spring.cloud.gateway.routes[5].id=patient_info_service_route
+spring.cloud.gateway.routes[5].uri=lb://g3-patient-info-service/
+spring.cloud.gateway.routes[5].predicates[0]=Path=/patient-info-service/**
+spring.cloud.gateway.routes[5].filters[0]=RewritePath=/patient-info-service/(?<segment>.*), /api/v1/$\{segment}
+spring.cloud.gateway.routes[5].filters[1].name=CircuitBreaker
+spring.cloud.gateway.routes[5].filters[1].args.name=patientinfoServiceCircuitBreaker
+spring.cloud.gateway.routes[5].filters[1].args.fallbackUri=forward:/g3-patient-info-service-fallback
+
+#Auth0 Service
+
+
+spring.cloud.gateway.routes[6].id=auth0_service_route
+spring.cloud.gateway.routes[6].uri=lb://g3-auth0-service/
+spring.cloud.gateway.routes[6].predicates[0]=Path=/auth0-service/**
+spring.cloud.gateway.routes[6].filters[0]=RewritePath=/auth0-service/(?<segment>.*), /api/v1/$\{segment}
+#spring.cloud.gateway.routes[6].filters[1].args.name=auth0serviceCircuitBreaker
+#spring.cloud.gateway.routes[6].filters[1].args.fallbackUri=forward:/g3-auth0-service-fallback
+
+management.endpoint.gateway.enabled=true
+management.health.circuitbreakers.enabled=true
+management.endpoints.web.exposure.include=*

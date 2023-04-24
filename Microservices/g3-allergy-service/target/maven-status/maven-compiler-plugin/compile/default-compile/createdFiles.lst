@@ -1,0 +1,9 @@
+com\capstone\application\service\AllergyService.class
+com\capstone\application\exception\GlobalExceptionHandler.class
+com\capstone\application\exception\ErrorResponse.class
+com\capstone\application\model\Allergy.class
+com\capstone\application\exception\AllergyServiceException.class
+com\capstone\application\repository\AllergyRepository.class
+com\capstone\application\controller\AllergyController.class
+com\capstone\application\service\impl\AllergyServiceImpl.class
+com\capstone\application\AllergyServiceApplication.class

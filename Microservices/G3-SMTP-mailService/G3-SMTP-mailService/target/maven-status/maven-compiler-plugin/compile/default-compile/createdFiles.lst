@@ -1,0 +1,5 @@
+com\email\service\EmailService.class
+com\email\model\Email.class
+com\email\controller\Controller.class
+com\email\G1SmtpMailServiceApplication.class
+com\email\service\EmailService$1.class

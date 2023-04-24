@@ -1,0 +1,5 @@
+com\capstone\application\Auth0ServiceApplication.class
+com\capstone\application\model\Auth0User.class
+com\capstone\application\controller\Auth0Controller.class
+com\capstone\application\service\Auth0service.class
+com\capstone\application\service\serviceImpl\Auth0ServiceImpl.class

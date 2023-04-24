@@ -1,0 +1,4 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Appointment,com.capstone.application,AppointmentApplication,5,3,0,0,2,1,1,1,1,1
+Appointment,com.capstone.application.controller,AppointmentController,5,95,0,0,1,23,1,16,1,16
+Appointment,com.capstone.application.service.impl,AppointmentServiceImpl,259,0,26,0,63,0,29,0,16,0

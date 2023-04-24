@@ -1,0 +1,5 @@
+package com.capstone.application.dto;
+
+public class PatientDto {
+
+}

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AppointmentController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Appointment</a> &gt; <a href="index.source.html" class="el_package">com.capstone.application.controller</a> &gt; <span class="el_source">AppointmentController.java</span></div><h1>AppointmentController.java</h1><pre class="source lang-java linenums">package com.capstone.application.controller;
+
+import java.util.List;
+
+import org.springframework.http.HttpStatusCode;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.HttpClientErrorException;
+
+import com.capstone.application.exception.AppointmentServiceException;
+import com.capstone.application.model.Appointment;
+import com.capstone.application.service.AppointmentService;
+
+import jakarta.transaction.Transactional;
+import lombok.extern.log4j.Log4j2;
+
+@RestController
+@CrossOrigin(origins = &quot;*&quot;)
+@RequestMapping(&quot;/api/v1&quot;)
+@Log4j2
+public class AppointmentController {
+<span class="fc" id="L30">	private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager</span>
+<span class="fc" id="L31">			.getLogger(AppointmentController.class);</span>
+
+	private AppointmentService appointmentService;
+
+	public AppointmentController(AppointmentService appointmentService) {
+<span class="fc" id="L36">		super();</span>
+<span class="fc" id="L37">		this.appointmentService = appointmentService;</span>
+<span class="fc" id="L38">	}</span>
+
+	@GetMapping(&quot;/appointments/{appointmentId}&quot;)
+	public List&lt;Appointment&gt; appointmentsByAppointmentId(@PathVariable int appointmentId)
+			throws AppointmentServiceException {
+
+<span class="fc" id="L44">		return appointmentService.findAppointmentsByAppointmentId(appointmentId);</span>
+	}
+//
+	@GetMapping(&quot;/patient/{patientId}/allappointments&quot;)
+	public List&lt;Integer&gt; allAppointmentsForPatientId(@PathVariable int patientId) throws AppointmentServiceException {
+<span class="fc" id="L49">		return appointmentService.findAllAppointmentsByPatientId(patientId);</span>
+	}
+
+	@GetMapping(&quot;/patient/{patientId}/appointments&quot;)
+	public List&lt;Appointment&gt; appointmetForPatientId(@PathVariable int patientId) throws AppointmentServiceException {
+<span class="fc" id="L54">		return appointmentService.findByAppointmentById(patientId);</span>
+
+	}
+
+	@GetMapping(&quot;/appointment/{physicianEmail}&quot;)
+	public List&lt;Appointment&gt; pendingAppointmentByEmail(@PathVariable String physicianEmail,
+			@RequestParam String acceptance) throws AppointmentServiceException {
+<span class="fc" id="L61">		return appointmentService.findByAppointmentByPEmail(physicianEmail, acceptance);</span>
+
+	}
+
+	@GetMapping(&quot;/appointment/{physicianEmail}/{date}&quot;)
+	public List&lt;Appointment&gt; AcceptedAppointmentByEmailandDate(@PathVariable String physicianEmail,
+			@PathVariable String date, @RequestParam String acceptance) throws AppointmentServiceException {
+<span class="fc" id="L68">		return appointmentService.findByAppointmentByPEmailandDate(physicianEmail, date, acceptance);</span>
+
+	}
+
+	@GetMapping(&quot;/appointments&quot;)
+	public List&lt;Appointment&gt; acceptedAppointmentForNurse(@RequestParam String acceptance)
+			throws AppointmentServiceException {
+<span class="fc" id="L75">		return appointmentService.findByAcceptedAppointment(acceptance);</span>
+	}
+
+	@PostMapping(&quot;/appointment&quot;)
+	public Appointment Createappointment(@RequestBody Appointment appointment) throws AppointmentServiceException {
+<span class="fc" id="L80">		return appointmentService.saveAppointment(appointment);</span>
+	}
+
+	@PutMapping(&quot;/appointments/{appointmentId}&quot;)
+	public Appointment updatedPhysicianAvailabilitys(@RequestBody Appointment appointment)
+			throws AppointmentServiceException {
+<span class="fc" id="L86">		Appointment updateResponse = appointmentService.update(appointment);</span>
+<span class="fc" id="L87">		return updateResponse;</span>
+	}
+
+	@DeleteMapping(&quot;/appointment/{appointmentId}&quot;)
+	public boolean deleteAppointmentById(@PathVariable(&quot;appointmentId&quot;) Integer appointmentId)
+			throws AppointmentServiceException {
+<span class="fc" id="L93">		return appointmentService.deleteAppointment(appointmentId);</span>
+
+	}
+
+	// aakash solanke
+	@PutMapping(&quot;/appointments/{appointmentId}/{status}&quot;)
+	@Transactional
+	public void updatedPhysicianAvailabilitys(@PathVariable int appointmentId, @PathVariable String status)
+			throws AppointmentServiceException {
+<span class="fc" id="L102">		appointmentService.updateByID(appointmentId, status);</span>
+<span class="fc" id="L103">	}</span>
+
+	@PutMapping(&quot;/rejectedappointments/{appointmentId}/{status}&quot;)
+	@Transactional
+	public void rejectAppointment(@PathVariable int appointmentId, @PathVariable String status)
+			throws AppointmentServiceException {
+<span class="fc" id="L109">		appointmentService.updateByID(appointmentId, status);</span>
+
+<span class="fc" id="L111">	}</span>
+
+	@GetMapping(&quot;/appointment/{patientId}/previous&quot;)
+	public Appointment previousAppointment(@PathVariable int patientId) throws AppointmentServiceException {
+<span class="fc" id="L115">		return appointmentService.findPreviousAppointmentByPatientId(patientId);</span>
+	}
+
+	@GetMapping(&quot;/appointment/{patientId}/previous/nurse&quot;)
+	public Appointment findPreviousAppointmentforNurseDoctor(@PathVariable int patientId)
+			throws AppointmentServiceException {
+<span class="nc" id="L121">		return appointmentService.findPreviousAppointmentforNurseDoctor(patientId);</span>
+	}
+
+	// Sangeeta
+	@GetMapping(&quot;/appointmentCount&quot;)
+	public long appointmentCount() {
+<span class="fc" id="L127">		return appointmentService.countAppointments();</span>
+	}
+
+	// gayatri
+	@GetMapping(&quot;/appointment/nurse/{date}&quot;)
+	public List&lt;Appointment&gt; AcceptedAppointmentByDate(@PathVariable String date, @RequestParam String acceptance)
+			throws AppointmentServiceException {
+<span class="fc" id="L134">		System.out.println(date + &quot; &quot; + &quot; &quot; + acceptance);</span>
+<span class="fc" id="L135">		return appointmentService.findAppointmentByDate(date, acceptance);</span>
+
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
